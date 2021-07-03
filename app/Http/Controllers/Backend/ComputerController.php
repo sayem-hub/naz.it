@@ -10,7 +10,7 @@ class ComputerController extends Controller
 {
     public function computer()
     {
-       $computers = Computer::orderBy('id','desc')->paginate(250);
+       $computers = Computer::orderBy('id','desc')->paginate(300);
         return view('Backend.computers.computers',compact('computers'));
     }
 

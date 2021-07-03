@@ -33,20 +33,21 @@ class HomeController extends Controller
     {
 
         $data = [
-            'Comid'=>$request->input('ComputerID'),
-            'User'=>$request->input('User'),
-            'Designation'=>$request->input('Designation'),
-            'Comtype'=>$request->input('ComType'),
-            'Monitor'=>$request->input('Monitor'),
-            'Keyboard'=>$request->input('Keyboard'),
-            'Mouse'=>$request->input('Mouse'),
-            'ups'=>$request->input('UPS'),
-            'Ipadd'=>$request->input('IPAdd'),
-            'Email'=>$request->input('EmailAddress'),
-            'Section'=>$request->input('Section'),
-            'Department'=>$request->input('Department'),
-            'Status'=>$request->input('Status'),
-            'Remarks'=>$request->input('Remarks'),
+            'Comid' => $request->input('ComputerID'),
+            'User' => $request->input('User'),
+            'Designation' => $request->input('Designation'),
+            'Comtype' => $request->input('ComType'),
+            'Monitor' => $request->input('Monitor'),
+            'Keyboard' => $request->input('Keyboard'),
+            'Mouse' => $request->input('Mouse'),
+            'ups' => $request->input('UPS'),
+            'Ipadd' => $request->input('IPAdd'),
+            'Email' => $request->input('EmailAddress'),
+            'Section' => $request->input('Section'),
+            'Department' => $request->input('Department'),
+            'Status' => $request->input('Status'),
+            'Remarks' => $request->input('Remarks'),
+
 
         ];
         Computer::create($data);
@@ -64,20 +65,20 @@ class HomeController extends Controller
         $computer = Computer::find($id);
 
         $data = [
-            'Comid'=>$request->input('ComputerID'),
-            'User'=>$request->input('User'),
-            'Designation'=>$request->input('Designation'),
-            'ComType'=>$request->input('ComType'),
-            'Monitor'=>$request->input('Monitor'),
-            'Keyboard'=>$request->input('Keyboard'),
-            'Mouse'=>$request->input('Mouse'),
-            'UPS'=>$request->input('UPS'),
-            'IPAdd'=>$request->input('IPAdd'),
-            'Email'=>$request->input('EmailAddress'),
-            'Section'=>$request->input('Section'),
-            'Department'=>$request->input('Department'),
-            'Status'=>$request->input('Status'),
-            'Remarks'=>$request->input('Remarks'),
+            'Comid' => $request->input('ComputerID'),
+            'User' => $request->input('User'),
+            'Designation' => $request->input('Designation'),
+            'ComType' => $request->input('ComType'),
+            'Monitor' => $request->input('Monitor'),
+            'Keyboard' => $request->input('Keyboard'),
+            'Mouse' => $request->input('Mouse'),
+            'UPS' => $request->input('UPS'),
+            'IPAdd' => $request->input('IPAdd'),
+            'Email' => $request->input('EmailAddress'),
+            'Section' => $request->input('Section'),
+            'Department' => $request->input('Department'),
+            'Status' => $request->input('Status'),
+            'Remarks' => $request->input('Remarks'),
         ];
         $computer->update($data);
         return redirect()->route('computer.user');

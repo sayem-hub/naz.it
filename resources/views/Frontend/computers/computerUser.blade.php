@@ -7,14 +7,14 @@
 <table class="table table-striped table-dark">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">#</th>
+       <th scope="col">#</th>
         <th scope="col">ID</th>
         <th scope="col">Name</th>
         <th scope="col">Designation</th>
         <th scope="col">IP Address</th>
-        <th scope="col">Email</th>
+        <th scope="col">Email Address</th>
         <th scope="col">Section</th>
-        <th scope="col">Dept.</th>
+        <th scope="col">Department</th>
         <th scope="col">Status</th>
 
         <th scope="col">Action</th>
@@ -35,8 +35,6 @@
         <td>{{$user->Section}}</td>
         <td>{{$user->Department}}</td>
         <td>{{$user->Status}}</td>
-
-
         <td>
           <a class="btn btn-primary" href="{{route('computer.user.edit',$user->id)}}">Edit</a>
 
