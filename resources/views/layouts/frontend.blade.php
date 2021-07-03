@@ -5,15 +5,15 @@
 <title>NIMS - NAZ IT Management System</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="description" content="Bootstrap, Landing page, Responsive, Businnes, Portfolio, Corporate">
-<meta name="Author" content="WebThemez">
+<meta name="Sayem" content="WebThemez">
 <!-- CSS Files -->
+
 <link href="{{asset('assets/frontend/css/bootstrap.min.css')}}" rel="stylesheet" media="screen">
 <link href="{{asset('assets/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
 <link href="{{asset('assets/frontend/css/pe-icon-7-stroke.css')}}" rel="stylesheet">
 <link href="{{asset('assets/frontend/css/animate.css')}}" rel="stylesheet" media="screen">
 <link href="{{asset('assets/frontend/css/owl.theme.css')}}" rel="stylesheet">
 <link href="{{asset('assets/frontend/css/owl.carousel.css')}}" rel="stylesheet">
-
 <link href="{{asset('assets/frontend/css/styles.css')}}" rel="stylesheet" media="screen">
 
 <!-- Google Fonts -->

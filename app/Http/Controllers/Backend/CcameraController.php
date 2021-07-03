@@ -10,7 +10,7 @@ use PhpParser\Node\Expr\FuncCall;
 class CcameraController extends Controller
 {
     public function index(){
-        $ccameras = Ccamera::orderBy('id','desc')->paginate(300);
+        $ccameras = Ccamera::orderBy('id')->paginate(300);
         return view('Backend.ccamera.ccameras',compact('ccameras'));
     }
 

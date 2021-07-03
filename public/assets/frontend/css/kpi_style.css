@@ -1,0 +1,72 @@
+body{
+    background: antiquewhite;
+}
+
+.wrapper{
+    width: 1370px;
+    margin: 0 auto;
+}
+.topbar{
+    margin-top: 40px;
+}
+.topbar ul{
+    list-style: none;
+
+}
+
+
+
+.child-nav{
+    float: left;
+    padding: 0 65px;
+}
+
+
+
+ul li a:hover{
+    color: hotpink;
+}
+
+h2{
+    text-align: center;
+    color: rgb(114, 174, 241);
+    margin-top: 50px;
+
+    display: inline-block;
+}
+p{
+    font-size: 20px;
+    color: black;
+
+}
+
+.all-link{
+    width: 550px;
+    border: 1px rgb(103, 80, 202) solid;
+}
+
+
+ol li{
+    font-size: 22px;
+    color: rgb(10, 150, 243);
+}
+ol li a{
+    display: block;
+    padding: 10px 0;
+    color: rgba(79, 60, 247, 0.836);
+    font-size: 22px;
+    text-decoration: none;
+
+}
+    a:visited {
+        color: green;
+    }
+
+ol li a:hover{
+    display: block;
+    padding: 10px 0;
+    color: red;
+    font-size: 22px;
+    text-decoration: none;
+}
+

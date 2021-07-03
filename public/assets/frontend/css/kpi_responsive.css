@@ -1,0 +1,39 @@
+
+@media (max-width: 768px){
+
+	.wrapper{
+		width: 100%;
+
+		}
+	ul li a{
+    float: left;
+
+    padding: 10px;
+	}
+
+
+.child-nav {
+    float: left;
+    padding: 0 15px;
+}
+
+
+ol li a:hover{
+    display: block;
+    padding: 10px 0;
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+a:visited {
+    color: green;
+}
+
+h2{
+    text-align: center;
+    color: #d3a81b4f;
+    margin-top: 40px;
+    display: inline-block;
+}
+}

@@ -1,0 +1,48 @@
+
+@media (max-width: 768px){
+	body{
+		background:  #C4E1C5;
+	}
+	.wrapper{
+		width: 100%;
+		
+		}
+	ul li a{
+    float: left;
+    
+    padding: 10px;
+	}
+
+	
+ol li{
+    font-size: 22px;
+    color: #990099;
+}
+
+	ol li a{
+    display: block;
+    padding: 10px 0;
+    color: #990099;
+
+    font-size: 22px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ol li a:hover{
+    display: block;
+    padding: 10px 0;
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+h1{
+    text-align: center;
+    color: #cc0066;
+
+    margin-top: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+}
+}

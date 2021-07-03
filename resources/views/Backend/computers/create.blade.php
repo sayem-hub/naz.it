@@ -96,6 +96,7 @@
                 <option value="FSP">FSP</option>
                 <option value="Apollo">Apollo</option>
                 <option value="Digital X">Digital X</option>
+                <option value="Power Pack">Power Pack</option>
             </select>
             </div>
 

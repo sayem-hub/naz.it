@@ -13,7 +13,7 @@ class LoginController extends Controller
     return view('backend.login');
 }
 
-    public function login(Request $request)
+    public function admin_login(Request $request)
     {
         $cred = $request->only('email', 'password');
         if(\auth()->attempt($cred)){

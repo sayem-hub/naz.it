@@ -18,22 +18,40 @@ use Illuminate\Support\Facades\Route;
 
  Route::get('/',[App\Http\Controllers\Frontend\HomeController::class, 'index'])->name('home');
 
+ Route::get('/registration',[App\Http\Controllers\Frontend\UserController::class, 'registration'])->name('registration');
+ Route::post('/registration',[App\Http\Controllers\Frontend\UserController::class, 'doRegistration']);
 
- //Computer Frontend Route
- Route::get('/computer-user',[App\Http\Controllers\Frontend\ComputerFrontController::class, 'computerUser'])->name('computer.user');
- Route::get('/computer/create',[App\Http\Controllers\Frontend\ComputerFrontController::class, 'create'])->name('computer.user.create');
- Route::post('/computer/create',[App\Http\Controllers\Frontend\ComputerFrontController::class, 'store']);
- Route::get('/computer/edit{id}',[App\Http\Controllers\Frontend\ComputerFrontController::class, 'edit'])->name('computer.user.edit');
- Route::post('/computer/edit{id}',[App\Http\Controllers\Frontend\ComputerFrontController::class, 'update']);
+Route::get('/login', [App\Http\Controllers\Frontend\UserController::class, 'login'])->name('login');
+Route::post('/login', [App\Http\Controllers\Frontend\UserController::class, 'doLogin']);
+Route::get('/logout', [App\Http\Controllers\Frontend\UserController::class, 'logout'])->name('logout');
+
+Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
+
+Route::get('/kpi',[App\Http\Controllers\Frontend\KpiController::class, 'kpi'])->name('kpi.home');
+
+
+ //Home Computer Route
+ Route::get('/computer-user',[App\Http\Controllers\Frontend\HomeController::class, 'computerUser'])->name('computer.user');
+ Route::get('/computer/create',[App\Http\Controllers\Frontend\HomeController::class, 'create'])->name('computer.user.create');
+ Route::post('/computer/create',[App\Http\Controllers\Frontend\HomeController::class, 'store']);
+ Route::get('/computer/edit{id}',[App\Http\Controllers\Frontend\HomeController::class, 'edit'])->name('computer.user.edit');
+ Route::post('/computer/edit{id}',[App\Http\Controllers\Frontend\HomeController::class, 'update']);
+
+ //Home CC Camera Route
+Route::get('/cc-camera',[App\Http\Controllers\Frontend\HomeController::class, 'ccamera'])->name('cc-camera');
+Route::get('/cc-camera/create',[App\Http\Controllers\Frontend\HomeController::class, 'cam_create'])->name('create');
+Route::post('/cc-camera/create',[App\Http\Controllers\Frontend\HomeController::class, 'cam_store']);
+
+Route::get('/cc-camera/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'cam_edit'])->name('edit');
+Route::post('/cc-camera/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'cam_update']);
 
 
 
 //Backend Route
 Route::get('admin/login', [App\Http\Controllers\Backend\LoginController::class, 'LoginForm'])->name('admin.login');
-Route::post('admin/login', [App\Http\Controllers\Backend\LoginController::class, 'login']);
+Route::post('admin/login', [App\Http\Controllers\Backend\LoginController::class, 'admin_login']);
 
-Route::get('user/login', [App\Http\Controllers\Backend\LoginController::class, 'LoginForm'])->name('user.login');
-Route::post('user/login', [App\Http\Controllers\Backend\LoginController::class, 'login']);
+
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
 

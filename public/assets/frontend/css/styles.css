@@ -85,7 +85,7 @@ a:hover {
     /* background: #7b4397; */
     background: -webkit-linear-gradient(to left,#7b4397,#dc2430);
     /* background: linear-gradient(to left,#7b4397,#dc2430); */
-    color: #fff;
+    color: black;
     margin-top: -1px;
     border-top: 1px solid #c54372;
 }
@@ -141,16 +141,16 @@ a:hover {
 }
 .btn-primary {
 	font-size: 17px;
-	margin: 30px 0 10px;
-	margin-right: 10px;
+	/* margin: 30px 0 10px; */
+	/* margin-right: 10px; */
 	line-height: 20px;
 	padding: 15px 26px;
 	height: 50px;
-	border: 2px solid #e01931;
+	border: 1px solid #e01931;
 	background: transparent;
 	transition: all 0.4s;
 	color: rgb(224, 25, 49);
-	border-radius: 100px;
+	border-radius: 50px;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
 	border: 2px solid #e01931;
