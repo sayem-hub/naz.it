@@ -36,7 +36,7 @@
 
                 <div class="mb-3">
                     <label for="office-id" class="form-label">Office ID</label>
-                    <input type="text" name="office_id" class="form-control" id="office_id" placeholder="Enter Your Office ID No...">
+                    <input type="text" name="office_id" class="form-control" id="office_id" placeholder="Enter Your Office ID No..." required>
                 </div>
 
                 <div class="mb-3">

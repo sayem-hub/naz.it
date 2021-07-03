@@ -16,8 +16,9 @@
                 </ul>
             </div>
             @endif
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="{{ route('profile') }}" method="post" enctype="multipart/form-data">
                 @csrf
+<img src="{{asset('/upload/users/'.auth()->user()->photo)}}" class="mt-3" alt="photo" style="height: 200px;">
                 <div class="mb-3">
                     <label for="name" class="form-label">Full Name</label>
                     <input type="text" name="name" class="form-control" id="name" value="{{ auth()->user()->name }}" placeholder="Enter Your Name..." readonly>
@@ -57,8 +58,7 @@
 
                 <div class="mb-3">
                     <label for="confirm_password" class="form-label">Confirm Password</label>
-                    <input type="password" name="password_confirmation" class="form-control" id="confirm_password"
-                        placeholder="Confirm Your Password...">
+                    <input type="password" name="password_confirmation" class="form-control" id="confirm_password"  placeholder="Confirm Your Password...">
                 </div>
 
                 <div class="mb-3">
@@ -89,6 +89,7 @@
                 <div class="mb-3">
                     <label for="photo" class="form-label">Profile Picture</label>
                     <input type="file" name="photo" class="form-control" id="photo" aria-describedby="emailHelp" >
+
                 </div>
 
                 <button type="submit" class="btn btn-primary">Update Profile</button>

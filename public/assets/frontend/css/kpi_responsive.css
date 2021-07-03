@@ -21,7 +21,7 @@
 ol li a:hover{
     display: block;
     padding: 10px 0;
-    color: black;
+    color: red;
     font-size: 22px;
     text-decoration: none;
 }

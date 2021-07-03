@@ -16,10 +16,10 @@ body {
 	font-size:16px;
 	line-height: 28px;
 	color: #777;
-	background: #e01931;
+
 	overflow-x:hidden;
 	position: relative;
-} 
+}
 h1,h2,h3,h4,h5,h6{
 font-family: 'Alegreya Sans', sans-serif;
 }
@@ -31,9 +31,9 @@ h5 { font-size: 1.1em; line-height:1.4em; }
 h6 { font-size: 1em; line-height:1.2em; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	text-decoration: none; 
-}	 
-p { 
+	text-decoration: none;
+}
+p {
 	padding:0 0 1em;
 	margin:0;
 }
@@ -43,7 +43,7 @@ a {
 	font-weight: bold;
 	-webkit-transition: all .8s ease;
 	transition: all .8s ease;
-} 
+}
 a:hover {
 	text-decoration: none;
 	color: #d92634;
@@ -53,7 +53,7 @@ a:hover {
 .highlight {
 	color: #F33030;
 }
- 
+
 .banner {
 	  position: relative;
 	  /* top: -80px; */
@@ -114,11 +114,11 @@ a:hover {
 .navbar-default .navbar-nav > li > a:focus {
     color: #FAD12C;
 }
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
 	background: transparent;
-    
+
 	color: #FAD12C;
 }
 .btn-default {
@@ -174,14 +174,14 @@ a:hover {
 	color: white
 }
 .site-name img{
-	width: 150px; 
+	width: 150px;
 	height: 37px
 }
 .logo {
 	margin: 80px 0 100px 0;
 }
 .logo img{
-	width: 150px; 
+	width: 150px;
 	height: 37px
 }
 .landing h1{
@@ -196,7 +196,7 @@ a:hover {
 .landing-text {
 	margin-bottom: 20px;
 }
-.landing-text p { 
+.landing-text p {
 	padding-bottom: 20px;
 }
 .more {
@@ -261,15 +261,24 @@ a:hover {
 	color: #fff;
 }
 #features .fa{
-	border: 1px solid #ffffff;
-	width: 64px;
-	height: 64px;
-	color: #e01931;
-	text-align: center;
-	padding: 21px;
-	font-size: 22px;
-	border-radius: 50%;
-	background: #ffffff;
+
+border: 1px solid #ffffff;
+
+width: 64px;
+
+height: 64px;
+
+color: #e01931;
+
+text-align: center;
+
+padding: 21px;
+
+font-size: 22px;
+
+border-radius: 50%;
+
+background: #ffffff;
 }
 
 .row-feat {
@@ -378,14 +387,14 @@ a:hover {
 .subscribe-form .form-control::-webkit-input-placeholder {
 	color: #333;
 }
-.subscribe-form .form-control:-moz-placeholder { 
-	color: #333;  
+.subscribe-form .form-control:-moz-placeholder {
+	color: #333;
 }
-.subscribe-form .form-control::-moz-placeholder { 
-	color: #333;  
+.subscribe-form .form-control::-moz-placeholder {
+	color: #333;
 }
-.subscribe-form .form-control:-ms-input-placeholder {  
-	color: #333;  
+.subscribe-form .form-control:-ms-input-placeholder {
+	color: #333;
 }
 #screenshot {
 	padding-top: 100px;
@@ -554,7 +563,7 @@ a:hover {
 	width: 195px;
 	position: relative;
 	border-radius: 4px;
-} 
+}
 .iphone {
 	background: #F33030;
 	transition: all 0.3s ease;
@@ -631,11 +640,11 @@ a:hover {
 	background: #d92634;
 }
 .scrollToTop{
-	width: 40px; 
+	width: 40px;
 	height: 40px;
 	padding: 5px;
 	font-size: 30px;
-	text-align: center; 
+	text-align: center;
 	color: rgb(242, 47, 47);
 	position: fixed;
 	bottom: 20px;
@@ -705,14 +714,14 @@ a:hover {
 .subscribe-form .form-control::-webkit-input-placeholder {
 	color: #333;
 }
-.subscribe-form .form-control:-moz-placeholder { 
-	color: #333;  
+.subscribe-form .form-control:-moz-placeholder {
+	color: #333;
 }
-.subscribe-form .form-control::-moz-placeholder { 
-	color: #333;  
+.subscribe-form .form-control::-moz-placeholder {
+	color: #333;
 }
-.subscribe-form .form-control:-ms-input-placeholder {  
-	color: #333;  
+.subscribe-form .form-control:-ms-input-placeholder {
+	color: #333;
 }
 #package {
 	padding-top: 100px;
@@ -787,7 +796,7 @@ a:hover {
 	background: #FCD72C;
 	transition: all 0.4s;
 	color: rgb(32, 32, 32);
-	border-radius: 4px;	
+	border-radius: 4px;
 }
 .btn-price:hover {
 	background: #d92634;
@@ -807,9 +816,9 @@ a:hover {
 	/* background: #d92634 !important; */
 }
 /* iPads (portrait) ----------- */
-@media only screen 
-and (min-width : 768px) 
-and (max-width : 1024px) 
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
 and (orientation : portrait) {
 	.more {
 		margin-bottom: 50px;
@@ -843,20 +852,20 @@ and (orientation : portrait) {
 	#client img {
 		margin: 10px 0 10px;
 		max-height: 40px;
-	}	
+	}
 }
 
 /* iPads (landscape) ----------- */
-@media only screen 
-and (min-width : 768px) 
-and (max-width : 1024px) 
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
 and (orientation : landscape) {
 	.logo {
 		margin: 100px 0 30px 0;
 	}
 	.landing h1{
 		margin: 60px 0 60px 0;
-	}	
+	}
 	.landing-text {
 		margin: 60px 0 40px 0;
 	}
@@ -871,7 +880,7 @@ and (orientation : landscape) {
 	}
 	.feature-img {
 		margin-top: 30px;
-	}	
+	}
 	.feat-list {
 		margin-top: 10px;
 	}
@@ -883,7 +892,7 @@ and (orientation : landscape) {
 	}
 	#client img {
 		max-height: 45px;
-	}	
+	}
 }
 
 /* smart-phone ----------- */
@@ -918,8 +927,8 @@ and (orientation : landscape) {
 	}
 	#client img {
 		margin: 10px 0 10px;
-	}	
-}	
+	}
+}
 /* iPhone 6Plus (landscape) ----------- */
 @media (max-width: 736px) {
 
@@ -964,7 +973,7 @@ and (orientation : landscape) {
 		margin: 20px 0 10px 0;
 	}
 	.landing-text p {
-		font-size: 16px !important; 
+		font-size: 16px !important;
 	}
 	#intro {
 		padding-top: 50px;
@@ -980,7 +989,7 @@ and (orientation : landscape) {
 	}
 	#screenshot {
 		padding-top: 70px;
-	}	
+	}
 	.screenshots {
 		padding-top: 30px;
 		padding-bottom: 70px;
@@ -996,8 +1005,8 @@ and (orientation : landscape) {
 		margin: 50px 0 20px;
 	}
 	.download-text p {
-		line-height: 1.5;	
-	}	
+		line-height: 1.5;
+	}
 	.download-store {
 		padding: 10px 0 70px;
 	}
@@ -1026,7 +1035,7 @@ and (orientation : landscape) {
 	}
 	.appstorebutton {
 		margin-bottom: 15px;
-	} 
+	}
 	.download-store li {
 		margin-left: 0;
 	}

@@ -18,12 +18,22 @@
             @endif
 
 
+                <div style="margin-top: 30px">
+                    @if(session()->has('message'))
+                    <div class="alert alert-success mt-3">
+                        {{ session()->get('message') }}
+                    </div>
+                    @endif
+                </div>
+
             <form action="{{route('login')}}" method="post">
                 @csrf
+
+
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
-                        placeholder="Enter Your Email...">
+                    <label for="office-id" class="form-label">ID No.</label>
+                    <input type="text" name="office_id" class="form-control" id="office_id" aria-describedby="emailHelp"
+                        placeholder="Enter Your Office ID...">
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
@@ -31,6 +41,8 @@
                         placeholder="Enter Your Password...">
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
+
+                <p class="text-center">Don't have an account? <a href="{{ route('registration') }}">Register</a> </p>
             </form>
         </div>
     </div>

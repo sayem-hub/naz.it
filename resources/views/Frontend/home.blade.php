@@ -6,34 +6,53 @@
 
 
 
-        <div class="col-md-7">
+    <div class="col-md-7">
 
-                    <h1 class="wow fadeInLeft">
-                    Welcome to NIMS!
-                    </h1>
 
-                    <div class="landing-text wow fadeInLeft">
-                        <p>You are in the NAZ IT data bank! To access all the information in one place you need to login first! Couldn't login? Then you have to sign up!</p>
-                 </div>
 
-                <!-- header button -->
-                <div class="head-btn wow fadeInLeft">
-                        @if(auth()->user())
-                        <a href="{{ route('logout') }}" class="btn-primary play-market">
-                            <i class="fa fa-android"></i> <span>Logout</span>
-                        </a>
+        <h1 class="wow fadeInLeft">
+            Welcome to NIMS!
+        </h1>
 
-                        @else
-                        <a href="{{ route('login') }}" class="btn-primary app-store">
-                            <i class="fa fa-apple"></i> <span> Login</span>
-                        </a>
-                        <a href="{{ route('registration') }}" class="btn-primary play-market">
-                            <i class="fa fa-android"></i> <span> Sign up</span>
-                        </a>
-                        @endif
-
-                </div>
+        <div class="landing-text wow fadeInLeft">
+            <p>You are in the <strong>NAZ IT</strong> data bank! To access all the information at one place you need to login first!</p>
         </div>
+
+        <!-- header button -->
+        <!-- header button -->
+        <div class="head-btn wow fadeInLeft">
+            @if(auth()->user())
+            <a href="{{ route('logout') }}" class="btn-primary play-market">
+                <i class="fa fa-arrow-circle-left"></i> <span>Logout</span>
+            </a>
+
+            @else
+            <a href="{{ route('login') }}" class="btn-primary">
+                <i class="fa fa-sign-in"></i> <span> Login</span>
+            </a>
+            <a href="{{ route('registration') }}" class="btn-primary play-market">
+                <i class="fa fa-unlock-alt"></i> <span>Register</span>
+            </a>
+            @endif
+
+        </div>
+
+    </div>
+
+    <!-- phone image -->
+    <div class="col-md-6">
+        <img src="{{asset('assets/frontend/images/header-phone.png')}}" alt="phone"
+            class="header-phone img-responsive wow fadeInRight">
+    </div>
+</div>
+</div>
+</div>
 </div>
 
-@endsection
+
+            </div>
+            </div>
+            </div>
+            </div>
+
+            @endsection

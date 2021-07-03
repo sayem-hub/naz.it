@@ -26,7 +26,7 @@
                         @if(auth()->user())
 
                         <li><a href="{{ route('profile') }}" class="btn-primary app-store">
-                            <i class="fa fa-apple"></i> <span>Profile</span> </a></li>
+                            <i class="fa fa-user"></i> <span>Profile</span> </a></li>
                             @endif
 
 				</ul>
