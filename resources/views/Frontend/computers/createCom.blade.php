@@ -65,6 +65,7 @@
                     <option value="HP">HP</option>
                     <option value="Jeway">Jeway</option>
                     <option value="Syntax">Syntax</option>
+                    <option value="Newmen">Newmen</option>
                 </select>
             </div>
 
@@ -80,6 +81,8 @@
                     <option value="Syntax">Syntax</option>
                     <option value="Flora">Flora</option>
                     <option value="Asus">Asus</option>
+                    <option value="Dell">Dell</option>
+                    <option value="Classic">Classic</option>
                 </select>
             </div>
 

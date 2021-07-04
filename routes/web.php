@@ -57,6 +57,11 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\Backend\DashboardController::class, 'dashboard'])->name('dashboard');
         Route::get('logout', [App\Http\Controllers\Backend\LoginController::class, 'logout'])->name('admin.logout');
 
+        //Import/Export Route
+        Route::get('importExport', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'importExport'])->name('import.export');
+        Route::get('exportExcel', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'exportExcel'])->name('export.excel');
+        Route::post('importExcel', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'importExcel'])->name('import.excel');
+
         //Computer Route
         Route::get('/computers', [App\Http\Controllers\Backend\ComputerController::class, 'computer'])->name('admin.computer');
 
