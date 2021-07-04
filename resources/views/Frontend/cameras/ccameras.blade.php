@@ -3,8 +3,8 @@
 @section('main')
 
 <h3 class="text-center mt-3">CC Camera List</h3>
-<a href="{{route('create')}}" class="btn btn-success">Add CC Camera</a>
-<table class="table">
+<a href="{{route('camera.create')}}" class="btn btn-success">Add CC Camera</a>
+<table class="table table-striped table-dark">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -27,7 +27,7 @@
             <td>{{$ccamera->updated_at}}</td>
 
             <td>
-                <a class="btn btn-primary" href="{{ route('edit', $ccamera->id)}}">Edit</a>
+                <a class="btn btn-primary" href="{{ route('camera.edit', $ccamera->id)}}">Edit</a>
 
             </td>
         </tr>

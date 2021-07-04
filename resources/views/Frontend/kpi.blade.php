@@ -19,10 +19,11 @@
     <div class="container">
         <div class="topbar">
             <ul>
-                <li class="child-nav"><a target="_blank" href="http://192.168.0.108/OTSNZ/LogIn.aspx">OTS Home</a></li>
+                <li class="child-nav"><a target="_blank" href="http://192.168.0.108/OTSNZ/LogIn.aspx">OTS</a></li>
+                <li class="child-nav"><a target="_blank" href="http://192.168.0.101/ERP">Specfo</a></li>
                 <li class="child-nav"><a target="_blank" href="https://chat.whatsapp.com/KQ0QlTEKJZ169fBiVxBfD3">KPI Group</a></li>
-                <li class="child-nav"><a target="_blank" href="https://www.dropbox.com/s/w8x12ecl34iom1b/WhatsApp%20Messenger.apk?dl=0" download rel="noopener noreferrer">Whatsapp Download</a></li>
-                <li class="child-nav"><a target="_blank" href="https://www.dropbox.com/s/u023qks0zayalrx/Ridmik%20Keyboard_v7.0.1.apk?dl=0" download  rel="noopener noreferrer">Ridmik  Download</a></li>
+                <li class="child-nav"><a target="_blank" href="https://www.dropbox.com/s/w8x12ecl34iom1b/WhatsApp%20Messenger.apk?dl=0" download rel="noopener noreferrer">Whatsapp</a></li>
+                <li class="child-nav"><a target="_blank" href="https://www.dropbox.com/s/u023qks0zayalrx/Ridmik%20Keyboard_v7.0.1.apk?dl=0" download  rel="noopener noreferrer">Ridmik</a></li>
             </ul>
         </div>
         <h2><marquee behavior="scroll" direction="left" scrollamount="7">Welcome to link library of Worker KPI Management Project!</marquee> </h2>

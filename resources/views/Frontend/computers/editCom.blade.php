@@ -28,7 +28,7 @@
 
             <div class="mb-3">
                 <label for="ComType" class="form-label">Computer Type</label>
-                <select class="form-select" name="ComType">
+                <select class="form-control" name="ComType">
                     <option value="{{$computer->Comtype}}" selected>{{$computer->Comtype}}</option>
                     <option value="Desktop">Desktop</option>
                     <option value="Laptop">Laptop</option>
@@ -36,7 +36,7 @@
             </div>
             <div class="mb-3">
                 <label for="Monitor" class="form-label">Monitor</label>
-                <select class="form-select" name="Monitor">
+                <select class="form-control" name="Monitor">
                     <option value="{{$computer->Monitor}}" selected>{{$computer->Monitor}}</option>
                     <option value="Dell 19 Inch">Dell 19 Inch</option>
                     <option value="HP 19 Inch">HP 19 Inch</option>
@@ -58,7 +58,7 @@
 
             <div class="mb-3">
                 <label for="Mouse	" class="form-label">Mouse</label>
-                <select class="form-select" name="Mouse">
+                <select class="form-control" name="Mouse">
                     <option value="{{$computer->Mouse}}" selected>{{$computer->Mouse}}</option>
                     <option value="A4TECH">A4TECH</option>
                     <option value="Logitech">Logitech</option>
@@ -71,7 +71,7 @@
 
             <div class="mb-3">
                 <label for="Keyboard" class="form-label">Keyboard</label>
-                <select class="form-select" name="Keyboard">
+                <select class="form-control" name="Keyboard">
                     <option value="{{$computer->Keyboard}}" selected>{{$computer->Keyboard}}</option>
                     <option value="A4TECH">A4TECH</option>
                     <option value="Logitech">Logitech</option>
@@ -87,7 +87,7 @@
 
             <div class="mb-3">
                 <label for="UPS" class="form-label">UPS</label>
-                <select class="form-select" name="UPS">
+                <select class="form-control" name="UPS">
                     <option value="{{$computer->ups}}" selected>{{$computer->ups}}</option>
                     <option value="N/A">N/A</option>
                     <option value="Power Guard">Power Guard</option>
@@ -113,7 +113,7 @@
 
             <div class="mb-3">
                 <label for="Section" class="form-label">Section</label>
-                <select class="form-select" name="Section">
+                <select class="form-control" name="Section">
                     <option value="{{$computer->Section}}" selected>{{$computer->Section}}</option>
                     <option value="HR & Admin">HR & Admin</option>
                     <option value="Merchandising">Merchandising</option>
@@ -147,7 +147,7 @@
 
             <div class="mb-3">
                 <label for="Department" class="form-label">Department</label>
-                <select class="form-select" name="Department">
+                <select class="form-control" name="Department">
                     <option value="{{$computer->Department}}" selected>{{$computer->Department}}</option>
                     <option value="HR & Admin">HR & Admin</option>
                     <option value="Merchandising">Merchandising</option>
@@ -166,7 +166,7 @@
 
             <div class="mb-3">
                 <label for="Status" class="form-label">Status</label>
-                <select class="form-select" name="Status">
+                <select class="form-control" name="Status">
                     <option value="{{$computer->Status}}" selected>{{$computer->Status}}</option>
                     <option value="Running">Running</option>
                     <option value="Idle">Idle</option>

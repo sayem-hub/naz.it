@@ -122,7 +122,7 @@ class HomeController extends Controller
             'status' => $request->input('status'),
         ];
         $ccamera->update($data);
-        return redirect()->route('ccamera');
+        return redirect()->route('cc-camera');
     }
 
 }

@@ -35,14 +35,8 @@ Route::post('admin/login', [App\Http\Controllers\Backend\LoginController::class,
 Route::middleware(['auth'])->group(function () {
 
             //Frontend Route
-
-
-
             Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
             Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
-
-
-
 
             //Home Computer Route
             Route::get('/computer-user', [App\Http\Controllers\Frontend\HomeController::class, 'computerUser'])->name('computer.user');
@@ -53,10 +47,9 @@ Route::middleware(['auth'])->group(function () {
 
             //Home CC Camera Route
             Route::get('/cc-camera', [App\Http\Controllers\Frontend\HomeController::class, 'ccamera'])->name('cc-camera');
-            Route::get('/cc-camera/create', [App\Http\Controllers\Frontend\HomeController::class, 'cam_create'])->name('create');
+            Route::get('/cc-camera/create', [App\Http\Controllers\Frontend\HomeController::class, 'cam_create'])->name('camera.create');
             Route::post('/cc-camera/create', [App\Http\Controllers\Frontend\HomeController::class, 'cam_store']);
-
-            Route::get('/cc-camera/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'cam_edit'])->name('edit');
+            Route::get('/cc-camera/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'cam_edit'])->name('camera.edit');
             Route::post('/cc-camera/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'cam_update']);
 
     Route::middleware('is_admin')->prefix('admin')->group(function(){

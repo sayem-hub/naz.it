@@ -11,7 +11,7 @@
 
 
         <h1 class="wow fadeInLeft">
-            Welcome to NIMS!
+            Welcome to NAZ-IMS!
         </h1>
 
         <div class="landing-text wow fadeInLeft">

@@ -28,7 +28,7 @@
 
             <div class="mb-3">
                 <label for="ComType" class="form-label">Computer Type</label>
-                <select class="form-select" name="ComType">
+                <select class="form-control" name="ComType">
                     <option value="Desktop">Desktop</option>
                     <option value="Laptop">Laptop</option>
                 </select>
@@ -37,7 +37,7 @@
 
             <div class="mb-3">
                 <label for="Monitor" class="form-label">Monitor</label>
-                <select class="form-select" name="Monitor">
+                <select class="form-control" name="Monitor">
                     <option value="Dell 19 Inch" selected>Dell 19 Inch</option>
                     <option value="HP 19 Inch">HP 19 Inch</option>
                     <option value="LG 19 Inch">LG 19 Inch</option>
@@ -57,8 +57,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="Mouse	" class="form-label">Mouse</label>
-                <select class="form-select" name="Mouse">
+                <label for="Mouse" class="form-label">Mouse</label>
+                <select class="form-control" name="Mouse">
                     <option value="A4TECH" selected>A4TECH</option>
                     <option value="Logitech">Logitech</option>
                     <option value="Delux">Delux</option>
@@ -69,8 +69,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="Keyboard" class="form-label" name="Keyboard">Keyboard</label>
-                <select class="form-select">
+                <label for="Keyboard" class="form-label" >Keyboard</label>
+                <select class="form-control" name="Keyboard">
                     <option value="A4TECH" selected>A4TECH</option>
                     <option value="Logitech">Logitech</option>
                     <option value="Delux">Delux</option>
@@ -87,7 +87,7 @@
 
             <div class="mb-3">
                 <label for="UPS" class="form-label">UPS</label>
-                <select class="form-select" name="UPS">
+                <select class="form-control" name="UPS">
                     <option value="N/A" selected>N/A</option>
                     <option value="Power Guard">Power Guard</option>
                     <option value="Power Vault">Power Vault</option>
@@ -112,7 +112,7 @@
 
             <div class="mb-3">
                 <label for="Section" class="form-label">Section</label>
-                <select class="form-select" name="Section">
+                <select class="form-control" name="Section">
                     <option value="HR & Admin" selected>HR & Admin</option>
                     <option value="Merchandising">Merchandising</option>
                     <option value="IT">IT</option>
@@ -146,7 +146,7 @@
 
             <div class="mb-3">
                 <label for="Department" class="form-label">Department</label>
-                <select class="form-select" name="Department">
+                <select class="form-control" name="Department">
                     <option value="HR & Admin" selected>HR & Admin</option>
                     <option value="Merchandising">Merchandising</option>
                     <option value="ICT">ICT</option>
@@ -165,7 +165,7 @@
 
             <div class="mb-3">
                 <label for="Status" class="form-label">Status</label>
-                <select class="form-select" name="Status">
+                <select class="form-control" name="Status">
                     <option value="Running" selected>Running</option>
                     <option value="Idle">Idle</option>
                     <option value="On Repair">On Repair</option>

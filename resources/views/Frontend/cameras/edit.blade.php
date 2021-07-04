@@ -3,11 +3,11 @@
 @section('main')
 
 <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-7">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
 
         <h3 class="text-center mt-3">Edit Camera</h3>
-        <form action="{{route('edit',$ccamera->id)}}" method="post">
+        <form action="{{route('camera.edit',$ccamera->id)}}" method="post">
             @csrf
             <div class="mb-3">
                 <label for="camera-name" class="form-label">Camera Name</label>
@@ -28,9 +28,10 @@
 
             <div class="mb-3">
                 <label for="camstatus" class="form-label">Status</label>
-                <select class="form-select" name="status">
+                <select class="form-control" name="status">
                     <option value="{{ $ccamera->status }}" selected>{{ $ccamera->status }}</option>
                     <option value="Inactive">Inactive</option>
+                    <option value="Active">Active</option>
                     <option value="In Repair">In Repair</option>
                     <option value="Damaged">Damaged</option>
                 </select>
