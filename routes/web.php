@@ -59,8 +59,8 @@ Route::middleware(['auth'])->group(function () {
 
         //Import/Export Route
         Route::get('importExport', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'importExport'])->name('import.export');
-        Route::get('exportExcel', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'exportExcel'])->name('export.excel');
-        Route::post('importExcel', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'importExcel'])->name('import.excel');
+        Route::get('computer/export', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'export'])->name('computer.export');
+        Route::post('import', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'import'])->name('computer.import');
 
         //Computer Route
         Route::get('/computers', [App\Http\Controllers\Backend\ComputerController::class, 'computer'])->name('admin.computer');

@@ -1,28 +1,30 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-
+use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Imports\ComputersImport;
+use App\Exports\ComputersExport;
+
+
 
 class MaatwebsiteController extends Controller
 {
     public function importExport()
     {
-        return view('importExport');
+        return view('Backend.reports.report');
     }
-    public function exportExcel($type)
+
+    public function import()
     {
-        $data = Post::get()->toArray();
-        return Excel::create('cc-camera', function($excel) use ($data) {
-            $excel->sheet('cc_camera', function($sheet) use ($data) {
-                $sheet->formArray($data);
-            });
-        })->download($type);
+        Excel::import(new ComputersImport, 'computers.xlsx');
+
+        return redirect('import.export')->with('success', 'All good!');
     }
-public function importExcel(Request $request)
-{
 
+    public function export()
+    {
+        return Excel::download(new ComputersExport, 'computers.xlsx');
+    }
 }
 
-}
