@@ -24,6 +24,7 @@
                 <li class="child-nav"><a target="_blank" href="https://chat.whatsapp.com/KQ0QlTEKJZ169fBiVxBfD3">KPI Group</a></li>
                 <li class="child-nav"><a target="_blank" href="https://www.dropbox.com/s/w8x12ecl34iom1b/WhatsApp%20Messenger.apk?dl=0" download rel="noopener noreferrer">Whatsapp</a></li>
                 <li class="child-nav"><a target="_blank" href="https://www.dropbox.com/s/u023qks0zayalrx/Ridmik%20Keyboard_v7.0.1.apk?dl=0" download  rel="noopener noreferrer">Ridmik</a></li>
+                <li class="child-nav"><a  href="{{ route('sewing.machine')}}">Sewing Machine</a></li>
             </ul>
         </div>
         <h2><marquee behavior="scroll" direction="left" scrollamount="7">Welcome to link library of Worker KPI Management Project!</marquee> </h2>

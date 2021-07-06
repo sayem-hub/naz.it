@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
+
+use App\Exports\CcameraExport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
 use App\Imports\ComputersImport;
@@ -25,6 +27,11 @@ class MaatwebsiteController extends Controller
     public function export()
     {
         return Excel::download(new ComputersExport, 'computers.xlsx');
+    }
+
+    public function cameraExport()
+    {
+        return Excel::download(new CcameraExport, 'cc-cameraList.xlsx');
     }
 }
 

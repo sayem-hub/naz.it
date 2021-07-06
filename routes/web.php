@@ -38,6 +38,10 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
             Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
 
+            //KPI Route
+            Route::get('/kpi/smachine',[App\Http\Controllers\Frontend\KpiController::class, 'sewingMachine'])->name('sewing.machine');
+            Route::post('/kpi/smachine',[App\Http\Controllers\Frontend\KpiController::class, 'brother_machineStore']);
+
             //Home Computer Route
             Route::get('/computer-user', [App\Http\Controllers\Frontend\HomeController::class, 'computerUser'])->name('computer.user');
             Route::get('/computer/create', [App\Http\Controllers\Frontend\HomeController::class, 'create'])->name('computer.user.create');
@@ -61,6 +65,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('importExport', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'importExport'])->name('import.export');
         Route::get('computer/export', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'export'])->name('computer.export');
         Route::post('import', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'import'])->name('computer.import');
+
+        Route::get('cc-camera/export', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'cameraExport'])->name('camera.export');
 
         //Computer Route
         Route::get('/computers', [App\Http\Controllers\Backend\ComputerController::class, 'computer'])->name('admin.computer');

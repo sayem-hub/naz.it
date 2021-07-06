@@ -54,7 +54,7 @@
 <div class="row justify-content-center">
     <div class="card">
         <div class="card-header">CC Camera Inventory</div>
-        <form action={{ route('computer.export') }} method="get" enctype="multipart/form-data">
+        <form action={{ route('camera.export') }} method="get" enctype="multipart/form-data">
             @csrf
             <button type="sumbit" class="btn btn-primary" />Export</button>
         </form>
