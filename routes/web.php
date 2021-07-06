@@ -42,6 +42,9 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/kpi/smachine',[App\Http\Controllers\Frontend\KpiController::class, 'sewingMachine'])->name('sewing.machine');
             Route::post('/kpi/smachine',[App\Http\Controllers\Frontend\KpiController::class, 'brother_machineStore']);
 
+            //Received Route
+            Route::get('/received',[App\Http\Controllers\Frontend\HomeController::class, 'received'])->name('received.goods');
+
             //Home Computer Route
             Route::get('/computer-user', [App\Http\Controllers\Frontend\HomeController::class, 'computerUser'])->name('computer.user');
             Route::get('/computer/create', [App\Http\Controllers\Frontend\HomeController::class, 'create'])->name('computer.user.create');

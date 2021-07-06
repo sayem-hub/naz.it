@@ -3421,8 +3421,8 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
     border-color:#e7e7e7
 }
 .navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:hover,.navbar-default .navbar-nav>.open>a:focus{
-    background-color:#e7e7e7;
-    color:#555
+
+    color:#F8D12D;
 }
 @media (max-width:767px){
     .navbar-default .navbar-nav .open .dropdown-menu>li>a{

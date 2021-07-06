@@ -124,7 +124,10 @@ class HomeController extends Controller
         $ccamera->update($data);
         return redirect()->route('cc-camera');
     }
-
+        public function received()
+        {
+            return view('Frontend.received.index');
+        }
 }
 
 

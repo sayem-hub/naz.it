@@ -4,9 +4,11 @@
 
 
 <div class="container">
+    <h2 >Generate machine code</h2>
 
 <form action="{{ route('sewing.machine') }}"}} method="POST">
     @csrf
+
     <table>
 <tr>
     <td>1. Brand Name </td>
@@ -41,8 +43,6 @@
             </select>
         </td>
     </tr>
-
-
     <tr>
         <td>3. Machine Serial No.</td>
         <td><input class="form-control" name="serial_no" type="text" placeholder="Input machine serial" required></td>
@@ -63,7 +63,6 @@
 
     <tr>
         <td>5. Line No. </td>
-
         <td> <select class="form-control" name="line_no">
                 <option value="" selected>---Select Line--</option>
                 <option value="Line-1"> Line-1 </option>
@@ -92,7 +91,8 @@
                 <option value="Line-24"> Line-24 </option>
             </select>
         </td>
-    </input>
+    </tr>
+
 
     <tr>
         <td>6. Unit </td>
@@ -129,7 +129,6 @@
 </table>
 
 <button type="submit" class="btn btn-primary">Submit</button>
-
 </form>
 </div>
 

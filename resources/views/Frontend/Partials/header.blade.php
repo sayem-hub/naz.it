@@ -15,9 +15,23 @@
 			  <div id="navbar-scroll" class="collapse navbar-collapse navbar-themers navbar-right">
 				<ul class="nav navbar-nav">
 					<li><a href="{{ route('home') }}">Home</a></li>
-					<li><a href="{{ route('computer.user') }}">Computer Users</a></li>
-					<li><a href="#feature">Incoming </a></li>
-					<li><a href="#screenshot">Outgoing</a></li>
+					<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">IT Inventory <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a class="dropdown-item active" href="{{ route('computer.user') }}">Computer Users</a></li>
+                            <li><a class="dropdown-item active" href="#">FaceID Machine</a></li>
+                            <li><a href="#">Wireless Router</a></li>
+                            <li><a href="#">Printer</a></li>
+                            <li><a href="#">Scanner</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Sewing Machine</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+
+					<li><a href="{{ route('received.goods') }}">Goods Received </a></li>
+					<li><a href="#screenshot">Goods Sent</a></li>
 					<li><a href="{{ route('cc-camera') }}">Camera List</a></li>
 					<li><a href="#clients">Questions</a></li>
 					<li><a href="{{ route('kpi.home') }}">KPI Link</a></li>
