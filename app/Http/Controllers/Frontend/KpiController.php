@@ -19,11 +19,19 @@ class KpiController extends Controller
 
     public function brother_machineStore(Request $request)
     {
-        
+        $machine_no=0;
+        Brother::where('machine_no', $machine_no);
+        $machine_name = $request->input('machine_name');
+        if($machine_name = 'P/M')
+        {
+
+            $machine_no +=1;
+        }
         $data = [
             'brand' => $request->input('brand'),
             'machine_name' => $request->input('machine_name'),
             'serial_no' => $request->input('serial_no'),
+            'machine_no'=>$machine_no,
             'supplier' => $request->input('supplier'),
             'line_no' => $request->input('line_no'),
             'unit' => $request->input('unit'),

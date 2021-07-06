@@ -59,7 +59,7 @@
         </td>
     </tr>
 
-    <input type="hidden" name="machine_no" id="machine_no" value="0">
+    {{-- <input type="hidden" name="machine_no" id="machine_no" value="0"> --}}
 
     <tr>
         <td>5. Line No. </td>
