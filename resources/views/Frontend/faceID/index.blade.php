@@ -21,23 +21,28 @@
     </thead>
     <tbody>
 
-        {{-- @foreach($ccameras as $key=>$ccamera)
+        @foreach($machines as $key=>$machine)
 
         <tr>
             <th scope="row">{{$key+1}}</th>
-            <td>{{$ccamera->camname}}-{{$ccamera->camno}}</td>
-            <td>{{$ccamera->camlocation}}</td>
-            <td>{{$ccamera->status}}</td>
-            <td>{{$ccamera->updated_at}}</td>
+            <td>{{$machine->machine_name}}
+            <td>{{$machine->machine_id}}</td>
+            <td>{{$machine->ip_address}}</td>
+            <td>{{$machine->serial_no}}</td>
+            <td>{{$machine->type}}</td>
+            <td>{{$machine->model}}</td>
+            <td>{{$machine->location}}</td>
+            <td>{{$machine->status}}</td>
+            <td>{{$machine->updated_at}}</td>
             <td>
-                <a class="btn btn-primary" href="{{ route('camera.edit', $ccamera->id)}}">Edit</a>
+                <a class="btn btn-primary" href="{{ route('faceid.edit', $machine->id)}}">Edit</a>
             </td>
         </tr>
 
-        @endforeach --}}
+        @endforeach
 
     </tbody>
 </table>
-{{-- {{$ccameras->links('pagination::bootstrap-4')}} --}}
+{{ $machines->links('pagination::bootstrap-4')}}
 
 @endsection

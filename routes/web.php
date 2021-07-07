@@ -34,15 +34,17 @@ Route::post('admin/login', [App\Http\Controllers\Backend\LoginController::class,
 
 Route::middleware(['auth'])->group(function () {
 
-            //Frontend Route
-            Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
-            Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
+    //Frontend Route
+    Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
+    Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
 
 
-        //FaceID Machine Route
+    //FaceID Machine Route
         Route::get('/faceid-list',[App\Http\Controllers\Frontend\FaceidController::class, 'index'])->name('faceid.index');
         Route::get('/faceid-list/create',[App\Http\Controllers\Frontend\FaceidController::class, 'create'])->name('faceid.create');
         Route::post('/faceid-list/create',[App\Http\Controllers\Frontend\FaceidController::class, 'store']);
+        Route::get('/faceid-list/edit/{id}',[App\Http\Controllers\Frontend\FaceidController::class, 'edit'])->name('faceid.edit');
+        Route::post('/faceid-list/edit/{id}',[App\Http\Controllers\Frontend\FaceidController::class, 'update']);
 
 
 
@@ -66,8 +68,8 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/computer-user', [App\Http\Controllers\Frontend\HomeController::class, 'computerUser'])->name('computer.user');
             Route::get('/computer/create', [App\Http\Controllers\Frontend\HomeController::class, 'create'])->name('computer.user.create');
             Route::post('/computer/create', [App\Http\Controllers\Frontend\HomeController::class, 'store']);
-            Route::get('/computer/edit{id}', [App\Http\Controllers\Frontend\HomeController::class, 'edit'])->name('computer.user.edit');
-            Route::post('/computer/edit{id}', [App\Http\Controllers\Frontend\HomeController::class, 'update']);
+            Route::get('/computer/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'edit'])->name('computer.user.edit');
+            Route::post('/computer/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'update']);
 
             //Home CC Camera Route
             Route::get('/cc-camera', [App\Http\Controllers\Frontend\HomeController::class, 'ccamera'])->name('cc-camera');

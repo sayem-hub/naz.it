@@ -6,32 +6,55 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Edit Camera</h3>
-        <form action="{{route('camera.edit',$ccamera->id)}}" method="post">
+        <h3 class="text-center mt-3">Add New Machine</h3>
+        <form action="{{route('faceid.edit', $machines->id)}}" method="post">
             @csrf
             <div class="mb-3">
-                <label for="camera-name" class="form-label">Camera Name</label>
-                <input type="text" class="form-control" name="camname" id="camname" value="{{ $ccamera->camname }}">
+                <label for="machine_name" class="form-label">Machine Name</label>
+                <input type="text" class="form-control" name="machine_name" id="machine_name" value="{{ $machines->machine_name }}">
             </div>
 
             <div class="mb-3">
-                <label for="camno" class="form-label">Camera No.</label>
-                <input type="text" class="form-control" name="camno" id="camno" value="{{ $ccamera->camno }}">
+                <label for="machine_id" class="form-label">Machine ID</label>
+                <input type="text" class="form-control" name="machine_id" id="machine_id" value="{{ $machines->machine_id }}">
+            </div>
+
+            <div class="mb-3">
+                <label for="ip_address" class="form-label">IP Address</label>
+                <input type="text" class="form-control" name="ip_address" id="ip_address" value="{{ $machines->ip_address }}">
+            </div>
+
+            <div class="mb-3">
+                <label for="serial_no" class="form-label">Serial No</label>
+                <input type="text" class="form-control" name="serial_no" id="serial_no" value="{{ $machines->serial_no }}">
+            </div>
+
+            <div class="mb-3">
+                <label for="type" class="form-label">Machine Type</label>
+                <select class="form-control" name="type">
+                    <option value="{{ $machines->type }}" selected>{{ $machines->type }}</option>
+                    <option value="FaceID" >FaceID</option>
+                    <option value="Finger">Finger</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="model" class="form-label">Model No</label>
+                <input type="text" class="form-control" name="model" id="model" value="{{ $machines->model }}">
+            </div>
+
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" name="location" id="location" value="{{ $machines->location}}">
             </div>
 
 
             <div class="mb-3">
-                <label for="cam-location" class="form-label">Camera Location</label>
-                <input type="text" class="form-control" name="camlocation" id="camlocation"
-                    value="{{ $ccamera->camlocation }}">
-            </div>
-
-            <div class="mb-3">
-                <label for="camstatus" class="form-label">Status</label>
+                <label for="status" class="form-label">Status</label>
                 <select class="form-control" name="status">
-                    <option value="{{ $ccamera->status }}" selected>{{ $ccamera->status }}</option>
+                    <option value="{{ $machines->status }}" selected>{{ $machines->status }}</option>
+                    <option value="Active" >Active</option>
                     <option value="Inactive">Inactive</option>
-                    <option value="Active">Active</option>
                     <option value="In Repair">In Repair</option>
                     <option value="Damaged">Damaged</option>
                 </select>
@@ -39,10 +62,7 @@
 
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
-
     </div>
-
 </div>
-
 
 @endsection

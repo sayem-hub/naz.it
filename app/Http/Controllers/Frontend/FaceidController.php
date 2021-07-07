@@ -37,4 +37,28 @@ class FaceidController extends Controller
 
         return redirect()->route('faceid.index');
         }
+
+        public function edit($id)
+        {
+        $machines = Faceid::find($id);
+        return view('Frontend.faceID.edit', compact('machines'));
+        }
+
+    public function update(Request $request, $id)
+    {
+        $machines = Faceid::find($id);
+
+        $data = [
+            'machine_name' => $request->input('machine_name'),
+            'machine_id' => $request->input('machine_id'),
+            'ip_address' => $request->input('ip_address'),
+            'serial_no' => $request->input('serial_no'),
+            'type' => $request->input('type'),
+            'model' => $request->input('model'),
+            'location' => $request->input('location'),
+            'status' => $request->input('status'),
+        ];
+        $machines->update($data);
+        return redirect()->route('faceid.index');
+}
 }

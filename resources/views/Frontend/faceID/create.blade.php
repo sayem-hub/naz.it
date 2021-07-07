@@ -11,22 +11,22 @@
             @csrf
             <div class="mb-3">
                 <label for="machine_name" class="form-label">Machine Name</label>
-                <input type="text" class="form-control" name="machine_name" id="machine_name">
+                <input type="text" class="form-control" name="machine_name" id="machine_name" placeholder="Enter machine name">
             </div>
 
             <div class="mb-3">
                 <label for="machine_id" class="form-label">Machine ID</label>
-                <input type="text" class="form-control" name="machine_id" id="machine_id">
+                <input type="text" class="form-control" name="machine_id" id="machine_id" placeholder="Enter machine ID">
             </div>
 
             <div class="mb-3">
                 <label for="ip_address" class="form-label">IP Address</label>
-                <input type="text" class="form-control" name="ip_address" id="ip_address">
+                <input type="text" class="form-control" name="ip_address" id="ip_address" placeholder="Enter IP Address">
             </div>
 
             <div class="mb-3">
             <label for="serial_no" class="form-label">Serial No</label>
-            <input type="text" class="form-control" name="serial_no" id="serial_no">
+            <input type="text" class="form-control" name="serial_no" id="serial_no" placeholder="Enter Serial No.">
             </div>
 
             <div class="mb-3">
@@ -39,12 +39,12 @@
 
             <div class="mb-3">
             <label for="model" class="form-label">Model No</label>
-            <input type="text" class="form-control" name="model" id="model">
+            <input type="text" class="form-control" name="model" id="model" placeholder="Enter Model">
             </div>
 
             <div class="mb-3">
             <label for="location" class="form-label">Location</label>
-            <input type="text" class="form-control" name="location" id="location">
+            <input type="text" class="form-control" name="location" id="location" placeholder="Enter location">
             </div>
 
 
