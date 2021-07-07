@@ -20,7 +20,7 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li><a class="dropdown-item active" href="{{ route('computer.user') }}">Computer Users</a></li>
-                            <li><a class="dropdown-item active" href="#">FaceID Machine</a></li>
+                            <li><a class="dropdown-item active" href="{{ route('faceid.index') }}">FaceID Machine</a></li>
                             <li><a href="#">Wireless Router</a></li>
                             <li><a href="#">Printer</a></li>
                             <li><a href="#">Scanner</a></li>
@@ -30,8 +30,8 @@
                         </ul>
                     </li>
 
-					<li><a href="{{ route('received.goods') }}">Goods Received </a></li>
-					<li><a href="#screenshot">Goods Sent</a></li>
+					<li><a href="{{ route('received.goods') }}">Received Item </a></li>
+					<li><a href="{{ route('sent.items') }}">Sent Item</a></li>
 					<li><a href="{{ route('cc-camera') }}">Camera List</a></li>
 					<li><a href="#clients">Questions</a></li>
 					<li><a href="{{ route('kpi.home') }}">KPI Link</a></li>

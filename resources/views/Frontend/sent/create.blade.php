@@ -5,23 +5,13 @@
     <div class="col-md-2"></div>
     <div class="col-md-7">
 
-        <h3 class="text-center mt-3">Add New Incoming Item</h3>
-        @if(session()->has('success'))
-        <div class="alert alert-success">
-            {{ session()->get('success') }}
-        </div>
-        @endif
-        <form action="{{route('admin.incoming.create')}}" method="post" enctype="multipart/form-data">
+        <h3 class="text-center mt-3">Add New Outgoing Item</h3>
+        <form action="{{route('sent.items.create')}}" method="post">
             @csrf
-
             <div class="mb-3">
                 <label for="item-name" class="form-label">Item Name</label>
-                <input type="text" class="form-control" name="itemname" id="itemname">
-            </div>
+                <input type="text" class="form-control" name="itemname" id="item-name">
 
-            <div class="mb-3">
-                <label for="quantity" class="form-label">Quantity</label>
-                <input type="number" class="form-control" name="quantity" id="quantity">
             </div>
 
             <div class="mb-3">
@@ -37,47 +27,7 @@
 
             <div class="mb-3">
                 <label for="serialno" class="form-label">Serial No.</label>
-                <input type="text" class="form-control" name="serial" id="serial">
-            </div>
-
-            <div class="mb-3">
-                <label for="supplier" class="form-label">Supplier Name</label>
-                <input type="text" class="form-control" name="supplier" id="supplier">
-            </div>
-
-            <div class="mb-3">
-                <label for="purchasedate" class="form-label">Purchase Date</label>
-                <input type="date" class="form-control" name="purdate" id="purdate">
-            </div>
-
-
-            <div class="mb-3">
-                <label for="warranty" class="form-label">Warranty Days</label>
-                <input type="number" class="form-control" name="warranty" id="warranty">
-            </div>
-
-            <div class="mb-3">
-                <label for="challan-no" class="form-label">Challan No.</label>
-                <input type="text" class="form-control" name="challanno" id="challanno">
-            </div>
-
-            <div class="mb-3">
-                <label for="challan" class="form-label">Challan</label>
-                <input type="file" class="form-control" name="challan" id="challan">
-            </div>
-
-            <div class="mb-3">
-                <label for="requisition-no" class="form-label">Requisition No.</label>
-                <input type="text" class="form-control" name="reqisitionno" id="reqno">
-            </div>
-
-            <div class="mb-3">
-                <label for="purchase-type" class="form-label">Purchase Type</label>
-                <select class="form-select" id="purtype" name="purtype">
-
-                    <option value="H/O" selected>H/O</option>
-                    <option value="Factory">Factory</option>
-                </select>
+                <input type="text" class="form-control" name="serial" id="serialno">
             </div>
 
             <div class="mb-3">
@@ -86,14 +36,55 @@
             </div>
 
             <div class="mb-3">
-                <label for="department" class="form-label">Department</label>
-                <input type="text" class="form-control" name="department" id="dept">
+                <label for="section" class="form-label">Section</label>
+                <input type="text" class="form-control" name="section" id="section">
             </div>
 
             <div class="mb-3">
-                <label for="notes" class="form-label">Notes</label>
-                <input type="text" class="form-control" name="notes" id="notes">
+                <label for="warranty	" class="form-label">Warranty Days</label>
+                <input type="number" class="form-control" name="warranty" id="warranty">
+            </div>
 
+            <div class="mb-3">
+                <label for="supplier" class="form-label">Supplier</label>
+                <input type="text" class="form-control" name="supplier" id="supplier">
+            </div>
+
+            <div class="mb-3">
+                <label for="purchase-date" class="form-label">Purchase Date</label>
+                <input type="date" class="form-control" name="purdate" id="purchase-date">
+            </div>
+
+            <div class="mb-3">
+                <label for="outgoing-date" class="form-label">Outgoing Date</label>
+                <input type="date" class="form-control" name="outdate" id="outgoing-date">
+            </div>
+
+            <div class="mb-3">
+                <label for="sentfor" class="form-label">Sent For</label>
+                <select class="form-control" id="sentfor" name="sentfor" required>
+                    <option selected>--Select--</option>
+                    <option value="Warranty">Warranty</option>
+                    <option value="Reparing">Reparing</option>
+                    <option value="Replace">Replace</option>
+                    <option value="Resigned">Resigned</option>
+                    <option value="Damaged">Damaged</option>
+                    <option value="Wastage">Wastage</option>
+                    <option value="Extra(No need)">Extra(No need)</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="gate-pass" class="form-label">Gate Pass No.</label>
+                <input type="number" class="form-control" name="gpno" id="gate-pass">
+            </div>
+
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-control" id="status" name="status" requred>
+                    <option selected>Open this select menu</option>
+                    <option value="Pending" selected>Pending</option>
+                </select>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>

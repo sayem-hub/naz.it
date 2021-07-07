@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>NIMS - NAZ IT Management System</title>
+<title>{{ config('app.name') }}-NAZ IT Management System</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="description" content="Bootstrap, Landing page, Responsive, Businnes, Portfolio, Corporate">
 <meta name="Sayem" content="WebThemez">

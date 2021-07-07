@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Computer;
 use App\Models\Ccamera;
 use App\Models\Incoming;
+use App\Models\Outitem;
 
 class HomeController extends Controller
 {
@@ -164,6 +165,44 @@ class HomeController extends Controller
         Incoming::create($data);
         return redirect()->route('received.goods');
         }
-}
+
+        public function sentItem()
+        {
+        $items = Outitem::orderBy('id', 'desc')->paginate(50);
+        return view('Frontend.sent.index', compact('items'));
+        }
+
+        public function createSentItem()
+        {
+
+        return view('Frontend.sent.create');
+    }
+
+    public function storeSentItem(Request $request)
+    {
+        $data =  [
+            'Iname' => $request->input('itemname'),
+            'Brand' => $request->input('brand'),
+            'Model' => $request->input('model'),
+            'Serial' => $request->input('serial'),
+            'User' => $request->input('user'),
+            'Section' => $request->input('section'),
+            'Warranty' => $request->input('warranty'),
+            'Supplier' => $request->input('supplier'),
+            'Purdate' => $request->input('purdate'),
+            'Outdate' => $request->input('outdate'),
+            'Sentfor' => $request->input('sentfor'),
+            'Gpno' => $request->input('gpno'),
+            'Status' => $request->input('status'),
+
+        ];
+
+        Outitem::create($data);
+
+        return redirect()->route('sent.items');
+    }
+
+        }
+
 
 

@@ -38,14 +38,27 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
             Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
 
+
+        //FaceID Machine Route
+        Route::get('/faceid-list',[App\Http\Controllers\Frontend\FaceidController::class, 'index'])->name('faceid.index');
+        Route::get('/faceid-list/create',[App\Http\Controllers\Frontend\FaceidController::class, 'create'])->name('faceid.create');
+        Route::post('/faceid-list/create',[App\Http\Controllers\Frontend\FaceidController::class, 'store']);
+
+
+
             //KPI Route
             Route::get('/kpi/smachine',[App\Http\Controllers\Frontend\KpiController::class, 'sewingMachine'])->name('sewing.machine');
             Route::post('/kpi/smachine',[App\Http\Controllers\Frontend\KpiController::class, 'brother_machineStore']);
 
             //Received Route
-            Route::get('/received',[App\Http\Controllers\Frontend\HomeController::class, 'received'])->name('received.goods');
-            Route::get('/received/new',[App\Http\Controllers\Frontend\HomeController::class, 'goodsCreate'])->name('received.goods.new');
-            Route::post('/received/new',[App\Http\Controllers\Frontend\HomeController::class, 'goodsStore']);
+            Route::get('/received-items',[App\Http\Controllers\Frontend\HomeController::class, 'received'])->name('received.goods');
+            Route::get('/received-items/new',[App\Http\Controllers\Frontend\HomeController::class, 'goodsCreate'])->name('received.goods.new');
+            Route::post('/received-items/new',[App\Http\Controllers\Frontend\HomeController::class, 'goodsStore']);
+
+            //Sent Route
+            Route::get('/sent-items',[App\Http\Controllers\Frontend\HomeController::class, 'sentItem'])->name('sent.items');
+            Route::get('/sent-items/create',[App\Http\Controllers\Frontend\HomeController::class, 'createSentItem'])->name('sent.items.create');
+            Route::post('/sent-items/create',[App\Http\Controllers\Frontend\HomeController::class, 'storeSentItem']);
 
 
 
