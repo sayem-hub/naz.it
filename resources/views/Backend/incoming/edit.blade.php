@@ -4,94 +4,88 @@
 
 <div class="row">
     <div class="col-md-2"></div>
-    <div class="col-md-7">
+    <div class="col-md-6">
 
         <h3 class="text-center mt-3">Update Record</h3>
-        <form action="{{route('admin.outgoing.edit',$outitems->id)}}" method="post">
+        <form action="{{route('admin.incoming.edit',$initems->id)}}" method="post" enctype="multipart/form-data">
         @csrf
             <div class="mb-3">
-              <label for="item-name" class="form-label">Item Name</label>
-              <input type="text" class="form-control" name="itemname" id="itemname" value="{{$outitems->Iname}}">
-              
+              <label for="itemname" class="form-label">Item Name</label>
+              <input type="text" class="form-control" name="itemname" id="itemname" value="{{$initems->item_name}}">
+            </div>
+
+            <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="text" class="form-control" name="quantity" id="quantity" value="{{$initems->quantity}}">
             </div>
 
             <div class="mb-3">
               <label for="brand" class="form-label">Brand</label>
-              <input type="text" class="form-control" name="brand" id="brand" value="{{$outitems->Brand}}">
+              <input type="text" class="form-control" name="brand" id="brand" value="{{$initems->brand_name}}">
             </div>
 
-            
             <div class="mb-3">
               <label for="model" class="form-label">Model</label>
-              <input type="text" class="form-control" name="model" id="model" value="{{$outitems->Model}}">
+              <input type="text" class="form-control" name="model" id="model" value="{{$initems->model}}">
             </div>
 
             <div class="mb-3">
-              <label for="serialno" class="form-label">Serial No.</label>
-              <input type="text" class="form-control" name="serial" id="serial" value="{{$outitems->Serial}}">
+              <label for="serial" class="form-label">Serial No.</label>
+              <input type="text" class="form-control" name="serial" id="serial" value="{{$initems->serial_no}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="supplier" class="form-label">Supplier</label>
+                <input type="text" class="form-control" name="supplier" id="supplier" value="{{$initems->supplier}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="pdate" class="form-label">Purchase Date</label>
+                <input type="text" class="form-control" name="pdate" id="pdate" value="{{$initems->pur_date}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="warranty" class="form-label">Warranty</label>
+                <input type="text" class="form-control" name="warranty" id="warranty" value="{{$initems->warranty}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="challan_no" class="form-label">Challan No</label>
+                <input type="text" class="form-control" name="challan_no" id="challan_no" value="{{$initems->challan_no}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="challan_img" class="form-label">Challan</label>
+                <input type="file" class="form-control" name="challan_img" id="challan_img" value="{{$initems->challan_img}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="req_no" class="form-label">Requisition No.</label>
+                <input type="text" class="form-control" name="req_no" id="req_no" value="{{$initems->req_no}}">
+            </div>
+
+            <div class="mb-3">
+            <label for="pur_type" class="form-label">Purchase Type</label>
+            <select class="form-control" id="pur_type" name="pur_type">
+                <option value="{{$initems->pur_type}}" selected>{{$initems->pur_type}}</option>
+                <option value="H/O">H/O</option>
+                <option value="Factory">Factory</option>
+            </select>
             </div>
 
             <div class="mb-3">
               <label for="user" class="form-label">User</label>
-              <input type="text" class="form-control" name="user" id="user" value="{{$outitems->User}}">
+              <input type="text" class="form-control" name="user" id="user" value="{{$initems->user_name}}">
             </div>
 
             <div class="mb-3">
-              <label for="section" class="form-label">Section</label>
-              <input type="text" class="form-control" name="section" id="section" value="{{$outitems->Section}}">
+              <label for="department" class="form-label">Department</label>
+              <input type="text" class="form-control" name="department" id="department" value="{{$initems->department}}">
             </div>
 
             <div class="mb-3">
-              <label for="warranty" class="form-label">Warranty</label>
-              <input type="number" class="form-control" name="warranty" id="warranty" value="{{$outitems->Warranty}}">
-            </div>
-
-            <div class="mb-3">
-              <label for="supplier" class="form-label">Supplier</label>
-              <input type="text" class="form-control" name="supplier" id="supplier" value="{{$outitems->Supplier}}">
-            </div>
-
-            <div class="mb-3">
-              <label for="purchase-date" class="form-label">Purchase Date</label>
-              <input type="date" class="form-control" name="purdate" id="purdate" value="{{$outitems->Purdate}}">
-            </div>
-
-            <div class="mb-3">
-              <label for="outgoing-date" class="form-label">Outgoing Date</label>
-              <input type="date" class="form-control" name="outdate" id="outdate" value="{{$outitems->Outdate}}">
-            </div>
-
-            <div class="mb-3">
-              <label for="sentfor" class="form-label">Sent For</label>
-              <select class="form-select" id="sentfor" name="sentfor" required>
-                    <option value=>--Select--</option> 
-                    <option value="Warranty">Warranty</option>
-                    <option value="Reparing">Reparing</option>
-                    <option value="Replace">Replace</option>
-                    <option value="Resigned">Resigned</option>
-                    <option value="Damaged">Damaged</option>
-                    <option value="Wastage">Wastage</option>
-                    <option value="Extra(No need)">Extra(No need)</option>
-                    
-                    </select>
-            </div>
-
-            <div class="mb-3">
-              <label for="gate-pass" class="form-label">Gate Pass No.</label>
-              <input type="number" class="form-control" name="gpno" id="gpno" value="{{$outitems->Gpno}}">
-            </div>
-
-            <div class="mb-3">
-              <label for="status" class="form-label">Status</label>
-
-              <select class="form-select" id="status" name="status" required>
-              
-                    <option selected>Open this select menu</option>
-                    <option value="Pending">Pending</option>                  
-                    <option value="Solved">Solved</option>
-                    <option value="Returned">Returned</option>
-                    <option value="Not Solved">Not Solved</option>
-                    </select>
+                <label for="notes" class="form-label">Notes</label>
+                <input type="text" class="form-control" name="notes" id="notes" value="{{$initems->notes}}">
             </div>
 
             <button type="submit" class="btn btn-primary">Update</button>

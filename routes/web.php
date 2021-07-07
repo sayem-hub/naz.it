@@ -44,6 +44,10 @@ Route::middleware(['auth'])->group(function () {
 
             //Received Route
             Route::get('/received',[App\Http\Controllers\Frontend\HomeController::class, 'received'])->name('received.goods');
+            Route::get('/received/new',[App\Http\Controllers\Frontend\HomeController::class, 'goodsCreate'])->name('received.goods.new');
+            Route::post('/received/new',[App\Http\Controllers\Frontend\HomeController::class, 'goodsStore']);
+
+
 
             //Home Computer Route
             Route::get('/computer-user', [App\Http\Controllers\Frontend\HomeController::class, 'computerUser'])->name('computer.user');

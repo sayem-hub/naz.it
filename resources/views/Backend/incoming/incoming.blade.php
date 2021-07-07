@@ -24,13 +24,13 @@
         <th scope="col">Department</th>
         <th scope="col">Notes</th>
         <th scope="col">Action</th>
-        
+
       </tr>
     </thead>
     <tbody>
-      
+
     @foreach($initems as $key=>$initem)
-          
+
       <tr>
         <th scope="row">{{$key+1}}</th>
         <td>{{$initem->item_name}}</td>
@@ -42,7 +42,7 @@
         <td>{{$initem->pur_date}}</td>
         <td>{{$initem->warranty}}</td>
         <td>{{$initem->challan_no}}</td>
-        <td> <img src="{{asset('upload/challans/'.$initem->challan_img)}}" alt="Not image file"> </td>
+        <td> <img src="{{asset('upload/challans/'.$initem->challan_img)}}" alt="Not image file" width="100px" height="100px"> </td>
         <td>{{$initem->req_no}}</td>
         <td>{{$initem->pur_type}}</td>
         <td>{{$initem->user_name}}</td>
@@ -50,7 +50,7 @@
         <td>{{$initem->notes}}</td>
        <!-- <td>{{$initem->created_at}}</td>
         <td>{{$initem->updated_at}}</td>-->
-        
+
         <td>
           <a class="btn btn-primary" href="{{route('admin.incoming.edit',$initem->id)}}">Edit</a>
           <a class="btn btn-warning" href="{{route('admin.incoming.delete',$initem->id)}}">Delete</a>

@@ -9,17 +9,17 @@ use App\Models\Incoming;
 class IncomingController extends Controller
 {
     public function incoming(){
-        
+
         $initems = Incoming::orderBy('id','desc')->paginate(10);
         return view('Backend.incoming.incoming',compact('initems'));
     }
-    
+
     public function create()
 
     {
         return view('Backend.incoming.create');
     }
-    
+
      public function store(Request $request)
     {
          $challan = $request->file('challan');
@@ -41,25 +41,25 @@ class IncomingController extends Controller
             'user_name'=>$request->input('user'),
             'department'=>$request->input('department'),
             'notes'=>$request->input('notes'),
-                        
+
         ];
-        
+
          Incoming::create($data);
          return redirect()->route('admin.incoming');
     }
-    
+
     public function edit($id)
 
     {
         $initems = Incoming::find($id);
         return view('backend.incoming.edit',compact('initems'));
     }
-    
+
      public function update(Request $request,$id)
 
     {
         $initems = Incoming::find($id);
-            
+
         $data =  [
             'item_name'=>$request->input('itemname'),
             'quantity'=>$request->input('quantity'),
@@ -67,21 +67,21 @@ class IncomingController extends Controller
             'model'=>$request->input('model'),
             'serial_no'=>$request->input('serial'),
             'supplier'=>$request->input('supplier'),
-            'pur_date'=>$request->input('purdate'),
+            'pur_date'=>$request->input('pdate'),
             'warranty'=>$request->input('warranty'),
-            'challan_no'=>$request->input('challanno'),
-            'challan_img'=>$request->input('challan'),
-            'req_no'=>$request->input('reqisitionno'),
-            'pur_type'=>$request->input('purtype'),
+            'challan_no'=>$request->input('challan_no'),
+            'challan_img'=>$request->input('challan_img'),
+            'req_no'=>$request->input('req_no'),
+            'pur_type'=>$request->input('pur_type'),
             'user_name'=>$request->input('user'),
             'department'=>$request->input('department'),
             'notes'=>$request->input('notes'),
         ];
-        
+
         $initems->update($data);
          return redirect()->route('admin.incoming');
     }
-    
+
      public function delete($id)
 
     {
@@ -90,5 +90,5 @@ class IncomingController extends Controller
 
         return redirect()->back();
     }
-     
+
 }
