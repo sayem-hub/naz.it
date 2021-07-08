@@ -39,6 +39,14 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
 
 
+    //RFID Route
+
+        Route::get('/rfid-list',[App\Http\Controllers\Frontend\RfidController::class, 'index'])->name('rfid.index');
+        Route::get('/rfid-list/create',[App\Http\Controllers\Frontend\RfidController::class, 'create'])->name('rfid.create');
+        Route::post('/rfid-list/create',[App\Http\Controllers\Frontend\RfidController::class, 'store']);
+        Route::get('/rfid-list/edit/{id}',[App\Http\Controllers\Frontend\RfidController::class, 'edit'])->name('rfid.edit');
+        Route::post('/rfid-list/create/{id}',[App\Http\Controllers\Frontend\RfidController::class, 'update']);
+
     //FaceID Machine Route
         Route::get('/faceid-list',[App\Http\Controllers\Frontend\FaceidController::class, 'index'])->name('faceid.index');
         Route::get('/faceid-list/create',[App\Http\Controllers\Frontend\FaceidController::class, 'create'])->name('faceid.create');

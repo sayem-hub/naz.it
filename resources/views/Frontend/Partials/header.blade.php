@@ -25,6 +25,8 @@
                             <li><a href="#">Printer</a></li>
                             <li><a href="#">Scanner</a></li>
                             <li class="divider"></li>
+                            <li><a href="{{ route('rfid.index') }}">RF ID Module</a></li>
+                            <li class="divider"></li>
                             <li><a href="#">Sewing Machine</a></li>
 
                         </ul>
