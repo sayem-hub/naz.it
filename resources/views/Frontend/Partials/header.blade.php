@@ -26,7 +26,7 @@
                             <li><a href="#">Scanner</a></li>
                             <li class="divider"></li>
                             <li><a href="#">Sewing Machine</a></li>
-                            <li class="divider"></li>
+
                         </ul>
                     </li>
 
@@ -37,11 +37,28 @@
 					<li><a href="{{ route('kpi.home') }}">KPI Link</a></li>
 
 
-                        @if(auth()->user())
+                    @if(auth()->user())
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Account <span
+                                class="caret"></span></a>
 
-                        <li><a href="{{ route('profile') }}" class="btn-primary app-store">
-                            <i class="fa fa-user"></i> <span>Profile</span> </a></li>
-                            @endif
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a class="dropdown-item" href="{{ route('profile') }}"> Profile</a></li>
+
+                            <li class="divider"></li>
+                            <li><a class="dropdown-item" href="{{ route('logout') }}" >Logout</a></li>
+
+                        </ul>
+                    </li>
+                @endif
+
+
+                    {{-- @if(auth()->user())
+                    <li><a href="{{ route('profile') }}" class="btn-primary app-store">
+                    <i class="fa fa-user"></i> <span>Profile</span> </a></li>
+                    @endif --}}
+
+
 
 				</ul>
 			  </div>

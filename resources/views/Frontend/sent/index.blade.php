@@ -4,7 +4,7 @@
 
 <h3 class="text-center mt-3">Outgoing Item List</h3>
 <a href="{{ route('sent.items.create') }}" class="btn btn-success">Add New Item</a>
-<table class="table">
+<table class="table table-bordered table-hover">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -16,13 +16,13 @@
             <th scope="col">Section</th>
             <th scope="col">Warranty</th>
             <th scope="col">Supplier</th>
-            <th scope="col">Purchase Date</th>
-            <th scope="col">Outgoing Date</th>
+            <th scope="col">Pur. Date</th>
+            <th scope="col">Out Date</th>
             {{--<th scope="col">GP No.</th>--}}
             <th scope="col">Sent For</th>
             <th scope="col">Status</th>
             {{--<th scope="col">Created_at</th>--}}
-            <th scope="col">Updated_at</th>
+            <th scope="col">Entry Date</th>
             {{-- <th scope="col">Action</th> --}}
 
         </tr>
@@ -47,7 +47,7 @@
             <td>{{$item->Sentfor}}</td>
             <td>{{$item->Status}}</td>
             {{--<td>{{$item->created_at}}</td>--}}
-            <td>{{$item->updated_at}}</td>
+            <td>{{$item->created_at->format('Y-m-d')}}</td>
         </tr>
 
         @endforeach

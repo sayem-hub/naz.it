@@ -3,7 +3,7 @@
 
 <h3 class="text-center mt-3">Received Items List</h3>
 <a href={{ route('received.goods.new') }} class="btn btn-success">Add New Item</a>
-<table class="table table-bordered" style="font-size: 15px">
+<table class="table table-bordered table-hover" style="font-size: 15px">
     <thead>
       <tr>
         <th scope="col">#</th>

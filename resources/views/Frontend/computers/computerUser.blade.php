@@ -4,7 +4,7 @@
 
 <h3 class="text-center mt-3">Computer User List</h3>
 <a href="{{route('computer.user.create')}}" class="btn btn-success">Add New Computer</a>
-<table class="table table-striped table-dark">
+<table class="table table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
        <th scope="col">#</th>

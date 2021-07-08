@@ -11,7 +11,7 @@ class FaceidController extends Controller
     public function index()
     {
 
-        $machines = Faceid::orderBy('id', 'desc')->paginate(100);
+        $machines = Faceid::orderBy('id')->paginate(100);
          return view('Frontend.faceID.index', compact('machines'));
     }
 
@@ -23,20 +23,37 @@ class FaceidController extends Controller
 
         public function store(Request $request)
         {
-        $data = [
-            'machine_name' => $request->input('machine_name'),
-            'machine_id' => $request->input('machine_id'),
-            'ip_address' => $request->input('ip_address'),
-            'serial_no' => $request->input('serial_no'),
-            'type' => $request->input('type'),
-            'model' => $request->input('model'),
-            'location' => $request->input('location'),
-            'status' => $request->input('status'),
-        ];
-        Faceid::create($data);
+       try {
+           $request->validate([
+               'machine_name'=> 'required',
+               'machine_id'=> 'required',
+               'ip_address'=> 'required',
+               'serial_no'=> 'required',
+               'type'=> 'required',
+               'model'=> 'required',
+               'location'=> 'required',
+               'status'=> 'required',
+           ]);
 
-        return redirect()->route('faceid.index');
-        }
+            $data = [
+                'machine_name' => $request->input('machine_name'),
+                'machine_id' => $request->input('machine_id'),
+                'ip_address' => $request->input('ip_address'),
+                'serial_no' => $request->input('serial_no'),
+                'type' => $request->input('type'),
+                'model' => $request->input('model'),
+                'location' => $request->input('location'),
+                'status' => $request->input('status'),
+            ];
+            Faceid::create($data);
+
+            return redirect()->route('faceid.index');
+
+       }catch (\Exception $exception) {
+           return redirect()->back()->withErrors($exception->getMessage());
+       }
+
+    }
 
         public function edit($id)
         {
@@ -46,19 +63,37 @@ class FaceidController extends Controller
 
     public function update(Request $request, $id)
     {
-        $machines = Faceid::find($id);
 
-        $data = [
-            'machine_name' => $request->input('machine_name'),
-            'machine_id' => $request->input('machine_id'),
-            'ip_address' => $request->input('ip_address'),
-            'serial_no' => $request->input('serial_no'),
-            'type' => $request->input('type'),
-            'model' => $request->input('model'),
-            'location' => $request->input('location'),
-            'status' => $request->input('status'),
-        ];
-        $machines->update($data);
-        return redirect()->route('faceid.index');
-}
+        try {
+            $request->validate([
+                'machine_name' => 'required',
+                'machine_id' => 'required',
+                'ip_address' => 'required',
+                'serial_no' => 'required',
+                'type' => 'required',
+                'model' => 'required',
+                'location' => 'required',
+                'status' => 'required',
+            ]);
+
+            $machines = Faceid::find($id);
+
+            $data = [
+                'machine_name' => $request->input('machine_name'),
+                'machine_id' => $request->input('machine_id'),
+                'ip_address' => $request->input('ip_address'),
+                'serial_no' => $request->input('serial_no'),
+                'type' => $request->input('type'),
+                'model' => $request->input('model'),
+                'location' => $request->input('location'),
+                'status' => $request->input('status'),
+            ];
+            $machines->update($data);
+            return redirect()->route('faceid.index');
+
+
+        } catch (\Exception $exception) {
+            return redirect()->back()->withErrors($exception->getMessage());
+        }
+    }
 }

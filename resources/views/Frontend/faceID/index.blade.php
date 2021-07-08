@@ -4,7 +4,7 @@
 
 <h3 class="text-center mt-3">Attendance Machine List</h3>
 <a href="{{ route('faceid.create') }}" class="btn btn-success">Add New Machine</a>
-<table class="table table-striped table-dark">
+<table class="table table-bordered table-hover">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -16,6 +16,7 @@
             <th scope="col">Model</th>
             <th scope="col">Location</th>
             <th scope="col">Status</th>
+            <th scope="col">Updated at</th>
             <th scope="col">Action</th>
         </tr>
     </thead>

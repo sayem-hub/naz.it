@@ -7,6 +7,18 @@
     <div class="col-md-4">
 
         <h3 class="text-center mt-3">Add New Machine</h3>
+
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+
+
         <form action="{{route('faceid.create')}}" method="post">
             @csrf
             <div class="mb-3">

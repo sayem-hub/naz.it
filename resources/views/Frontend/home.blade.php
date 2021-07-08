@@ -41,7 +41,7 @@
 
     <!-- phone image -->
     <div class="col-md-6">
-        <img src="{{asset('assets/frontend/images/header-phone.png')}}" alt="phone"
+        <img src="{{asset('assets/frontend/images/header-phone.png')}}" alt="image-missing"
             class="header-phone img-responsive wow fadeInRight">
     </div>
 </div>
