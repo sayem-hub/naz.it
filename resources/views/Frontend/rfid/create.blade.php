@@ -7,9 +7,13 @@
     <div class="col-md-4">
 
         <h3 class="text-center mt-3">Issue New RF ID</h3>
-        @if(session()->has('success'))
-        <div class="alert alert-success">
-            {{ session()->get('success') }}
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
         </div>
         @endif
         <form action="{{route('rfid.create')}}" method="post">
