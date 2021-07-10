@@ -60,7 +60,14 @@
 
             <div class="mb-3">
                 <label for="status" class="form-label">Status</label>
-                <input type="text" class="form-control" name="status" id="status">
+                <select class="form-control" name="status">
+
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                    <option value="In Repair">In Repair</option>
+                    <option value="Damaged">Damaged</option>
+                    <option value="Idle">Idle</option>
+                </select>
             </div>
 
 

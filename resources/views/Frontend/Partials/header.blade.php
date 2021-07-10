@@ -20,6 +20,7 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li><a class="dropdown-item active" href="{{ route('computer.user') }}">Computer Users</a></li>
+                            <li><a class="dropdown-item active" href="{{ route('frontend.pabx.index') }}">PABX Users</a></li>
                             <li><a class="dropdown-item active" href="{{ route('faceid.index') }}">FaceID Machine</a></li>
                             <li><a href="#">Wireless Router</a></li>
                             <li><a href="#">Printer</a></li>

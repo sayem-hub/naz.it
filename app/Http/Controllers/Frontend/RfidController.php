@@ -10,7 +10,7 @@ class RfidController extends Controller
 {
     public function index()
     {
-          $rfids = Rfid::orderBy('id')->paginate(200);
+          $rfids = Rfid::orderBy('id', 'desc')->paginate(300);
         return view('Frontend.rfid.index', compact('rfids'));
         }
         public function create()
@@ -54,7 +54,7 @@ class RfidController extends Controller
 
     public function edit($id)
     {
-
+        $rfids = Rfid::find($id);
         return view('Frontend.rfid.edit', compact('rfids'));
     }
 

@@ -38,14 +38,18 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
     Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
 
-
+//PABX Route
+        Route::get('/pabx-list',[App\Http\Controllers\Frontend\PabxController::class, 'index'])->name('frontend.pabx.index');
+        Route::get('/pabx-list/new',[App\Http\Controllers\Frontend\PabxController::class, 'create'])->name('frontend.pabx.create');
+        Route::post('/pabx-list/new',[App\Http\Controllers\Frontend\PabxController::class, 'store']);
+        Route::get('/pabx-list/edit/{id}', [App\Http\Controllers\Frontend\PabxController::class, 'edit'])->name('frontend.pabx.edit');
+        Route::post('/pabx-list/edit/{id}', [App\Http\Controllers\Frontend\PabxController::class, 'update']);
     //RFID Route
-
         Route::get('/rfid-list',[App\Http\Controllers\Frontend\RfidController::class, 'index'])->name('rfid.index');
         Route::get('/rfid-list/create',[App\Http\Controllers\Frontend\RfidController::class, 'create'])->name('rfid.create');
         Route::post('/rfid-list/create',[App\Http\Controllers\Frontend\RfidController::class, 'store']);
         Route::get('/rfid-list/edit/{id}',[App\Http\Controllers\Frontend\RfidController::class, 'edit'])->name('rfid.edit');
-        Route::post('/rfid-list/create/{id}',[App\Http\Controllers\Frontend\RfidController::class, 'update']);
+        Route::post('/rfid-list/edit/{id}',[App\Http\Controllers\Frontend\RfidController::class, 'update']);
 
     //FaceID Machine Route
         Route::get('/faceid-list',[App\Http\Controllers\Frontend\FaceidController::class, 'index'])->name('faceid.index');

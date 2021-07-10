@@ -18,45 +18,37 @@
         </div>
         @endif
 
-        <form action="{{route('faceid.edit', $machines->id)}}" method="post">
+        <form action="{{route('frontend.pabx.edit', $machines->id)}}" method="post">
             @csrf
             <div class="mb-3">
-                <label for="machine_name" class="form-label">Machine Name</label>
-                <input type="text" class="form-control" name="machine_name" id="machine_name" value="{{ $machines->machine_name }}">
+                <label for="employee_name" class="form-label">Emplyee Name</label>
+                <input type="text" class="form-control" name="employee_name" id="employee_name" value="{{ $machines->employee_name }}">
             </div>
 
             <div class="mb-3">
-                <label for="machine_id" class="form-label">Machine ID</label>
-                <input type="text" class="form-control" name="machine_id" id="machine_id" value="{{ $machines->machine_id }}">
+                <label for="designation" class="form-label">Designation</label>
+                <input type="text" class="form-control" name="designation" id="designation" value="{{ $machines->designation }}">
             </div>
 
             <div class="mb-3">
-                <label for="ip_address" class="form-label">IP Address</label>
-                <input type="text" class="form-control" name="ip_address" id="ip_address" value="{{ $machines->ip_address }}">
+                <label for="section" class="form-label">Section</label>
+                <input type="text" class="form-control" name="section" id="section" value="{{ $machines->section }}">
             </div>
 
             <div class="mb-3">
-                <label for="serial_no" class="form-label">Serial No</label>
-                <input type="text" class="form-control" name="serial_no" id="serial_no" value="{{ $machines->serial_no }}">
+                <label for="department" class="form-label">Department</label>
+                <input type="text" class="form-control" name="department" id="department" value="{{ $machines->department }}">
             </div>
 
-            <div class="mb-3">
-                <label for="type" class="form-label">Machine Type</label>
-                <select class="form-control" name="type">
-                    <option value="{{ $machines->type }}" selected>{{ $machines->type }}</option>
-                    <option value="FaceID" >FaceID</option>
-                    <option value="Finger">Finger</option>
-                </select>
-            </div>
+                    <div class="mb-3">
+                        <label for="pabx_no" class="form-label">PABX No</label>
+                        <input type="text" class="form-control" name="pabx_no" id="pabx_no" value="{{ $machines->pabx_no }}">
+                    </div>
+
 
             <div class="mb-3">
                 <label for="model" class="form-label">Model No</label>
                 <input type="text" class="form-control" name="model" id="model" value="{{ $machines->model }}">
-            </div>
-
-            <div class="mb-3">
-                <label for="location" class="form-label">Location</label>
-                <input type="text" class="form-control" name="location" id="location" value="{{ $machines->location}}">
             </div>
 
 
@@ -70,6 +62,11 @@
                     <option value="Damaged">Damaged</option>
                     <option value="Idle">Idle</option>
                 </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="remarks" class="form-label">Remarks No</label>
+                <input type="text" class="form-control" name="remarks" id="remarks" value="{{ $machines->remarks }}">
             </div>
 
             <button type="submit" class="btn btn-primary">Update</button>

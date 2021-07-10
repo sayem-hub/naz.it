@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRfidsTable extends Migration
+class CreatePabxesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,16 @@ class CreateRfidsTable extends Migration
      */
     public function up()
     {
-        Schema::create('rfids', function (Blueprint $table) {
+        Schema::create('pabxes', function (Blueprint $table) {
             $table->id();
-            $table->string('naz_id');
-            $table->string('name');
+            $table->string('employee_name');
             $table->string('designation');
             $table->string('section');
-            $table->string('rf_id');
-            $table->date('issue_date');
+            $table->string('department');
+            $table->integer('pabx_no');
+            $table->string('model');
             $table->string('status');
-            $table->string('remarks');
+            $table->string('remarks')->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class CreateRfidsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rfids');
+        Schema::dropIfExists('pabxes');
     }
 }

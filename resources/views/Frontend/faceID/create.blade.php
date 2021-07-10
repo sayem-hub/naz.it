@@ -67,6 +67,7 @@
                     <option value="Inactive">Inactive</option>
                     <option value="In Repair">In Repair</option>
                     <option value="Damaged">Damaged</option>
+                    <option value="Idle">Idle</option>
                 </select>
             </div>
 

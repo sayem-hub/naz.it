@@ -45,6 +45,7 @@
                 <option value="Asus 19 Inch">Asus 19 Inch</option>
                 <option value="Dell 22 Inch">Dell 22 Inch</option>
                 <option value="HP 22 Inch">HP 22 Inch</option>
+                <option value="Asus 24 Inch">Asus 24 Inch</option>
                 <option value="Samsung 22 Inch">Samsung 22 Inch</option>
                 <option value="LG 14 Inch">LG 14 Inch</option>
                 <option value="LG 16 Inch">LG 16 Inch</option>

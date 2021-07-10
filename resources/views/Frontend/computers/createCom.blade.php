@@ -31,6 +31,7 @@
                 <select class="form-control" name="ComType">
                     <option value="Desktop">Desktop</option>
                     <option value="Laptop">Laptop</option>
+                    <option value="iMAC">iMAC</option>
                 </select>
 
             </div>
@@ -45,6 +46,7 @@
                     <option value="Asus 19 Inch">Asus 19 Inch</option>
                     <option value="Dell 22 Inch">Dell 22 Inch</option>
                     <option value="HP 22 Inch">HP 22 Inch</option>
+                    <option value="Asus 24 Inch">Asus 24 Inch</option>
                     <option value="Samsung 22 Inch">Samsung 22 Inch</option>
                     <option value="LG 14 Inch">LG 14 Inch</option>
                     <option value="LG 16 Inch">LG 16 Inch</option>
@@ -53,6 +55,7 @@
                     <option value="Acer 19 Inch">Acer 19 Inch</option>
                     <option value="Asus 16 Inch">Asus 16 Inch</option>
                     <option value="Benq 14 Inch">Benq 14 Inch</option>
+                    <option value="Dell 24 Inch">Dell 24 Inch</option>
                 </select>
             </div>
 
@@ -144,6 +147,9 @@
                     <option value="Washing">Washing</option>
                     <option value="ETP">ETP</option>
                     <option value="Batch">Batch</option>
+                    <option value="Design">Design</option>
+                    <option value="Embroidery">Embroidery</option>
+                    <option value="Printing">Printing</option>
                 </select>
             </div>
 
@@ -163,6 +169,8 @@
                     <option value="All Over Print">All Over Print</option>
                     <option value="Store">Store</option>
                     <option value="NZ Accessories">NZ Accessories</option>
+                    <option value="Embroidery">Embroidery</option>
+                    <option value="Printing">Printing</option>
                 </select>
             </div>
 
