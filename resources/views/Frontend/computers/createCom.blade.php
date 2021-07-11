@@ -179,7 +179,7 @@
                 <select class="form-control" name="Status">
                     <option value="Running" selected>Running</option>
                     <option value="Idle">Idle</option>
-                    <option value="On Repair">On Repair</option>
+                    <option value="In Repair">On Repair</option>
                 </select>
             </div>
 
