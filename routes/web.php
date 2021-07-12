@@ -50,6 +50,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/rfid-list/create',[App\Http\Controllers\Frontend\RfidController::class, 'store']);
         Route::get('/rfid-list/edit/{id}',[App\Http\Controllers\Frontend\RfidController::class, 'edit'])->name('rfid.edit');
         Route::post('/rfid-list/edit/{id}',[App\Http\Controllers\Frontend\RfidController::class, 'update']);
+        Route::get('/rfid-list/search',[App\Http\Controllers\Frontend\SearchController::class, 'rfidSearch'])->name('rfid.search');
 
     //FaceID Machine Route
         Route::get('/faceid-list',[App\Http\Controllers\Frontend\FaceidController::class, 'index'])->name('faceid.index');

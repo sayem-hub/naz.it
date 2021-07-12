@@ -2,7 +2,23 @@
 @section('main')
 
 <h3 class="text-center mt-3">Issued RF ID List</h3>
-<a href={{ route('rfid.create') }} class="btn btn-success">Issue New ID</a>
+
+
+<form action="{{ route('rfid.search') }}" method="GET">
+<div class="form-group">
+    <a href={{ route('rfid.create') }} class="btn btn-success">Issue New ID</a>
+<div class="form-group">
+        <label for="search" class="form-label">Enter keywords</label>
+        <input type="text" class="form-control" name="query" placeholder="Search by NAZ ID or RF ID" value="{{ request()->input('query') }}">
+        <span class="text-danger">@error('query'){{ $message }}@enderror</span>
+</div>
+
+<div class="form-group">
+    <button type="submit" class="btn btn-info">Search</button>
+</div>
+</form>
+
+
 <table class="table table-bordered table-hover" style="font-size: 15px">
     <thead>
       <tr>
