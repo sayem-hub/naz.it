@@ -2,8 +2,27 @@
 @section('main')
 
 <h3 class="text-center mt-3">Received Items List</h3>
-<a href={{ route('received.goods.new') }} class="btn btn-success">Add New Item</a>
-<table class="table table-bordered table-hover" style="font-size: 15px">
+
+
+<form action="{{ route('received.goods.search') }}" method="GET">
+    <div class="form-group">
+        <a href={{ route('received.goods.new') }} class="btn btn-success">Add New Item</a>
+        <div class="form-group">
+            <label for="search" class="form-label">Enter keywords</label>
+            <input type="text" class="form-control" name="query" placeholder="Search by Serial No. or User name"
+                value="{{ request()->input('query') }}">
+            <span class="text-danger">@error('query'){{ $message }}@enderror</span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-info">Search</button>
+        </div>
+    </div>
+</form>
+
+
+
+<table class="table table-bordered table-hover" style="font-size: 13px">
     <thead>
       <tr>
         <th scope="col">#</th>

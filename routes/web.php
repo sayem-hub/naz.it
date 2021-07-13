@@ -69,6 +69,7 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/received-items',[App\Http\Controllers\Frontend\HomeController::class, 'received'])->name('received.goods');
             Route::get('/received-items/new',[App\Http\Controllers\Frontend\HomeController::class, 'goodsCreate'])->name('received.goods.new');
             Route::post('/received-items/new',[App\Http\Controllers\Frontend\HomeController::class, 'goodsStore']);
+            Route::get('/received-items/search',[App\Http\Controllers\Frontend\SearchController::class, 'receivedSearch'])->name('received.goods.search');
 
             //Sent Route
             Route::get('/sent-items',[App\Http\Controllers\Frontend\HomeController::class, 'sentItem'])->name('sent.items');
@@ -83,6 +84,7 @@ Route::middleware(['auth'])->group(function () {
             Route::post('/computer/create', [App\Http\Controllers\Frontend\HomeController::class, 'store']);
             Route::get('/computer/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'edit'])->name('computer.user.edit');
             Route::post('/computer/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'update']);
+            Route::get('/computer/search', [App\Http\Controllers\Frontend\SearchController::class, 'compSearch'])->name('computer.search');
 
             //Home CC Camera Route
             Route::get('/cc-camera', [App\Http\Controllers\Frontend\HomeController::class, 'ccamera'])->name('cc-camera');

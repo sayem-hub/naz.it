@@ -2,8 +2,28 @@
 
 @section('main')
 
-<h3 class="text-center mt-3">Computer User List</h3>
+<h3 class="text-center mt-3">Computer Users List</h3>
+
+<form action="{{ route('computer.search') }}" method="GET">
+    <div class="form-group">
 <a href="{{route('computer.user.create')}}" class="btn btn-success">Add New Computer</a>
+        <div class="form-group">
+            <label for="search" class="form-label">Enter keywords</label>
+            <input type="text" class="form-control" name="query" placeholder="Search by Name or Department"
+                value="{{ request()->input('query') }}">
+            <span class="text-danger">@error('query'){{ $message }}@enderror</span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-info">Search</button>
+        </div>
+    </div>
+</form>
+
+
+
+
+
 <table class="table table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
