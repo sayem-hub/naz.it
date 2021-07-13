@@ -32,7 +32,7 @@
         <th scope="col">Model</th>
         <th scope="col">Serial No.</th>
         <th scope="col">Supplier</th>
-        <th scope="col">Puchase Date</th>
+        <th scope="col">Purchase Date</th>
         <th scope="col">Warranty</th>
         <th scope="col">Challan No.</th>
         <th scope="col">Challan</th>
@@ -60,7 +60,7 @@
         <td>{{$received->pur_date}}</td>
         <td>{{$received->warranty}}</td>
         <td>{{$received->challan_no}}</td>
-        <td> <img src="{{asset('upload/challans/'.$received->challan_img)}}" alt="Not image file" width="100px" height="100px"> </td>
+        <td> <img src="{{asset('upload/challans/'.$received->challan_img)}}" alt="Not image file" width="100px" height="65px"> </td>
         <td>{{$received->req_no}}</td>
         <td>{{$received->pur_type}}</td>
         <td>{{$received->user_name}}</td>
@@ -70,7 +70,7 @@
         <td>{{$received->updated_at}}</td>-->
 
         {{-- <td>
-          <a class="btn btn-primary" href="#">Edit</a>
+          <a class="btn btn-secondary" href="#">Edit</a>
         </td>--}}
       </tr>
 

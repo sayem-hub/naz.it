@@ -20,11 +20,7 @@
     </div>
 </form>
 
-
-
-
-
-<table class="table table-bordered table-hover">
+<table class="table table-bordered table-hover" style="font-size: 14px">
     <thead class="thead-dark">
       <tr>
        <th scope="col">#</th>
@@ -56,7 +52,7 @@
         <td>{{$user->Department}}</td>
         <td>{{$user->Status}}</td>
         <td>
-          <a class="btn btn-primary" href="{{route('computer.user.edit',$user->id)}}">Edit</a>
+          <a class="btn btn-secondary" href="{{route('computer.user.edit',$user->id)}}">Edit</a>
 
         </td>
       </tr>

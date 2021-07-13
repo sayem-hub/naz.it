@@ -36,7 +36,7 @@
             <td>{{$machine->status}}</td>
             <td>{{$machine->updated_at->format('Y-m-d')}}</td>
             <td>
-                <a class="btn btn-primary" href="{{ route('faceid.edit', $machine->id)}}">Edit</a>
+                <a class="btn btn-secondary" href="{{ route('faceid.edit', $machine->id)}}">Edit</a>
             </td>
         </tr>
 

@@ -69,7 +69,7 @@
                 <input type="text" class="form-control" name="remarks" id="remarks" value="{{ $machines->remarks }}">
             </div>
 
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-secondary">Update</button>
         </form>
     </div>
 </div>
