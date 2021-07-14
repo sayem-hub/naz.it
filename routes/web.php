@@ -85,6 +85,8 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/computer/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'edit'])->name('computer.user.edit');
             Route::post('/computer/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'update']);
             Route::get('/computer/search', [App\Http\Controllers\Frontend\SearchController::class, 'compSearch'])->name('computer.search');
+            Route::get('/computer-user/previewPdf', [App\Http\Controllers\Frontend\PdfController::class, 'compPdf'])->name('computer.pdf');
+            Route::get('/computer-user/generatePDF', [App\Http\Controllers\Frontend\PdfController::class, 'generatePDF'])->name('pdf.generate');
 
             //Home CC Camera Route
             Route::get('/cc-camera', [App\Http\Controllers\Frontend\HomeController::class, 'ccamera'])->name('cc-camera');
