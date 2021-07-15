@@ -1,17 +1,22 @@
 @extends('layouts.frontend')
 @section('main')
 
-<h3 class="text-center mt-3">Received Items List</h3>
 
+<div class="row">
+<div class="col-md-0"></div>
+<div class="col-md-13">
+
+<h3 class="text-center mt-3">Received Items List</h3>
 
 <form action="{{ route('received.goods.search') }}" method="GET">
     <div class="form-group">
         <a href={{ route('received.goods.new') }} class="btn btn-success">Add New Item</a>
-        <div class="form-group">
+        <div class="form-group row" >
+            <div class="col-xs-3">
             <label for="search" class="form-label">Enter keywords</label>
-            <input type="text" class="form-control" name="query" placeholder="Search by Serial No. or User name"
-                value="{{ request()->input('query') }}">
+            <input type="text" class="form-control" name="query" placeholder="Search by Serial No. or User name" value="{{ request()->input('query') }}">
             <span class="text-danger">@error('query'){{ $message }}@enderror</span>
+            </div>
         </div>
 
         <div class="form-group">
@@ -19,8 +24,6 @@
         </div>
     </div>
 </form>
-
-
 
 <table class="table table-bordered table-hover" style="font-size: 13px">
     <thead>
@@ -40,7 +43,7 @@
         <th scope="col">P.Type</th>
         <th scope="col">User</th>
         <th scope="col">Department</th>
-        <th scope="col">Notes</th>
+        {{-- <th scope="col">Notes</th> --}}
         {{-- <th scope="col">Action</th> --}}
 
       </tr>
@@ -65,7 +68,7 @@
         <td>{{$received->pur_type}}</td>
         <td>{{$received->user_name}}</td>
         <td>{{$received->department}}</td>
-        <td>{{$received->notes}}</td>
+        {{-- <td>{{$received->notes}}</td> --}}
        <!-- <td>{{$received->created_at}}</td>
         <td>{{$received->updated_at}}</td>-->
 
@@ -78,8 +81,8 @@
 
     </tbody>
   </table>
-  {{$incoming->links('pagination::bootstrap-4')}}
-
+</div>
+</div>
 @endsection
 
 

@@ -82,7 +82,7 @@
                         <option selected>{{ auth()->user()->company }}</option>
                         <option value="NAZ Bangladesh Ltd.">NAZ Bangladesh Ltd.</option>
                         <option value="CA Knitwear Ltd.">CA Knitwear Ltd.</option>
-                        <option value="NZ HO">NZ HO</option>
+                        {{-- <option value="NZ HO">NZ HO</option> --}}
                     </select>
                 </div>
 

@@ -42,7 +42,8 @@
             <div class="mb-3">
                 <label for="Brand" class="form-label">Brand</label>
                 <select class="form-control" name="Brand">
-                    <option value="HP" selected>HP</option>
+                    <option value="" selected></option>
+                    <option value="HP">HP</option>
                     <option value="Dell">Dell</option>
                     <option value="Asus">Asus</option>
                     <option value="Acer">Acer</option>

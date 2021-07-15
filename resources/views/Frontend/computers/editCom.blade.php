@@ -43,7 +43,7 @@
                 <div class="mb-3">
                     <label for="Brand" class="form-label">Brand</label>
                     <select class="form-control" name="Brand">
-                        <option value={{$computer->Brand}} selected>{{$computer->Brand}}</option>
+                        <option value={{$computer->Brand}}>{{$computer->Brand}}</option>
                         <option value="HP">HP</option>
                         <option value="Dell">Dell</option>
                         <option value="Asus">Asus</option>
@@ -177,6 +177,7 @@
                     <option value="Design">Design</option>
                     <option value="Embroidery">Embroidery</option>
                     <option value="Printing">Printing</option>
+                    <option value="Security">Security</option>
                 </select>
             </div>
 
@@ -197,6 +198,7 @@
                     <option value="NZ Accessories">NZ Accessories</option>
                     <option value="Embroidery">Embroidery</option>
                     <option value="Printing">Printing</option>
+                    <option value="Admin">Admin</option>
 
                 </select>
             </div>
