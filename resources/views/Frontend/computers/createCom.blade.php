@@ -12,7 +12,11 @@
            <div class="mb-3">
                 <label for="ComputerID" class="form-label">Computer ID</label>
                 <input type="text" class="form-control" name="ComputerID" id="ComputerID">
+            </div>
 
+            <div class="mb-3">
+                <label for="EmployeeID" class="form-label">Employee ID</label>
+                <input type="text" class="form-control" name="Emp_id" id="EmployeeID">
             </div>
 
             <div class="mb-3">
@@ -29,15 +33,30 @@
             <div class="mb-3">
                 <label for="ComType" class="form-label">Computer Type</label>
                 <select class="form-control" name="ComType">
-                    <option value="Desktop">Desktop</option>
+                    <option value="Desktop" selected>Desktop</option>
                     <option value="Laptop">Laptop</option>
                     <option value="iMAC">iMAC</option>
                 </select>
-
             </div>
 
             <div class="mb-3">
-                <label for="Monitor" class="form-label">Monitor</label>
+                <label for="Brand" class="form-label">Brand</label>
+                <select class="form-control" name="Brand">
+                    <option value="HP" selected>HP</option>
+                    <option value="Dell">Dell</option>
+                    <option value="Asus">Asus</option>
+                    <option value="Acer">Acer</option>
+                    <option value="Lenovo">Lenovo</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="Spec" class="form-label">Specification</label>
+                <input type="text" class="form-control" name="Spec" id="Spec" placeholder="Processor model, RAM size, HDD/SSD Size">
+            </div>
+
+            <div class="mb-3">
+                <label for="Monitor" class="form-label">Monitor/Display</label>
                 <select class="form-control" name="Monitor">
                     <option value="Dell 19 Inch" selected>Dell 19 Inch</option>
                     <option value="HP 19 Inch">HP 19 Inch</option>
@@ -56,12 +75,15 @@
                     <option value="Asus 16 Inch">Asus 16 Inch</option>
                     <option value="Benq 14 Inch">Benq 14 Inch</option>
                     <option value="Dell 24 Inch">Dell 24 Inch</option>
+                    <option value=" Lap-14.1 Inch">Lap-14.1 Inch</option>
+                    <option value=" Lap-15.6 Inch">Lap-15.6 Inch</option>
                 </select>
             </div>
 
             <div class="mb-3">
                 <label for="Mouse" class="form-label">Mouse</label>
                 <select class="form-control" name="Mouse">
+                    <option value="N/A">N/A</option>
                     <option value="A4TECH" selected>A4TECH</option>
                     <option value="Logitech">Logitech</option>
                     <option value="Delux">Delux</option>
@@ -75,6 +97,7 @@
             <div class="mb-3">
                 <label for="Keyboard" class="form-label" >Keyboard</label>
                 <select class="form-control" name="Keyboard">
+                    <option value="N/A">N/A</option>
                     <option value="A4TECH" selected>A4TECH</option>
                     <option value="Logitech">Logitech</option>
                     <option value="Delux">Delux</option>
@@ -189,7 +212,7 @@
             </div>
 
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Create</button>
           </form>
 
     </div>

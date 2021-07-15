@@ -12,7 +12,11 @@
             <div class="mb-3">
                 <label for="ComputerID" class="form-label">Computer ID</label>
                 <input type="text" class="form-control" name="ComputerID" id="ComputerID" value="{{$computer->Comid}}">
+            </div>
 
+            <div class="mb-3">
+                <label for="EmployeeID" class="form-label">Employee ID</label>
+                <input type="text" class="form-control" name="Emp_id" id="EmployeeID">
             </div>
 
             <div class="mb-3">
@@ -35,8 +39,26 @@
                     <option value="iMAC">iMAC</option>
                 </select>
             </div>
+
+                <div class="mb-3">
+                    <label for="Brand" class="form-label">Brand</label>
+                    <select class="form-control" name="Brand">
+                        <option value={{$computer->Brand}} selected>{{$computer->Brand}}</option>
+                        <option value="HP">HP</option>
+                        <option value="Dell">Dell</option>
+                        <option value="Asus">Asus</option>
+                        <option value="Acer">Acer</option>
+                        <option value="Lenovo">Lenovo</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Spec" class="form-label">Specification</label>
+                    <input type="text" class="form-control" name="Spec" id="Spec" value="{{ $computer->Spec }}">
+                </div>
+
             <div class="mb-3">
-                <label for="Monitor" class="form-label">Monitor</label>
+                <label for="Monitor" class="form-label">Monitor/Display</label>
                 <select class="form-control" name="Monitor">
                     <option value="{{$computer->Monitor}}" selected>{{$computer->Monitor}}</option>
                     <option value="Dell 19 Inch">Dell 19 Inch</option>
@@ -56,6 +78,8 @@
                     <option value="Asus 16 Inch">Asus 16 Inch</option>
                     <option value="Benq 14 Inch">Benq 14 Inch</option>
                     <option value="Dell 24 Inch">Dell 24 Inch</option>
+                    <option value=" Lap-14.1 Inch">Lap-14.1 Inch</option>
+                    <option value=" Lap-15.6 Inch">Lap-15.6 Inch</option>
                 </select>
             </div>
 
@@ -63,6 +87,7 @@
                 <label for="Mouse	" class="form-label">Mouse</label>
                 <select class="form-control" name="Mouse">
                     <option value="{{$computer->Mouse}}" selected>{{$computer->Mouse}}</option>
+                    <option value="N/A">N/A</option>
                     <option value="A4TECH">A4TECH</option>
                     <option value="Logitech">Logitech</option>
                     <option value="Delux">Delux</option>
@@ -77,6 +102,7 @@
                 <label for="Keyboard" class="form-label">Keyboard</label>
                 <select class="form-control" name="Keyboard">
                     <option value="{{$computer->Keyboard}}" selected>{{$computer->Keyboard}}</option>
+                    <option value="N/A">N/A</option>
                     <option value="A4TECH">A4TECH</option>
                     <option value="Logitech">Logitech</option>
                     <option value="Delux">Delux</option>
@@ -181,7 +207,7 @@
                     <option value="{{$computer->Status}}" selected>{{$computer->Status}}</option>
                     <option value="Running">Running</option>
                     <option value="Idle">Idle</option>
-                    <option value="In Repair">On Repair</option>
+                    <option value="In Repair">In Repair</option>
                 </select>
             </div>
 
@@ -189,7 +215,7 @@
                 <label for="Remarks" class="form-label">Remarks</label>
                 <input type="text" class="form-control" name="Remarks" id="Remarks" value="{{$computer->Remarks}}">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Update</button>
           </form>
 
     </div>

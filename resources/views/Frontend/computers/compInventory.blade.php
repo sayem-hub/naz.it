@@ -45,7 +45,7 @@
         .styled-table {
         border-collapse: collapse;
         margin: 15px 0;
-        font-size: 0.7em;
+        font-size: 0.6em;
         font-family: sans-serif;
         min-width: 400px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -108,6 +108,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Computer ID</th>
+                <th scope="col">Employee ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Designation</th>
                 {{-- <th scope="col">IP Address</th> --}}
@@ -124,6 +125,7 @@
             <tr>
                 <th scope="row">{{$key+1}}</th>
                 <td>{{$user->Comid}}</td>
+                <td>{{$user->Emp_id}}</td>
                 <td>{{$user->User}}</td>
                 <td>{{$user->Designation}}</td>
                 {{-- <td>{{$user->Ipadd}}</td> --}}

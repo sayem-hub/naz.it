@@ -68,7 +68,7 @@ class UserController extends Controller
                 'office_id' => $request->input('office_id'),
                 'phone' => $request->input('phone'),
                 'email' => $request->input('email'),
-                'password' => Hash::make('User#852'),
+                'password' => Hash::make('User#850'),
                 'department' => $request->input('department'),
                 'section' => $request->input('section'),
                 'company' => $request->input('company'),

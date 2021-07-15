@@ -7,7 +7,8 @@
     <thead class="thead-dark">
         <tr>
             <th scope="col">#</th>
-            <th scope="col">ID</th>
+            <th scope="col">ComID</th>
+            <th scope="col">EmpID</th>
             <th scope="col">Name</th>
             <th scope="col">Designation</th>
             <th scope="col">IP Address</th>
@@ -27,6 +28,7 @@
         <tr>
             <th scope="row">{{$key+1}}</th>
             <td>{{$user->Comid}}</td>
+            <td>{{$user->Emp_id}}</td>
             <td>{{$user->User}}</td>
             <td>{{$user->Designation}}</td>
             <td>{{$user->Ipadd}}</td>

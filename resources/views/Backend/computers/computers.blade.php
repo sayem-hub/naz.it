@@ -9,6 +9,7 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Computer ID</th>
+        <th scope="col">Employee ID</th>
         <th scope="col">Name</th>
         <th scope="col">Designation</th>
         <th scope="col">IP Address</th>
@@ -18,16 +19,17 @@
         <th scope="col">Status</th>
         <th scope="col">Updated at</th>
         <th scope="col">Action</th>
-        
+
       </tr>
     </thead>
     <tbody>
-      
+
       @foreach($computers as $key=>$user)
-          
+
       <tr>
         <th scope="row">{{$key+1}}</th>
         <td>{{$user->Comid}}</td>
+        <td>{{$user->Emp_id}}</td>
         <td>{{$user->User}}</td>
         <td>{{$user->Designation}}</td>
         <td>{{$user->Ipadd}}</td>
@@ -36,7 +38,7 @@
         <td>{{$user->Department}}</td>
         <td>{{$user->Status}}</td>
         <td>{{$user->updated_at}}</td>
-        
+
         <td>
           <a class="btn btn-primary" href="{{route('admin.computer.edit',$user->id)}}">Edit</a>
           <a class="btn btn-warning" href="{{route('admin.computer.delete',$user->id)}}">Delete</a>

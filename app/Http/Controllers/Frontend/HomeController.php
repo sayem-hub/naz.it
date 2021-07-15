@@ -22,7 +22,7 @@ class HomeController extends Controller
 
     public function computerUser()
     {
-        $computers = Computer::orderBy('id','desc')->paginate(20);
+        $computers = Computer::orderBy('id','desc')->paginate(300);
         return view('Frontend.computers.computerUser',compact('computers'));
     }
 
@@ -36,9 +36,12 @@ class HomeController extends Controller
 
         $data = [
             'Comid' => $request->input('ComputerID'),
+            'Emp_id' => $request->input('Emp_id'),
             'User' => $request->input('User'),
             'Designation' => $request->input('Designation'),
             'Comtype' => $request->input('ComType'),
+            'Brand' => $request->input('Brand'),
+            'Spec' => $request->input('Spec'),
             'Monitor' => $request->input('Monitor'),
             'Keyboard' => $request->input('Keyboard'),
             'Mouse' => $request->input('Mouse'),
@@ -68,9 +71,12 @@ class HomeController extends Controller
 
         $data = [
             'Comid' => $request->input('ComputerID'),
+            'Emp_id' => $request->input('Emp_id'),
             'User' => $request->input('User'),
             'Designation' => $request->input('Designation'),
             'ComType' => $request->input('ComType'),
+            'Brand' => $request->input('Brand'),
+            'Spec' => $request->input('Spec'),
             'Monitor' => $request->input('Monitor'),
             'Keyboard' => $request->input('Keyboard'),
             'Mouse' => $request->input('Mouse'),
