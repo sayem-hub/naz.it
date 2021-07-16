@@ -2,35 +2,30 @@
 
 @section('main')
 
-<h3 class="text-center mt-3">Computer Users List</h3>
+<div class="row">
+    <div class="col-md-0"></div>
+    <div class="col-md-13">
+
+        <h3 class="text-center mt-3">Computer Users List</h3>
+
+        <form action="{{ route('computer.search') }}" method="GET">
+            <div class="form-group">
+                <a href={{ route('computer.user.create') }} class="btn btn-success">Add New Computer</a>
+                <a href="{{route('pdf.generate')}}" class="btn btn-warning btn-sm">Generate PDF</a>
+                <div class="form-group row"><br>
+                    <div class="col-xs-3">
+
+                        <input type="text" class="form-control" name="query" placeholder="Name or Department"
+                            value="{{ request()->input('query') }}">
+                        <span class="text-danger">@error('query'){{ $message }}@enderror</span>
 
 
-<div class="col-md-0"></div>
-    <div class="col-md-1">
-
-<div class="pdf" style=margin-top:10px;>
-    <a href="{{route('computer.user.create')}}" class="btn btn-success">Add New Computer</a>
-    {{-- <a href="{{route('computer.pdf')}}" class="btn btn-danger btn-sm">Preview PDF</a> --}}
-    <a href="{{route('pdf.generate')}}" class="btn btn-warning btn-sm">Generate PDF</a>
-</div>
-</div>
-
-
-
-    <div class="row">
-            <div class="col-md-9" ></div>
-            <div class="col-md-0">
-<form action="{{ route('computer.search') }}" method="GET">
-
-                <div class="input-group">
-                    <input type="text" class="form-control rounded" name= "query" placeholder="Name or Department" aria-label="Search"
-                        aria-describedby="search-addon" value="{{ request()->input('query') }}"/>
-                    <button type="submit" class="btn btn-outline-primary">Search</button>
-                    <span class="text-danger">@error('query'){{ $message }}@enderror</span>
+                    </div>
+                    <button type="submit" class="btn btn-info">Search</button>
                 </div>
-                </div>
-        </form>
+
             </div>
+        </form>
 
 
 
@@ -77,6 +72,8 @@
 
     </tbody>
   </table>
+    </div>
+</div>
   {{-- {{$computers->links('pagination::bootstrap-4')}} --}}
 
 @endsection

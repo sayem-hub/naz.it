@@ -2822,7 +2822,13 @@ input[type=submit].btn-block,input[type=reset].btn-block,input[type=button].btn-
     padding-left:0;
     padding-right:0
 }
-.input-group .form-control{
+
+.input-group{
+float:left;
+width:100%;
+margin-bottom:0
+}
+ .form-control{
     float:left;
     width:100%;
     margin-bottom:0

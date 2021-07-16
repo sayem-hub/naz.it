@@ -10,18 +10,18 @@
 
 <form action="{{ route('received.goods.search') }}" method="GET">
     <div class="form-group">
-        <a href={{ route('received.goods.new') }} class="btn btn-success">Add New Item</a>
-        <div class="form-group row" >
+        <a  href={{ route('received.goods.new') }} class="btn btn-success">Add New Item</a>
+        <div class="form-group row" ><br>
             <div class="col-xs-3">
-            <label for="search" class="form-label">Enter keywords</label>
-            <input type="text" class="form-control" name="query" placeholder="Search by Serial No. or User name" value="{{ request()->input('query') }}">
-            <span class="text-danger">@error('query'){{ $message }}@enderror</span>
-            </div>
-        </div>
 
-        <div class="form-group">
+            <input type="text" class="form-control" name="query" placeholder="Serial No. or User name" value="{{ request()->input('query') }}">
+            <span class="text-danger">@error('query'){{ $message }}@enderror</span>
+
+
+            </div>
             <button type="submit" class="btn btn-info">Search</button>
         </div>
+
     </div>
 </form>
 

@@ -29,6 +29,8 @@
                             <li><a href="{{ route('rfid.index') }}">RF ID Module</a></li>
                             <li class="divider"></li>
                             <li><a href="#">Sewing Machine</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">IT Policy</a></li>
 
                         </ul>
                     </li>
