@@ -174,6 +174,8 @@
                     <option value="Design">Design</option>
                     <option value="Embroidery">Embroidery</option>
                     <option value="Printing">Printing</option>
+                    <option value="Store">Store</option>
+                    <option value="Maintenance">Maintenance</option>
                 </select>
             </div>
 

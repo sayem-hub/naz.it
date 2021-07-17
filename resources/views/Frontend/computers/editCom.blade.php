@@ -16,7 +16,7 @@
 
             <div class="mb-3">
                 <label for="EmployeeID" class="form-label">Employee ID</label>
-                <input type="text" class="form-control" name="Emp_id" id="EmployeeID">
+                <input type="text" class="form-control" name="Emp_id" id="EmployeeID" value="{{$computer->Emp_id}}">
             </div>
 
             <div class="mb-3">
@@ -178,6 +178,8 @@
                     <option value="Embroidery">Embroidery</option>
                     <option value="Printing">Printing</option>
                     <option value="Security">Security</option>
+                    <option value="Store">Store</option>
+                    <option value="Maintenance">Maintenance</option>
                 </select>
             </div>
 

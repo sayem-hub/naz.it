@@ -38,15 +38,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
     Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
 
-
-    //Router & Switch Route
-
-    Route::get('/router-list',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerIndex'])->name('router.index');
-    Route::get('/router/create',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerCreate'])->name('router.create');
-    Route::post('/router/create',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerStore'])->name('router.store');
-    Route::get('/router/edit/{id}', [App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerEdit'])->name('router.edit');
-    Route::post('/router/edit/{id}', [App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerUpdate']);
-
     //Printer & Scanner Route
 
     Route::get('/printers-list',[App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerIndex'])->name('printer.index');
@@ -55,11 +46,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/printer/edit/{id}', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerEdit'])->name('printer.edit');
     Route::post('/printer/edit/{id}', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerUpdate']);
 
-    Route::get('/scanner-list', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scannerIndex'])->name('scanner.index');
-    Route::get('/scanner/create', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scannerCreate'])->name('scanner.create');
+    Route::get('/scanner-list', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerIndex'])->name('scanner.index');
+    Route::get('/scanner/create', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scanner'])->name('scanner.create');
     Route::post('/scanner/create', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scannerStore']);
-    Route::get('/scanner/edit/{id}', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scannerEdit'])->name('scanner.edit');
-    Route::post('/scanner/edit/{id}', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scannerStore']);
+    Route::get('/scanner/edit/{id}', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scanner'])->name('scanner.edit');
+    Route::post('/scanner/edit/{id}', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scanner']);
 
 //PABX Route
         Route::get('/pabx-list',[App\Http\Controllers\Frontend\PabxController::class, 'index'])->name('frontend.pabx.index');
