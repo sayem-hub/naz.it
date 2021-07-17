@@ -40,7 +40,7 @@
             <td>{{$rfid->status}}</td>
             <td>{{$rfid->remarks}}</td>
             <td>{{$rfid->created_at}}</td>
-            <td><a class="btn btn-primary" href="{{ route('rfid.edit', $rfid->id) }}">Edit</a></td>
+            <td><a class="btn btn-secondary" href="{{ route('rfid.edit', $rfid->id) }}">Edit</a></td>
         </tr>
 
         @endforeach

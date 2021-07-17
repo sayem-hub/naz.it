@@ -37,7 +37,7 @@
             <td>{{$user->Department}}</td>
             <td>{{$user->Status}}</td>
             <td>
-                <a class="btn btn-primary" href="{{route('computer.user.edit',$user->id)}}">Edit</a>
+                <a class="btn btn-secondary" href="{{route('computer.user.edit',$user->id)}}">Edit</a>
 
             </td>
         </tr>
