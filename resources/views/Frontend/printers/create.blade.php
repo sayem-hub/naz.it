@@ -42,6 +42,11 @@
             </div>
 
             <div class="mb-3">
+                <label for="serial_no" class="form-label">Serial No </label>
+                <input type="text" class="form-control" name="serial_no" id="serial_no">
+            </div>
+
+            <div class="mb-3">
                 <label for="function" class="form-label">Function</label>
                 <select class="form-control" name="function">
                     <option value="" selected>---Select Printer Function---</option>

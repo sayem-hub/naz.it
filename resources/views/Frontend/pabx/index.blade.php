@@ -4,7 +4,7 @@
 
 <h3 class="text-center mt-3">PABX Users List</h3>
 <a href="{{ route('frontend.pabx.create') }}" class="btn btn-success">Add New PABX</a>
-<table class="table table-bordered table-hover">
+<table class="table table-bordered table-hover" style="font-size: 14px">
     <thead>
         <tr>
             <th scope="col">#</th>

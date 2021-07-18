@@ -25,13 +25,14 @@
         <th scope="col">Printer ID</th>
         <th scope="col">Brand</th>
         <th scope="col">Model</th>
+        <th scope="col">Serial No</th>
         <th scope="col">Function</th>
         <th scope="col">Section</th>
         <th scope="col">Department</th>
         <th scope="col">User</th>
         <th scope="col">Service Type</th>
         <th scope="col">Status</th>
-        <th scope="col">Remarks</th>
+        {{-- <th scope="col">Remarks</th> --}}
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -44,13 +45,14 @@
         <td>{{$print->printer_id}}</td>
         <td>{{$print->printer_brand}}</td>
         <td>{{$print->printer_model}}</td>
+        <td>{{$print->serial_no}}</td>
         <td>{{$print->function}}</td>
         <td>{{$print->section}}</td>
         <td>{{$print->department}}</td>
         <td>{{$print->user}}</td>
         <td>{{$print->service_type}}</td>
         <td>{{$print->status}}</td>
-        <td>{{$print->remarks}}</td>
+        {{-- <td>{{$print->remarks}}</td> --}}
         <td>
           <a class="btn btn-secondary" href="{{route('printer.edit',$print->id)}}">Edit</a>
 

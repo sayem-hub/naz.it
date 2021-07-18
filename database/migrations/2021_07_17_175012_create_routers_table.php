@@ -20,7 +20,7 @@ class CreateRoutersTable extends Migration
             $table->string('brand');
             $table->string('model');
             $table->string('ssid');
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->string('ip_address');
             $table->string('location');
             $table->string('status');

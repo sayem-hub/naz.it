@@ -18,6 +18,7 @@ class CreatePrintersTable extends Migration
             $table->string('printer_id')->unique();
             $table->string('printer_brand');
             $table->string('printer_model');
+            $table->string('serial_no')->unique()->nullable();
             $table->string('function');
             $table->string('section');
             $table->string('department');

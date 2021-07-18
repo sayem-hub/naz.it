@@ -22,7 +22,7 @@
                             <li><a class="dropdown-item active" href="{{ route('computer.user') }}">Computer Users</a></li>
                             <li><a class="dropdown-item active" href="{{ route('frontend.pabx.index') }}">PABX Users</a></li>
                             <li><a class="dropdown-item active" href="{{ route('faceid.index') }}">FaceID Machine</a></li>
-                            <li><a href="{{ route('router.index') }}">Wireless Router</a></li>
+                            <li><a href="{{ route('router.index') }}">Router List</a></li>
                             <li><a href="{{ route('printer.index') }}">Printer</a></li>
                             <li><a href="{{ route('scanner.index') }}">Scanner</a></li>
                             <li class="divider"></li>

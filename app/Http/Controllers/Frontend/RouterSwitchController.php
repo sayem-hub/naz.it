@@ -10,7 +10,7 @@ class RouterSwitchController extends Controller
 {
     public function routerIndex()
     {
-        $routers = Router::orderBy('id', 'desc')->paginate(50);
+        $routers = Router::orderBy('id')->paginate(50);
         return view('Frontend.routers.index', compact('routers'));
     }
 
@@ -29,7 +29,6 @@ class RouterSwitchController extends Controller
                 'brand' => 'required',
                 'model' => 'required',
                 'ssid' => 'required',
-                'password' => 'required',
                 'ip_address' => 'required',
                 'location' => 'required',
                 'status' => 'required',
@@ -72,7 +71,6 @@ class RouterSwitchController extends Controller
                 'brand' => 'required',
                 'model' => 'required',
                'ssid' => 'required',
-              'password' => 'required',
                'ip_address' => 'required',
                'location' => 'required',
                 'status' => 'required',
