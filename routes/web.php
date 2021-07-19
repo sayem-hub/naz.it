@@ -54,6 +54,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/printer/create',[App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerStore']);
     Route::get('/printer/edit/{id}', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerEdit'])->name('printer.edit');
     Route::post('/printer/edit/{id}', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerUpdate']);
+    Route::get('printer-list/generatePDF',[App\Http\Controllers\Frontend\PdfController::class, 'generatePrinterPdf'])->name('create.printer.pdf');
 
     Route::get('/scanner-list', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scannerIndex'])->name('scanner.index');
     Route::get('/scanner/create', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scannerCreate'])->name('scanner.create');

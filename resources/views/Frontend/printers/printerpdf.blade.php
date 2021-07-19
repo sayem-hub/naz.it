@@ -100,39 +100,41 @@
 
     <h2>NAZ Bangladesh Ltd.</h2>
     <h3>ICT Department</h3>
-    <h4>Computer Inventory</h4>
+    <h4>Printer List</h4>
 
 
     <table class="styled-table" >
         <thead class="thead-dark" >
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Computer ID</th>
-                <th scope="col">Employee ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Designation</th>
-                {{-- <th scope="col">IP Address</th> --}}
-                <th scope="col">Email Address</th>
+                <th scope="col">Printer ID</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Model</th>
+                <th scope="col">Serial No</th>
+                <th scope="col">Function</th>
                 <th scope="col">Section</th>
                 <th scope="col">Department</th>
+                <th scope="col">User</th>
+                <th scope="col">Service Type</th>
                 <th scope="col">Status</th>
             </tr>
         </thead>
         <tbody>
 
-            @foreach($computers as $key=>$user)
+            @foreach($printers as $key=>$print)
 
             <tr>
                 <th scope="row">{{$key+1}}</th>
-                <td>{{$user->Comid}}</td>
-                <td>{{$user->Emp_id}}</td>
-                <td>{{$user->User}}</td>
-                <td>{{$user->Designation}}</td>
-                {{-- <td>{{$user->Ipadd}}</td> --}}
-                <td>{{$user->Email}}</td>
-                <td>{{$user->Section}}</td>
-                <td>{{$user->Department}}</td>
-                <td>{{$user->Status}}</td>
+                <td>{{$print->printer_id}}</td>
+                <td>{{$print->printer_brand}}</td>
+                <td>{{$print->printer_model}}</td>
+                <td>{{$print->serial_no}}</td>
+                <td>{{$print->function}}</td>
+                <td>{{$print->section}}</td>
+                <td>{{$print->department}}</td>
+                <td>{{$print->user}}</td>
+                <td>{{$print->service_type}}</td>
+                <td>{{$print->status}}</td>
             </tr>
 
             @endforeach
