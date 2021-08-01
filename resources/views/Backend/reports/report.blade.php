@@ -10,7 +10,7 @@
        <div class="card-header">Computer Inventory</div>
         <form action={{ route('computer.export') }} method="get" enctype="multipart/form-data">
                 @csrf
-            <button type="sumbit" class="btn btn-primary"  />Export</button>
+            <button type="sumbit" class="btn btn-primary" >Export</button>
             </form>
             </div>
 

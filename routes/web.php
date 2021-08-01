@@ -118,6 +118,7 @@ Route::middleware(['auth'])->group(function () {
             Route::post('/cc-camera/create', [App\Http\Controllers\Frontend\HomeController::class, 'cam_store']);
             Route::get('/cc-camera/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'cam_edit'])->name('camera.edit');
             Route::post('/cc-camera/edit/{id}', [App\Http\Controllers\Frontend\HomeController::class, 'cam_update']);
+            Route::get('cc-camera/export', [App\Http\Controllers\Frontend\MaatwebsiteController::class, 'cameraExcelExport'])->name('camera.export.excel');
 
     Route::middleware('is_admin')->prefix('admin')->group(function(){
 

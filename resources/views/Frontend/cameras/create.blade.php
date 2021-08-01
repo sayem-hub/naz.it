@@ -26,6 +26,19 @@
             </div>
 
             <div class="mb-3">
+                        <label for="dvr_no" class="form-label">DVR No</label>
+                        <select class="form-control" name="dvr_no">
+                            <option value="">---Select DVR No---</option>
+                            <option value="DVR-201">DVR-201</option>
+                            <option value="DVR-203">DVR-203</option>
+                            <option value="DVR-204">DVR-204</option>
+                            <option value="DVR-205">DVR-205</option>
+                            <option value="DVR-206">DVR-206</option>
+                            <option value="DVR-207">DVR-207</option>
+                        </select>
+                    </div>
+
+            <div class="mb-3">
                 <label for="camstatus" class="form-label">Status</label>
                 <select class="form-control" name="status">
                     <option value="Active">Active</option>

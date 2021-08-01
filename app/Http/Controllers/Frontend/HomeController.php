@@ -108,6 +108,7 @@ class HomeController extends Controller
             'camname' => $request->input('camname'),
             'camno' => $request->input('camno'),
             'camlocation' => $request->input('camlocation'),
+            'dvr_no' => $request->input('dvr_no'),
             'status' => $request->input('status'),
         ];
 
@@ -127,6 +128,7 @@ class HomeController extends Controller
             'camname' => $request->input('camname'),
             'camno' => $request->input('camno'),
             'camlocation' => $request->input('camlocation'),
+            'dvr_no' => $request->input('dvr_no'),
             'status' => $request->input('status'),
         ];
         $ccamera->update($data);

@@ -18,6 +18,7 @@ class CreateCcamerasTable extends Migration
             $table->string('camname',255);
             $table->string('camno',150)->unique();
             $table->string('camlocation',255);
+            $table->string('dvr_no',150)->nullable();
             $table->string('status',100);
             $table->timestamps();
         });
