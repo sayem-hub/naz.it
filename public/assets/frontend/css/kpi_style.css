@@ -1,8 +1,6 @@
-body{
-    background: antiquewhite;
-}
 
-.wrapper{
+
+.container2{
     width: 1370px;
     margin: 0 auto;
 }
@@ -30,9 +28,9 @@ ul li a:hover{
 h2{
     text-align: center;
     color: rgb(114, 174, 241);
-    margin-top: 50px;
-    display: inline-block;
+    margin-top: 120px;
 }
+
 p{
     font-size: 20px;
     color: black;

@@ -35,8 +35,8 @@
                         </ul>
                     </li>
 
-					<li><a href="{{ route('received.goods') }}">Received Item </a></li>
-					<li><a href="{{ route('sent.items') }}">Sent Item</a></li>
+					<li><a href="{{ route('received.goods') }}">In Item </a></li>
+					<li><a href="{{ route('sent.items') }}">Out Item</a></li>
 					<li><a href="{{ route('cc-camera') }}">Camera List</a></li>
 					<li><a href="#clients">Questions</a></li>
 					<li><a href="{{ route('kpi.home') }}">KPI Link</a></li>
