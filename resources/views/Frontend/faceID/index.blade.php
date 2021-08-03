@@ -2,9 +2,20 @@
 
 @section('main')
 
-<h3 class="text-center mt-3">Attendance Machine List</h3>
-<a href="{{ route('faceid.create') }}" class="btn btn-success">Add New Machine</a>
-<table class="table table-bordered table-hover">
+
+<div class="row">
+    <div class="col-md-0"></div>
+    <div class="col-md-13">
+
+        <h3 class="text-center mt-3">Attendance Machine List</h3>
+
+
+            <div class="form-group">
+                <a href="{{ route('faceid.create') }}" class="btn btn-success">Add New Machine</a>
+                <a href="{{route('create.faceid.pdf')}}" class="btn btn-warning btn-sm">PDF Report</a>
+            </div>
+
+<table class="table table-bordered table-hover" style="font-size: 14px">
     <thead>
         <tr>
             <th scope="col">#</th>

@@ -4,8 +4,8 @@
 
 <h3 class="text-center mt-3">CC Camera List</h3>
 <a href="{{route('camera.create')}}" class="btn btn-success">Add CC Camera</a>
-<a href="{{route('camera.export.excel')}}" class="btn btn-info">Export to Excel</a>
-<table class="table table-bordered table-hover" style="font-size: 14px">
+<a href="{{route('camera.export.excel')}}" class="btn btn-info">Export to Excel</a> <br>
+<table class="table table-bordered table-hover" style="font-size: 14px"> <br>
     <thead>
         <tr>
             <th scope="col">#</th>

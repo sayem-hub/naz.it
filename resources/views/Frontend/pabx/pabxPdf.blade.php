@@ -39,13 +39,10 @@
             line-height: 15px;
             }
 
-
-
-
         .styled-table {
         border-collapse: collapse;
         margin: 15px 0;
-        font-size: 0.6em;
+        font-size: 0.7em;
         font-family: sans-serif;
         min-width: 400px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -85,7 +82,6 @@
             line-height: 40%;
         }
 
-
     </style>
 
 </head>
@@ -101,39 +97,35 @@
 
     <h3>NAZ Bangladesh Ltd.</h3>
     <h4>ICT Department</h4>
-    <h5>Computer Inventory</h5>
+    <h5>PABX User List</h5>
 
 
     <table class="styled-table" >
         <thead class="thead-dark" >
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Computer ID</th>
-                <th scope="col">Employee ID</th>
-                <th scope="col">Name</th>
+                <th scope="col">Employee Name</th>
                 <th scope="col">Designation</th>
-                {{-- <th scope="col">IP Address</th> --}}
-                <th scope="col">Email Address</th>
                 <th scope="col">Section</th>
                 <th scope="col">Department</th>
+                <th scope="col">Extension No</th>
+                <th scope="col">Model</th>
                 <th scope="col">Status</th>
             </tr>
         </thead>
         <tbody>
 
-            @foreach($computers as $key=>$user)
+            @foreach($pabxes as $key=>$pabx)
 
             <tr>
                 <th scope="row">{{$key+1}}</th>
-                <td>{{$user->Comid}}</td>
-                <td>{{$user->Emp_id}}</td>
-                <td>{{$user->User}}</td>
-                <td>{{$user->Designation}}</td>
-                {{-- <td>{{$user->Ipadd}}</td> --}}
-                <td>{{$user->Email}}</td>
-                <td>{{$user->Section}}</td>
-                <td>{{$user->Department}}</td>
-                <td>{{$user->Status}}</td>
+                <td>{{$pabx->employee_name}}</td>
+                <td>{{$pabx->designation}}</td>
+                <td>{{$pabx->section}}</td>
+                <td>{{$pabx->department}}</td>
+                <td>{{$pabx->pabx_no}}</td>
+                <td>{{$pabx->model}}</td>
+                <td>{{$pabx->status}}</td>
             </tr>
 
             @endforeach

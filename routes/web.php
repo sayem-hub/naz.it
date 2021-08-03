@@ -46,6 +46,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/router/create',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerStore'])->name('router.store');
     Route::get('/router/edit/{id}', [App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerEdit'])->name('router.edit');
     Route::post('/router/edit/{id}', [App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerUpdate']);
+    Route::get('router-list/generatePDF', [App\Http\Controllers\Frontend\PdfController::class, 'generateRouterPdf'])->name('create.router.pdf');
 
     //Printer & Scanner Route
 
@@ -68,6 +69,8 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/pabx-list/new',[App\Http\Controllers\Frontend\PabxController::class, 'store']);
         Route::get('/pabx-list/edit/{id}', [App\Http\Controllers\Frontend\PabxController::class, 'edit'])->name('frontend.pabx.edit');
         Route::post('/pabx-list/edit/{id}', [App\Http\Controllers\Frontend\PabxController::class, 'update']);
+    Route::get('pabx-list/generatePDF', [App\Http\Controllers\Frontend\PdfController::class, 'generatePabxPdf'])->name('create.pabx.pdf');
+
     //RFID Route
         Route::get('/rfid-list',[App\Http\Controllers\Frontend\RfidController::class, 'index'])->name('rfid.index');
         Route::get('/rfid-list/create',[App\Http\Controllers\Frontend\RfidController::class, 'create'])->name('rfid.create');
@@ -82,6 +85,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/faceid-list/create',[App\Http\Controllers\Frontend\FaceidController::class, 'store']);
         Route::get('/faceid-list/edit/{id}',[App\Http\Controllers\Frontend\FaceidController::class, 'edit'])->name('faceid.edit');
         Route::post('/faceid-list/edit/{id}',[App\Http\Controllers\Frontend\FaceidController::class, 'update']);
+         Route::get('faceid-list/generatePDF', [App\Http\Controllers\Frontend\PdfController::class, 'generateFaceidPdf'])->name('create.faceid.pdf');
 
 
 

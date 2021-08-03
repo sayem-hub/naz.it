@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Computer;
+use App\Models\Faceid;
+use App\Models\Pabx;
 use App\Models\Printer;
+use App\Models\Router;
 use Illuminate\Http\Request;
 use PDF;
 
@@ -39,4 +42,44 @@ class PdfController extends Controller
             $pdf = PDF::loadView('Frontend.printers.printerpdf',compact(('printers')));
             return $pdf->download('Printer-list.pdf');
         }
+
+    public function faceidPdf(Request $request)
+    {
+        $faceids = Faceid::all();
+        return view('Frontend.faceID.faceidPdf', compact('faceids'));
+    }
+
+    public function generateFaceidPdf(Request $request)
+    {
+        $faceids = Faceid::all();
+        $pdf = PDF::loadView('Frontend.faceID.faceidPdf', compact(('faceids')));
+        return $pdf->download('Faceid-list.pdf');
+    }
+
+
+    public function pabxPdf(Request $request)
+    {
+        $pabxes = Pabx::all();
+        return view('Frontend.pabx.pabxPdf', compact('pabxes'));
+    }
+
+    public function generatePabxPdf(Request $request)
+    {
+        $pabxes = Pabx::all();
+        $pdf = PDF::loadView('Frontend.pabx.pabxPdf', compact(('pabxes')));
+        return $pdf->download('Pabx-list.pdf');
+    }
+
+    public function routerPdf(Request $request)
+    {
+        $routers = Router::all();
+        return view('Frontend.routers.routerPdf', compact('routers'));
+    }
+
+    public function generateRouterPdf(Request $request)
+    {
+        $routers = Router::all();
+        $pdf = PDF::loadView('Frontend.routers.routerPdf', compact(('routers')));
+        return $pdf->download('Router-list.pdf');
+    }
 }

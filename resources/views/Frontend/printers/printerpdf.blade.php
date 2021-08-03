@@ -79,9 +79,11 @@
         color: #009879;
         }
 
-    h2, h3, h4{
+    h2, h3, h4, h5{
+            font-family: sans-serif;
             text-align: center;
             line-height: 40%;
+
         }
 
 
@@ -98,9 +100,9 @@
         All Rights Reserved. Copyright © NAZ-IMS by Abu Sayem; Print date: <?php echo date("Y-m-d");?>
     </footer>
 
-    <h2>NAZ Bangladesh Ltd.</h2>
-    <h3>ICT Department</h3>
-    <h4>Printer List</h4>
+    <h3>NAZ Bangladesh Ltd.</h3>
+    <h4>ICT Department</h4>
+    <h5>Printer List</h5>
 
 
     <table class="styled-table" >

@@ -2,8 +2,19 @@
 
 @section('main')
 
-<h3 class="text-center mt-3">PABX Users List</h3>
-<a href="{{ route('frontend.pabx.create') }}" class="btn btn-success">Add New PABX</a>
+
+
+<div class="row">
+    <div class="col-md-0"></div>
+    <div class="col-md-13">
+
+        <h3 class="text-center mt-3">PABX Users List</h3>
+
+        <div class="form-group">
+            <a href="{{ route('frontend.pabx.create') }}" class="btn btn-success">Add New Extension</a>
+            <a href="{{route('create.pabx.pdf')}}" class="btn btn-warning btn-sm">PDF Report</a>
+        </div>
+
 <table class="table table-bordered table-hover" style="font-size: 14px">
     <thead>
         <tr>

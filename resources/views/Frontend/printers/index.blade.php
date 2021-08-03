@@ -11,7 +11,7 @@
         <form action="" method="GET">
             <div class="form-group">
                 <a href={{ route('printer.create') }} class="btn btn-success">Add New Printer</a>
-                <a href={{route('create.printer.pdf')}} class="btn btn-warning btn-sm">Generate PDF</a>
+                <a href={{route('create.printer.pdf')}} class="btn btn-warning btn-sm">PDF Report</a>
 
 
             </div>

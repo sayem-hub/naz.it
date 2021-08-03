@@ -80,7 +80,7 @@
         }
 
     h2, h3, h4, h5{
-            font-family: sans-serif;
+        font-family: sans-serif;
             text-align: center;
             line-height: 40%;
         }
@@ -101,39 +101,37 @@
 
     <h3>NAZ Bangladesh Ltd.</h3>
     <h4>ICT Department</h4>
-    <h5>Computer Inventory</h5>
+    <h5>Router List</h5>
 
 
     <table class="styled-table" >
         <thead class="thead-dark" >
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Computer ID</th>
-                <th scope="col">Employee ID</th>
+                <th scope="col">Router ID</th>
                 <th scope="col">Name</th>
-                <th scope="col">Designation</th>
-                {{-- <th scope="col">IP Address</th> --}}
-                <th scope="col">Email Address</th>
-                <th scope="col">Section</th>
-                <th scope="col">Department</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Model</th>
+                <th scope="col">WiFi Name</th>
+                <th scope="col">IP Address</th>
+                <th scope="col">Location</th>
                 <th scope="col">Status</th>
             </tr>
         </thead>
         <tbody>
 
-            @foreach($computers as $key=>$user)
+            @foreach($routers   as $key=>$router)
 
             <tr>
                 <th scope="row">{{$key+1}}</th>
-                <td>{{$user->Comid}}</td>
-                <td>{{$user->Emp_id}}</td>
-                <td>{{$user->User}}</td>
-                <td>{{$user->Designation}}</td>
-                {{-- <td>{{$user->Ipadd}}</td> --}}
-                <td>{{$user->Email}}</td>
-                <td>{{$user->Section}}</td>
-                <td>{{$user->Department}}</td>
-                <td>{{$user->Status}}</td>
+                <td>{{$router->router_id}}</td>
+                <td>{{$router->name}}</td>
+                <td>{{$router->brand}}</td>
+                <td>{{$router->model}}</td>
+                <td>{{$router->ssid}}</td>
+                <td>{{$router->ip_address}}</td>
+                <td>{{$router->location}}</td>
+                <td>{{$router->status}}</td>
             </tr>
 
             @endforeach

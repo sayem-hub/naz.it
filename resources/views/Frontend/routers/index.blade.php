@@ -2,20 +2,18 @@
 
 @section('main')
 
+
+
 <div class="row">
     <div class="col-md-0"></div>
     <div class="col-md-13">
 
         <h3 class="text-center mt-3">Router List</h3>
 
-        <form action="" method="GET">
-            <div class="form-group">
-                <a href={{ route('router.create') }} class="btn btn-success">Add New Router</a>
-
-
-            </div>
-        </form>
-
+        <div class="form-group">
+            <a href="{{ route('router.create') }}" class="btn btn-success">Add New Router</a>
+            <a href="{{route('create.router.pdf')}}" class="btn btn-warning btn-sm">PDF Report</a>
+        </div>
 
 
 <table class="table table-bordered table-hover" style="font-size: 14px">
