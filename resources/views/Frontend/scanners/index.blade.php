@@ -8,14 +8,10 @@
 
         <h3 class="text-center mt-3">Scanner List</h3>
 
-        <form action="" method="GET">
-            <div class="form-group">
-                <a href={{ route('scanner.create') }} class="btn btn-success">Add New Scanner</a>
-
-
-            </div>
-        </form>
-
+        <div class="form-group">
+            <a href="{{ route('scanner.create') }}" class="btn btn-success">Add New Scanner</a>
+            <a href="{{route('create.scanner.pdf')}}" class="btn btn-warning btn-sm">PDF Report</a>
+        </div>
 
 
 <table class="table table-bordered table-hover" style="font-size: 14px">

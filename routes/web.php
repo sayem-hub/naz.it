@@ -62,6 +62,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/scanner/create', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scannerStore']);
     Route::get('/scanner/edit/{id}', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scannerEdit'])->name('scanner.edit');
     Route::post('/scanner/edit/{id}', [App\Http\Controllers\Frontend\PrinterScannerController::class, 'scannerStore']);
+    Route::get('scanner-list/generatePDF', [App\Http\Controllers\Frontend\PdfController::class, 'generateScannerPdf'])->name('create.scanner.pdf');
 
 //PABX Route
         Route::get('/pabx-list',[App\Http\Controllers\Frontend\PabxController::class, 'index'])->name('frontend.pabx.index');

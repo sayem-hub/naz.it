@@ -8,6 +8,7 @@ use App\Models\Faceid;
 use App\Models\Pabx;
 use App\Models\Printer;
 use App\Models\Router;
+use App\Models\Scanner;
 use Illuminate\Http\Request;
 use PDF;
 
@@ -81,5 +82,18 @@ class PdfController extends Controller
         $routers = Router::all();
         $pdf = PDF::loadView('Frontend.routers.routerPdf', compact(('routers')));
         return $pdf->download('Router-list.pdf');
+    }
+
+    public function scannerPdf(Request $request)
+    {
+        $scanners = Scanner::all();
+        return view('Frontend.scanners.scannerPdf', compact('scanners'));
+    }
+
+    public function generateScannerPdf(Request $request)
+    {
+        $scanners = Scanner::all();
+        $pdf = PDF::loadView('Frontend.scanners.scannerPdf', compact(('scanners')));
+        return $pdf->download('Scanner-list.pdf');
     }
 }
