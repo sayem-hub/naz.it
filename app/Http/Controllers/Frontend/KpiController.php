@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Brother;
+use App\Models\Tablet;
 use Illuminate\Http\Request;
 
 class KpiController extends Controller
@@ -42,4 +43,94 @@ class KpiController extends Controller
         Brother::create($data);
         return redirect()->back();
     }
+
+        public function index()
+        {
+
+        $tablets = Tablet::orderBy('id')->paginate(15);
+            return view('Frontend.kpiproject.tablet.index', compact('tablets'));
+        }
+
+    public function create()
+    {
+        return view('Frontend.kpiproject.tablet.create');
+    }
+
+    public function store(Request $request)
+    {
+        try {
+            $request->validate([
+                'tab_id'=> 'required',
+                'model' => 'required',
+                'status' => 'required',
+
+            ]);
+
+            $data = [
+                'tab_id' => $request->input('tab_id'),
+                'brand' => $request->input('brand'),
+                'model' => $request->input('model'),
+                'size' => $request->input('size'),
+                'serial' => $request->input('serial'),
+                'imei_1' => $request->input('imei_1'),
+                'imei_2' => $request->input('imei_2'),
+                'user' => $request->input('user'),
+                'emp_id' => $request->input('emp_id'),
+                'designation' => $request->input('designation'),
+                'section' => $request->input('section'),
+                'department' => $request->input('department'),
+                'status' => $request->input('status'),
+                'notes' => $request->input('notes'),
+
+            ];
+            Tablet::create($data);
+
+            return redirect()->route('frontend.kpiproject.tablet.index');
+        } catch (\Exception $exception) {
+            return redirect()->back()->withErrors($exception->getMessage());
+        }
+    }
+
+    public function edit($id)
+    {
+        $tablets = Tablet::find($id);
+        return view('frontend.kpiproject.tablet.edit', compact('tablets'));
+    }
+
+    public function update(Request $request, $id)
+    {
+
+        try {
+            $request->validate([
+
+                'tab_id' => 'required',
+                'model' => 'required',
+                'status' => 'required',
+
+            ]);
+
+            $tablets = Tablet::find($id);
+
+            $data = [
+                'tab_id' => $request->input('tab_id'),
+                'brand' => $request->input('brand'),
+                'model' => $request->input('model'),
+                'size' => $request->input('size'),
+                'serial' => $request->input('serial'),
+                'imei_1' => $request->input('imei_1'),
+                'imei_2' => $request->input('imei_2'),
+                'user' => $request->input('user'),
+                'designation' => $request->input('designation'),
+                'section' => $request->input('section'),
+                'department' => $request->input('department'),
+                'status' => $request->input('status'),
+                'notes' => $request->input('notes'),
+            ];
+            $tablets->update($data);
+            return redirect()->route('frontend.kpiproject.tablet.index');
+        } catch (\Exception $exception) {
+            return redirect()->back()->withErrors($exception->getMessage());
+        }
+    }
+
 }

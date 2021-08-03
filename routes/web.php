@@ -94,6 +94,11 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/kpi/smachine',[App\Http\Controllers\Frontend\KpiController::class, 'sewingMachine'])->name('sewing.machine');
             Route::post('/kpi/smachine',[App\Http\Controllers\Frontend\KpiController::class, 'brother_machineStore']);
 
+    //Tablet Route
+    Route::get('/kpiproject/tab-list', [App\Http\Controllers\Frontend\KpiController::class, 'index'])->name('tablet.index');
+    Route::get('/kpiproject/tab-list/create', [App\Http\Controllers\Frontend\KpiController::class, 'create'])->name('tablet.create');
+    Route::post('/kpiproject/tab-list/create', [App\Http\Controllers\Frontend\KpiController::class, 'store']);
+
             //Received Route
             Route::get('/received-items',[App\Http\Controllers\Frontend\HomeController::class, 'received'])->name('received.goods');
             Route::get('/received-items/new',[App\Http\Controllers\Frontend\HomeController::class, 'goodsCreate'])->name('received.goods.new');
