@@ -6,16 +6,16 @@
     <div class="col-md-0"></div>
     <div class="col-md-13">
 
-        <h3 class="text-center mt-3">Tablet Computer List</h3>
+        <h3 class="text-center mt-3">Android TAB List</h3>
 
-        <form action="{{ route('computer.search') }}" method="GET">
+        <form action="{{ route('tablet.search') }}" method="GET">
             <div class="form-group">
                 <a href={{ route('tablet.create') }} class="btn btn-success">Add New Tab</a>
-                <a href="#" class="btn btn-warning btn-sm">PDF Report</a>
+                <a href="{{ route('create.tablet.pdf') }}" class="btn btn-warning btn-sm">PDF Report</a>
                 <div class="form-group row"><br>
                     <div class="col-xs-3">
 
-                        <input type="text" class="form-control" name="query" placeholder="Name or Department"
+                        <input type="text" class="form-control" name="query" placeholder="Name or Serial"
                             value="{{ request()->input('query') }}">
                         <span class="text-danger">@error('query'){{ $message }}@enderror</span>
                     </div>
@@ -39,7 +39,7 @@
         <th scope="col">IMEI 1</th>
         <th scope="col">IMEI 2</th>
         <th scope="col">User</th>
-        <th scope="col">Office ID</th>
+        <th scope="col">Emp ID</th>
         <th scope="col">Designation</th>
         <th scope="col">Section</th>
         <th scope="col">Dept.</th>
@@ -82,7 +82,7 @@
   </table>
     </div>
 </div>
-  {{-- {{$computers->links('pagination::bootstrap-4')}} --}}
+  {{-- {{$tablets->links('pagination::bootstrap-4')}} --}}
 
 @endsection
 

@@ -9,6 +9,7 @@ use App\Models\Pabx;
 use App\Models\Printer;
 use App\Models\Router;
 use App\Models\Scanner;
+use App\Models\Tablet;
 use Illuminate\Http\Request;
 use PDF;
 
@@ -95,5 +96,18 @@ class PdfController extends Controller
         $scanners = Scanner::all();
         $pdf = PDF::loadView('Frontend.scanners.scannerPdf', compact(('scanners')));
         return $pdf->download('Scanner-list.pdf');
+    }
+
+    public function tabPdf(Request $request)
+    {
+        $tablets = Tablet::all();
+        return view('Frontend.kpiproject.tablet.tabletPdf', compact('tablets'));
+    }
+
+    public function generateTabPdf(Request $request)
+    {
+        $tablets = Tablet::all();
+        $pdf = PDF::loadView('Frontend.kpiproject.tablet.tabletPdf', compact(('tablets')));
+        return $pdf->download('TAB_List.pdf');
     }
 }

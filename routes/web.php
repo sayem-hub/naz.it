@@ -100,6 +100,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/kpi/tab-list/create', [App\Http\Controllers\Frontend\KpiController::class, 'store']);
     Route::get('/kpi/tab-list/edit/{id}', [App\Http\Controllers\Frontend\KpiController::class, 'edit'])->name('tablet.edit');
     Route::post('/kpi/tab-list/edit/{id}', [App\Http\Controllers\Frontend\KpiController::class, 'update']);
+    Route::get('tab-list/generatePDF', [App\Http\Controllers\Frontend\PdfController::class, 'generateTabPdf'])->name('create.tablet.pdf');
+
+    Route::get('/tab/search', [App\Http\Controllers\Frontend\SearchController::class, 'tabSearch'])->name('tablet.search');
+
             //Received Route
             Route::get('/received-items',[App\Http\Controllers\Frontend\HomeController::class, 'received'])->name('received.goods');
             Route::get('/received-items/new',[App\Http\Controllers\Frontend\HomeController::class, 'goodsCreate'])->name('received.goods.new');

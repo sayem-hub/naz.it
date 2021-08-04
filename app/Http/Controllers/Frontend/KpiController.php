@@ -47,7 +47,7 @@ class KpiController extends Controller
         public function index()
         {
 
-        $tablets = Tablet::orderBy('id')->paginate(15);
+        $tablets = Tablet::orderBy('id' ,'desc')->paginate(100);
             return view('Frontend.kpiproject.tablet.index', compact('tablets'));
         }
 

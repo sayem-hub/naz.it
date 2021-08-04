@@ -70,7 +70,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="emp_id" class="form-label">Office ID</label>
+                <label for="emp_id" class="form-label">Employee ID</label>
                 <input type="text" class="form-control" name="emp_id" id="emp_id" placeholder="Write employee ID no.">
             </div>
 

@@ -57,5 +57,21 @@ class SearchController extends Controller
             ->paginate(200);
         return view('Frontend.received.search', ['received_items' => $received_items]);
     }
+    public function tabSearch(Request $request)
+    {
+
+        $request->validate([
+            'query' => 'required|min:3'
+        ]);
+
+        $search_text = $request->input('query');
+        $tablets = DB::table('tablets')
+        ->where('user', 'LIKE', '%' . $search_text . '%')->orWhere('serial', 'LIKE', '%' . $search_text . '%')
+            //   ->orWhere('SurfaceArea','<', 10)
+            //   ->orWhere('LocalName','like','%'.$search_text.'%')
+            ->paginate(200);
+        return view('Frontend.kpiproject.tablet.search', ['tablets' => $tablets]);
+    }
+
     }
 

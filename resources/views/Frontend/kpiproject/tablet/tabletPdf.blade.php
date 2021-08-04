@@ -45,7 +45,7 @@
         .styled-table {
         border-collapse: collapse;
         margin: 15px 0;
-        font-size: 0.6em;
+        font-size: 0.5em;
         font-family: sans-serif;
         min-width: 400px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -101,39 +101,49 @@
 
     <h3>NAZ Bangladesh Ltd.</h3>
     <h4>ICT Department</h4>
-    <h5>Computer Inventory</h5>
+    <h5>Android TAB List</h5>
 
 
     <table class="styled-table" >
         <thead class="thead-dark" >
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Computer ID</th>
-                <th scope="col">Employee ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Designation</th>
-                {{-- <th scope="col">IP Address</th> --}}
-                <th scope="col">Email Address</th>
-                <th scope="col">Section</th>
-                <th scope="col">Department</th>
+                <th scope="col">TAB ID</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Model</th>
+                <th scope="col">Size</th>
+                <th scope="col">Serial</th>
+                <th scope="col">IMEI 1</th>
+                {{-- <th scope="col">IMEI 2</th> --}}
+                <th scope="col">User</th>
+                <th scope="col">Emp ID</th>
+                {{-- <th scope="col">Designation</th> --}}
+                {{-- <th scope="col">Section</th> --}}
+                <th scope="col">Dept.</th>
+                <th scope="col">Line</th>
                 <th scope="col">Status</th>
             </tr>
         </thead>
         <tbody>
 
-            @foreach($computers as $key=>$user)
+            @foreach($tablets as $key=>$tablet)
 
             <tr>
                 <th scope="row">{{$key+1}}</th>
-                <td>{{$user->Comid}}</td>
-                <td>{{$user->Emp_id}}</td>
-                <td>{{$user->User}}</td>
-                <td>{{$user->Designation}}</td>
-                {{-- <td>{{$user->Ipadd}}</td> --}}
-                <td>{{$user->Email}}</td>
-                <td>{{$user->Section}}</td>
-                <td>{{$user->Department}}</td>
-                <td>{{$user->Status}}</td>
+                <td>{{$tablet->tab_id}}</td>
+                <td>{{$tablet->brand}}</td>
+                <td>{{$tablet->model}}</td>
+                <td>{{$tablet->size}}</td>
+                <td>{{$tablet->serial}}</td>
+                <td>{{$tablet->imei_1}}</td>
+                {{-- <td>{{$tablet->imei_2}}</td> --}}
+                <td>{{$tablet->user}}</td>
+                <td>{{$tablet->emp_id}}</td>
+                {{-- <td>{{$tablet->designation}}</td> --}}
+                {{-- <td>{{$tablet->section}}</td> --}}
+                <td>{{$tablet->department}}</td>
+                <td>{{$tablet->line_no}}</td>
+                <td>{{$tablet->status}}</td>
             </tr>
 
             @endforeach
