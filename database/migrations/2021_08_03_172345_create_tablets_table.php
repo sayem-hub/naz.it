@@ -27,8 +27,9 @@ class CreateTabletsTable extends Migration
             $table->string('designation');
             $table->string('section');
             $table->string('department');
+            $table->string('line_no');
             $table->string('status');
-            $table->string('notes');
+            $table->string('notes')->nullable();
             $table->timestamps();
         });
     }

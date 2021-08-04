@@ -11,7 +11,7 @@
         <form action="{{ route('computer.search') }}" method="GET">
             <div class="form-group">
                 <a href={{ route('tablet.create') }} class="btn btn-success">Add New Tab</a>
-                <a href="{{route('pdf.generate')}}" class="btn btn-warning btn-sm">PDF Report</a>
+                <a href="#" class="btn btn-warning btn-sm">PDF Report</a>
                 <div class="form-group row"><br>
                     <div class="col-xs-3">
 
@@ -27,7 +27,7 @@
 
 
 
-<table class="table table-bordered table-hover" style="font-size: 14px">
+<table class="table table-bordered table-hover" style="font-size: 13px">
     <thead class="thead-dark">
       <tr>
        <th scope="col">#</th>
@@ -42,9 +42,9 @@
         <th scope="col">Office ID</th>
         <th scope="col">Designation</th>
         <th scope="col">Section</th>
-        <th scope="col">Department</th>
+        <th scope="col">Dept.</th>
+        <th scope="col">Line</th>
         <th scope="col">Status</th>
-
         <th scope="col">Action</th>
 
       </tr>
@@ -63,13 +63,15 @@
         <td>{{$tablet->imei_1}}</td>
         <td>{{$tablet->imei_2}}</td>
         <td>{{$tablet->user}}</td>
+        <td>{{$tablet->emp_id}}</td>
         <td>{{$tablet->designation}}</td>
         <td>{{$tablet->section}}</td>
         <td>{{$tablet->department}}</td>
+        <td>{{$tablet->line_no}}</td>
         <td>{{$tablet->status}}</td>
-        <td>{{$tablet->notes}}</td>
+        {{-- <td>{{$tablet->notes}}</td> --}}
         <td>
-          <a class="btn btn-secondary" href="{{route('computer.user.edit',$user->id)}}">Edit</a>
+          <a class="btn btn-secondary" href="{{ route('tablet.edit', $tablet->id) }}">Edit</a>
 
         </td>
       </tr>

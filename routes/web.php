@@ -95,10 +95,11 @@ Route::middleware(['auth'])->group(function () {
             Route::post('/kpi/smachine',[App\Http\Controllers\Frontend\KpiController::class, 'brother_machineStore']);
 
     //Tablet Route
-    Route::get('/kpiproject/tab-list', [App\Http\Controllers\Frontend\KpiController::class, 'index'])->name('tablet.index');
-    Route::get('/kpiproject/tab-list/create', [App\Http\Controllers\Frontend\KpiController::class, 'create'])->name('tablet.create');
-    Route::post('/kpiproject/tab-list/create', [App\Http\Controllers\Frontend\KpiController::class, 'store']);
-
+    Route::get('/kpi/tab-list', [App\Http\Controllers\Frontend\KpiController::class, 'index'])->name('tablet.index');
+    Route::get('/kpi/tab-list/create', [App\Http\Controllers\Frontend\KpiController::class, 'create'])->name('tablet.create');
+    Route::post('/kpi/tab-list/create', [App\Http\Controllers\Frontend\KpiController::class, 'store']);
+    Route::get('/kpi/tab-list/edit/{id}', [App\Http\Controllers\Frontend\KpiController::class, 'edit'])->name('tablet.edit');
+    Route::post('/kpi/tab-list/edit/{id}', [App\Http\Controllers\Frontend\KpiController::class, 'update']);
             //Received Route
             Route::get('/received-items',[App\Http\Controllers\Frontend\HomeController::class, 'received'])->name('received.goods');
             Route::get('/received-items/new',[App\Http\Controllers\Frontend\HomeController::class, 'goodsCreate'])->name('received.goods.new');

@@ -60,10 +60,9 @@ class KpiController extends Controller
     {
         try {
             $request->validate([
-                'tab_id'=> 'required',
-                'model' => 'required',
-                'status' => 'required',
-
+                 'tab_id'=> 'required',
+                 'model' => 'required',
+                 'status' => 'required',
             ]);
 
             $data = [
@@ -79,13 +78,13 @@ class KpiController extends Controller
                 'designation' => $request->input('designation'),
                 'section' => $request->input('section'),
                 'department' => $request->input('department'),
+                'line_no' => $request->input('line_no'),
                 'status' => $request->input('status'),
                 'notes' => $request->input('notes'),
-
             ];
-            Tablet::create($data);
 
-            return redirect()->route('frontend.kpiproject.tablet.index');
+            Tablet::create($data);
+            return redirect()->route('tablet.index');
         } catch (\Exception $exception) {
             return redirect()->back()->withErrors($exception->getMessage());
         }
@@ -94,7 +93,7 @@ class KpiController extends Controller
     public function edit($id)
     {
         $tablets = Tablet::find($id);
-        return view('frontend.kpiproject.tablet.edit', compact('tablets'));
+        return view('Frontend.kpiproject.tablet.edit', compact('tablets'));
     }
 
     public function update(Request $request, $id)
@@ -106,7 +105,6 @@ class KpiController extends Controller
                 'tab_id' => 'required',
                 'model' => 'required',
                 'status' => 'required',
-
             ]);
 
             $tablets = Tablet::find($id);
@@ -120,14 +118,16 @@ class KpiController extends Controller
                 'imei_1' => $request->input('imei_1'),
                 'imei_2' => $request->input('imei_2'),
                 'user' => $request->input('user'),
+                'emp_id' => $request->input('emp_id'),
                 'designation' => $request->input('designation'),
                 'section' => $request->input('section'),
                 'department' => $request->input('department'),
+                'line_no' => $request->input('line_no'),
                 'status' => $request->input('status'),
                 'notes' => $request->input('notes'),
             ];
             $tablets->update($data);
-            return redirect()->route('frontend.kpiproject.tablet.index');
+            return redirect()->route('tablet.index');
         } catch (\Exception $exception) {
             return redirect()->back()->withErrors($exception->getMessage());
         }
