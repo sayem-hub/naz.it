@@ -111,7 +111,7 @@
                 <th scope="col">TAB ID</th>
                 <th scope="col">Brand</th>
                 <th scope="col">Model</th>
-                <th scope="col">Size</th>
+                {{-- <th scope="col">Size</th> --}}
                 <th scope="col">Serial</th>
                 <th scope="col">IMEI 1</th>
                 {{-- <th scope="col">IMEI 2</th> --}}
@@ -133,7 +133,7 @@
                 <td>{{$tablet->tab_id}}</td>
                 <td>{{$tablet->brand}}</td>
                 <td>{{$tablet->model}}</td>
-                <td>{{$tablet->size}}</td>
+                {{-- <td>{{$tablet->size}}</td> --}}
                 <td>{{$tablet->serial}}</td>
                 <td>{{$tablet->imei_1}}</td>
                 {{-- <td>{{$tablet->imei_2}}</td> --}}

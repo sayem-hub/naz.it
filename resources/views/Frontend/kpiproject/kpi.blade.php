@@ -29,7 +29,7 @@
                 <li class="child-nav"><a target="_blank"
                         href="https://www.dropbox.com/s/u023qks0zayalrx/Ridmik%20Keyboard_v7.0.1.apk?dl=0" download
                         rel="noopener noreferrer">Ridmik</a></li>
-                <li class="child-nav"><a href="{{ route('sewing.machine')}}">Sewing Machine</a></li>
+                <li class="child-nav"><a href="{{ route('sewing.machine')}}">S.M ID</a></li>
                 <li class="child-nav"><a href="{{ route('tablet.index') }}">TAB List</a></li>
             </ul>
         </div>

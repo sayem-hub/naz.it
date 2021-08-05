@@ -82,7 +82,9 @@
                 <div class="mb-3">
                         <label for="Section" class="form-label">Section</label>
                         <select class="form-control" name="section">
-                            <option value="MIS" selected>MIS</option>
+                            <option value="MIS">MIS</option>
+                            <option value="KPI" selected>KPI</option>
+                            <option value="IT">IT</option>
                             <option value="Quality">Quality</option>
                          </select>
                 </div>

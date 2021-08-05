@@ -85,7 +85,9 @@
         <label for="Section" class="form-label">Section</label>
         <select class="form-control" name="section">
             <option value="{{ "$tablets->section" }}" selected>{{ "$tablets->designation" }}</option>
-            <option value="MIS" selected>MIS</option>
+            <option value="MIS">MIS</option>
+            <option value="KPI">KPI</option>
+            <option value="IT">IT</option>
             <option value="Quality">Quality</option>
         </select>
     </div>
