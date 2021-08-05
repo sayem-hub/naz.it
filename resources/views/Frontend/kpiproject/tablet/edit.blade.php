@@ -25,7 +25,7 @@
     @csrf
     <div class="mb-3">
         <label for="tab_id" class="form-label">Tab ID</label>
-        <input type="text" class="form-control" name="tab_id" id="tab_id" value={{ "$tablets->tab_id" }}>
+        <input type="text" class="form-control" name="tab_id" id="tab_id" value="{{ $tablets->tab_id }}">
     </div>
 
     <div class="mb-3">
@@ -39,7 +39,7 @@
 
     <div class="mb-3">
         <label for="model" class="form-label">Model</label>
-        <input type="text" class="form-control" name="model" id="model" value={{ "$tablets->model" }}>
+        <input type="text" class="form-control" name="model" id="model" value="{{ $tablets->model }}">
     </div>
 
 <div class="mb-3">
@@ -53,38 +53,38 @@
 
     <div class="mb-3">
         <label for="serial" class="form-label">Serial No</label>
-        <input type="text" class="form-control" name="serial" id="serial" value={{ "$tablets->serial" }}>
+        <input type="text" class="form-control" name="serial" id="serial" value="{{ $tablets->serial }}">
     </div>
 
     <div class="mb-3">
         <label for="imei_1" class="form-label">IMEI 1</label>
-        <input type="text" class="form-control" name="imei_1" id="imei_1" value={{ "$tablets->imei_1" }}>
+        <input type="text" class="form-control" name="imei_1" id="imei_1" value="{{ $tablets->imei_1 }}">
     </div>
 
     <div class="mb-3">
         <label for="imei_2" class="form-label">IMEI 2</label>
-        <input type="text" class="form-control" name="imei_2" id="imei_2" value={{ "$tablets->imei_2" }}>
+        <input type="text" class="form-control" name="imei_2" id="imei_2" value="{{ $tablets->imei_2 }}">
     </div>
 
     <div class="mb-3">
         <label for="user" class="form-label">User</label>
-        <input type="text" class="form-control" name="user" id="user" value={{ "$tablets->user" }}>
+        <input type="text" class="form-control" name="user" id="user" value="{{ $tablets->user }}">
     </div>
 
     <div class="mb-3">
         <label for="emp_id" class="form-label">Employee ID</label>
-        <input type="text" class="form-control" name="emp_id" id="emp_id" value={{ "$tablets->emp_id" }}>
+        <input type="text" class="form-control" name="emp_id" id="emp_id" value="{{ $tablets->emp_id}}">
     </div>
 
     <div class="mb-3">
         <label for="designation" class="form-label">Designation</label>
-        <input type="text" class="form-control" name="designation" id="designation" value={{ "$tablets->designation" }}>
+        <input type="text" class="form-control" name="designation" id="designation" value="{{ $tablets->designation}}">
     </div>
 
     <div class="mb-3">
         <label for="Section" class="form-label">Section</label>
         <select class="form-control" name="section">
-            <option value="{{ "$tablets->section" }}" selected>{{ "$tablets->designation" }}</option>
+            <option value="{{ $tablets->section }}" selected>{{ $tablets->section }}</option>
             <option value="MIS">MIS</option>
             <option value="KPI">KPI</option>
             <option value="IT">IT</option>
@@ -95,7 +95,7 @@
     <div class="mb-3">
         <label for="department" class="form-label">Department</label>
         <select class="form-control" name="department">
-            <option value="{{ $tablets->department }}" selected>{{ "$tablets->designation" }}</option>
+            <option value="{{ $tablets->department }}" selected>{{ $tablets->department }}</option>
             <option value="ICT" selected>ICT</option>
             <option value="Knitting">Knitting</option>
         </select>
@@ -139,7 +139,7 @@
     <div class="mb-3">
         <label for="Status" class="form-label">Status</label>
         <select class="form-control" name="status">
-            <option value="{{ $tablets->status }}" selected>{{ "$tablets->status" }}</option>
+            <option value="{{ $tablets->status }}" selected>{{ $tablets->status }}</option>
             <option value="Running" selected>Running</option>
             <option value="Idle">Idle</option>
             <option value="In Repair">In Repair</option>
@@ -148,7 +148,7 @@
 
     <div class="mb-3">
         <label for="notes" class="form-label">Notes</label>
-        <input type="text" class="form-control" name="notes" id="notes" value={{ "$tablets->notes" }}>
+        <input type="text" class="form-control" name="notes" id="notes" value="{{ $tablets->notes }}">
     </div>
 
 
