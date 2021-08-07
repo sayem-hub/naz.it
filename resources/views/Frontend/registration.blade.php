@@ -30,6 +30,10 @@
                         <option value="Officer">Officer</option>
                         <option value="Executive">Executive</option>
                         <option value="Sr. Executive">Sr. Executive</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Sr. Manager">Sr. Manager</option>
+                        <option value="Asst. Manager">Asst. Manager</option>
+                        <option value="Deputy Manager">Deputy Manager</option>
                         <option value="Data Entry Operator">Data Entry Operator</option>
                     </select>
                 </div>
@@ -56,6 +60,8 @@
                     <select name="department" class="form-control" id="department" >
                         <option selected>---Select Your Department---</option>
                         <option value="ICT">ICT</option>
+                        <option value="HR & Admin">HR & Admin</option>
+                        <option value="Compliance">Compliance</option>
                     </select>
                 </div>
 

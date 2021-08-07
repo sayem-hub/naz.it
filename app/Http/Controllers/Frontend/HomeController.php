@@ -137,7 +137,7 @@ class HomeController extends Controller
         public function received()
         {
 
-        $incoming = Incoming::orderBy('id')->paginate(10);
+        $incoming = Incoming::orderBy('id', 'desc')->paginate(10);
         return view('Frontend.received.index', compact('incoming'));
 
         }

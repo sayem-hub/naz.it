@@ -35,14 +35,14 @@
         <th scope="col">Model</th>
         <th scope="col">Serial No.</th>
         <th scope="col">Supplier</th>
-        <th scope="col">Purchase Date</th>
+        <th scope="col">Pur Date</th>
         <th scope="col">Warranty</th>
         <th scope="col">Challan No.</th>
         <th scope="col">Challan</th>
         <th scope="col">Req No.</th>
         <th scope="col">P.Type</th>
         <th scope="col">User</th>
-        <th scope="col">Department</th>
+        <th scope="col">Dept.</th>
         {{-- <th scope="col">Notes</th> --}}
         {{-- <th scope="col">Action</th> --}}
 
@@ -83,6 +83,8 @@
   </table>
 </div>
 </div>
+
+{{ $incoming->links('pagination::bootstrap-4')}}
 @endsection
 
 

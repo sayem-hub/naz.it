@@ -31,6 +31,7 @@
                 <select class="form-control" name="designation">
                     <option value="Officer" selected>Officer</option>
                     <option value="Executive">Executive</option>
+                    <option value="Sr. Executive">Sr. Executive</option>
                     <option value="Asst. Manager">Asst. Manager</option>
                     <option value="Deputy Manager">Deputy Manager</option>
                     <option value="Manager">Manager</option>
@@ -38,8 +39,11 @@
                     <option value="AGM">AGM</option>
                     <option value="DGM">DGM</option>
                     <option value="GM">GM</option>
+                    <option value="Cheif Business Council">Cheif Business Council</option>
                     <option value="Incharge">Incharge</option>
-
+                    <option value="Peon">Peon</option>
+                    <option value="Security">Security</option>
+                    <option value="Head of Production">Head of Production</option>
                 </select>
             </div>
 

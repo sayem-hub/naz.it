@@ -27,7 +27,24 @@
 
             <div class="mb-3">
                 <label for="designation" class="form-label">Designation</label>
-                <input type="text" class="form-control" name="designation" id="designation" value="{{ $machines->designation }}">
+                <select class="form-control" name="designation">
+                        <option value="{{ $machines->designation }}" selected>{{ $machines->designation }}</option>
+                        <option value="Officer">Officer</option>
+                        <option value="Executive">Executive</option>
+                        <option value="Sr. Executive">Sr. Executive</option>
+                        <option value="Asst. Manager">Asst. Manager</option>
+                        <option value="Deputy Manager">Deputy Manager</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Sr. Manager">Sr. Manager</option>
+                        <option value="AGM">AGM</option>
+                        <option value="DGM">DGM</option>
+                        <option value="GM">GM</option>
+                        <option value="Cheif Business Council">Cheif Business Council</option>
+                        <option value="Incharge">Incharge</option>
+                        <option value="Peon">Peon</option>
+                        <option value="Security">Security</option>
+                        <option value="Head of Production">Head of Production</option>
+                        </select>
             </div>
 
             <div class="mb-3">
@@ -65,7 +82,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="remarks" class="form-label">Remarks No</label>
+                <label for="remarks" class="form-label">Remarks</label>
                 <input type="text" class="form-control" name="remarks" id="remarks" value="{{ $machines->remarks }}">
             </div>
 
