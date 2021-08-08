@@ -43,7 +43,7 @@
                 <div class="mb-3">
                     <label for="Brand" class="form-label">Brand</label>
                     <select class="form-control" name="Brand">
-                        <option value={{$computer->Brand}}>{{$computer->Brand}}</option>
+                        <option value={{$computer->Brand}} selected>{{$computer->Brand}}</option>
                         <option value="HP">HP</option>
                         <option value="Dell">Dell</option>
                         <option value="Asus">Asus</option>
@@ -155,7 +155,9 @@
                     <option value="Compliance">Compliance</option>
                     <option value="Payroll">Payroll</option>
                     <option value="PD">PD</option>
+                    <option value="Accounts">Accounts</option>
                     <option value="IE">IE</option>
+                    <option value="IE">Delivery</option>
                     <option value="Quality">Quality</option>
                     <option value="Finishing">Finishing</option>
                     <option value="Planning">Planning</option>
@@ -163,6 +165,7 @@
                     <option value="Dyeing">Dyeing</option>
                     <option value="General Store">General Store</option>
                     <option value="Sewing Store">Sewing Store</option>
+                    <option value="Sewing">Sewing</option>
                     <option value="Finishing Store">Finishing Store</option>
                     <option value="Knitting Store">Knitting Store</option>
                     <option value="Fabric Store">Fabric Store</option>
@@ -177,8 +180,9 @@
                     <option value="Design">Design</option>
                     <option value="Embroidery">Embroidery</option>
                     <option value="Printing">Printing</option>
-                    <option value="Security">Security</option>
                     <option value="Store">Store</option>
+                    <option value="Offset">Offset</option>
+                    <option value="Elastic">Elastic</option>
                     <option value="Maintenance">Maintenance</option>
                 </select>
             </div>
@@ -187,20 +191,21 @@
                 <label for="Department" class="form-label">Department</label>
                 <select class="form-control" name="Department">
                     <option value="{{$computer->Department}}" selected>{{$computer->Department}}</option>
-                    <option value="HR & Admin">HR & Admin</option>
-                    <option value="Merchandising">Merchandising</option>
-                    <option value="ICT">ICT</option>
-                    <option value="Audit">Audit</option>
-                    <option value="Compliance">Compliance</option>
-                    <option value="IE & Planning">IE & Planning</option>
-                    <option value="Knitting">Knitting</option>
-                    <option value="Dyeing">Dyeing</option>
-                    <option value="All Over Print">All Over Print</option>
-                    <option value="Store">Store</option>
-                    <option value="NZ Accessories">NZ Accessories</option>
-                    <option value="Embroidery">Embroidery</option>
-                    <option value="Printing">Printing</option>
-                    <option value="Admin">Admin</option>
+                  <option value="HR & Admin">HR & Admin</option>
+                <option value="Merchandising">Merchandising</option>
+                <option value="ICT">ICT</option>
+                <option value="Audit">Audit</option>
+                <option value="Accounts">Accounts</option>
+                <option value="Compliance">Compliance</option>
+                <option value="IE & Planning">IE & Planning</option>
+                <option value="RMG">RMG</option>
+                <option value="Knitting">Knitting</option>
+                <option value="Dyeing">Dyeing</option>
+                <option value="All Over Print">All Over Print</option>
+                <option value="Store">Store</option>
+                <option value="NZ Accessories">NZ Accessories</option>
+                <option value="Embroidery">Embroidery</option>
+                <option value="Printing">Printing</option>
 
                 </select>
             </div>

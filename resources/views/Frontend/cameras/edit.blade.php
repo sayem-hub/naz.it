@@ -6,7 +6,7 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Edit Camera</h3>
+        <h3 class="text-center mt-3">Edit Camera Info</h3>
         <form action="{{route('camera.edit',$ccamera->id)}}" method="post">
             @csrf
             <div class="mb-3">
@@ -30,6 +30,7 @@
                             <label for="dvr_no" class="form-label">DVR No</label>
                             <select class="form-control" name="dvr_no">
                                 <option value="{{ $ccamera->dvr_no }}">{{ $ccamera->dvr_no }}</option>
+                                <option value="N/A">N/A</option>
                                 <option value="DVR-201">DVR-201</option>
                                 <option value="DVR-203">DVR-203</option>
                                 <option value="DVR-204">DVR-204</option>

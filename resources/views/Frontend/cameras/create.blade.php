@@ -29,6 +29,7 @@
                         <label for="dvr_no" class="form-label">DVR No</label>
                         <select class="form-control" name="dvr_no">
                             <option value="">---Select DVR No---</option>
+                            <option value="N/A">N/A</option>
                             <option value="DVR-201">DVR-201</option>
                             <option value="DVR-203">DVR-203</option>
                             <option value="DVR-204">DVR-204</option>

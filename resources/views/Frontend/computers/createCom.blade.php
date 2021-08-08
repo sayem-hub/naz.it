@@ -153,6 +153,7 @@
                     <option value="PD">PD</option>
                     <option value="Accounts">Accounts</option>
                     <option value="IE">IE</option>
+                    <option value="IE">Delivery</option>
                     <option value="Quality">Quality</option>
                     <option value="Finishing">Finishing</option>
                     <option value="Planning">Planning</option>
@@ -160,6 +161,7 @@
                     <option value="Dyeing">Dyeing</option>
                     <option value="General Store">General Store</option>
                     <option value="Sewing Store">Sewing Store</option>
+                    <option value="Sewing">Sewing</option>
                     <option value="Finishing Store">Finishing Store</option>
                     <option value="Knitting Store">Knitting Store</option>
                     <option value="Fabric Store">Fabric Store</option>
@@ -176,6 +178,8 @@
                     <option value="Printing">Printing</option>
                     <option value="Store">Store</option>
                     <option value="Maintenance">Maintenance</option>
+                    <option value="Offset">Offset</option>
+                    <option value="Elastic">Elastic</option>
                 </select>
             </div>
 
