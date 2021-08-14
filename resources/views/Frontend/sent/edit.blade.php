@@ -70,6 +70,7 @@
                     <option value="Resigned">Resigned</option>
                     <option value="Damaged">Damaged</option>
                     <option value="Wastage">Wastage</option>
+                    <option value="As needed">As needed</option>
                     <option value="Extra(No need)">Extra(No need)</option>
 
                 </select>

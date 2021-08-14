@@ -2,8 +2,8 @@
 @section('main')
 
 <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-7">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
 
         <h3 class="text-center mt-3">Add New Outgoing Item</h3>
         <form action="{{route('sent.items.create')}}" method="post">
@@ -70,6 +70,7 @@
                     <option value="Resigned">Resigned</option>
                     <option value="Damaged">Damaged</option>
                     <option value="Wastage">Wastage</option>
+                    <option value="As needed">As needed</option>
                     <option value="Extra(No need)">Extra(No need)</option>
                 </select>
             </div>
@@ -84,6 +85,7 @@
                 <select class="form-control" id="status" name="status" requred>
                     <option selected>Open this select menu</option>
                     <option value="Pending" selected>Pending</option>
+                    <option value="Non-returnable">Non-returnable</option>
                 </select>
             </div>
 
