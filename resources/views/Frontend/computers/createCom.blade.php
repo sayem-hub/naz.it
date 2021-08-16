@@ -153,7 +153,7 @@
                     <option value="PD">PD</option>
                     <option value="Accounts">Accounts</option>
                     <option value="IE">IE</option>
-                    <option value="IE">Delivery</option>
+                    <option value="Delivery">Delivery</option>
                     <option value="Quality">Quality</option>
                     <option value="Finishing">Finishing</option>
                     <option value="Planning">Planning</option>
@@ -176,6 +176,7 @@
                     <option value="Design">Design</option>
                     <option value="Embroidery">Embroidery</option>
                     <option value="Printing">Printing</option>
+                    <option value="Production">Production</option>
                     <option value="Store">Store</option>
                     <option value="Maintenance">Maintenance</option>
                     <option value="Offset">Offset</option>
