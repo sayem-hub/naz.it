@@ -38,9 +38,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
     Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
 
+  //Requisition Route
+  Route::get('/requisition-list',[App\Http\Controllers\Frontend\RequisitionController::class, 'index'])->name('requisition.index');
+  Route::get('/requisition-add',[App\Http\Controllers\Frontend\RequisitionController::class, 'create'])->name('requisition.add');
+  Route::post('/requisition-add',[App\Http\Controllers\Frontend\RequisitionController::class, 'store']);
+  Route::get('/requisition-edit/{id}',[App\Http\Controllers\Frontend\RequisitionController::class, 'edit'])->name('requisition.edit');
+  Route::post('/requisition-edit/{id}',[App\Http\Controllers\Frontend\RequisitionController::class, 'update']);
+  Route::post('/requisition/search',[App\Http\Controllers\Frontend\RequisitionController::class, 'search'])->name('requisition.search');
 
     //Router & Switch Route
-
     Route::get('/router-list',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerIndex'])->name('router.index');
     Route::get('/router/create',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerCreate'])->name('router.create');
     Route::post('/router/create',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerStore'])->name('router.store');
@@ -49,7 +55,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('router-list/generatePDF', [App\Http\Controllers\Frontend\PdfController::class, 'generateRouterPdf'])->name('create.router.pdf');
 
     //Printer & Scanner Route
-
     Route::get('/printers-list',[App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerIndex'])->name('printer.index');
     Route::get('/printer/create',[App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerCreate'])->name('printer.create');
     Route::post('/printer/create',[App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerStore']);
