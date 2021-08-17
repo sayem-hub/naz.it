@@ -44,7 +44,7 @@ Route::middleware(['auth'])->group(function () {
   Route::post('/requisition-add',[App\Http\Controllers\Frontend\RequisitionController::class, 'store']);
   Route::get('/requisition-edit/{id}',[App\Http\Controllers\Frontend\RequisitionController::class, 'edit'])->name('requisition.edit');
   Route::post('/requisition-edit/{id}',[App\Http\Controllers\Frontend\RequisitionController::class, 'update']);
-  Route::post('/requisition/search',[App\Http\Controllers\Frontend\RequisitionController::class, 'search'])->name('requisition.search');
+  Route::get('/requisition/search',[App\Http\Controllers\Frontend\SearchController::class, 'requisitionSearch'])->name('requisition.search');
 
     //Router & Switch Route
     Route::get('/router-list',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerIndex'])->name('router.index');

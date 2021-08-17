@@ -73,5 +73,19 @@ class SearchController extends Controller
         return view('Frontend.kpiproject.tablet.search', ['tablets' => $tablets]);
     }
 
+    public function requisitionSearch(Request $request)
+{
+    $request->validate(([
+        'query'=>'required|min:3'
+    ]));
+
+    $search_text = $request->input('query');
+        $requisitions = DB::table('requisitions')
+        ->where('required_for', 'LIKE', '%' . $search_text . '%')->orWhere('status', 'LIKE', '%' . $search_text . '%')
+            //   ->orWhere('SurfaceArea','<', 10)
+            //   ->orWhere('LocalName','like','%'.$search_text.'%')
+            ->paginate(50);
+        return view('Frontend.requisition.search', ['requisitions' => $requisitions]);
+}
     }
 

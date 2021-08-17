@@ -6,47 +6,48 @@
 
 
 <h3 class="text-center mt-3">Search results</h3>
-<a href={{ route('rfid.create') }} class="btn btn-success">Issue New ID</a>
-<table class="table table-bordered table-hover" style="font-size: 15px">
+<a href={{ route('rfid.create') }} class="btn btn-success">Add new requisition</a>
+<table class="table table-bordered table-hover" style="font-size: 14px">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">NAZ ID</th>
-
-            <th scope="col">Name</th>
+           <th scope="col">#</th>
+            <th scope="col">Requisition No</th>
+            <th scope="col">Item(s)</th>
+            <th scope="col">Required for</th>
             <th scope="col">Designation</th>
-            <th scope="col">Section</th>
-            <th scope="col">RF ID No</th>
-            <th scope="col">Issue Date</th>
+            <th scope="col">Section/Dept.</th>
+            <th scope="col">Requisition Date</th>
             <th scope="col">Status</th>
-            <th scope="col">Remarks</th>
-            <th scope="col">Created at</th>
+            {{-- <th scope="col">Notes</th> --}}
+            <th scope="col">Entry at</th>
             <th scope="col">Action</th>
 
-        </tr>
-    </thead>
-    <tbody>
+            </tr>
+            </thead>
+            <tbody>
 
-        @foreach($rfids as $key=>$rfid)
+                @foreach($requisitions as $key=>$requisition)
 
-        <tr>
-            <th scope="row">{{$key+1}}</th>
-            <td>{{$rfid->naz_id}}</td>
-            <td>{{$rfid->name}}</td>
-            <td>{{$rfid->designation}}</td>
-            <td>{{$rfid->section}}</td>
-            <td>{{$rfid->rf_id}}</td>
-            <td>{{$rfid->issue_date}}</td>
-            <td>{{$rfid->status}}</td>
-            <td>{{$rfid->remarks}}</td>
-            <td>{{$rfid->created_at}}</td>
-            <td><a class="btn btn-secondary" href="{{ route('rfid.edit', $rfid->id) }}">Edit</a></td>
-        </tr>
+                <tr>
+                    <th scope="row">{{$key+1}}</th>
+                    <td>{{$requisition->requisition_no}}</td>
+                    <td>{{$requisition->item_names}}</td>
+                    <td>{{$requisition->required_for}}</td>
+                    <td>{{$requisition->designation}}</td>
+                    <td>{{$requisition->department}}</td>
+                    <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td>
+                    <td>{{$requisition->status}}</td>
+                    {{-- <td>{{$requisition->notes}}</td> --}}
+                    <td>{{date('d/m/Y', strtotime($requisition->created_at))}}</td>
+                    <td><a class="btn btn-secondary" href="{{ route('requisition.edit', $requisition->id) }}">Edit</a></td>
+                </tr>
 
-        @endforeach
+                @endforeach
 
-    </tbody>
-</table>
-{{$rfids->links('pagination::bootstrap-4')}}
+            </tbody>
+            </table>
+            </div>
+            </div>
+            {{$requisitions->links('pagination::bootstrap-4')}}
 
-@endsection
+            @endsection

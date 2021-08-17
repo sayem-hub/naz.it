@@ -8,13 +8,13 @@
 
         <h3 class="text-center mt-3">Requisition List</h3>
 
-        <form action="#" method="GET">
+        <form action="{{ route('requisition.search') }}" method="GET">
             <div class="form-group">
                 <a href={{ route('requisition.add') }} class="btn btn-success">Add requisition</a>
                 <div class="form-group row"><br>
                     <div class="col-xs-3">
 
-                        <input type="text" class="form-control" name="query" placeholder="Pending or Received"
+                        <input type="text" class="form-control" name="query" placeholder="Requisition for Or type Pending/Received"
                             value="{{ request()->input('query') }}">
                         <span class="text-danger">@error('query'){{ $message }}@enderror</span>
 
@@ -27,7 +27,7 @@
         </form>
 
 
-<table class="table table-bordered table-hover" style="font-size: 14px">
+<table class="table table-bordered table-hover" style="font-size: 13px">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -36,7 +36,7 @@
         <th scope="col">Required for</th>
         <th scope="col">Designation</th>
         <th scope="col">Section/Dept.</th>
-        <th scope="col">Requisition Date</th>
+        <th scope="col">Req. Date</th>
         <th scope="col">Status</th>
         {{-- <th scope="col">Notes</th> --}}
         <th scope="col">Entry at</th>
