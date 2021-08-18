@@ -176,7 +176,7 @@ class HomeController extends Controller
 
         public function sentItem()
         {
-        $items = Outitem::orderBy('id', 'desc')->paginate(10);
+        $items = Outitem::orderBy('id', 'desc')->paginate(15);
         return view('Frontend.sent.index', compact('items'));
         }
 
