@@ -22,7 +22,7 @@
             <th scope="col">Sent For</th>
             <th scope="col">Status</th>
             {{--<th scope="col">Created_at</th>--}}
-            <th scope="col">Entry Date</th>
+            {{-- <th scope="col">Entry Date</th> --}}
             {{-- <th scope="col">Action</th> --}}
 
         </tr>
@@ -31,7 +31,9 @@
 
         @foreach($items as $key=>$item)
 
-        <tr>
+
+
+        <tr >
             <th scope="row">{{$key+1}}</th>
             <td>{{$item->Iname}}</td>
             <td>{{$item->Brand}}</td>
@@ -45,9 +47,24 @@
             <td>{{$item->Outdate}}</td>
             <td>{{$item->Gpno}}</td>
             <td>{{$item->Sentfor}}</td>
-            <td>{{$item->Status}}</td>
+
+            @php
+            if ( $item->Status == 'Pending'):
+            $color = 'red';
+            elseif ( $item->Status == 'Solved'):
+            $color = 'green';
+            elseif ( $item->Status == 'Returned'):
+            $color = 'yellow';
+            else:
+            $color = 'gray';
+            endif;
+            @endphp
+
+            <td style="background-color: {{$color}}">{{ $item->Status }}</td>
+
+            {{-- <td>{{$item->Status}}</td> --}}
             {{--<td>{{$item->created_at}}</td>--}}
-            <td>{{$item->created_at->format('Y-m-d')}}</td>
+            {{-- <td>{{$item->created_at->format('Y-m-d')}}</td> --}}
         </tr>
 
         @endforeach

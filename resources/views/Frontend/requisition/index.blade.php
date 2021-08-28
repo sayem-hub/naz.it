@@ -39,7 +39,7 @@
         <th scope="col">Req. Date</th>
         <th scope="col">Status</th>
         {{-- <th scope="col">Notes</th> --}}
-        <th scope="col">Entry at</th>
+        {{-- <th scope="col">Entry at</th> --}}
         <th scope="col">Action</th>
 
       </tr>
@@ -56,9 +56,21 @@
         <td>{{$requisition->designation}}</td>
         <td>{{$requisition->department}}</td>
         <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td>
-        <td>{{$requisition->status}}</td>
+
+        @php
+        if ( $requisition->status == 'Pending'):
+        $color = 'red';
+        elseif ( $requisition->status == 'Received'):
+        $color = 'green';
+        else:
+        $color = 'gray';
+        endif;
+        @endphp
+
+        <td style="color: {{$color}}">{{ $requisition->status }}</td>
+        {{-- <td>{{$requisition->status}}</td> --}}
         {{-- <td>{{$requisition->notes}}</td> --}}
-        <td>{{date('d/m/Y', strtotime($requisition->created_at))}}</td>
+        {{-- <td>{{date('d/m/Y', strtotime($requisition->created_at))}}</td> --}}
         <td><a class="btn btn-secondary" href="{{ route('requisition.edit', $requisition->id) }}">Edit</a></td>
       </tr>
 

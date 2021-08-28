@@ -39,8 +39,8 @@
         <th scope="col">RF ID No</th>
         <th scope="col">Issue Date</th>
         <th scope="col">Status</th>
-        <th scope="col">Remarks</th>
-        <th scope="col">Created at</th>
+        {{-- <th scope="col">Remarks</th> --}}
+        {{-- <th scope="col">Created at</th> --}}
         <th scope="col">Action</th>
 
       </tr>
@@ -58,8 +58,8 @@
         <td>{{$rfid->rf_id}}</td>
         <td>{{$rfid->issue_date}}</td>
         <td>{{$rfid->status}}</td>
-        <td>{{$rfid->remarks}}</td>
-        <td>{{$rfid->created_at}}</td>
+        {{-- <td>{{$rfid->remarks}}</td> --}}
+        {{-- <td>{{$rfid->created_at}}</td> --}}
         <td><a class="btn btn-secondary" href="{{ route('rfid.edit', $rfid->id) }}">Edit</a></td>
       </tr>
 
