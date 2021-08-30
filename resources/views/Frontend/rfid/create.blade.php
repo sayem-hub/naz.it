@@ -36,6 +36,7 @@
                     <option value="Ordinary Operator">Ordinary Operator</option>
                     <option value="Sr. Operator">Sr. Operator</option>
                     <option value="Operator">Operator</option>
+                    <option value="Jr. Operator">Jr. Operator</option>
 
                 </select>
             </div>

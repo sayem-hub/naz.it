@@ -26,7 +26,7 @@
             <th scope="col">PABX No</th>
             <th scope="col">Model</th>
             <th scope="col">Status</th>
-            <th scope="col">Remarks</th>
+            {{-- <th scope="col">Remarks</th> --}}
             <th scope="col">Updated at</th>
             <th scope="col">Action</th>
         </tr>
@@ -44,7 +44,7 @@
             <td>{{$pabx->pabx_no}}</td>
             <td>{{$pabx->model}}</td>
             <td>{{$pabx->status}}</td>
-            <td>{{$pabx->remarks}}</td>
+            {{-- <td>{{$pabx->remarks}}</td> --}}
             <td>{{$pabx->updated_at->format('Y-m-d')}}</td>
             <td>
                 <a class="btn btn-secondary" href="{{ route('frontend.pabx.edit', $pabx->id)}}">Edit</a>

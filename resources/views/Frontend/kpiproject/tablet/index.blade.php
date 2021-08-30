@@ -41,7 +41,7 @@
         <th scope="col">User</th>
         <th scope="col">Emp ID</th>
         <th scope="col">Designation</th>
-        <th scope="col">Section</th>
+        <th scope="col">Sect.</th>
         <th scope="col">Dept.</th>
         <th scope="col">Line</th>
         <th scope="col">Status</th>
