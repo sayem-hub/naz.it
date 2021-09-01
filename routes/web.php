@@ -38,13 +38,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
     Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
 
-  //Requisition Route
-  Route::get('/requisition-list',[App\Http\Controllers\Frontend\RequisitionController::class, 'index'])->name('requisition.index');
-  Route::get('/requisition-add',[App\Http\Controllers\Frontend\RequisitionController::class, 'create'])->name('requisition.add');
-  Route::post('/requisition-add',[App\Http\Controllers\Frontend\RequisitionController::class, 'store']);
-  Route::get('/requisition-edit/{id}',[App\Http\Controllers\Frontend\RequisitionController::class, 'edit'])->name('requisition.edit');
-  Route::post('/requisition-edit/{id}',[App\Http\Controllers\Frontend\RequisitionController::class, 'update']);
-  Route::get('/requisition/search',[App\Http\Controllers\Frontend\SearchController::class, 'requisitionSearch'])->name('requisition.search');
+    //Requisition Route
+    Route::get('/requisition-list',[App\Http\Controllers\Frontend\RequisitionController::class, 'index'])->name('requisition.index');
+    Route::get('/requisition-add',[App\Http\Controllers\Frontend\RequisitionController::class, 'create'])->name('requisition.add');
+    Route::post('/requisition-add',[App\Http\Controllers\Frontend\RequisitionController::class, 'store']);
+    Route::get('/requisition-edit/{id}',[App\Http\Controllers\Frontend\RequisitionController::class, 'edit'])->name('requisition.edit');
+    Route::post('/requisition-edit/{id}',[App\Http\Controllers\Frontend\RequisitionController::class, 'update']);
+    Route::get('/requisition/search',[App\Http\Controllers\Frontend\SearchController::class, 'requisitionSearch'])->name('requisition.search');
 
     //Router & Switch Route
     Route::get('/router-list',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerIndex'])->name('router.index');
@@ -99,15 +99,15 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/kpi/smachine',[App\Http\Controllers\Frontend\KpiController::class, 'sewingMachine'])->name('sewing.machine');
             Route::post('/kpi/smachine',[App\Http\Controllers\Frontend\KpiController::class, 'brother_machineStore']);
 
-    //Tablet Route
-    Route::get('/kpi/tab-list', [App\Http\Controllers\Frontend\KpiController::class, 'index'])->name('tablet.index');
-    Route::get('/kpi/tab-list/create', [App\Http\Controllers\Frontend\KpiController::class, 'create'])->name('tablet.create');
-    Route::post('/kpi/tab-list/create', [App\Http\Controllers\Frontend\KpiController::class, 'store']);
-    Route::get('/kpi/tab-list/edit/{id}', [App\Http\Controllers\Frontend\KpiController::class, 'edit'])->name('tablet.edit');
-    Route::post('/kpi/tab-list/edit/{id}', [App\Http\Controllers\Frontend\KpiController::class, 'update']);
-    Route::get('tab-list/generatePDF', [App\Http\Controllers\Frontend\PdfController::class, 'generateTabPdf'])->name('create.tablet.pdf');
+            //Tablet Route
+            Route::get('/kpi/tab-list', [App\Http\Controllers\Frontend\KpiController::class, 'index'])->name('tablet.index');
+            Route::get('/kpi/tab-list/create', [App\Http\Controllers\Frontend\KpiController::class, 'create'])->name('tablet.create');
+            Route::post('/kpi/tab-list/create', [App\Http\Controllers\Frontend\KpiController::class, 'store']);
+            Route::get('/kpi/tab-list/edit/{id}', [App\Http\Controllers\Frontend\KpiController::class, 'edit'])->name('tablet.edit');
+            Route::post('/kpi/tab-list/edit/{id}', [App\Http\Controllers\Frontend\KpiController::class, 'update']);
+            Route::get('tab-list/generatePDF', [App\Http\Controllers\Frontend\PdfController::class, 'generateTabPdf'])->name('create.tablet.pdf');
 
-    Route::get('/tab/search', [App\Http\Controllers\Frontend\SearchController::class, 'tabSearch'])->name('tablet.search');
+            Route::get('/tab/search', [App\Http\Controllers\Frontend\SearchController::class, 'tabSearch'])->name('tablet.search');
 
             //Received Route
             Route::get('/received-items',[App\Http\Controllers\Frontend\HomeController::class, 'received'])->name('received.goods');
@@ -201,9 +201,15 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/questions/kha', [App\Http\Controllers\Backend\QuestionsController::class, 'questions_kha'])->name('admin.questions.kha');
         Route::get('/questions/ga', [App\Http\Controllers\Backend\QuestionsController::class, 'questions_ga'])->name('admin.questions.ga');
 
+        Route::get('/question',[App\Http\Controllers\Backend\QuestionsController::class,'question'])->name('admin.question.index');
+        Route::get('/question/search',[App\Http\Controllers\Backend\QuestionsController::class,'search'])->name('admin.question.search');
+        Route::get('/question/edit/{id}',[App\Http\Controllers\Backend\QuestionsController::class,'edit'])->name('admin.question.edit');
+        Route::post('/question/edit/{id}',[App\Http\Controllers\Backend\QuestionsController::class,'update']);
+
+        Route::get('/question/create', [App\Http\Controllers\Backend\QuestionsController::class, 'create'])->name('admin.question.create');
+        Route::post('/question/create', [App\Http\Controllers\Backend\QuestionsController::class, 'store']);
+
     });
-
-
 
 });
 

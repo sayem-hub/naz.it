@@ -31,6 +31,7 @@
                         rel="noopener noreferrer">Ridmik</a></li>
                 <li class="child-nav"><a href="{{ route('sewing.machine')}}">S.M ID</a></li>
                 <li class="child-nav"><a href="{{ route('tablet.index') }}">TAB List</a></li>
+                <li class="child-nav"><a href="{{ route('admin.question.index') }}">Question</a></li>
             </ul>
         </div>
         <h2>
