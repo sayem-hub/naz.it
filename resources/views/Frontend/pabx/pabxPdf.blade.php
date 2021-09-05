@@ -27,7 +27,7 @@
             }
             footer {
             position: fixed;
-            bottom: -10px;
+            bottom: -7px;
             left: 0px;
             right: 0px;
             height: 10px;
@@ -36,7 +36,15 @@
 
             color: black;
             text-align: center;
-            line-height: 15px;
+            line-height: 10px;
+            }
+
+            hr {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 0.5px;
             }
 
         .styled-table {
@@ -92,7 +100,8 @@
         NAZ-IMS (NAZ IT Management System)
     </header>
     <footer>
-        All Rights Reserved. Copyright © NAZ-IMS by Abu Sayem; Print date: <?php echo date("Y-m-d");?>
+        <hr>
+        Software generated report. Copyright © NAZ-IMS by Abu Sayem; Print date: <?php echo date("Y-m-d");?>
     </footer>
 
     <h3>NAZ Bangladesh Ltd.</h3>

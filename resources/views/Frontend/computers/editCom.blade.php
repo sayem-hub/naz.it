@@ -53,6 +53,11 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="Model" class="form-label">Model (If applicable)</label>
+                    <input type="text" class="form-control" name="Model" id="Model" value="{{ $computer->Model }}">
+                </div>
+
+                <div class="mb-3">
                     <label for="Spec" class="form-label">Specification</label>
                     <input type="text" class="form-control" name="Spec" id="Spec" value="{{ $computer->Spec }}">
                 </div>
@@ -149,6 +154,7 @@
                     <option value="{{$computer->Section}}" selected>{{$computer->Section}}</option>
                     <option value="HR & Admin">HR & Admin</option>
                     <option value="Merchandising">Merchandising</option>
+                    <option value="Civil">Civil</option>
                     <option value="IT">IT</option>
                     <option value="MIS">MIS</option>
                     <option value="Internal Audit">Internal Audit</option>
@@ -194,6 +200,7 @@
                     <option value="{{$computer->Department}}" selected>{{$computer->Department}}</option>
                   <option value="HR & Admin">HR & Admin</option>
                 <option value="Merchandising">Merchandising</option>
+                <option value="Civil">Civil</option>
                 <option value="ICT">ICT</option>
                 <option value="Audit">Audit</option>
                 <option value="Accounts">Accounts</option>

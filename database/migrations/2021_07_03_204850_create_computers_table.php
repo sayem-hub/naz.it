@@ -16,14 +16,18 @@ class CreateComputersTable extends Migration
         Schema::create('computers', function (Blueprint $table) {
             $table->id();
             $table->string('Comid')->unique();
+            $table->string('Emp_id')->unique();
             $table->string('User');
             $table->string('Designation');
-            $table->string('ComType');
+            $table->string('Comtype');
+            $table->string('Brand')->nullable();
+            $table->string('Model')->nullable();
+            $table->string('Spec')->nullable();
             $table->string('Monitor');
             $table->string('Keyboard');
             $table->string('Mouse');
-            $table->string('UPS');
-            $table->string('IPAdd');
+            $table->string('ups');
+            $table->string('Ipadd');
             $table->string('Email');
             $table->string('Section');
             $table->string('Department');

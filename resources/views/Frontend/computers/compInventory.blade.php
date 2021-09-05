@@ -27,7 +27,7 @@
             }
             footer {
             position: fixed;
-            bottom: -10px;
+            bottom: -7px;
             left: 0px;
             right: 0px;
             height: 10px;
@@ -36,11 +36,8 @@
 
             color: black;
             text-align: center;
-            line-height: 15px;
+            line-height: 10px;
             }
-
-
-
 
         .styled-table {
         border-collapse: collapse;
@@ -85,6 +82,14 @@
             line-height: 40%;
         }
 
+        hr {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset;
+        border-width: 0.5px;
+        }
+
 
     </style>
 
@@ -96,7 +101,8 @@
         NAZ-IMS (NAZ IT Management System)
     </header>
     <footer>
-        All Rights Reserved. Copyright © NAZ-IMS by Abu Sayem; Print date: <?php echo date("Y-m-d");?>
+        <hr>
+        Software generated report. Copyright © NAZ-IMS by Abu Sayem; Print date: <?php echo date("Y-m-d");?>
     </footer>
 
     <h3>NAZ Bangladesh Ltd.</h3>
@@ -108,14 +114,14 @@
         <thead class="thead-dark" >
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Computer ID</th>
-                <th scope="col">Employee ID</th>
+                <th scope="col">Comp ID</th>
+                <th scope="col">Emp ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Designation</th>
                 {{-- <th scope="col">IP Address</th> --}}
-                <th scope="col">Email Address</th>
+                <th scope="col">Email address</th>
                 <th scope="col">Section</th>
-                <th scope="col">Department</th>
+                <th scope="col">Dept.</th>
                 <th scope="col">Status</th>
             </tr>
         </thead>

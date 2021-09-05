@@ -27,7 +27,7 @@
 
 
 
-<table class="table table-bordered table-hover" style="font-size: 14px">
+<table class="table table-bordered table-hover" style="font-size: 13px">
     <thead class="thead-dark">
       <tr>
        <th scope="col">#</th>
@@ -35,8 +35,8 @@
         <th scope="col">Employee ID</th>
         <th scope="col">Name</th>
         <th scope="col">Designation</th>
-        <th scope="col">IP Address</th>
-        <th scope="col">Email Address</th>
+        <th scope="col">IP address</th>
+        <th scope="col">Email address</th>
         <th scope="col">Section</th>
         <th scope="col">Department</th>
         <th scope="col">Status</th>

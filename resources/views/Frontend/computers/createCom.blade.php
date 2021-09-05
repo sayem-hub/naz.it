@@ -52,6 +52,11 @@
             </div>
 
             <div class="mb-3">
+                <label for="model" class="form-label">Model (If applicable)</label>
+                <input type="text" class="form-control" name="model" id="model">
+            </div>
+
+            <div class="mb-3">
                 <label for="Spec" class="form-label">Specification</label>
                 <input type="text" class="form-control" name="Spec" id="Spec" placeholder="Processor model, RAM size, HDD/SSD Size">
             </div>
@@ -145,6 +150,7 @@
                 <select class="form-control" name="Section">
                     <option value="HR & Admin" selected>HR & Admin</option>
                     <option value="Merchandising">Merchandising</option>
+                    <option value="Civil">Civil</option>
                     <option value="IT">IT</option>
                     <option value="MIS">MIS</option>
                     <option value="Internal Audit">Internal Audit</option>
@@ -189,6 +195,7 @@
                 <select class="form-control" name="Department">
                     <option value="HR & Admin" selected>HR & Admin</option>
                     <option value="Merchandising">Merchandising</option>
+                    <option value="Civil">Civil</option>
                     <option value="ICT">ICT</option>
                     <option value="Audit">Audit</option>
                     <option value="Accounts">Accounts</option>

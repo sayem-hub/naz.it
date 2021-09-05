@@ -93,7 +93,7 @@
         NAZ-IMS (NAZ IT Management System)
     </header>
     <footer>
-        All Rights Reserved. Copyright © NAZ-IMS by Abu Sayem; Print date: <?php echo date("Y-m-d");?>
+        Software generated report. Copyright © NAZ-IMS by Abu Sayem; Print date: <?php echo date("Y-m-d");?>
     </footer>
 
     <h3>NAZ Bangladesh Ltd.</h3>
