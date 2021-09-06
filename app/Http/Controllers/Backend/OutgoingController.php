@@ -34,6 +34,7 @@ class OutgoingController extends Controller
              'Purdate'=>$request->input('purdate'),
              'Outdate'=>$request->input('outdate'),
              'Sentfor'=>$request->input('sentfor'),
+             'Problems'=>$request->input('problems'),
              'Gpno'=>$request->input('gpno'),
              'Status'=>$request->input('status'),
 
@@ -69,6 +70,7 @@ class OutgoingController extends Controller
              'Purdate'=>$request->input('purdate'),
              'Outdate'=>$request->input('outdate'),
              'Sentfor'=>$request->input('sentfor'),
+            'Problems' => $request->input('problems'),
              'Gpno'=>$request->input('gpno'),
              'Status'=>$request->input('status'),
             'Reason' => $request->input('reason'),

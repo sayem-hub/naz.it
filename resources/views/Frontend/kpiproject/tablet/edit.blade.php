@@ -76,9 +76,12 @@
         <input type="text" class="form-control" name="emp_id" id="emp_id" value="{{ $tablets->emp_id}}">
     </div>
 
-    <div class="mb-3">
-        <label for="designation" class="form-label">Designation</label>
-        <input type="text" class="form-control" name="designation" id="designation" value="{{ $tablets->designation}}">
+        <div class="mb-3">
+        <label for="designation" class="form-label">Title</label>
+        <select class="form-control" name="designation">
+            <option value="{{ $tablets->designation}}" selected>{{ $tablets->designation}}</option>
+            <option value="DEO">DEO</option>
+        </select>
     </div>
 
     <div class="mb-3">

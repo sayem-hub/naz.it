@@ -76,6 +76,11 @@
             </div>
 
             <div class="mb-3">
+                <label for="problems" class="form-label">Problems</label>
+                <input type="text" class="form-control" name="problems" id="problems" value="{{ $outitems->Problems }}">
+            </div>
+
+            <div class="mb-3">
               <label for="gate-pass" class="form-label">Gate Pass No.</label>
               <input type="number" class="form-control" name="gpno" id="gpno" value="{{$outitems->Gpno}}">
             </div>
@@ -89,11 +94,6 @@
                     <option value="Returned">Returned</option>
                     <option value="Not Solved">Not Solved</option>
                     </select>
-            </div>
-
-            <div class="mb-3">
-              <label for="reason" class="form-label">Reason</label>
-              <textarea class="form-control" rows="2" cols="30" name="reason">{{ $outitems->Reason }}</textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">Update</button>

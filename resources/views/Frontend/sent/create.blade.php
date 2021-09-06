@@ -76,6 +76,11 @@
             </div>
 
             <div class="mb-3">
+                <label for="problems" class="form-label">Problems</label>
+                <input type="text" class="form-control" name="problems" id="problems">
+            </div>
+
+            <div class="mb-3">
                 <label for="gate-pass" class="form-label">Gate Pass No.</label>
                 <input type="number" class="form-control" name="gpno" id="gate-pass">
             </div>

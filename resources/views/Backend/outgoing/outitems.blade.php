@@ -4,7 +4,7 @@
 
 <h3 class="text-center mt-3">Outgoing Item List</h3>
 <a href="{{route('admin.outgoing.create')}}" class="btn btn-success">Add New Item</a>
-<table class="table">
+<table class="table" style="font-size: 11px">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -20,17 +20,18 @@
         <th scope="col">Outgoing Date</th>
         {{--<th scope="col">GP No.</th>--}}
         <th scope="col">Sent For</th>
+        <th scope="col">Problems</th>
         <th scope="col">Status</th>
         {{--<th scope="col">Created_at</th>--}}
-        <th scope="col">Updated_at</th>
+        {{-- <th scope="col">Updated_at</th> --}}
         <th scope="col">Action</th>
-        
+
       </tr>
     </thead>
     <tbody>
-      
+
     @foreach($outitems as $key=>$outitem)
-          
+
       <tr>
         <th scope="row">{{$key+1}}</th>
         <td>{{$outitem->Iname}}</td>
@@ -45,10 +46,11 @@
         <td>{{$outitem->Outdate}}</td>
         {{--<td>{{$outitem->Gpno}}</td>--}}
         <td>{{$outitem->Sentfor}}</td>
+        <td>{{$outitem->Problems}}</td>
         <td>{{$outitem->Status}}</td>
         {{--<td>{{$outitem->created_at}}</td>--}}
-        <td>{{$outitem->updated_at}}</td>
-        
+        {{-- <td>{{$outitem->updated_at}}</td> --}}
+
         <td>
           <a class="btn btn-primary" href="{{route('admin.outgoing.edit',$outitem->id)}}">Edit</a>
           <a class="btn btn-warning" href="{{route('admin.outgoing.delete',$outitem->id)}}">Delete</a>

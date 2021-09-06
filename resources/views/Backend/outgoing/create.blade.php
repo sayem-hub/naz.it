@@ -12,7 +12,7 @@
             <div class="mb-3">
               <label for="item-name" class="form-label">Item Name</label>
               <input type="text" class="form-control" name="itemname" id="itemname">
-              
+
             </div>
 
             <div class="mb-3">
@@ -20,7 +20,7 @@
               <input type="text" class="form-control" name="brand" id="brand">
             </div>
 
-            
+
             <div class="mb-3">
               <label for="model" class="form-label">Model</label>
               <input type="text" class="form-control" name="model" id="model">
@@ -62,9 +62,14 @@
             </div>
 
             <div class="mb-3">
+                <label for="problems" class="form-label">Problems</label>
+                <input type="text" class="form-control" name="problems" id="problems">
+            </div>
+
+            <div class="mb-3">
               <label for="sentfor" class="form-label">Sent For</label>
               <select class="form-select" id="sentfor" name="sentfor" required>
-              
+
                     <option selected>--Select--</option>
                     <option value="Warranty">Warranty</option>
                     <option value="Reparing">Reparing</option>
@@ -84,10 +89,10 @@
             <div class="mb-3">
               <label for="status" class="form-label">Status</label>
               <select class="form-select" id="status" name="status" requred>
-              
+
                     <option selected>Open this select menu</option>
                     <option value="Pending" selected>Pending</option>
-                    
+
                     </select>
             </div>
 

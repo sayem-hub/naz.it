@@ -27,7 +27,7 @@
 
 
 
-<table class="table table-bordered table-hover" style="font-size: 13px">
+<table class="table table-bordered table-hover" style="font-size: 12px">
     <thead class="thead-dark">
       <tr>
        <th scope="col">#</th>
@@ -40,7 +40,7 @@
         <th scope="col">IMEI 2</th>
         <th scope="col">User</th>
         <th scope="col">Emp ID</th>
-        <th scope="col">Designation</th>
+        <th scope="col">Title</th>
         <th scope="col">Sect.</th>
         <th scope="col">Dept.</th>
         <th scope="col">Line</th>

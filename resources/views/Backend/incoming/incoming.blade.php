@@ -4,7 +4,7 @@
 
 <h3 class="text-center mt-3">Incoming Item List</h3>
 <a href="{{route('admin.incoming.create')}}" class="btn btn-success">Add New Item</a>
-<table class="table">
+<table class="table" style="font-size: 11px">
     <thead>
       <tr>
         <th scope="col">#</th>
