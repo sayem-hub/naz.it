@@ -45,6 +45,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/requisition-edit/{id}',[App\Http\Controllers\Frontend\RequisitionController::class, 'edit'])->name('requisition.edit');
     Route::post('/requisition-edit/{id}',[App\Http\Controllers\Frontend\RequisitionController::class, 'update']);
     Route::get('/requisition/search',[App\Http\Controllers\Frontend\SearchController::class, 'requisitionSearch'])->name('requisition.search');
+    Route::get('requisiton-list/generatePDF',[App\Http\Controllers\Frontend\PdfController::class, 'generatePReqPdf'])->name('create.preq.pdf');
+    Route::get('requisiton-list/generateRPDF',[App\Http\Controllers\Frontend\PdfController::class, 'generateRReqPdf'])->name('create.rreq.pdf');
 
     //Router & Switch Route
     Route::get('/router-list',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerIndex'])->name('router.index');

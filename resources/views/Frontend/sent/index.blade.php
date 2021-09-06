@@ -20,7 +20,7 @@
             <th scope="col">Out Date</th>
             <th scope="col">GP No</th>
             <th scope="col">Sent For</th>
-            <th scope="col">Problems</th>
+            <th scope="col">Problem</th>
             <th scope="col">Status</th>
             {{--<th scope="col">Created_at</th>--}}
             {{-- <th scope="col">Entry Date</th> --}}

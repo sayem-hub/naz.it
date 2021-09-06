@@ -11,6 +11,8 @@
         <form action="{{ route('requisition.search') }}" method="GET">
             <div class="form-group">
                 <a href={{ route('requisition.add') }} class="btn btn-success">Add requisition</a>
+                <a href={{route('create.preq.pdf')}} class="btn btn-danger btn-sm">Pending report</a>
+                <a href={{route('create.rreq.pdf')}} class="btn btn-warning btn-sm">Received report</a>
                 <div class="form-group row"><br>
                     <div class="col-xs-3">
 

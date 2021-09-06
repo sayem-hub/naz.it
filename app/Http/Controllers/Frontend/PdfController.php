@@ -7,10 +7,12 @@ use App\Models\Computer;
 use App\Models\Faceid;
 use App\Models\Pabx;
 use App\Models\Printer;
+use App\Models\Requisition;
 use App\Models\Router;
 use App\Models\Scanner;
 use App\Models\Tablet;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use PDF;
 
 
@@ -109,5 +111,20 @@ class PdfController extends Controller
         $tablets = Tablet::all();
         $pdf = PDF::loadView('Frontend.kpiproject.tablet.tabletPdf', compact(('tablets')));
         return $pdf->download('TAB_List.pdf');
+    }
+
+    public function generatePReqPdf(Request $request)
+    {
+        $requisitions = DB::table('requisitions')->where('status', '=', 'Pending')->get();
+        $pdf = PDF::loadView('Frontend.requisition.PdfPRequisition', compact(('requisitions')));
+        return $pdf->download('Pending_list.pdf');
+    }
+
+    public function generateRReqPdf(Request $request)
+
+    {
+        $requisitions = DB::table('requisitions')->where('status', '=', 'Received')->get();
+        $pdf = PDF::loadView('Frontend.requisition.PdfRRequisition', compact(('requisitions')));
+        return $pdf->download('Received_list.pdf');
     }
 }
