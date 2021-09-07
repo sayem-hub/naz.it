@@ -16,7 +16,7 @@
         </div>
 
 
-<table class="table table-bordered table-hover" style="font-size: 14px">
+<table class="table table-bordered table-hover" style="font-size: 13px">
     <thead class="thead-dark">
       <tr>
        <th scope="col">#</th>
@@ -29,7 +29,7 @@
         <th scope="col">IP Address</th>
         <th scope="col">Location</th>
         <th scope="col">Status</th>
-        <th scope="col">Notes</th>
+        {{-- <th scope="col">Notes</th> --}}
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -48,7 +48,7 @@
         <td>{{$route->ip_address}}</td>
         <td>{{$route->location}}</td>
         <td>{{$route->status}}</td>
-        <td>{{$route->notes}}</td>
+        {{-- <td>{{$route->notes}}</td> --}}
         <td>
           <a class="btn btn-secondary" href="{{route('router.edit',$route->id)}}">Edit</a>
 

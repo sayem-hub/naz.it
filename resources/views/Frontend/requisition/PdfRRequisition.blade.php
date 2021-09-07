@@ -50,9 +50,9 @@
         .styled-table {
         border-collapse: collapse;
         margin: 15px 0;
-        font-size: 0.6em;
+        font-size: 0.8em;
         font-family: sans-serif;
-        min-width: 400px;
+        min-width: 450px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         }
 
