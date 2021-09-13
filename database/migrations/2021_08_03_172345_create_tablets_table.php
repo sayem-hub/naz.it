@@ -19,11 +19,11 @@ class CreateTabletsTable extends Migration
             $table->string('brand');
             $table->string('model');
             $table->string('size');
-            $table->string('serial')->nullable();
-            $table->string('imei_1')->nullable();
-            $table->string('imei_2')->nullable();
+            $table->string('serial')->unique()->nullable();
+            $table->string('imei_1')->unique()->nullable();
+            $table->string('imei_2')->unique()->nullable();
             $table->string('user');
-            $table->string('emp_id')->nullable();
+            $table->string('emp_id')->unique()->nullable();
             $table->string('designation');
             $table->string('section');
             $table->string('department');

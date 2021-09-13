@@ -21,6 +21,7 @@
             <th scope="col">GP No</th>
             <th scope="col">Sent For</th>
             <th scope="col">Problem</th>
+            <th scope="col">Notes</th>
             <th scope="col">Status</th>
             {{--<th scope="col">Created_at</th>--}}
             {{-- <th scope="col">Entry Date</th> --}}
@@ -49,6 +50,7 @@
             <td>{{$item->Gpno}}</td>
             <td>{{$item->Sentfor}}</td>
             <td>{{$item->Problems}}</td>
+            <td>{{$item->Notes}}</td>
 
             @php
             if ( $item->Status == 'Pending'):
@@ -57,6 +59,8 @@
             $color = 'green';
             elseif ( $item->Status == 'Returned'):
             $color = 'yellow';
+            elseif ( $item->Status == 'Replaced'):
+            $color = 'brown';
             else:
             $color = 'gray';
             endif;

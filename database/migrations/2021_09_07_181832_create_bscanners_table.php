@@ -18,15 +18,16 @@ class CreateBscannersTable extends Migration
             $table->string('scanner_id')->unique();
             $table->string('brand');
             $table->string('model');
-            $table->string('serial')->nullable();
+            $table->string('serial')->unique()->nullable();
+            $table->string('type');
+            $table->string('emp_id')->unique()->nullable();
             $table->string('user');
-            $table->string('emp_id')->nullable();
             $table->string('designation');
             $table->string('section');
             $table->string('department');
             $table->string('line_no');
             $table->string('status');
-            $table->string('notes')->nullable();
+            // $table->string('notes')->nullable();
             $table->timestamps();
         });
     }

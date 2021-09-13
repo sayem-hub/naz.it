@@ -26,7 +26,8 @@
                             <li><a href="{{ route('printer.index') }}">Printer</a></li>
                             <li><a href="{{ route('scanner.index') }}">Scanner</a></li>
                             <li class="divider"></li>
-                            <li><a href="{{ route('rfid.index') }}">RF ID Module</a></li>
+
+                            <li><a href="{{ route('cc-camera') }}">CC Camera</a></li>
                             <li class="divider"></li>
                             <li><a href="#">Sewing Machine</a></li>
                             <li class="divider"></li>
@@ -38,7 +39,7 @@
 					<li><a href="{{ route('received.goods') }}">In Item </a></li>
 					<li><a href="{{ route('sent.items') }}">Out Item</a></li>
                     <li><a href="{{ route('requisition.index') }}">Requisition</a></li>
-					<li><a href="{{ route('cc-camera') }}">Camera List</a></li>
+					<li><a href="{{ route('rfid.index') }}">RF ID</a></li>
 					<li><a href="{{ route('kpi.home') }}">KPI Link</a></li>
 
 

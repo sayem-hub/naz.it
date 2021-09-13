@@ -81,6 +81,11 @@
             </div>
 
             <div class="mb-3">
+                <label for="Notes" class="form-label">Notes</label>
+                <input type="text" class="form-control" name="Notes" id="Notes" value="{{ $outitems->Notes }}">
+            </div>
+
+            <div class="mb-3">
               <label for="gate-pass" class="form-label">Gate Pass No.</label>
               <input type="number" class="form-control" name="gpno" id="gpno" value="{{$outitems->Gpno}}">
             </div>
@@ -92,6 +97,7 @@
                     <option value="Pending">Pending</option>
                     <option value="Solved">Solved</option>
                     <option value="Returned">Returned</option>
+                    <option value="Replaced">Replaced</option>
                     <option value="Not Solved">Not Solved</option>
                     </select>
             </div>

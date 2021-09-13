@@ -10,8 +10,8 @@
         <th scope="col">#</th>
         <th scope="col">Item Name</th>
         {{--<th scope="col">Brand</th>
-        <th scope="col">Model</th>
-        <th scope="col">Serial No.</th>--}}
+        <th scope="col">Model</th>--}}
+        <th scope="col">Serial No.</th>
         <th scope="col">User</th>
         <th scope="col">Section</th>
         <th scope="col">Warranty</th>
@@ -21,6 +21,7 @@
         {{--<th scope="col">GP No.</th>--}}
         <th scope="col">Sent For</th>
         <th scope="col">Problems</th>
+        <th scope="col">Notes</th>
         <th scope="col">Status</th>
         {{--<th scope="col">Created_at</th>--}}
         {{-- <th scope="col">Updated_at</th> --}}
@@ -36,8 +37,8 @@
         <th scope="row">{{$key+1}}</th>
         <td>{{$outitem->Iname}}</td>
         {{--<td>{{$outitem->Brand}}</td>
-        <td>{{$outitem->Model}}</td>
-        <td>{{$outitem->Serial}}</td>--}}
+        <td>{{$outitem->Model}}</td>--}}
+        <td>{{$outitem->Serial}}</td>
         <td>{{$outitem->User}}</td>
         <td>{{$outitem->Section}}</td>
         <td>{{$outitem->Warranty}}</td>
@@ -47,6 +48,7 @@
         {{--<td>{{$outitem->Gpno}}</td>--}}
         <td>{{$outitem->Sentfor}}</td>
         <td>{{$outitem->Problems}}</td>
+        <td>{{$outitem->Notes}}</td>
         <td>{{$outitem->Status}}</td>
         {{--<td>{{$outitem->created_at}}</td>--}}
         {{-- <td>{{$outitem->updated_at}}</td> --}}

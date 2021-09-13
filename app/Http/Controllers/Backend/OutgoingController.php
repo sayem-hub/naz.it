@@ -35,6 +35,7 @@ class OutgoingController extends Controller
              'Outdate'=>$request->input('outdate'),
              'Sentfor'=>$request->input('sentfor'),
              'Problems'=>$request->input('problems'),
+            'Notes' => $request->input('Notes'),
              'Gpno'=>$request->input('gpno'),
              'Status'=>$request->input('status'),
 
@@ -71,9 +72,10 @@ class OutgoingController extends Controller
              'Outdate'=>$request->input('outdate'),
              'Sentfor'=>$request->input('sentfor'),
             'Problems' => $request->input('problems'),
+            'Notes' => $request->input('Notes'),
              'Gpno'=>$request->input('gpno'),
-             'Status'=>$request->input('status'),
-            'Reason' => $request->input('reason'),
+            'Status'=>$request->input('status'),
+
         ];
 
         $outitems->update($data);

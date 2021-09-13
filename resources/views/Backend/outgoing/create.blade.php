@@ -67,6 +67,11 @@
             </div>
 
             <div class="mb-3">
+                <label for="Notes" class="form-label">Notes</label>
+                <input type="text" class="form-control" name="Notes" id="Notes" value="{{ $outitems->Notes }}">
+            </div>
+
+            <div class="mb-3">
               <label for="sentfor" class="form-label">Sent For</label>
               <select class="form-select" id="sentfor" name="sentfor" required>
 

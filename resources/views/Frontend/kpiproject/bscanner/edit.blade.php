@@ -171,7 +171,7 @@
         <label for="Status" class="form-label">Status</label>
         <select class="form-control" name="status">
             <option value="{{ $tablets->status }}" selected>{{ $tablets->status }}</option>
-            <option value="Running">Running</option>
+            <option value="Running" selected>Running</option>
             <option value="Idle">Idle</option>
             <option value="In Repair">In Repair</option>
         </select>
