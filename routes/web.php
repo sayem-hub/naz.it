@@ -38,6 +38,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
     Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
 
+ //Wastage management route
+ Route::get('wastage-list',[App\Http\Controllers\Frontend\WastageController::class, 'index'])->name('wastage.index');
+ Route::get('wastage/add',[App\Http\Controllers\Frontend\WastageController::class, 'create'])->name('wastage.create');
+ Route::post('wastage/add',[App\Http\Controllers\Frontend\WastageController::class, 'store']);
+ Route::get('wastage/edit/{id}',[App\Http\Controllers\Frontend\WastageController::class, 'edit'])->name('wastage.edit');
+ Route::post('wastage/edit/{id}',[App\Http\Controllers\Frontend\WastageController::class, 'update']);
+
+
+
     //Requisition Route
     Route::get('/requisition-list',[App\Http\Controllers\Frontend\RequisitionController::class, 'index'])->name('requisition.index');
     Route::get('/requisition-add',[App\Http\Controllers\Frontend\RequisitionController::class, 'create'])->name('requisition.add');

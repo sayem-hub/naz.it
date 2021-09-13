@@ -31,15 +31,17 @@
                             <li class="divider"></li>
                             <li><a href="#">Sewing Machine</a></li>
                             <li class="divider"></li>
+                            <li><a href="{{ route('wastage.index') }}">Wastage Management</a></li>
+                            <li class="divider"></li>
                             <li><a href="#">IT Policy</a></li>
 
                         </ul>
                     </li>
 
 					<li><a href="{{ route('received.goods') }}">In Item </a></li>
-					<li><a href="{{ route('sent.items') }}">Out Item</a></li>
+					<li><a href="{{ route('sent.items') }}">Sent Item</a></li>
                     <li><a href="{{ route('requisition.index') }}">Requisition</a></li>
-					<li><a href="{{ route('rfid.index') }}">RF ID</a></li>
+					<li><a href="{{ route('rfid.index') }}">RFID</a></li>
 					<li><a href="{{ route('kpi.home') }}">KPI Link</a></li>
 
 

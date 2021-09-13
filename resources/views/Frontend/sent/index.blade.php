@@ -2,7 +2,7 @@
 @section('main')
 
 
-<h4 class="text-center mt-3">Outgoing Item List</h4>
+<h4 class="text-center mt-3">Sent Item List</h4>
 <a href="{{ route('sent.items.create') }}" class="btn btn-success">Add New Item</a>
 <table class="table table-bordered table-hover" style="font-size: 11px">
     <thead>

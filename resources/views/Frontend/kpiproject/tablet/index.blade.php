@@ -68,12 +68,23 @@
         <td>{{$tablet->section}}</td>
         <td>{{$tablet->department}}</td>
         <td>{{$tablet->line_no}}</td>
-        <td>{{$tablet->status}}</td>
-        {{-- <td>{{$tablet->notes}}</td> --}}
-        <td>
-          <a class="btn btn-secondary" href="{{ route('tablet.edit', $tablet->id) }}">Edit</a>
 
-        </td>
+        {{-- <td>{{$tablet->notes}}</td> --}}
+
+            @php
+            if ( $tablet->status == 'Running'):
+            $color = 'green';
+            elseif ( $tablet->status == 'In Repair'):
+            $color = 'red';
+            else:
+            $color = 'gray';
+            endif;
+            @endphp
+
+<td style="color: {{$color}}">{{$tablet->status}}</td>
+
+
+        <td><a class="btn btn-secondary" href="{{ route('tablet.edit', $tablet->id) }}">Edit</a></td>
       </tr>
 
       @endforeach
