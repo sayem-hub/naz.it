@@ -76,6 +76,10 @@
             $color = 'green';
             elseif ( $tablet->status == 'In Repair'):
             $color = 'red';
+            elseif ( $tablet->status == 'In Warranty'):
+            $color = 'blue';
+            elseif ( $tablet->status == 'Idle'):
+            $color = 'black';
             else:
             $color = 'gray';
             endif;

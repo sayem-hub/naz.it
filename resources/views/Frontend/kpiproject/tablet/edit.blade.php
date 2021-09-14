@@ -174,6 +174,7 @@
             <option value="Running">Running</option>
             <option value="Idle">Idle</option>
             <option value="In Repair">In Repair</option>
+            <option value="In Warranty">In Warranty</option>
         </select>
     </div>
 

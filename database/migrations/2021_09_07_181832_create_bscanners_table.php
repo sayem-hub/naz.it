@@ -18,7 +18,7 @@ class CreateBscannersTable extends Migration
             $table->string('scanner_id')->unique();
             $table->string('brand');
             $table->string('model');
-            $table->string('serial')->unique()->nullable();
+            $table->string('serial_no')->unique()->nullable();
             $table->string('type');
             $table->string('emp_id')->unique()->nullable();
             $table->string('user');
