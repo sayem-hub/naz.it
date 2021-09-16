@@ -20,6 +20,7 @@ class CreateWastagesTable extends Migration
             $table->string('model')->nullable();
             $table->string('serial_no')->nullable()->unique();
             $table->string('problem')->nullable();
+            $table->string('user')->nullable();
             $table->string('note')->nullable();
             $table->string('status');
             $table->timestamps();

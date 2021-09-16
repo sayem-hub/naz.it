@@ -51,7 +51,24 @@
 
             <div class="mb-3">
             <label for="problem" class="form-label">Problem</label>
-            <input type="text" class="form-control" name="problem" id="problem" placeholder="Enter problem">
+            <select class="form-control" name="problem">
+                <option value= "" selected>---Select problem---</option>
+                <option value="No power">No power</option>
+                <option value="No display">No display</option>
+                <option value="Hang problem">Hang problem</option>
+                <option value="Blue screen">Blue screen</option>
+                <option value="Auto restart">Auto restart</option>
+                <option value="Auto shutdown">Auto shutdown</option>
+                <option value="OS/Soft not installed">OS/Soft not installed</option>
+                <option value="Panel problem">Panel problem</option>
+                <option value="Unknown">Unknown</option>
+                <option value="Other">Other</option>
+            </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="user_name" class="form-label">User</label>
+                <input type="text" class="form-control" name="user_name" id="user_name" placeholder="Enter user name">
             </div>
 
             <div class="mb-3">

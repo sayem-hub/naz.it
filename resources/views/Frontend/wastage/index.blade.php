@@ -12,7 +12,7 @@
 
             <div class="form-group">
                 <a href="{{ route('wastage.create') }}" class="btn btn-success">Add wastage</a>
-                <a href="{{route('create.faceid.pdf')}}" class="btn btn-warning btn-sm">PDF Report</a>
+                <a href="#" class="btn btn-warning btn-sm">PDF Report</a>
             </div>
 
 <table class="table table-bordered table-hover" style="font-size: 14px">
@@ -23,6 +23,7 @@
             <th scope="col">Model</th>
             <th scope="col">Serial no</th>
             <th scope="col">Problem</th>
+            <th scope="col">User</th>
             {{-- <th scope="col">Note</th> --}}
             <th scope="col">Status</th>
             {{-- <th scope="col">Updated at</th> --}}
@@ -39,6 +40,7 @@
             <td>{{$wastage->model}}</td>
             <td>{{$wastage->serial_no}}</td>
             <td>{{$wastage->problem}}</td>
+            <td>{{$wastage->user}}</td>
             {{-- <td>{{$wastage->note}}</td> --}}
             <td>{{$wastage->status}}</td>
             {{-- <td>{{$wastage->updated_at->format('Y-m-d')}}</td> --}}
