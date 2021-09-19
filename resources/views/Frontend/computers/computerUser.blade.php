@@ -15,7 +15,7 @@
                 <div class="form-group row"><br>
                     <div class="col-xs-3">
 
-                        <input type="text" class="form-control" name="query" placeholder="Name or Department"
+                        <input type="text" class="form-control" name="query" placeholder="Name or Computer ID or Department"
                             value="{{ request()->input('query') }}">
                         <span class="text-danger">@error('query'){{ $message }}@enderror</span>
                     </div>

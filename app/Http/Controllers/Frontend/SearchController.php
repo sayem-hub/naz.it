@@ -34,7 +34,7 @@ class SearchController extends Controller
 
         $search_text = $request->input('query');
         $computers = DB::table('computers')
-        ->where('User', 'LIKE', '%' . $search_text . '%')->orWhere('Department', 'LIKE', '%' . $search_text . '%')
+        ->where('User', 'LIKE', '%' . $search_text . '%')->orWhere('Department', 'LIKE', '%' . $search_text . '%')->orWhere('Comid', 'LIKE', '%' . $search_text . '%')
         //   ->orWhere('SurfaceArea','<', 10)
         //   ->orWhere('LocalName','like','%'.$search_text.'%')
         ->paginate(200);
@@ -81,11 +81,26 @@ class SearchController extends Controller
 
     $search_text = $request->input('query');
         $requisitions = DB::table('requisitions')
-        ->where('required_for', 'LIKE', '%' . $search_text . '%')->orWhere('status', 'LIKE', '%' . $search_text . '%')
+        ->where('required_for', 'LIKE', '%' . $search_text . '%')->orWhere('status', 'LIKE', '%' . $search_text . '%')->orWhere('requisition_no', 'LIKE', '%' . $search_text . '%')
             //   ->orWhere('SurfaceArea','<', 10)
             //   ->orWhere('LocalName','like','%'.$search_text.'%')
             ->paginate(1000);
         return view('Frontend.requisition.search', ['requisitions' => $requisitions]);
 }
+
+    public function sentSearch(Request $request)
+    {
+        $request->validate(([
+            'query' => 'required|min:3'
+        ]));
+
+        $search_text = $request->input('query');
+        $sentitems = DB::table('outitems')
+        ->where('Iname', 'LIKE', '%' . $search_text . '%')->orWhere('Serial', 'LIKE', '%' . $search_text . '%')->orWhere('User', 'LIKE', '%' . $search_text . '%')
+        //   ->orWhere('SurfaceArea','<', 10)
+        //   ->orWhere('LocalName','like','%'.$search_text.'%')
+        ->paginate(1000);
+        return view('Frontend.sent.search', ['sentitems' => $sentitems]);
+    }
     }
 

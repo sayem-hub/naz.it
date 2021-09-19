@@ -16,7 +16,7 @@
                 <div class="form-group row"><br>
                     <div class="col-xs-3">
 
-                        <input type="text" class="form-control" name="query" placeholder="Requisition for Or type Pending/Received"
+                        <input type="text" class="form-control" name="query" placeholder="Search by User, Requisition no Or Status"
                             value="{{ request()->input('query') }}">
                         <span class="text-danger">@error('query'){{ $message }}@enderror</span>
 

@@ -130,6 +130,7 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/sent-items',[App\Http\Controllers\Frontend\HomeController::class, 'sentItem'])->name('sent.items');
             Route::get('/sent-items/create',[App\Http\Controllers\Frontend\HomeController::class, 'createSentItem'])->name('sent.items.create');
             Route::post('/sent-items/create',[App\Http\Controllers\Frontend\HomeController::class, 'storeSentItem']);
+            Route::get('/sent-items/search',[App\Http\Controllers\Frontend\SearchController::class, 'sentSearch'])->name('sentitem.search');
 
 
 
