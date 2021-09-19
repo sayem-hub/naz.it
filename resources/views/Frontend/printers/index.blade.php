@@ -19,7 +19,7 @@
 
 
 
-<table class="table table-bordered table-hover" style="font-size: 14px">
+<table class="table table-bordered table-hover" style="font-size: 12px">
     <thead class="thead-dark">
       <tr>
        <th scope="col">#</th>

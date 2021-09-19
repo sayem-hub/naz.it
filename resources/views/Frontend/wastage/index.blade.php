@@ -15,7 +15,7 @@
                 <a href="#" class="btn btn-warning btn-sm">PDF Report</a>
             </div>
 
-<table class="table table-bordered table-hover" style="font-size: 14px">
+<table class="table table-bordered table-hover" style="font-size: 13px">
     <thead>
         <tr>
             <th scope="col">#</th>

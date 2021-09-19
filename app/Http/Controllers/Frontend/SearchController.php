@@ -84,7 +84,7 @@ class SearchController extends Controller
         ->where('required_for', 'LIKE', '%' . $search_text . '%')->orWhere('status', 'LIKE', '%' . $search_text . '%')
             //   ->orWhere('SurfaceArea','<', 10)
             //   ->orWhere('LocalName','like','%'.$search_text.'%')
-            ->paginate(50);
+            ->paginate(1000);
         return view('Frontend.requisition.search', ['requisitions' => $requisitions]);
 }
     }

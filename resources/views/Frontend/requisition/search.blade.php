@@ -3,7 +3,7 @@
 
 <h3 class="text-center mt-3">Search results</h3>
 <a href={{ route('requisition.add') }} class="btn btn-success">Add new requisition</a>
-<table class="table table-bordered table-hover" style="font-size: 13px">
+<table class="table table-bordered table-hover" style="font-size: 12px">
     <thead>
         <tr>
            <th scope="col">#</th>
