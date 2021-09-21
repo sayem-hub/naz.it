@@ -36,13 +36,14 @@
                     <option value="Desktop" selected>Desktop</option>
                     <option value="Laptop">Laptop</option>
                     <option value="iMAC">iMAC</option>
+                    <option value="Server">Server</option>
                 </select>
             </div>
 
             <div class="mb-3">
                 <label for="Brand" class="form-label">Brand</label>
                 <select class="form-control" name="Brand">
-                    <option value="" selected></option>
+                    <option value="" selected>---Select Brand---</option>
                     <option value="HP">HP</option>
                     <option value="Dell">Dell</option>
                     <option value="Asus">Asus</option>
@@ -64,7 +65,8 @@
             <div class="mb-3">
                 <label for="Monitor" class="form-label">Monitor/Display</label>
                 <select class="form-control" name="Monitor">
-                    <option value="Dell 19 Inch" selected>Dell 19 Inch</option>
+                    <option value="" selected>---Select Monitor/display size---</option>
+                    <option value="Dell 19 Inch">Dell 19 Inch</option>
                     <option value="HP 19 Inch">HP 19 Inch</option>
                     <option value="LG 19 Inch">LG 19 Inch</option>
                     <option value="Samsung 19 Inch">Samsung 19 Inch</option>
@@ -159,6 +161,7 @@
                     <option value="PD">PD</option>
                     <option value="Accounts">Accounts</option>
                     <option value="IE">IE</option>
+                    <option value="CAD">CAD</option>
                     <option value="Delivery">Delivery</option>
                     <option value="Quality">Quality</option>
                     <option value="Finishing">Finishing</option>
@@ -206,6 +209,7 @@
                     <option value="Dyeing">Dyeing</option>
                     <option value="All Over Print">All Over Print</option>
                     <option value="Store">Store</option>
+                    <option value="CAD">CAD</option>
                     <option value="NZ Accessories">NZ Accessories</option>
                     <option value="Embroidery">Embroidery</option>
                     <option value="Printing">Printing</option>
