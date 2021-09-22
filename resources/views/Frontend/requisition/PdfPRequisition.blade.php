@@ -103,7 +103,7 @@
     </header>
     <footer>
         <hr>
-         Software generated report. Copyright © NAZ-IMS by Abu Sayem; Print date: <?php echo date("Y-m-d");?>
+         Copyright © 2021-<?php echo date("Y");?> NAZ-IMS by Abu Sayem; Software generated report. Print date & time: <?php echo date("Y-m-d, h:i:sa");?>
     </footer>
 
     <h3>NAZ Bangladesh Ltd.</h3>
