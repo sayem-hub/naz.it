@@ -105,8 +105,9 @@
             <div class="mb-3">
                 <label for="Keyboard" class="form-label" >Keyboard</label>
                 <select class="form-control" name="Keyboard">
+                    <option value="" selected>---Select from list---</option>
                     <option value="N/A">N/A</option>
-                    <option value="A4TECH" selected>A4TECH</option>
+                    <option value="A4TECH">A4TECH</option>
                     <option value="Logitech">Logitech</option>
                     <option value="Delux">Delux</option>
                     <option value="Newman">Newman</option>
@@ -125,7 +126,8 @@
             <div class="mb-3">
                 <label for="UPS" class="form-label">UPS</label>
                 <select class="form-control" name="UPS">
-                    <option value="N/A" selected>N/A</option>
+                    <option value="" selected>---Select from list---</option>
+                    <option value="N/A">N/A</option>
                     <option value="Power Guard">Power Guard</option>
                     <option value="Power Vault">Power Vault</option>
                     <option value="PC Power">PC Power</option>
@@ -150,7 +152,8 @@
             <div class="mb-3">
                 <label for="Section" class="form-label">Section</label>
                 <select class="form-control" name="Section">
-                    <option value="HR & Admin" selected>HR & Admin</option>
+                    <option value="" selected>---Select from list---</option>
+                    <option value="HR & Admin">HR & Admin</option>
                     <option value="Merchandising">Merchandising</option>
                     <option value="Civil">Civil</option>
                     <option value="IT">IT</option>
@@ -196,7 +199,8 @@
             <div class="mb-3">
                 <label for="Department" class="form-label">Department</label>
                 <select class="form-control" name="Department">
-                    <option value="HR & Admin" selected>HR & Admin</option>
+                    <option value="" selected>---Select from list---</option>
+                    <option value="HR & Admin">HR & Admin</option>
                     <option value="Merchandising">Merchandising</option>
                     <option value="Civil">Civil</option>
                     <option value="ICT">ICT</option>

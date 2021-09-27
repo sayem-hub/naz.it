@@ -24,6 +24,7 @@ class PdfController extends Controller
         public function compPdf(Request $request)
     {
         $computers = Computer::all();
+        
         return view('Frontend.computers.compInventory', compact('computers'));
     }
 

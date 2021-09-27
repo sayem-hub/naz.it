@@ -91,6 +91,19 @@
         }
 
 
+        .count-table:
+            table,
+            td,
+            th {
+                border: 1px solid black;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+
     </style>
 
 </head>
@@ -144,9 +157,40 @@
 
             @endforeach
 
-
         </tbody>
     </table>
+
+{{-- Counting part --}}
+
+
+<h4>In summary</h4>
+
+    <table class="count-table">
+        <thead >
+            <tr>
+
+                <th >Desktop</th>
+                <th >Laptop</th>
+                <th >iMAC</th>
+                <th >Server</th>
+                <th >Total</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+
+                <td>{{$user->where('Comtype', '=', 'Desktop')->count()}}</td>
+                <td>{{$user->where('Comtype', '=', 'Laptop')->count()}}</td>
+                <td>{{$user->where('Comtype', '=', 'iMAC')->count()}}</td>
+                <td>{{$user->where('Comtype', '=', 'Server')->count()}}</td>
+                <td>{{$user->count()}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{{-- $count = Model::where('status','=','1')->count(); --}}
 
 </body>
 </html>
