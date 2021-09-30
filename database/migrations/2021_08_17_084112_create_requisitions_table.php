@@ -22,6 +22,7 @@ class CreateRequisitionsTable extends Migration
             $table->string('department');
             $table->date('requisition_date')->nullable();
             $table->string('status');
+            $table->string('received_date')->nullable();
             $table->string('notes')->nullable();
             $table->timestamps();
         });

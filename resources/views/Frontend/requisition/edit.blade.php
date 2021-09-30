@@ -61,6 +61,11 @@
             </div>
 
             <div class="mb-3">
+                <label for="received_date" class="form-label">Received date</label>
+                <input type="date" class="form-control" name="received_date" id="received_date" value="{{ $requisitions->received_date }}">
+            </div>
+
+            <div class="mb-3">
                 <label for="notes" class="form-label">Notes</label>
                 <input type="text" class="form-control" name="notes" id="notes" value="{{ $requisitions->notes }}">
             </div>

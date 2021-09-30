@@ -81,6 +81,7 @@ class RequisitionController extends Controller
                 'department' => $request->input('department'),
                 'requisition_date' => $request->input('requisition_date'),
                 'status' => $request->input('status'),
+                'received_date'=>$request->input('received_date'),
                 'notes' => $request->input('notes'),
             ];
 

@@ -39,7 +39,9 @@
         <th scope="col">Designation</th>
         <th scope="col">Section/Dept.</th>
         <th scope="col">Req. Date</th>
+        <th scope="col">Rcvd Date</th>
         <th scope="col">Status</th>
+
         {{-- <th scope="col">Notes</th> --}}
         {{-- <th scope="col">Entry at</th> --}}
         <th scope="col">Action</th>
@@ -58,6 +60,7 @@
         <td>{{$requisition->designation}}</td>
         <td>{{$requisition->department}}</td>
         <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td>
+        <td>{{!empty($requisition) ? date('d/m/Y', strtotime($requisition->received_date)) : null}}</td>
 
         @php
         if ( $requisition->status == 'Pending'):
