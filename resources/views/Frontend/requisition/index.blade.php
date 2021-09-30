@@ -59,8 +59,9 @@
         <td>{{$requisition->required_for}}</td>
         <td>{{$requisition->designation}}</td>
         <td>{{$requisition->department}}</td>
-        <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td>
-        <td>{{!empty($requisition) ? date('d/m/Y', strtotime($requisition->received_date)) : null}}</td>
+        <td>{{$requisition->requisition_date}}</td>
+        {{-- <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td> --}}
+        <td>{{$requisition->received_date}}</td>
 
         @php
         if ( $requisition->status == 'Pending'):

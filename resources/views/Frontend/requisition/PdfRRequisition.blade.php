@@ -50,25 +50,28 @@
         .styled-table {
         border-collapse: collapse;
         margin: 15px 0;
-        font-size: 0.8em;
+        font-size: 0.6em;
         font-family: sans-serif;
         min-width: 450px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        margin: auto;
         }
 
         .styled-table thead tr {
         background-color: #009879;
         color: #ffffff;
-        text-align: left;
+        text-align: center;
+
         }
 
         .styled-table th,
         .styled-table td {
-        padding: 10px 13px;
+        padding: 9px 12px;
         }
 
         .styled-table tbody tr {
         border-bottom: 1px solid #dddddd;
+
         }
 
         .styled-table tbody tr:nth-of-type(even) {
@@ -121,6 +124,7 @@
                 <th scope="col">Designation</th>
                 <th scope="col">Section</th>
                 <th scope="col">Req date</th>
+                <th scope="col">Recvd date</th>
                 {{-- <th scope="col">Status</th> --}}
             </tr>
         </thead>
@@ -136,6 +140,7 @@
                 <td>{{$requisition->designation}}</td>
                 <td>{{$requisition->department}}</td>
                 <td>{{$requisition->requisition_date}}</td>
+                <td>{{$requisition->received_date}}</td>
                 {{-- <td>{{$requisition->status}}</td> --}}
             </tr>
             @endforeach

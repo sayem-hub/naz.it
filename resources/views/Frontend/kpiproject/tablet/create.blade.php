@@ -79,6 +79,7 @@
                     <select class="form-control" name="designation">
                         <option value="">--Select designation--</option>
                         <option value="DEO">DEO</option>
+                        <option value="QI">QI</option>
                     </select>
                 </div>
 
@@ -161,6 +162,8 @@
                     <option value="Line-76">Line-76</option>
                     <option value="Line-77">Line-77</option>
                     <option value="Line-78">Line-78</option>
+                    <option value="Quality">Quality</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 
