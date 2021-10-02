@@ -56,6 +56,7 @@
                 <option value="No power">No power</option>
                 <option value="No display">No display</option>
                 <option value="Hang problem">Hang problem</option>
+                <option value="Power problem">Power problem</option>
                 <option value="Blue screen">Blue screen</option>
                 <option value="Auto restart">Auto restart</option>
                 <option value="Auto shutdown">Auto shutdown</option>
