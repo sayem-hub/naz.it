@@ -33,13 +33,13 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Requisition No</th>
+        <th scope="col">Requisition no</th>
         <th scope="col">Item(s)</th>
         <th scope="col">Required for</th>
         <th scope="col">Designation</th>
         <th scope="col">Section/Dept.</th>
-        <th scope="col">Req. Date</th>
-        <th scope="col">Rcvd Date</th>
+        <th scope="col">Req date</th>
+        <th scope="col">Rcvd date</th>
         <th scope="col">Status</th>
 
         {{-- <th scope="col">Notes</th> --}}

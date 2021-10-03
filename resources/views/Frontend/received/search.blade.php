@@ -3,7 +3,7 @@
 
 <h3 class="text-center mt-3">Search results</h3>
 <a href={{ route('received.goods.new') }} class="btn btn-success">Add New Item</a>
-<table class="table table-bordered table-hover" style="font-size: 13px">
+<table class="table table-bordered table-hover" style="font-size: 12px">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -41,8 +41,8 @@
             <td>{{$r_item->pur_date}}</td>
             <td>{{$r_item->warranty}}</td>
             <td>{{$r_item->challan_no}}</td>
-            <td> <img src="{{asset('upload/challans/'.$r_item->challan_img)}}" alt="Not image file" width="100px"
-                    height="100px"> </td>
+            <td> <img src="{{asset('upload/challans/'.$r_item->challan_img)}}" alt="Not image file" width="95px"
+                    height="60px"> </td>
             <td>{{$r_item->req_no}}</td>
             <td>{{$r_item->pur_type}}</td>
             <td>{{$r_item->user_name}}</td>

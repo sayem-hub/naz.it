@@ -3,8 +3,8 @@
 @section('main')
 
 <div class="row" style="color: rgb(80, 75, 75)">
-    <div class="col-md-2"></div>
-    <div class="col-md-7">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
 
         <h3 class="text-center mt-3">Edit Record</h3>
         <form action="{{route('computer.user.edit',$computer->id)}}" method="post">
@@ -228,7 +228,7 @@
                     <option value="{{$computer->Status}}" selected>{{$computer->Status}}</option>
                     <option value="Running">Running</option>
                     <option value="Idle">Idle</option>
-                    <option value="In Repair">In Repair</option>
+                    <option value="In repair">In repair</option>
                 </select>
             </div>
 

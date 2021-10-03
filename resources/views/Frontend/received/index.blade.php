@@ -29,18 +29,18 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Item Name</th>
+        <th scope="col">Item name</th>
         <!--<th scope="col">Quantity</th>-->
         <th scope="col">Brand</th>
         <th scope="col">Model</th>
-        <th scope="col">Serial No.</th>
+        <th scope="col">Serial no.</th>
         <th scope="col">Supplier</th>
-        <th scope="col">Pur Date</th>
-        <th scope="col">Warranty</th>
-        <th scope="col">Challan No.</th>
+        <th scope="col">Pur date</th>
+        <th scope="col">Wty</th>
+        <th scope="col">Challan no.</th>
         <th scope="col">Challan</th>
-        <th scope="col">Req No.</th>
-        <th scope="col">P.Type</th>
+        <th scope="col">Req no.</th>
+        <th scope="col">P.type</th>
         <th scope="col">User</th>
         <th scope="col">Dept.</th>
         {{-- <th scope="col">Notes</th> --}}
@@ -63,7 +63,7 @@
         <td>{{$received->pur_date}}</td>
         <td>{{$received->warranty}}</td>
         <td>{{$received->challan_no}}</td>
-        <td> <img src="{{asset('upload/challans/'.$received->challan_img)}}" alt="Not image file" width="100px" height="65px"> </td>
+        <td> <img src="{{asset('upload/challans/'.$received->challan_img)}}" alt="Not image file" width="95px" height="60px"> </td>
         <td>{{$received->req_no}}</td>
         <td>{{$received->pur_type}}</td>
         <td>{{$received->user_name}}</td>

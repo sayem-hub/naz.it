@@ -3,8 +3,8 @@
 @section('main')
 
 <div class="row" style="color: rgb(71, 67, 67)">
-    <div class="col-md-2"></div>
-    <div class="col-md-7">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
 
         <h3 class="text-center mt-3">Add New Computer</h3>
         <form action="{{route('computer.user.create')}}" method="post">
@@ -225,7 +225,7 @@
                 <select class="form-control" name="Status">
                     <option value="Running" selected>Running</option>
                     <option value="Idle">Idle</option>
-                    <option value="In Repair">On Repair</option>
+                    <option value="In repair">In repair</option>
                 </select>
             </div>
 

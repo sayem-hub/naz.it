@@ -59,7 +59,21 @@
         <td>{{$user->Email}}</td>
         <td>{{$user->Section}}</td>
         <td>{{$user->Department}}</td>
-        <td>{{$user->Status}}</td>
+
+            @php
+            if ( $user->Status == 'In repair'):
+            $color = 'red';
+            elseif ( $user->Status == 'Running'):
+            $color = 'green';
+            elseif ( $user->Status == 'Idle'):
+            $color = 'blue';
+            else:
+            $color = 'gray';
+            endif;
+            @endphp
+
+            <td style="color: {{$color}}">{{ $user->Status }}</td>
+
         <td>
           <a class="btn btn-secondary" href="{{route('computer.user.edit',$user->id)}}">Edit</a>
 
