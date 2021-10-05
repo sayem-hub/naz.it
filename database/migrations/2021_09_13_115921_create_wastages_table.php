@@ -23,6 +23,7 @@ class CreateWastagesTable extends Migration
             $table->string('user')->nullable();
             $table->string('note')->nullable();
             $table->string('status');
+            $table->string('remarks');
             $table->timestamps();
         });
     }

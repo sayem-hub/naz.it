@@ -72,20 +72,24 @@
                 <input type="text" class="form-control" name="user_name" id="user_name" placeholder="Enter user name">
             </div>
 
-            <div class="mb-3">
-                <label for="note" class="form-label">Note</label>
-                <input type="text" class="form-control" name="note" id="note" placeholder="If any">
-            </div>
+
 
 
             <div class="mb-3">
                 <label for="status" class="form-label">Status</label>
                 <select class="form-control" name="status">
                     <option value="In house" selected>In house</option>
-                    <option value="Delivered">Delivered</option>
+                    <option value="HO" >HO</option>
                     <option value="In store">In store</option>
+                    <option value="In store">In store</option>
+                    <option value="Repaired">Repaired</option>
                 </select>
             </div>
+
+            <div class="mb-3">
+                        <label for="note" class="form-label">Note</label>
+                        <input type="text" class="form-control" name="note" id="note" placeholder="If any">
+                    </div>
 
             <button type="submit" class="btn btn-primary">Create</button>
         </form>

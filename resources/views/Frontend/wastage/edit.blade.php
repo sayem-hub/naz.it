@@ -73,19 +73,20 @@
                 </div>
 
         <div class="mb-3">
-            <label for="note" class="form-label">Note</label>
-            <input type="text" class="form-control" name="note" id="note" value="{{ $wastages->note }}">
-        </div>
-
-
-        <div class="mb-3">
             <label for="status" class="form-label">Status</label>
             <select class="form-control" name="status">
                 <option value="{{ $wastages->status }}" selected>{{ $wastages->status }}</option>
-                <option value="In house">In house</option>
-                <option value="Delivered">Delivered</option>
-                <option value="In store">In store</option>
+                <option value="In house" selected>In house</option>
+                 <option value="HO">HO</option>
+                    <option value="In store">In store</option>
+                    <option value="In store">In store</option>
+                    <option value="Repaired">Repaired</option>
             </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="note" class="form-label">Note</label>
+            <input type="text" class="form-control" name="note" id="note" value="{{ $wastages->note }}">
         </div>
 
         <button type="submit" class="btn btn-primary">Update</button>

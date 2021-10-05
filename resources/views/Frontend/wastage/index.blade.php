@@ -15,7 +15,7 @@
                 <a href="#" class="btn btn-warning btn-sm">PDF Report</a>
             </div>
 
-<table class="table table-bordered table-hover" style="font-size: 13px">
+<table class="table table-bordered table-hover" style="font-size: 12px">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -27,6 +27,7 @@
             {{-- <th scope="col">Note</th> --}}
             <th scope="col">Status</th>
             {{-- <th scope="col">Updated at</th> --}}
+            <th scope="col">Remarks</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
@@ -43,6 +44,7 @@
             <td>{{$wastage->user}}</td>
             {{-- <td>{{$wastage->note}}</td> --}}
             <td>{{$wastage->status}}</td>
+            <td>{{$wastage->note}}</td>
             {{-- <td>{{$wastage->updated_at->format('Y-m-d')}}</td> --}}
             <td>
                 <a class="btn btn-secondary" href="{{ route('wastage.edit', $wastage->id)}}">Edit</a>
