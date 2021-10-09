@@ -22,7 +22,7 @@ class HomeController extends Controller
 
     public function computerUser()
     {
-        $computers = Computer::orderBy('id')->paginate(300);
+        $computers = Computer::orderBy('id', 'desc')->paginate(300);
         return view('Frontend.computers.computerUser',compact('computers'));
     }
 

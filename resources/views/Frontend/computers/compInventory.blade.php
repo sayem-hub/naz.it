@@ -41,7 +41,7 @@
 
         .styled-table {
         border-collapse: collapse;
-        margin: 15px 0;
+        margin: 15px auto;
         font-size: 0.6em;
         font-family: sans-serif;
         min-width: 400px;
@@ -52,12 +52,12 @@
         .styled-table thead tr {
         background-color: #009879;
         color: #ffffff;
-        text-align: left;
+        text-align: center;
         }
 
         .styled-table th,
         .styled-table td {
-        padding: 10px 13px;
+        padding: 9px 12px;
         }
 
         .styled-table tbody tr {
@@ -92,16 +92,16 @@
         }
 
 
-        .count-table:
-            table,
-            td,
-            th {
+        .count-table {
+
                 border: 1px solid black;
             }
 
-            table {
-                width: 100%;
+            .count-table {
+                width: 80%;
                 border-collapse: collapse;
+                text-align: center;
+                margin: auto;
             }
 
 
