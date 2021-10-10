@@ -8,13 +8,13 @@
 <table class="table table-bordered table-hover" style="font-size: 13px"> <br>
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Camera Name & No.</th>
-            <th scope="col">Location</th>
-            <th scope="col">DVR No</th>
-            <th scope="col">Status</th>
-            <th scope="col">Updated at</th>
-            <th scope="col">Action</th>
+            <th scope="col" style="text-align:center">SL</th>
+            <th scope="col" style="text-align:center">Camera Name & No.</th>
+            <th scope="col" style="text-align:center">Location</th>
+            <th scope="col" style="text-align:center">DVR No</th>
+            <th scope="col" style="text-align:center">Status</th>
+            <th scope="col" style="text-align:center">Updated at</th>
+            <th scope="col" style="text-align:center">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -22,14 +22,14 @@
         @foreach($ccameras as $key=>$ccamera)
 
         <tr>
-            <th scope="row">{{$key+1}}</th>
+            <th scope="row" style="text-align:center">{{$key+1}}</th>
             <td>{{$ccamera->camname}}-{{$ccamera->camno}}</td>
             <td>{{$ccamera->camlocation}}</td>
-            <td>{{$ccamera->dvr_no}}</td>
-            <td>{{$ccamera->status}}</td>
-            <td>{{$ccamera->updated_at}}</td>
+            <td style="text-align:center">{{$ccamera->dvr_no}}</td>
+            <td style="text-align:center">{{$ccamera->status}}</td>
+            <td style="text-align:center">{{$ccamera->updated_at}}</td>
 
-            <td>
+            <td style="text-align:center">
                 <a class="btn btn-secondary" href="{{ route('camera.edit', $ccamera->id)}}">Edit</a>
 
             </td>

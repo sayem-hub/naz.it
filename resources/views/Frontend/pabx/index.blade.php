@@ -18,17 +18,17 @@
 <table class="table table-bordered table-hover" style="font-size: 13px">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Employee Name</th>
-            <th scope="col">Designation</th>
-            <th scope="col">Section</th>
-            <th scope="col">Department</th>
-            <th scope="col">PABX No</th>
-            <th scope="col">Model</th>
-            <th scope="col">Status</th>
+            <th scope="col" style="text-align:center">SL</th>
+            <th scope="col" style="text-align:center">Employee Name</th>
+            <th scope="col" style="text-align:center">Designation</th>
+            <th scope="col" style="text-align:center">Section</th>
+            <th scope="col" style="text-align:center">Department</th>
+            <th scope="col" style="text-align:center">PABX No</th>
+            <th scope="col" style="text-align:center">Model</th>
+            <th scope="col" style="text-align:center">Status</th>
             {{-- <th scope="col">Remarks</th> --}}
-            <th scope="col">Updated at</th>
-            <th scope="col">Action</th>
+            <th scope="col" style="text-align:center">Updated at</th>
+            <th scope="col" style="text-align:center">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -36,17 +36,17 @@
         @foreach($pabxes as $key=>$pabx)
 
         <tr>
-            <th scope="row">{{$key+1}}</th>
+            <th scope="row" style="text-align:center">{{$key+1}}</th>
             <td>{{$pabx->employee_name}}
             <td>{{$pabx->designation}}</td>
             <td>{{$pabx->section}}</td>
             <td>{{$pabx->department}}</td>
-            <td>{{$pabx->pabx_no}}</td>
-            <td>{{$pabx->model}}</td>
-            <td>{{$pabx->status}}</td>
+            <td style="text-align:center">{{$pabx->pabx_no}}</td>
+            <td style="text-align:center">{{$pabx->model}}</td>
+            <td style="text-align:center">{{$pabx->status}}</td>
             {{-- <td>{{$pabx->remarks}}</td> --}}
-            <td>{{$pabx->updated_at->format('Y-m-d')}}</td>
-            <td>
+            <td style="text-align:center">{{$pabx->updated_at->format('Y-m-d')}}</td>
+            <td style="text-align:center">
                 <a class="btn btn-secondary" href="{{ route('frontend.pabx.edit', $pabx->id)}}">Edit</a>
             </td>
         </tr>

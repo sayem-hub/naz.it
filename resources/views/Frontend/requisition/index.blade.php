@@ -16,7 +16,7 @@
                 <div class="form-group row"><br>
                     <div class="col-xs-3">
 
-                        <input type="text" class="form-control" name="query" placeholder="Search by User, Requisition No, or Status"
+                        <input type="text" class="form-control" name="query" placeholder="User, Requisition no, or Status"
                             value="{{ request()->input('query') }}">
                         <span class="text-danger">@error('query'){{ $message }}@enderror</span>
 
@@ -32,19 +32,19 @@
 <table class="table table-bordered table-hover" style="font-size: 12px">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Requisition no</th>
-        <th scope="col">Item(s)</th>
-        <th scope="col">Required for</th>
-        <th scope="col">Designation</th>
-        <th scope="col">Section/Dept.</th>
-        <th scope="col">Req date</th>
-        <th scope="col">Rcvd date</th>
-        <th scope="col">Status</th>
+        <th scope="col" style="text-align:center">SL</th>
+        <th scope="col" style="text-align:center">Requisition no</th>
+        <th scope="col" style="text-align:center">Item(s)</th>
+        <th scope="col" style="text-align:center">Required for</th>
+        <th scope="col" style="text-align:center">Designation</th>
+        <th scope="col" style="text-align:center">Section/Dept.</th>
+        <th scope="col" style="text-align:center">Req date</th>
+        <th scope="col" style="text-align:center">Rcvd date</th>
+        <th scope="col" style="text-align:center">Status</th>
 
         {{-- <th scope="col">Notes</th> --}}
         {{-- <th scope="col">Entry at</th> --}}
-        <th scope="col">Action</th>
+        <th scope="col" style="text-align:center">Action</th>
 
       </tr>
     </thead>
@@ -53,15 +53,15 @@
     @foreach($requisitions as $key=>$requisition)
 
       <tr>
-        <th scope="row">{{$key+1}}</th>
-        <td>{{$requisition->requisition_no}}</td>
+        <th scope="row" style="text-align:center">{{$key+1}}</th>
+        <td style="text-align:center">{{$requisition->requisition_no}}</td>
         <td>{{$requisition->item_names}}</td>
         <td>{{$requisition->required_for}}</td>
         <td>{{$requisition->designation}}</td>
         <td>{{$requisition->department}}</td>
-        <td>{{$requisition->requisition_date}}</td>
+        <td style="text-align:center">{{$requisition->requisition_date}}</td>
         {{-- <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td> --}}
-        <td>{{$requisition->received_date}}</td>
+        <td style="text-align:center">{{$requisition->received_date}}</td>
 
         @php
         if ( $requisition->status == 'Pending'):
@@ -73,11 +73,11 @@
         endif;
         @endphp
 
-        <td style="color: {{$color}}">{{ $requisition->status }}</td>
+        <td style="color: {{$color}}; text-align:center">{{ $requisition->status }}</td>
         {{-- <td>{{$requisition->status}}</td> --}}
         {{-- <td>{{$requisition->notes}}</td> --}}
         {{-- <td>{{date('d/m/Y', strtotime($requisition->created_at))}}</td> --}}
-        <td><a class="btn btn-secondary" href="{{ route('requisition.edit', $requisition->id) }}">Edit</a></td>
+        <td style="text-align:center"><a class="btn btn-secondary" href="{{ route('requisition.edit', $requisition->id) }}">Edit</a></td>
       </tr>
 
       @endforeach

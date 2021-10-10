@@ -30,18 +30,18 @@
 <table class="table table-bordered table-hover" style="font-size: 14px">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">NAZ ID</th>
+        <th scope="col" style="text-align:center">SL</th>
+        <th scope="col" style="text-align:center">NAZ ID</th>
 
-        <th scope="col">Name</th>
-        <th scope="col">Designation</th>
-        <th scope="col">Section</th>
-        <th scope="col">RF ID No</th>
-        <th scope="col">Issue Date</th>
-        <th scope="col">Status</th>
+        <th scope="col" style="text-align:center">Name</th>
+        <th scope="col" style="text-align:center">Designation</th>
+        <th scope="col" style="text-align:center">Section</th>
+        <th scope="col" style="text-align:center">RF ID No</th>
+        <th scope="col" style="text-align:center">Issue Date</th>
+        <th scope="col" style="text-align:center">Status</th>
         {{-- <th scope="col">Remarks</th> --}}
         {{-- <th scope="col">Created at</th> --}}
-        <th scope="col">Action</th>
+        <th scope="col" style="text-align:center">Action</th>
 
       </tr>
     </thead>
@@ -50,17 +50,17 @@
     @foreach($rfids as $key=>$rfid)
 
       <tr>
-        <th scope="row">{{$key+1}}</th>
-        <td>{{$rfid->naz_id}}</td>
+        <th scope="row" style="text-align:center">{{$key+1}}</th>
+        <td style="text-align:center">{{$rfid->naz_id}}</td>
         <td>{{$rfid->name}}</td>
-        <td>{{$rfid->designation}}</td>
-        <td>{{$rfid->section}}</td>
-        <td>{{$rfid->rf_id}}</td>
-        <td>{{$rfid->issue_date}}</td>
-        <td>{{$rfid->status}}</td>
+        <td style="text-align:center">{{$rfid->designation}}</td>
+        <td style="text-align:center">{{$rfid->section}}</td>
+        <td style="text-align:center">{{$rfid->rf_id}}</td>
+        <td style="text-align:center">{{$rfid->issue_date}}</td>
+        <td style="text-align:center">{{$rfid->status}}</td>
         {{-- <td>{{$rfid->remarks}}</td> --}}
         {{-- <td>{{$rfid->created_at}}</td> --}}
-        <td><a class="btn btn-secondary" href="{{ route('rfid.edit', $rfid->id) }}">Edit</a></td>
+        <td style="text-align:center"><a class="btn btn-secondary" href="{{ route('rfid.edit', $rfid->id) }}">Edit</a></td>
       </tr>
 
       @endforeach

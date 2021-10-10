@@ -30,22 +30,22 @@
 <table class="table table-bordered table-hover" style="font-size: 12px">
     <thead class="thead-dark">
       <tr>
-       <th scope="col">#</th>
-        <th scope="col">Tab ID</th>
-        <th scope="col">Brand</th>
-        <th scope="col">Model</th>
-        <th scope="col">Size</th>
-        <th scope="col">Serial</th>
-        <th scope="col">IMEI 1</th>
-        <th scope="col">IMEI 2</th>
-        <th scope="col">User</th>
-        <th scope="col">Emp ID</th>
-        <th scope="col">Title</th>
-        <th scope="col">Sect.</th>
-        <th scope="col">Dept.</th>
-        <th scope="col">Line</th>
-        <th scope="col">Status</th>
-        <th scope="col">Action</th>
+       <th scope="col" style="text-align:center">SL</th>
+        <th scope="col" style="text-align:center">Tab ID</th>
+        <th scope="col" style="text-align:center">Brand</th>
+        <th scope="col" style="text-align:center">Model</th>
+        <th scope="col" style="text-align:center">Size</th>
+        <th scope="col" style="text-align:center">Serial</th>
+        <th scope="col" style="text-align:center">IMEI 1</th>
+        <th scope="col" style="text-align:center">IMEI 2</th>
+        <th scope="col" style="text-align:center">User</th>
+        <th scope="col" style="text-align:center">Emp ID</th>
+        <th scope="col" style="text-align:center">Title</th>
+        <th scope="col" style="text-align:center">Sect.</th>
+        <th scope="col" style="text-align:center">Dept.</th>
+        <th scope="col" style="text-align:center">Line</th>
+        <th scope="col" style="text-align:center">Status</th>
+        <th scope="col" style="text-align:center">Action</th>
 
       </tr>
     </thead>
@@ -54,20 +54,20 @@
       @foreach($tablets as $key=>$tablet)
 
       <tr>
-        <th scope="row">{{$key+1}}</th>
-        <td>{{$tablet->tab_id}}</td>
-        <td>{{$tablet->brand}}</td>
-        <td>{{$tablet->model}}</td>
-        <td>{{$tablet->size}}</td>
-        <td>{{$tablet->serial}}</td>
+        <th scope="row" style="text-align:center">{{$key+1}}</th>
+        <td style="text-align:center">{{$tablet->tab_id}}</td>
+        <td style="text-align:center">{{$tablet->brand}}</td>
+        <td style="text-align:center">{{$tablet->model}}</td>
+        <td style="text-align:center">{{$tablet->size}}</td>
+        <td style="text-align:center">{{$tablet->serial}}</td>
         <td>{{$tablet->imei_1}}</td>
         <td>{{$tablet->imei_2}}</td>
         <td>{{$tablet->user}}</td>
-        <td>{{$tablet->emp_id}}</td>
-        <td>{{$tablet->designation}}</td>
-        <td>{{$tablet->section}}</td>
-        <td>{{$tablet->department}}</td>
-        <td>{{$tablet->line_no}}</td>
+        <td style="text-align:center">{{$tablet->emp_id}}</td>
+        <td style="text-align:center">{{$tablet->designation}}</td>
+        <td style="text-align:center">{{$tablet->section}}</td>
+        <td style="text-align:center">{{$tablet->department}}</td>
+        <td style="text-align:center">{{$tablet->line_no}}</td>
 
         {{-- <td>{{$tablet->notes}}</td> --}}
 
@@ -85,10 +85,10 @@
             endif;
             @endphp
 
-<td style="color: {{$color}}">{{$tablet->status}}</td>
+<td style="color: {{$color}}; text-align:center">{{$tablet->status}}</td>
 
 
-        <td><a class="btn btn-secondary" href="{{ route('tablet.edit', $tablet->id) }}">Edit</a></td>
+        <td style="text-align:center"><a class="btn btn-secondary" href="{{ route('tablet.edit', $tablet->id) }}">Edit</a></td>
       </tr>
 
       @endforeach

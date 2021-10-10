@@ -28,23 +28,23 @@
 <table class="table table-bordered table-hover" style="font-size: 12px">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Item name</th>
-        <!--<th scope="col">Quantity</th>-->
-        <th scope="col">Brand</th>
-        <th scope="col">Model</th>
-        <th scope="col">Serial no.</th>
-        <th scope="col">Supplier</th>
-        <th scope="col">Pur date</th>
-        <th scope="col">Wty</th>
-        <th scope="col">Challan no.</th>
-        <th scope="col">Challan</th>
-        <th scope="col">Req no.</th>
-        <th scope="col">P.type</th>
-        <th scope="col">User</th>
-        <th scope="col">Dept.</th>
-        {{-- <th scope="col">Notes</th> --}}
-        {{-- <th scope="col">Action</th> --}}
+        <th scope="col" style="text-align:center">SL</th>
+        <th scope="col"style="text-align:center">Item name</th>
+        <!--<th scope="col"style="text-align:center">Quantity</th>-->
+        <th scope="col"style="text-align:center">Brand</th>
+        <th scope="col"style="text-align:center">Model</th>
+        <th scope="col"style="text-align:center">Serial no.</th>
+        <th scope="col"style="text-align:center">Supplier</th>
+        <th scope="col"style="text-align:center">Pur date</th>
+        <th scope="col"style="text-align:center">Wty</th>
+        <th scope="col"style="text-align:center">Challan no.</th>
+        <th scope="col"style="text-align:center">Challan</th>
+        <th scope="col"style="text-align:center">Req no.</th>
+        <th scope="col"style="text-align:center">P.type</th>
+        <th scope="col"style="text-align:center">User</th>
+        <th scope="col"style="text-align:center">Dept.</th>
+        {{-- <th scope="col"style="text-align:center">Notes</th> --}}
+        {{-- <th scope="col"style="text-align:center">Action</th> --}}
 
       </tr>
     </thead>
@@ -53,24 +53,24 @@
     @foreach($incoming as $key=>$received)
 
       <tr>
-        <th scope="row">{{$key+1}}</th>
+        <th scope="row" style="text-align:center">{{$key+1}}</th>
         <td>{{$received->item_name}}</td>
-        <!--<td>{{$received->quantity}}</td>-->
-        <td>{{$received->brand_name}}</td>
-        <td>{{$received->model}}</td>
+       {{-- <td>{{$received->quantity}}</td> --}}
+        <td style="text-align:center">{{$received->brand_name}}</td>
+        <td style="text-align:center">{{$received->model}}</td>
         <td>{{$received->serial_no}}</td>
-        <td>{{$received->supplier}}</td>
-        <td>{{$received->pur_date}}</td>
-        <td>{{$received->warranty}}</td>
-        <td>{{$received->challan_no}}</td>
-        <td> <img src="{{asset('upload/challans/'.$received->challan_img)}}" alt="Not image file" width="95px" height="60px"> </td>
-        <td>{{$received->req_no}}</td>
-        <td>{{$received->pur_type}}</td>
+        <td style="text-align:center">{{$received->supplier}}</td>
+        <td style="text-align:center">{{$received->pur_date}}</td>
+        <td style="text-align:center">{{$received->warranty}}</td>
+        <td style="text-align:center">{{$received->challan_no}}</td>
+        <td style="text-align:center"> <img src="{{asset('upload/challans/'.$received->challan_img)}}" alt="Not image file" width="95px" height="60px"> </td>
+        <td style="text-align:center">{{$received->req_no}}</td>
+        <td style="text-align:center">{{$received->pur_type}}</td>
         <td>{{$received->user_name}}</td>
-        <td>{{$received->department}}</td>
+        <td style="text-align:center">{{$received->department}}</td>
         {{-- <td>{{$received->notes}}</td> --}}
-       <!-- <td>{{$received->created_at}}</td>
-        <td>{{$received->updated_at}}</td>-->
+       {{-- <td>{{$received->created_at}}</td> --}}
+        {{-- <td>{{$received->updated_at}}</td>--> --}}
 
         {{-- <td>
           <a class="btn btn-secondary" href="#">Edit</a>
