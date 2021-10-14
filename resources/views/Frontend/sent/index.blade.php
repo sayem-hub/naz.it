@@ -66,7 +66,7 @@
             <td style="text-align:center">{{$item->Gpno}}</td>
             <td style="text-align:center">{{$item->Sentfor}}</td>
             <td> {{$item->Problems}}</td>
-            <td style="text-align:center">{{$item->Notes}}</td>
+            <td>{{$item->Notes}}</td>
 
             @php
             if ( $item->Status == 'Pending'):
