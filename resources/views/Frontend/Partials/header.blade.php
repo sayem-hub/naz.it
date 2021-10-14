@@ -29,7 +29,7 @@
 
                             <li><a href="{{ route('cc-camera') }}">CC Camera</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Sewing Machine</a></li>
+                            <li><a href="#">Toner Stock</a></li>
                             <li class="divider"></li>
                             <li><a href="{{ route('wastage.index') }}">Wastage Management</a></li>
                             <li class="divider"></li>
