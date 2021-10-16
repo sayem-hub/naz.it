@@ -38,16 +38,18 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
     Route::post('/profile', [App\Http\Controllers\Frontend\UserController::class, 'updateProfile']);
 
+//Toner Status
+
+Route::get('/toner-status', [App\Http\Controllers\Frontend\TonerController::class, 'tonerExpenseIndex'])->name('toner.status');
 
 
-    
 
- //Wastage management route
- Route::get('wastage-list',[App\Http\Controllers\Frontend\WastageController::class, 'index'])->name('wastage.index');
- Route::get('wastage/add',[App\Http\Controllers\Frontend\WastageController::class, 'create'])->name('wastage.create');
- Route::post('wastage/add',[App\Http\Controllers\Frontend\WastageController::class, 'store']);
- Route::get('wastage/edit/{id}',[App\Http\Controllers\Frontend\WastageController::class, 'edit'])->name('wastage.edit');
- Route::post('wastage/edit/{id}',[App\Http\Controllers\Frontend\WastageController::class, 'update']);
+    //Wastage management route
+    Route::get('wastage-list',[App\Http\Controllers\Frontend\WastageController::class, 'index'])->name('wastage.index');
+    Route::get('wastage/add',[App\Http\Controllers\Frontend\WastageController::class, 'create'])->name('wastage.create');
+    Route::post('wastage/add',[App\Http\Controllers\Frontend\WastageController::class, 'store']);
+    Route::get('wastage/edit/{id}',[App\Http\Controllers\Frontend\WastageController::class, 'edit'])->name('wastage.edit');
+    Route::post('wastage/edit/{id}',[App\Http\Controllers\Frontend\WastageController::class, 'update']);
 
 
 
