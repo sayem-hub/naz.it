@@ -24,17 +24,35 @@
 
 
 
-                {{-- @foreach($stocks as $key=>$stock) --}}
-
-                 {{-- {{$stock->where('model', '=', '85A')->sum('qty') }} --}}
-
-                <tr>
-                    {{-- <th scope="row" style="text-align:center">{{$key+1}}</th> --}}
-                    <td style="text-align:center">{{Tonerstocks::model}}</td>
-                    <td style="text-align:center">{{Tonerstocks::qty}}</td>
+             <tr>
+                   <td style="text-align:center">1</td>
+                    <td style="text-align:center">85A</td>
+                    <td style="text-align:center">{{$stocks85}}</td>
                 </tr>
 
-                {{-- @endforeach --}}
+                <tr>
+                    <td style="text-align:center">2</td>
+                    <td style="text-align:center">26A</td>
+                    <td style="text-align:center">{{$stocks26}}</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:center">3</td>
+                    <td style="text-align:center">93A</td>
+                    <td style="text-align:center">{{$stocks93}}</td>
+                </tr>
+
+
+
+                {{-- @foreach($stocks as $key=>$stock)
+
+                <tr>
+                    <th scope="row" style="text-align:center">{{$key+1}}</th>
+                    <td style="text-align:center">{{$stock->toner_model}}</td>
+                    <td style="text-align:center">{{$stock}}</td>
+                </tr>
+
+                @endforeach--}}
             </tbody>
         </table>
     </div>
@@ -65,7 +83,7 @@
             <th scope="col" style="text-align:center">Model</th>
             <th scope="col" style="text-align:center">Section</th>
             <th scope="col" style="text-align:center">Printer Model</th>
-            <th scope="col" style="text-align:center">Notes</th>
+            {{-- <th scope="col" style="text-align:center">Notes</th> --}}
         </tr>
     </thead>
     <tbody>
@@ -75,10 +93,10 @@
         <tr >
             <th scope="row" style="text-align:center">{{$key+1}}</th>
             <td>{{$expense->date}}</td>
-            <td style="text-align:center">{{$expense->model}}</td>
+            <td style="text-align:center">{{$expense->toner_model}}</td>
             <td style="text-align:center">{{$expense->section}}</td>
             <td>{{$expense->printer_model}}</td>
-            <td>{{$expense->notes}}</td>
+            {{-- <td>{{$expense->notes}}</td> --}}
 
         </tr>
 
