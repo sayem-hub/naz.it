@@ -16,8 +16,9 @@ class CreateTonerstocksTable extends Migration
         Schema::create('tonerstocks', function (Blueprint $table) {
             $table->id();
             $table->date('date');
-            $table->string('model');
+            $table->string('toner_model');
             $table->string('qty');
+            $table->string('gp_no');
             $table->string('notes');
             $table->timestamps();
         });

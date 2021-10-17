@@ -12,8 +12,8 @@ class TonerController extends Controller
     public function tonerExpenseIndex()
 
     {
-        $expenses = Tonerexpense::orderBy('id', 'desc')->paginate(100);
-
+        $expenses = Tonerexpense::orderBy('id', 'desc')->paginate(50);
+        $newtoners = Tonerstock::orderBy('id', 'desc')->paginate(10);
         $toner85 = Tonerstock::where('toner_model', '=', '85A')->sum('qty');
         $model85 = Tonerexpense::where('toner_model', '=', '85A')->count();
         $stocks85 = $toner85 - $model85;
@@ -28,9 +28,12 @@ class TonerController extends Controller
 
 
         // $stocks = Tonerstock::orderBy('id')->paginate(100);
-        return view('Frontend.toner.index', compact('expenses'))->with('stocks85', $stocks85)
+        return view('Frontend.toner.index', compact('expenses', 'newtoners'))->with('stocks85', $stocks85)
         -> with('stocks26', $stocks26)
         -> with('stocks93', $stocks93);
+
+
+
 
     }
 
