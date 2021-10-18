@@ -8,8 +8,7 @@
     <div class="col-md-4">
         <h4 class="text-center mt-3">Toner Stock</h4>
 
-        <a href="" class="btn btn-success">Add New Stock</a>
-
+        <a href="{{ route('toner.stock.create') }}" class="btn btn-success">Add new stock</a>
 
         <table class="table table-bordered table-hover" style="font-size: 14px">
             <thead>
@@ -20,9 +19,6 @@
                 </tr>
             </thead>
             <tbody>
-
-
-
 
              <tr>
                    <td style="text-align:center">1</td>
@@ -56,7 +52,7 @@
     <div class="col-md-5">
 <h4 class="text-center mt-3">Toner Expenses</h4>
 
-<a href="" class="btn btn-success">Enter expenses</a>
+<a href="{{ route('toner.expense.create') }}" class="btn btn-success">Expense entry</a>
 
 
 <table class="table table-bordered table-hover" style="font-size: 13px">
@@ -134,9 +130,6 @@
         {{$newtoners->links('pagination::bootstrap-4')}}
 
     </div>
-
 </div>
-
-
 
 @endsection

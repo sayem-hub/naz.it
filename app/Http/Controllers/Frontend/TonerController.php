@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class TonerController extends Controller
 {
-    public function tonerExpenseIndex()
+    public function tonerIndex()
 
     {
         $expenses = Tonerexpense::orderBy('id', 'desc')->paginate(50);
@@ -32,9 +32,41 @@ class TonerController extends Controller
         -> with('stocks26', $stocks26)
         -> with('stocks93', $stocks93);
 
-
-
-
     }
 
+        public function tonerReceive(){
+        return view('Frontend.toner.stockCreate');
+
+        }
+
+        public function tonerReceiveStore(Request $request){
+            $data = [
+            'date' => $request->input('date'),
+            'toner_model' => $request->input('toner_model'),
+            'qty' => $request->input('quantity'),
+            'gp_no' => $request->input('gp_no'),
+            'notes' => $request->input('notes'),
+            ];
+
+
+        Tonerstock::create($data);
+        return redirect()->route('toner.status');
+        }
+
+        public function tonerExpense(){
+            return view('Frontend.toner.expenseCreate');
+        }
+
+        public function tonerExpenseStore(Request $request){
+        $data = [
+            'date' => $request->input('date'),
+            'toner_model' => $request->input('toner_model'),
+            'section' => $request->input('section'),
+            'printer_model' => $request->input('printer_model'),
+            'notes' => $request->input('notes'),
+        ];
+
+        Tonerexpense::create($data);
+        return redirect()->route('toner.status');
+        }
 }

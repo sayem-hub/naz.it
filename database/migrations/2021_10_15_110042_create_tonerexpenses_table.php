@@ -19,7 +19,7 @@ class CreateTonerexpensesTable extends Migration
             $table->string('toner_model');
             $table->string('section');
             $table->string('printer_model');
-            $table->string('notes');
+            $table->string('notes')->nullable();
             $table->timestamps();
         });
     }

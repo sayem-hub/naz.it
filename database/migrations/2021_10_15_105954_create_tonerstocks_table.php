@@ -19,7 +19,7 @@ class CreateTonerstocksTable extends Migration
             $table->string('toner_model');
             $table->string('qty');
             $table->string('gp_no');
-            $table->string('notes');
+            $table->string('notes')->nullable();
             $table->timestamps();
         });
     }
