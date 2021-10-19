@@ -80,6 +80,7 @@
                     <option value="AOC 14 Inch">AOC 14 Inch</option>
                     <option value="AOC 19 Inch">AOC 19 Inch</option>
                     <option value="Acer 19 Inch">Acer 19 Inch</option>
+                    <option value="Lenovo 19 Inch">Lenovo 19 Inch</option>
                     <option value="Asus 16 Inch">Asus 16 Inch</option>
                     <option value="Benq 14 Inch">Benq 14 Inch</option>
                     <option value="Dell 24 Inch">Dell 24 Inch</option>
@@ -90,12 +91,15 @@
 
             <div class="mb-3">
                 <label for="Mouse" class="form-label">Mouse</label>
+
                 <select class="form-control" name="Mouse">
-                    <option value="N/A">N/A</option>
-                    <option value="A4TECH" selected>A4TECH</option>
+                    <option value="" selected>---Select from list---</option>
+                    <option value="N/A" >N/A</option>
+                    <option value="A4TECH" >A4TECH</option>
                     <option value="Logitech">Logitech</option>
                     <option value="Delux">Delux</option>
                     <option value="HP">HP</option>
+                    <option value="Dell">Dell</option>
                     <option value="Jeway">Jeway</option>
                     <option value="Syntax">Syntax</option>
                     <option value="Newmen">Newmen</option>
@@ -179,8 +183,9 @@
                     <option value="Fabric Store">Fabric Store</option>
                     <option value="Inventory">Inventory</option>
                     <option value="Chemical Store">Chemical Store</option>
-                    <option value="Design">Design</option>
                     <option value="NZ Acc Store">NZ Acc Store</option>
+                    <option value="Yarn Store">Yarn Store</option>
+                    <option value="Design">Design</option>
                     <option value="Testing LAB">Testing LAB</option>
                     <option value="Washing">Washing</option>
                     <option value="ETP">ETP</option>

@@ -35,11 +35,17 @@
                 <label for="printer_model" class="form-label">Printer model</label>
                <select class="form-control" name="printer_model">
                 <option value="" selected>--Select printer model--</option>
+                <option value="Unknown" >Unknown</option>
                 <option value="HP P1102">HP P1102</option>
                 <option value="Canon LBP6030">Canon LBP6030</option>
                 <option value="HP M402dn">HP M402dn</option>
                 <option value="HP M706n">HP M706n</option>
             </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="recipient" class="form-label">Recipient</label>
+                <input type="text" class="form-control" name="recipient" id="recipient">
             </div>
 
 

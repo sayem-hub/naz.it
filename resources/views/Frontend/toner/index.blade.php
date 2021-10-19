@@ -63,6 +63,7 @@
             <th scope="col" style="text-align:center">Model</th>
             <th scope="col" style="text-align:center">Section</th>
             <th scope="col" style="text-align:center">Printer Model</th>
+            <th scope="col" style="text-align:center">Recipient</th>
             {{-- <th scope="col" style="text-align:center">Notes</th> --}}
         </tr>
     </thead>
@@ -76,6 +77,7 @@
             <td style="text-align:center">{{$expense->toner_model}}</td>
             <td style="text-align:center">{{$expense->section}}</td>
             <td style="text-align:center">{{$expense->printer_model}}</td>
+            <td style="text-align:center">{{$expense->recipient}}</td>
             {{-- <td>{{$expense->notes}}</td> --}}
 
         </tr>

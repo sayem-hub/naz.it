@@ -63,6 +63,7 @@ class TonerController extends Controller
             'toner_model' => $request->input('toner_model'),
             'section' => $request->input('section'),
             'printer_model' => $request->input('printer_model'),
+            'recipient' => $request->input('recipient'),
             'notes' => $request->input('notes'),
         ];
 
