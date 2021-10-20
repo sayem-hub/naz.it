@@ -111,7 +111,7 @@
 
     <h3>NAZ Bangladesh Ltd.</h3>
     <h4>ICT Department</h4>
-    <h5>Received Item List</h5>
+    <h5>List of Items Received</h5>
 
 
     <table class="styled-table" >

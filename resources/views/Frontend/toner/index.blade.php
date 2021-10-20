@@ -50,7 +50,7 @@
 
     <div class="col-md-1"></div>
     <div class="col-md-5">
-<h4 class="text-center mt-3">Toner Expenses</h4>
+<h4 class="text-center mt-3">Toner Consumption</h4>
 
 <a href="{{ route('toner.expense.create') }}" class="btn btn-success">Expense entry</a>
 
