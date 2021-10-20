@@ -65,7 +65,7 @@
                 <select class="form-control" name="status">
                     <option value="Active" selected>Active</option>
                     <option value="Inactive">Inactive</option>
-                    <option value="In Repair">In Repair</option>
+                    <option value="In repair">In repair</option>
                     <option value="Damaged">Damaged</option>
                     <option value="Idle">Idle</option>
                 </select>

@@ -18,17 +18,17 @@
 <table class="table table-bordered table-hover" style="font-size: 13px">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Machine Name</th>
-            <th scope="col">ID</th>
-            <th scope="col">IP Address</th>
-            <th scope="col">Serial No</th>
-            <th scope="col">Type</th>
-            <th scope="col">Model</th>
-            <th scope="col">Location</th>
-            <th scope="col">Status</th>
-            <th scope="col">Updated at</th>
-            <th scope="col">Action</th>
+            <th style="text-align:center" scope="col">SL</th>
+            <th scope="col" style="text-align:center">Machine Name</th>
+            <th scope="col" style="text-align:center">ID</th>
+            <th scope="col" style="text-align:center">IP address</th>
+            <th scope="col" style="text-align:center">Serial no</th>
+            <th scope="col" style="text-align:center">Type</th>
+            <th scope="col" style="text-align:center">Model</th>
+            <th scope="col" style="text-align:center">Location</th>
+            <th scope="col" style="text-align:center">Status</th>
+            {{-- <th scope="col">Updated at</th> --}}
+            <th scope="col" style="text-align:center">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -36,19 +36,32 @@
         @foreach($machines as $key=>$machine)
 
         <tr>
-            <th scope="row">{{$key+1}}</th>
-            <td>{{$machine->machine_name}}
-            <td>{{$machine->machine_id}}</td>
-            <td>{{$machine->ip_address}}</td>
-            <td>{{$machine->serial_no}}</td>
-            <td>{{$machine->type}}</td>
-            <td>{{$machine->model}}</td>
+            <th scope="row" style="text-align:center">{{$key+1}}</th>
+            <td >{{$machine->machine_name}}
+            <td style="text-align:center">{{$machine->machine_id}}</td>
+            <td style="text-align:center">{{$machine->ip_address}}</td>
+            <td style="text-align:center">{{$machine->serial_no}}</td>
+            <td style="text-align:center">{{$machine->type}}</td>
+            <td style="text-align:center">{{$machine->model}}</td>
             <td>{{$machine->location}}</td>
-            <td>{{$machine->status}}</td>
-            <td>{{$machine->updated_at->format('Y-m-d')}}</td>
-            <td>
-                <a class="btn btn-secondary" href="{{ route('faceid.edit', $machine->id)}}">Edit</a>
-            </td>
+
+            @php
+            if ( $machine->status == 'In repair'):
+            $color = 'red';
+            elseif ( $machine->status == 'Active'):
+            $color = 'green';
+            elseif ( $machine->status == 'Idle'):
+            $color = 'blue';
+            elseif ( $machine->status == 'Inactive'):
+            $color = 'brown';
+            else:
+            $color = 'gray';
+            endif;
+            @endphp
+
+            <td style="color: {{$color}}; text-align:center">{{ $machine->status }}</td>
+            {{-- <td>{{$machine->updated_at->format('Y-m-d')}}</td> --}}
+            <td style="text-align:center"><a class="btn btn-secondary" href="{{ route('faceid.edit', $machine->id)}}" >Edit</a></td>
         </tr>
 
         @endforeach
