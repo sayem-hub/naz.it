@@ -40,14 +40,49 @@
 
             </tbody>
         </table>
-    </div>
+
+{{-- New Toner Receiving Section --}}
+    <br>
+        <h4 class="text-center mt-3">Toner receiving record</h4>
+
+        <table class="table table-bordered table-hover  " style="font-size: 12px; ">
+            <thead>
+                <tr>
+                    <th scope="col" style="text-align:center">SL</th>
+                    <th scope="col" style="text-align:center">Date</th>
+                    <th scope="col" style="text-align:center">Model</th>
+                    <th scope="col" style="text-align:center">Quantity</th>
+                    <th scope="col" style="text-align:center">GP no.</th>
+                    {{-- <th scope="col" style="text-align:center">Notes</th> --}}
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach($newtoners as $key=>$newtoner)
+
+                <tr>
+                    <th scope="row" style="text-align:center">{{$key+1}}</th>
+                    <td style="text-align:center">{{$newtoner->date}}</td>
+                    <td style="text-align:center">{{$newtoner->toner_model}}</td>
+                    <td style="text-align:center">{{$newtoner->qty}}</td>
+                    <td style="text-align:center">{{$newtoner->gp_no}}</td>
+                </tr>
+
+                @endforeach
+
+            </tbody>
+        </table>
+        {{$newtoners->links('pagination::bootstrap-4')}}
+</div>
+
+
 
 
 
 {{-- Toner Expenses Section --}}
 
-<div class="row">
 
+<div class = "row">
     <div class="col-md-1"></div>
     <div class="col-md-5">
 <h4 class="text-center mt-3">Toner Consumption</h4>
@@ -55,7 +90,7 @@
 <a href="{{ route('toner.expense.create') }}" class="btn btn-success">Expense entry</a>
 
 
-<table class="table table-bordered table-hover" style="font-size: 13px">
+<table class="table table-bordered table-hover" style="font-size: 12px">
     <thead>
         <tr>
             <th scope="col" style="text-align:center">SL</th>
@@ -89,49 +124,10 @@
 {{$expenses->links('pagination::bootstrap-4')}}
 
 </div>
-
 </div>
 
 
-{{-- New Toner Receiving Section --}}
-
-<div class="row">
-
-    <div class="col-md-1"></div>
-    <div class="col-md-4">
-        <h4 class="text-center mt-3">Toner receiving record</h4>
 
 
-        <table class="table table-bordered table-hover" style="font-size: 13px">
-            <thead>
-                <tr>
-                    <th scope="col" style="text-align:center">SL</th>
-                    <th scope="col" style="text-align:center">Date</th>
-                    <th scope="col" style="text-align:center">Model</th>
-                    <th scope="col" style="text-align:center">Quantity</th>
-                    <th scope="col" style="text-align:center">GP no.</th>
-                    {{-- <th scope="col" style="text-align:center">Notes</th> --}}
-                </tr>
-            </thead>
-            <tbody>
-
-                @foreach($newtoners as $key=>$newtoner)
-
-                <tr>
-                    <th scope="row" style="text-align:center">{{$key+1}}</th>
-                    <td style="text-align:center">{{$newtoner->date}}</td>
-                    <td style="text-align:center">{{$newtoner->toner_model}}</td>
-                    <td style="text-align:center">{{$newtoner->qty}}</td>
-                    <td style="text-align:center">{{$newtoner->gp_no}}</td>
-                </tr>
-
-                @endforeach
-
-            </tbody>
-        </table>
-        {{$newtoners->links('pagination::bootstrap-4')}}
-
-    </div>
-</div>
 
 @endsection

@@ -47,7 +47,7 @@
 
                     @if(auth()->user())
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Account <span
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">nAccount <span
                                 class="caret"></span></a>
 
                         <ul class="dropdown-menu" role="menu">

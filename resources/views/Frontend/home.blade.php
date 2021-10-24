@@ -10,7 +10,7 @@
 
 
 
-        <h1 class="wow fadeInLeft">
+        <h1 class="wow fadeInLeft" style="font-size: 3em">
             Welcome to NAZ-IMS!
         </h1>
 
