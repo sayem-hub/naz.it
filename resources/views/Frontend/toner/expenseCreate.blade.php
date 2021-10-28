@@ -10,8 +10,8 @@
             @csrf
 
             <div class="mb-3">
-                <label for="date" class="form-label">Date</label>
-                <input type="date" class="form-control" name="date" id="date">
+                <label for="date" class="form-label">Date & Time</label>
+                <input type="datetime-local" class="form-control" name="date" id="date">
 
             </div>
 

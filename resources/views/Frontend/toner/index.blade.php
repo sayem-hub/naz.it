@@ -10,9 +10,9 @@
 
         <a href="{{ route('toner.stock.create') }}" class="btn btn-success">Add new stock</a>
 
-        <table class="table table-bordered table-hover" style="font-size: 14px">
-            <thead>
-                <tr>
+        <table class="table table-bordered table-hover" style="font-size: 14px";>
+            <thead style= "background-color: #FF8C00" >
+                <tr >
                     <th scope="col" style="text-align:center">SL</th>
                     <th scope="col" style="text-align:center">Model</th>
                     <th scope="col" style="text-align:center">Quantity</th>
@@ -90,11 +90,11 @@
 <a href="{{ route('toner.expense.create') }}" class="btn btn-success">Expense entry</a>
 
 
-<table class="table table-bordered table-hover" style="font-size: 12px">
+<table class="table table-bordered table-hover" style="font-size: 11.5px">
     <thead>
         <tr>
             <th scope="col" style="text-align:center">SL</th>
-            <th scope="col" style="text-align:center">Date</th>
+            <th scope="col" style="text-align:center">Date & Time</th>
             <th scope="col" style="text-align:center">Model</th>
             <th scope="col" style="text-align:center">Section</th>
             <th scope="col" style="text-align:center">Printer Model</th>
@@ -107,8 +107,9 @@
         @foreach($expenses as $key=>$expense)
 
         <tr >
-            <th scope="row" style="text-align:center">{{$key+1}}</th>
-            <td style="text-align:center">{{$expense->date}}</td>
+         <th scope="row" style="text-align:center">{{$key+1}}</th>
+         <td style="text-align:center">{{ date('Y-m-d, h:i A', strtotime($expense->date)) }}</td>
+            {{-- <td style="text-align:center">{{$expense->date}}</td> --}}
             <td style="text-align:center">{{$expense->toner_model}}</td>
             <td style="text-align:center">{{$expense->section}}</td>
             <td style="text-align:center">{{$expense->printer_model}}</td>
