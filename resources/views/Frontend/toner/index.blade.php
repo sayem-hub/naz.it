@@ -11,7 +11,7 @@
         <a href="{{ route('toner.stock.create') }}" class="btn btn-success">Add new stock</a>
 
         <table class="table table-bordered table-hover" style="font-size: 14px";>
-            <thead style= "background-color: #FF8C00" >
+            <thead style= "background-color: #FFD67B" >
                 <tr >
                     <th scope="col" style="text-align:center">SL</th>
                     <th scope="col" style="text-align:center">Model</th>
@@ -45,7 +45,7 @@
     <br>
         <h4 class="text-center mt-3">Toner receiving record</h4>
 
-        <table class="table table-bordered table-hover  " style="font-size: 12px; ">
+        <table class="table table-bordered table-hover  " style="font-size: 11.5px; ">
             <thead>
                 <tr>
                     <th scope="col" style="text-align:center">SL</th>
@@ -78,10 +78,7 @@
 
 
 
-
 {{-- Toner Expenses Section --}}
-
-
 <div class = "row">
     <div class="col-md-1"></div>
     <div class="col-md-5">
@@ -90,7 +87,7 @@
 <a href="{{ route('toner.expense.create') }}" class="btn btn-success">Expense entry</a>
 
 
-<table class="table table-bordered table-hover" style="font-size: 11.5px">
+<table class="table table-bordered table-hover" style="font-size: 11px">
     <thead>
         <tr>
             <th scope="col" style="text-align:center">SL</th>
