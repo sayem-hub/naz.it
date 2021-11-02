@@ -76,12 +76,14 @@ class SearchController extends Controller
     public function requisitionSearch(Request $request)
 {
     $request->validate(([
-        'query'=>'required|min:3'
+        'query'=>'required|min:2'
     ]));
 
     $search_text = $request->input('query');
         $requisitions = DB::table('requisitions')
-        ->where('required_for', 'LIKE', '%' . $search_text . '%')->orWhere('status', 'LIKE', '%' . $search_text . '%')->orWhere('requisition_no', 'LIKE', '%' . $search_text . '%')
+        ->where('required_for', 'LIKE', '%' . $search_text . '%')->orWhere('status', 'LIKE', '%' . $search_text . '%')
+        ->orWhere('requisition_no', 'LIKE', '%' . $search_text . '%')
+        ->orWhere('item_names', 'LIKE', '%' . $search_text . '%')
             //   ->orWhere('SurfaceArea','<', 10)
             //   ->orWhere('LocalName','like','%'.$search_text.'%')
             ->paginate(1000);

@@ -16,7 +16,7 @@
                 <div class="form-group row"><br>
                     <div class="col-xs-3">
 
-                        <input type="text" class="form-control" name="query" placeholder="User, Requisition no, or Status"
+                        <input type="text" class="form-control" name="query" placeholder="User, item, req no, or status"
                             value="{{ request()->input('query') }}">
                         <span class="text-danger">@error('query'){{ $message }}@enderror</span>
 
