@@ -52,7 +52,7 @@
                     <th scope="col" style="text-align:center">Date</th>
                     <th scope="col" style="text-align:center">Model</th>
                     <th scope="col" style="text-align:center">Quantity</th>
-                    <th scope="col" style="text-align:center">GP no.</th>
+                    <th scope="col" style="text-align:center">GP No.</th>
                     {{-- <th scope="col" style="text-align:center">Notes</th> --}}
                 </tr>
             </thead>
