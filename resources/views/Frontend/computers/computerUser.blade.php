@@ -35,11 +35,13 @@
         <th scope="col" style="text-align:center">Emp ID</th>
         <th scope="col" style="text-align:center">Name</th>
         <th scope="col" style="text-align:center">Designation</th>
+        <th scope="col" style="text-align:center">Com type</th>
         <th scope="col" style="text-align:center">IP address</th>
         <th scope="col" style="text-align:center">Email address</th>
         <th scope="col" style="text-align:center">Section</th>
-        <th scope="col" style="text-align:center">Department</th>
+        {{-- <th scope="col" style="text-align:center">Department</th> --}}
         <th scope="col" style="text-align:center">Status</th>
+        <th scope="col" style="text-align:center">KP Status</th>
         <th scope="col" style="text-align:center">Action</th>
 
       </tr>
@@ -54,10 +56,11 @@
         <td style="text-align:center">{{$user->Emp_id}}</td>
         <td>{{$user->User}}</td>
         <td>{{$user->Designation}}</td>
+        <td style="text-align:center">{{$user->Comtype}}</td>
         <td style="text-align:center">{{$user->Ipadd}}</td>
         <td>{{$user->Email}}</td>
         <td>{{$user->Section}}</td>
-        <td>{{$user->Department}}</td>
+        {{-- <td>{{$user->Department}}</td> --}}
 
             @php
             if ( $user->Status == 'In repair'):
@@ -72,6 +75,7 @@
             @endphp
 
             <td style="color: {{$color}}; text-align:center">{{ $user->Status }}</td>
+            <td style="text-align:center">{{$user->Kp_status}}</td>
 
         <td style="text-align:center">
           <a class="btn btn-secondary" href="{{route('computer.user.edit',$user->id)}}">Edit</a>

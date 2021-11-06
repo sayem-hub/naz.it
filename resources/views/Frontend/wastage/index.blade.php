@@ -18,17 +18,17 @@
 <table class="table table-bordered table-hover" style="font-size: 12px">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Item name</th>
-            <th scope="col">Model</th>
-            <th scope="col">Serial no</th>
-            <th scope="col">Problem</th>
-            <th scope="col">User</th>
+            <th scope="col" style="text-align:center">SL</th>
+            <th scope="col" style="text-align:center">Item name</th>
+            <th scope="col" style="text-align:center">Model</th>
+            <th scope="col" style="text-align:center">Serial no</th>
+            <th scope="col" style="text-align:center">Problem</th>
+            <th scope="col" style="text-align:center">User</th>
             {{-- <th scope="col">Note</th> --}}
-            <th scope="col">Status</th>
+            <th scope="col" style="text-align:center">Status</th>
             {{-- <th scope="col">Updated at</th> --}}
-            <th scope="col">Remarks</th>
-            <th scope="col">Action</th>
+            <th scope="col" style="text-align:center">Notes</th>
+            <th scope="col" style="text-align:center">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -36,17 +36,17 @@
         @foreach($wastages as $key=>$wastage)
 
         <tr>
-            <th scope="row">{{$key+1}}</th>
+            <th scope ="row" style="text-align:center">{{$key+1}}</th>
             <td>{{$wastage->item_name}}
             <td>{{$wastage->model}}</td>
-            <td>{{$wastage->serial_no}}</td>
+            <td style="text-align:center">{{$wastage->serial_no}}</td>
             <td>{{$wastage->problem}}</td>
             <td>{{$wastage->user}}</td>
             {{-- <td>{{$wastage->note}}</td> --}}
-            <td>{{$wastage->status}}</td>
-            <td>{{$wastage->note}}</td>
+            <td style="text-align:center">{{$wastage->status}}</td>
+            <td>{{$wastage->notes}}</td>
             {{-- <td>{{$wastage->updated_at->format('Y-m-d')}}</td> --}}
-            <td>
+            <td style="text-align:center">
                 <a class="btn btn-secondary" href="{{ route('wastage.edit', $wastage->id)}}">Edit</a>
             </td>
         </tr>

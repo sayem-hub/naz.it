@@ -236,6 +236,17 @@
             </div>
 
             <div class="mb-3">
+                <label for="Kp_status" class="form-label">Kaspersky Status</label>
+                <select class="form-control" name="Kp_status">
+                    <option value="{{$computer->Kp_status}}" selected>{{$computer->Kp_status}}</option>
+                    <option value="Installed">Installed</option>
+                    <option value="Old version">Old version</option>
+                    <option value="Not installed">Not installed</option>
+                    <option value="Problem">Problem</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
                 <label for="Remarks" class="form-label">Remarks</label>
                 <input type="text" class="form-control" name="Remarks" id="Remarks" value="{{$computer->Remarks}}">
             </div>

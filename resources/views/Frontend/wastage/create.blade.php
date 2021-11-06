@@ -24,7 +24,8 @@
             <div class="mb-3">
                 <label for="item_name" class="form-label">Item Name</label>
                 <select class="form-control" name="item_name">
-                    <option value="Motherboard" selected>Motherboard</option>
+                    <option value="" selected>---Select item---</option>
+                    <option value="Motherboard">Motherboard</option>
                     <option value="HDD">HDD</option>
                     <option value="SSD">SSD</option>
                     <option value="Monitor">Monitor</option>

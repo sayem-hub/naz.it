@@ -10,7 +10,7 @@ class WastageController extends Controller
 {
     public function index()
     {
-        $wastages = Wastage::orderBy('id' ,'desc')->paginate(20);
+        $wastages = Wastage::orderBy('id' ,'desc')->paginate(25);
         return view('Frontend.wastage.index', compact('wastages'));
     }
 
@@ -37,7 +37,7 @@ class WastageController extends Controller
                 'serial_no' => $request->input('serial_no'),
                 'problem' => $request->input('problem'),
                 'user' => $request->input('user_name'),
-                'note' => $request->input('note'),
+                'notes' => $request->input('note'),
                 'status' => $request->input('status'),
             ];
             Wastage::create($data);
@@ -75,7 +75,7 @@ class WastageController extends Controller
                 'serial_no' => $request->input('serial_no'),
                 'problem' => $request->input('problem'),
                 'user' => $request->input('user_name'),
-                'note' => $request->input('note'),
+                'notes' => $request->input('note'),
                 'status' => $request->input('status'),
             ];
             $wastages->update($data);

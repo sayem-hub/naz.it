@@ -52,6 +52,7 @@ class HomeController extends Controller
             'Section' => $request->input('Section'),
             'Department' => $request->input('Department'),
             'Status' => $request->input('Status'),
+            'Kp_status' => $request->input('Kp_status'),
             'Remarks' => $request->input('Remarks'),
 
 
@@ -88,6 +89,7 @@ class HomeController extends Controller
             'Section' => $request->input('Section'),
             'Department' => $request->input('Department'),
             'Status' => $request->input('Status'),
+            'Kp_status' => $request->input('Kp_status'),
             'Remarks' => $request->input('Remarks'),
         ];
         $computer->update($data);
