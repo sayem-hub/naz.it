@@ -3,8 +3,8 @@
 @section('main')
 
 <div class="row" style="color: rgb(80, 75, 75)">
-    <div class="col-md-2"></div>
-    <div class="col-md-7">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
 
         <h3 class="text-center mt-3">Edit Record</h3>
         <form action="{{route('printer.edit',$printers->id)}}" method="post">
@@ -43,8 +43,8 @@
                     <option value="Laser">Laser</option>
                     <option value="Inkjet">Inkjet</option>
                     <option value="Color Laser">Color Laser</option>
-                    <option value="Multi Function Inkjet">Multi Function Inkjet</option>
-                    <option value="Multi Function Laser">Multi Function Laser</option>
+                    <option value="MF Inkjet">MF Inkjet</option>
+                    <option value="MF Laser">MF Laser</option>
                 </select>
             </div>
 
@@ -78,10 +78,13 @@
                 <label for="Status" class="form-label">Status</label>
                 <select class="form-control" name="status">
                     <option value="{{ $printers->status }}" selected>{{ $printers->status}}</option>
-                    <option value="Active" selected>Active</option>
+                    <option value="Active">Active</option>
                     <option value="Inactive">Inactive</option>
                     <option value="Idle">Idle</option>
-                    <option value="In Repair">In Repair</option>
+                    <option value="In repair">In repair</option>
+                    <option value="No cartridge">No cartridge</option>
+                    <option value="No toner">No toner</option>
+                    <option value="Ink empty">Ink empty</option>
                 </select>
             </div>
 

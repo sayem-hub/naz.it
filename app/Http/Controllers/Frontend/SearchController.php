@@ -104,5 +104,21 @@ class SearchController extends Controller
         ->paginate(1000);
         return view('Frontend.sent.search', ['sentitems' => $sentitems]);
     }
-    }
+
+        public function printerSearch(Request $request)
+
+        {
+        $request->validate(([
+            'query' => 'required|min:3'
+        ]));
+
+        $search_text = $request->input('query');
+        $printers = DB::table('printers')
+        ->where('user', 'LIKE', '%' . $search_text . '%')->orWhere('section', 'LIKE', '%' . $search_text . '%')->orWhere('status', 'LIKE', '%' . $search_text . '%')
+            //   ->orWhere('SurfaceArea','<', 10)
+            //   ->orWhere('LocalName','like','%'.$search_text.'%')
+            ->paginate(1000);
+        return view('Frontend.printers.search', ['printers' => $printers]);
+        }
+}
 

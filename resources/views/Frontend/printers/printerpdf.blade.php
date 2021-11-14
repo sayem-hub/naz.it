@@ -65,7 +65,7 @@
 
         .styled-table th,
         .styled-table td {
-        padding: 10px 13px;
+        padding: 9px 12px;
         }
 
         .styled-table tbody tr {

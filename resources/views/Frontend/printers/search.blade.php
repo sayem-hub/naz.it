@@ -2,49 +2,66 @@
 @section('main')
 
 <h3 class="text-center mt-3">Search Results</h3>
-<a href="{{route('computer.user.create')}}" class="btn btn-success">Add New Computer</a>
-<table class="table table-bordered table-hover" style="font-size: 14px">
+<a href="{{route('printer.create')}}" class="btn btn-success">Add New Printer</a>
+<table class="table table-bordered table-hover" style="font-size: 12px">
     <thead class="thead-dark">
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">ComID</th>
-            <th scope="col">EmpID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Designation</th>
-            <th scope="col">IP Address</th>
-            <th scope="col">Email Address</th>
-            <th scope="col">Section</th>
-            <th scope="col">Department</th>
-            <th scope="col">Status</th>
-
-            <th scope="col">Action</th>
-
+            <th scope="col" style="text-align:center">SL</th>
+            <th scope="col" style="text-align:center">Printer ID</th>
+            <th scope="col" style="text-align:center">Brand</th>
+            <th scope="col" style="text-align:center">Model</th>
+            <th scope="col" style="text-align:center">Serial No</th>
+            <th scope="col" style="text-align:center">Function</th>
+            <th scope="col" style="text-align:center">Section</th>
+            <th scope="col" style="text-align:center">Department</th>
+            <th scope="col" style="text-align:center">User</th>
+            <th scope="col" style="text-align:center">Service Type</th>
+            <th scope="col" style="text-align:center">Status</th>
+            {{-- <th scope="col">Remarks</th> --}}
+            <th scope="col" style="text-align:center">Action</th>
         </tr>
     </thead>
     <tbody>
 
-        @foreach($computers as $key=>$user)
+        @foreach($printers as $key=>$print)
 
-        <tr>
-            <th scope="row">{{$key+1}}</th>
-            <td>{{$user->Comid}}</td>
-            <td>{{$user->Emp_id}}</td>
-            <td>{{$user->User}}</td>
-            <td>{{$user->Designation}}</td>
-            <td>{{$user->Ipadd}}</td>
-            <td>{{$user->Email}}</td>
-            <td>{{$user->Section}}</td>
-            <td>{{$user->Department}}</td>
-            <td>{{$user->Status}}</td>
-            <td>
-                <a class="btn btn-primary" href="{{route('computer.user.edit',$user->id)}}">Edit</a>
+       <tr>
+        <th scope="row" style="text-align:center">{{$key+1}}</th>
+        <td style="text-align:center">{{$print->printer_id}}</td>
+        <td style="text-align:center"> {{$print->printer_brand}}</td>
+        <td style="text-align:center">{{$print->printer_model}}</td>
+        <td style="text-align:center">{{$print->serial_no}}</td>
+        <td style="text-align:center">{{$print->function}}</td>
+        <td style="text-align:center">{{$print->section}}</td>
+        <td style="text-align:center">{{$print->department}}</td>
+        <td style="text-align:center">{{$print->user}}</td>
+        <td style="text-align:center">{{$print->service_type}}</td>
 
-            </td>
+        @php
+        if ( $print->status == 'In repair'):
+        $color = 'red';
+        elseif ( $print->status == 'Active'):
+        $color = 'green';
+        elseif ( $print->status == 'Idle'):
+        $color = 'blue';
+        else:
+        $color = 'gray';
+        endif;
+        @endphp
+
+        <td style="color: {{$color}}; text-align:center">{{ $print->status }}</td>
+
+
+        {{-- <td>{{$print->remarks}}</td> --}}
+        <td style="text-align:center">
+            <a class="btn btn-secondary" href="{{route('printer.edit',$print->id)}}">Edit</a>
+
+        </td style="text-align:center">
         </tr>
 
         @endforeach
 
     </tbody>
 </table>
-{{$computers->links('pagination::bootstrap-4')}}
+{{$printers->links('pagination::bootstrap-4')}}
 @endsection
