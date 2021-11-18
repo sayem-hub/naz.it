@@ -47,7 +47,7 @@
             <td>{{$wastage->notes}}</td>
             {{-- <td>{{$wastage->updated_at->format('Y-m-d')}}</td> --}}
             <td style="text-align:center">
-                <a class="btn btn-secondary" href="{{ route('wastage.edit', $wastage->id)}}">Edit</a>
+                <a class="btn-secondary btn-block" href="{{ route('wastage.edit', $wastage->id)}}">Edit</a>
             </td>
         </tr>
 

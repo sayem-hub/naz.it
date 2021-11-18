@@ -31,11 +31,11 @@
     <thead class="thead-dark">
       <tr>
        <th scope="col" style="text-align:center">SL</th>
-        <th scope="col" style="text-align:center">Comp ID</th>
+        <th scope="col" style="text-align:center">Com ID</th>
         <th scope="col" style="text-align:center">Emp ID</th>
         <th scope="col" style="text-align:center">Name</th>
         <th scope="col" style="text-align:center">Designation</th>
-        <th scope="col" style="text-align:center">Com type</th>
+        <th scope="col" style="text-align:center">Type</th>
         <th scope="col" style="text-align:center">IP address</th>
         <th scope="col" style="text-align:center">Email address</th>
         <th scope="col" style="text-align:center">Section</th>
@@ -78,7 +78,7 @@
             <td style="text-align:center">{{$user->Kp_status}}</td>
 
         <td style="text-align:center">
-          <a class="btn btn-secondary" href="{{route('computer.user.edit',$user->id)}}">Edit</a>
+          <a class="btn-secondary btn-block" href="{{route('computer.user.edit',$user->id)}}">Edit</a>
 
         </td>
       </tr>

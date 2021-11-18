@@ -61,7 +61,7 @@
 
             <td style="color: {{$color}}; text-align:center">{{ $machine->status }}</td>
             {{-- <td>{{$machine->updated_at->format('Y-m-d')}}</td> --}}
-            <td style="text-align:center"><a class="btn btn-secondary" href="{{ route('faceid.edit', $machine->id)}}" >Edit</a></td>
+            <td style="text-align:center"><a class="btn-secondary btn-block" href="{{ route('faceid.edit', $machine->id)}}" >Edit</a></td>
         </tr>
 
         @endforeach

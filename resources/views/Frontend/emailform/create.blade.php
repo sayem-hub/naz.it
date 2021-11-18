@@ -119,12 +119,15 @@
                 </div>
 
                 <div class="col-sm-8">
-                <input type="text" class="form-control mail-form" name="referred_by" id="referred_by" required><br>
+                <input type="text" class="form-control mail-form" name="referred_by" id="referred_by" required>
             </div>
 
-            <div class="col-sm-4">
-            <button type="submit" class="btn btn-primary btn-block">Submit</button>
-            </div>
+<div class="row">
+    <div class="col-md-12 bg-light text-right">
+        <button type="button" class="btn btn-primary">Submit</button>
+    </div>
+</div>
+
         </form>
 
     </div>

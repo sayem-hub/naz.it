@@ -78,7 +78,7 @@
 
         {{-- <td>{{$print->remarks}}</td> --}}
         <td style="text-align:center">
-          <a class="btn btn-secondary" href="{{route('printer.edit',$print->id)}}">Edit</a>
+          <a class="btn-secondary btn-block" href="{{route('printer.edit',$print->id)}}">Edit</a>
 
         </td style="text-align:center">
       </tr>
