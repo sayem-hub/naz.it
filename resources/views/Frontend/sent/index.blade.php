@@ -34,8 +34,9 @@
             <th scope="col" style="text-align:center">Supplier</th>
             <th scope="col" style="text-align:center">Pur date</th>
             <th scope="col" style="text-align:center">Out date</th>
-            <th scope="col" style="text-align:center">GP no.</th>
+            <th scope="col" style="text-align:center">GP</th>
             <th scope="col" style="text-align:center">Sent for</th>
+            <th scope="col" style="text-align:center">Sent to</th>
             <th scope="col" style="text-align:center">Problem</th>
             <th scope="col" style="text-align:center">Notes</th>
             <th scope="col" style="text-align:center">Status</th>
@@ -65,16 +66,17 @@
             <td style="text-align:center">{{$item->Outdate}}</td>
             <td style="text-align:center">{{$item->Gpno}}</td>
             <td style="text-align:center">{{$item->Sentfor}}</td>
+            <td style="text-align:center">{{$item->To}}</td>
             <td> {{$item->Problems}}</td>
             <td>{{$item->Notes}}</td>
 
             @php
             if ( $item->Status == 'Pending'):
-            $color = 'red';
+            $color = '#FF4500';
             elseif ( $item->Status == 'Solved'):
             $color = 'green';
             elseif ( $item->Status == 'Returned'):
-            $color = 'yellow';
+            $color = '#737CA1';
             elseif ( $item->Status == 'Replaced'):
             $color = 'bisque';
             else:
@@ -82,7 +84,7 @@
             endif;
             @endphp
 
-            <td style="background-color: {{$color}}; text-align:center">{{ $item->Status }}</td>
+            <td style="background-color: {{$color}}; color: #3F000F; text-weight:  ; text-align:center">{{ $item->Status }}</td>
 
             {{-- <td>{{$item->Status}}</td> --}}
             {{--<td>{{$item->created_at}}</td>--}}

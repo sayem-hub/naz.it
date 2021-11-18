@@ -37,6 +37,7 @@ class OutgoingController extends Controller
              'Problems'=>$request->input('problems'),
             'Notes' => $request->input('Notes'),
              'Gpno'=>$request->input('gpno'),
+            'To' => $request->input('destination'),
              'Status'=>$request->input('status'),
 
 
@@ -74,6 +75,7 @@ class OutgoingController extends Controller
             'Problems' => $request->input('problems'),
             'Notes' => $request->input('Notes'),
              'Gpno'=>$request->input('gpno'),
+            'To' => $request->input('destination'),
             'Status'=>$request->input('status'),
 
         ];

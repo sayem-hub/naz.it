@@ -206,6 +206,7 @@ class HomeController extends Controller
             'Sentfor' => $request->input('sentfor'),
             'Problems' => $request->input('problems'),
             'Gpno' => $request->input('gpno'),
+            'To' => $request->input('destination'),
             'Status' => $request->input('status'),
 
         ];

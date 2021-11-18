@@ -87,15 +87,27 @@
             </div>
 
             <div class="mb-3">
+                <label for="destination" class="form-label">To</label>
+                <select class="form-control" id="status" name="destination" requred>
+                    <option value="{{$outitems->To}}" selected>{{$outitems->To}}</option>
+                    <option value="HO" >HO</option>
+                    <option value="CA">CA</option>
+                    <option value="Givensee">Givensee</option>
+                    <option value="Monipur">Monipur</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
                 <label for="status" class="form-label">Status</label>
-
                 <select class="form-select" id="status" name="status" required>
-
-                    <option selected>Open this select menu</option>
+                    <option value= "{{$outitems->Status}}"selected>{{$outitems->To}}</option>
                     <option value="Pending">Pending</option>
                     <option value="Solved">Solved</option>
                     <option value="Returned">Returned</option>
                     <option value="Not Solved">Not Solved</option>
+                    <option value="Returnable">Returnable</option>
+                    <option value="Nreturnable">Non-returnable</option>
+                    <option value="Using">Using</option>
                 </select>
             </div>
 

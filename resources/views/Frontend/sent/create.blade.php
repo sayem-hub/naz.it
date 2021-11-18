@@ -2,8 +2,8 @@
 @section('main')
 
 <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
 
         <h3 class="text-center mt-3">Add New Outgoing Item</h3>
         <form action="{{route('sent.items.create')}}" method="post">
@@ -42,7 +42,7 @@
 
             <div class="mb-3">
                 <label for="warranty	" class="form-label">Warranty Days</label>
-                <input type="number" class="form-control" name="warranty" id="warranty">
+                <input type="text" class="form-control" name="warranty" id="warranty">
             </div>
 
             <div class="mb-3">
@@ -71,7 +71,7 @@
                     <option value="Damaged">Damaged</option>
                     <option value="Wastage">Wastage</option>
                     <option value="As needed">As needed</option>
-                    <option value="Extra(No need)">Extra(No need)</option>
+                    <option value="No need">Extra(No need)</option>
                 </select>
             </div>
 
@@ -85,12 +85,25 @@
                 <input type="number" class="form-control" name="gpno" id="gate-pass">
             </div>
 
+                     <div class="mb-3">
+                            <label for="destination" class="form-label">To</label>
+                            <select class="form-control" id="status" name="destination" requred>
+                                <option selected>--Select--</option>
+                                <option value="HO">HO</option>
+                                <option value="CA">CA</option>
+                                <option value="Givensee">Givensee</option>
+                                <option value="Monipur">Monipur</option>
+                            </select>
+                        </div>
+
             <div class="mb-3">
                 <label for="status" class="form-label">Status</label>
                 <select class="form-control" id="status" name="status" requred>
-                    <option selected>Open this select menu</option>
-                    <option value="Pending" selected>Pending</option>
-                    <option value="Non-returnable">Non-returnable</option>
+                    <option selected>--Select--</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Nreturnable">Non-returnable</option>
+                    <option value="Returnable">Returnable</option>
+                    <option value="Using">Using</option>
                 </select>
             </div>
 
