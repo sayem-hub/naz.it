@@ -14,7 +14,7 @@
 
 			  <div id="navbar-scroll" class="collapse navbar-collapse navbar-themers navbar-right">
 				<ul class="nav navbar-nav">
-					<li><a href="{{ route('home') }}">Home</a></li>
+					<li><a href="{{ route('home') }}"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a></li>
 					<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">IT Inventory <span class="caret"></span></a>
 
@@ -38,17 +38,17 @@
                         </ul>
                     </li>
 
-					<li><a href="{{ route('received.goods') }}">In Item </a></li>
-					<li><a href="{{ route('sent.items') }}">Sent Item</a></li>
+					<li><a href="{{ route('received.goods') }}">Received </a></li>
+					<li><a href="{{ route('sent.items') }}">Sent</a></li>
                     <li><a href="{{ route('requisition.index') }}">Requisition</a></li>
 					<li><a href="{{ route('rfid.index') }}">RFID</a></li>
-					<li><a href="{{ route('kpi.home') }}">KPI Link</a></li>
+					<li><a href="{{ route('kpi.home') }}">KPI</a></li>
+					<li><a href="{{ route('new.mail.form.create') }}">Open Mail</a></li>
 
 
                     @if(auth()->user())
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">nAccount <span
-                                class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user fa-lg"></i><span class="caret"></span></a>
 
                         <ul class="dropdown-menu" role="menu">
                             <li><a class="dropdown-item" href="{{ route('profile') }}"> Profile</a></li>

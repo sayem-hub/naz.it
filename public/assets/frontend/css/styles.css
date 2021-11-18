@@ -223,16 +223,16 @@ a:hover {
 }
 
 .btn-secondary {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 200;
-    line-height: 20px;
-    padding: 10px 20px;
-    height: 35px;
+    line-height: 4px;
+    padding: 10px 5px;
+    height: 23px;
     border: none;
     background: #F33030;
     transition: all 0.4s;
     color: white;
-    border-radius: 4px;
+    border-radius: 20px;
 }
 
 .btn-secondary:hover,

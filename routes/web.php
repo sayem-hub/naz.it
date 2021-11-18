@@ -19,6 +19,13 @@ Route::get('/', [App\Http\Controllers\Frontend\HomeController::class, 'index'])-
 Route::get('/registration', [App\Http\Controllers\Frontend\UserController::class, 'registration'])->name('registration');
 Route::post('/registration', [App\Http\Controllers\Frontend\UserController::class, 'doRegistration']);
 
+
+// Route::get('/new-mail-form', [App\Http\Controllers\Frontend\EmailController::class, 'index'])->name('new.mail.form');
+Route::get('/new-mail-form', [App\Http\Controllers\Frontend\EmailController::class, 'create'])->name('new.mail.form.create');
+Route::post('/new-mail-form', [App\Http\Controllers\Frontend\EmailController::class, 'store']);
+
+
+
 Route::get('/login', [App\Http\Controllers\Frontend\UserController::class, 'login'])->name('login');
 Route::post('/login', [App\Http\Controllers\Frontend\UserController::class, 'doLogin']);
 Route::get('/logout', [App\Http\Controllers\Frontend\UserController::class, 'logout'])->name('logout');

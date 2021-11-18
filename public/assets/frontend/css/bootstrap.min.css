@@ -231,8 +231,12 @@ body{
 input,button,select,textarea{
     font-family:inherit;
     font-size:inherit;
-    line-height:inherit
+    line-height:inherit;
 }
+
+.mail-form{
+	margin-top: 6px;
+	}
 a{
     color:#428bca;
     text-decoration:none
@@ -1670,6 +1674,7 @@ textarea.input-lg,select[multiple].input-lg{
 }
 .btn{
     display:inline-block;
+	margin-top:10px;
     margin-bottom:0;
     font-weight:400;
     text-align:center;

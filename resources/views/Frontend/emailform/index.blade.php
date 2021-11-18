@@ -77,7 +77,7 @@
         {{-- <td>{{$requisition->status}}</td> --}}
         {{-- <td>{{$requisition->notes}}</td> --}}
         {{-- <td>{{date('d/m/Y', strtotime($requisition->created_at))}}</td> --}}
-        <td style="text-align:center"><a class=" btn-secondary btn-block" href="{{ route('requisition.edit', $requisition->id) }}">Edit</a></td>
+        <td style="text-align:center"><a class="btn btn-secondary" href="{{ route('requisition.edit', $requisition->id) }}">Edit</a></td>
       </tr>
 
       @endforeach
