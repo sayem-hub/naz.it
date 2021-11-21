@@ -12,7 +12,7 @@
         <div class="form-group">
             <a href={{ route('printer.create') }} class="btn btn-success">Add New Printer</a>
             <a href={{route('create.printer.pdf')}} class="btn btn-warning btn-sm">PDF Report</a>
-            <div class="form-group row"><br>
+            <div class="form-group row">
                 <div class="col-xs-3">
 
                     <input type="text" class="form-control" name="query" placeholder="User name or section or status"

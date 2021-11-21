@@ -11,7 +11,7 @@
         <form action="{{ route('rfid.search') }}" method="GET">
             <div class="form-group">
                 <a href={{ route('rfid.create') }} class="btn btn-success">Issue New ID</a>
-                <div class="form-group row"><br>
+                <div class="form-group row">
                     <div class="col-xs-3">
 
                         <input type="text" class="form-control" name="query" placeholder="NAZ ID or RF ID"

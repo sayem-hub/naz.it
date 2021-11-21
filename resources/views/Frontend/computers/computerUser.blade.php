@@ -12,10 +12,10 @@
             <div class="form-group">
                 <a href={{ route('computer.user.create') }} class="btn btn-success">Add New Computer</a>
                 <a href="{{route('pdf.generate')}}" class="btn btn-warning btn-sm">PDF Report</a>
-                <div class="form-group row"><br>
+                <div class="form-group row">
                     <div class="col-xs-3">
 
-                        <input type="text" class="form-control" name="query" placeholder="Name or Computer ID or Department"
+                        <input type="text" class="form-control" name="query" placeholder="Name, Computer ID, Department"
                             value="{{ request()->input('query') }}">
                         <span class="text-danger">@error('query'){{ $message }}@enderror</span>
                     </div>

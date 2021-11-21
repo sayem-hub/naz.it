@@ -40,6 +40,7 @@
                 <option value="Canon LBP6030">Canon LBP6030</option>
                 <option value="HP M402dn">HP M402dn</option>
                 <option value="HP M706n">HP M706n</option>
+                <option value="Canon 6230 DN">Canon LBP6230DN</option>
             </select>
             </div>
 

@@ -13,7 +13,7 @@
                 <a href={{ route('requisition.add') }} class="btn btn-success">Add requisition</a>
                 <a href={{route('create.preq.pdf')}} class="btn btn-danger btn-sm">Pending report</a>
                 <a href={{route('create.rreq.pdf')}} class="btn btn-warning btn-sm">Receipt report</a>
-                <div class="form-group row"><br>
+                <div class="form-group row">
                     <div class="col-xs-3">
 
                         <input type="text" class="form-control" name="query" placeholder="User, item, req no, or status"

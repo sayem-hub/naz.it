@@ -5,20 +5,21 @@
 <h4 class="text-center mt-3">Sent Item List</h4>
 
 <form action="{{ route('sentitem.search') }}" method="GET">
-    <div class="form-group">
+
 <a href="{{ route('sent.items.create') }}" class="btn btn-success">Add New Item</a>
 
-<div class="form-group row"><br>
+<div class="form-group row">
     <div class="col-xs-3">
 
-        <input type="text" class="form-control" name="query" placeholder="Item name or Serial no Or User name"
+        <input type="text" class="form-control" name="query" placeholder="Item name, Serial, User name"
             value="{{ request()->input('query') }}">
         <span class="text-danger">@error('query'){{ $message }}@enderror</span>
     </div>
-    <button type="submit" class="btn btn-info">Search</button>
+<button type="submit" class="btn btn-info">Search</button>
 </div>
 </form>
-</div>
+
+
 
 <table class="table table-bordered table-hover" style="font-size: 11px">
     <thead>
