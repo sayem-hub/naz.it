@@ -7,7 +7,7 @@
     <div class="col-md-6">
 
         <h3 class="text-center mt-3">Mail Opening Form</h3>
-            <p class="text-center">Please fill up the form amd submit to apply an Email account.<br> (<span style="color: red">*</span>) Marks field are
+            <p class="text-center">To apply for an email account please fill out the form and click the submit button.<br> (<span style="color: red">*</span>) Marks field are
                         mandatory!</p>
 
         @if ($errors->any())
