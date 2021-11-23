@@ -148,6 +148,8 @@ Route::post('/toner/add', [App\Http\Controllers\Frontend\TonerController::class,
             Route::get('/sent-items/create',[App\Http\Controllers\Frontend\HomeController::class, 'createSentItem'])->name('sent.items.create');
             Route::post('/sent-items/create',[App\Http\Controllers\Frontend\HomeController::class, 'storeSentItem']);
             Route::get('/sent-items/search',[App\Http\Controllers\Frontend\SearchController::class, 'sentSearch'])->name('sentitem.search');
+            Route::get('/generate-pendingReport',[App\Http\Controllers\Frontend\PdfController::class, 'generateSentPending'])->name('sentitem.pending');
+            Route::get('/generate-pending-Wtyreport/search',[App\Http\Controllers\Frontend\PdfController::class, 'generateWarrantyPending'])->name('sentitem.wty.pending');
 
 
 

@@ -24,7 +24,7 @@ class PdfController extends Controller
         public function compPdf(Request $request)
     {
         $computers = Computer::all();
-        
+
         return view('Frontend.computers.compInventory', compact('computers'));
     }
 
@@ -127,5 +127,20 @@ class PdfController extends Controller
         $requisitions = DB::table('requisitions')->where('status', '=', 'Received')->get();
         $pdf = PDF::loadView('Frontend.requisition.PdfRRequisition', compact(('requisitions')));
         return $pdf->download('Received_list.pdf');
+    }
+
+    public function generateSentPending(Request $request)
+    {
+        $sentitemspending = DB::table('outitems')->where('Status', '=', 'Pending')->get();
+        $pdf = PDF::loadView('Frontend.sent.sentPendingPDF', compact(('sentitemspending')))->setPaper('a4', 'landscape');
+        return $pdf->download('Pending_sent_list.pdf');
+    }
+
+    public function generateWarrantyPending(Request $request)
+
+    {
+        $sentwarranty = DB::table('outitems')->where('Sentfor', '=', 'Warranty' AND 'Status', '=', 'Pending')->get();
+        $pdf = PDF::loadView('Frontend.sent.sentWarrantyPDF', compact(('sentwarranty')))->setPaper('a4', 'landscape');
+        return $pdf->download('Warranty_Pending_list.pdf');
     }
 }

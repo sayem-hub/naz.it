@@ -19,8 +19,6 @@
                         <input type="text" class="form-control" name="query" placeholder="User, item, req no, or status"
                             value="{{ request()->input('query') }}">
                         <span class="text-danger">@error('query'){{ $message }}@enderror</span>
-
-
                     </div>
                     <button type="submit" class="btn btn-info">Search</button>
                 </div>
