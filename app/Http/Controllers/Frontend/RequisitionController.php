@@ -80,8 +80,9 @@ class RequisitionController extends Controller
                 'designation' => $request->input('designation'),
                 'department' => $request->input('department'),
                 'requisition_date' => $request->input('requisition_date'),
+                'received_date' => $request->input('received_date'),
+                'pur_type' => $request->input('pur_type'),
                 'status' => $request->input('status'),
-                'received_date'=>$request->input('received_date'),
                 'notes' => $request->input('notes'),
             ];
 

@@ -66,6 +66,15 @@
             </div>
 
             <div class="mb-3">
+                <label for="pur_type" class="form-label">Pur type</label>
+                    <select class="form-control" name="pur_type">
+                        <option value="{{ $requisitions->pur_type }}" selected>{{ $requisitions->pur_type }}</option>
+                        <option value="H/O">H/O</option>
+                        <option value="Factory">Factory</option>
+                    </select>
+            </div>
+
+            <div class="mb-3">
                 <label for="notes" class="form-label">Notes</label>
                 <input type="text" class="form-control" name="notes" id="notes" value="{{ $requisitions->notes }}">
             </div>

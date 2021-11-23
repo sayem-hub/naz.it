@@ -38,6 +38,7 @@
         <th scope="col" style="text-align:center">Section/Dept.</th>
         <th scope="col" style="text-align:center">Req date</th>
         <th scope="col" style="text-align:center">Rcvd date</th>
+        <th scope="col" style="text-align:center">Pur type</th>
         <th scope="col" style="text-align:center">Status</th>
 
         {{-- <th scope="col">Notes</th> --}}
@@ -60,6 +61,7 @@
         <td style="text-align:center">{{$requisition->requisition_date}}</td>
         {{-- <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td> --}}
         <td style="text-align:center">{{$requisition->received_date}}</td>
+        <td style="text-align:center">{{$requisition->pur_type}}</td>
 
         @php
         if ( $requisition->status == 'Pending'):
