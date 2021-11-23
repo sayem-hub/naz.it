@@ -139,8 +139,8 @@ class PdfController extends Controller
     public function generateWarrantyPending(Request $request)
 
     {
-        $sentwarranty = DB::table('outitems')->where('Sentfor', '=', 'Warranty' AND 'Status', '=', 'Pending')->get();
-        $pdf = PDF::loadView('Frontend.sent.sentWarrantyPDF', compact(('sentwarranty')))->setPaper('a4', 'landscape');
+        $sentitemswarranty = DB::table('outitems')->where([['Sentfor', '=', 'Warranty'], ['Status', '=', 'Pending']])->get();
+        $pdf = PDF::loadView('Frontend.sent.sentWarrantyPDF', compact(('sentitemswarranty')))->setPaper('a4', 'landscape');
         return $pdf->download('Warranty_Pending_list.pdf');
     }
 }
