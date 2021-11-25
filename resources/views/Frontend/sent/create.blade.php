@@ -91,9 +91,14 @@
                                 <option selected>--Select--</option>
                                 <option value="HO">HO</option>
                                 <option value="CA">CA</option>
-                                <option value="Givensee">Givensee</option>
-                                <option value="Monipur">Monipur</option>
+                                <option value="Giv.">Givensee</option>
+                                <option value="Mpur">Monipur</option>
                             </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="GRN" class="form-label">GRN</label>
+                            <input type="text" class="form-control" name="GRN" id="GRN">
                         </div>
 
             <div class="mb-3">

@@ -73,6 +73,15 @@ class RequisitionController extends Controller
 
             $requisitions = Requisition::find($id);
 
+            if ($request->hasFile('challan')){
+            $challan = $request->file('challan');
+            $newName = 'challan' . date('d-m-Y-H-i-s', time()) . '.' . $challan->getClientOriginalExtension();
+            $request->challan->move('upload/requisition/challans', $newName);
+            }
+            else{
+                $newName= 'NoChallan';
+            }
+
             $data = [
                 'requisition_no' => $request->input('requisition_no'),
                 'item_names' => $request->input('item_names'),
@@ -81,6 +90,8 @@ class RequisitionController extends Controller
                 'department' => $request->input('department'),
                 'requisition_date' => $request->input('requisition_date'),
                 'received_date' => $request->input('received_date'),
+                'Grn' => $request->input('GRN'),
+                'challan' => $newName,
                 'pur_type' => $request->input('pur_type'),
                 'status' => $request->input('status'),
                 'notes' => $request->input('notes'),

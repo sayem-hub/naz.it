@@ -6,7 +6,7 @@
     <div class="col-md-0"></div>
     <div class="col-md-13">
 
-        <h3 class="text-center mt-3">Requisition List</h3>
+        <h3 class="text-center mt-3">Requisition Status</h3>
 
         <form action="{{ route('requisition.search') }}" method="GET">
             <div class="form-group">
@@ -27,18 +27,20 @@
         </form>
 
 
-<table class="table table-bordered table-hover" style="font-size: 12px">
+<table class="table table-bordered table-hover" style="font-size: 11px">
     <thead>
       <tr>
         <th scope="col" style="text-align:center">SL</th>
-        <th scope="col" style="text-align:center">Requisition no</th>
+        <th scope="col" style="text-align:center">Requisition</th>
         <th scope="col" style="text-align:center">Item(s)</th>
         <th scope="col" style="text-align:center">Required for</th>
-        <th scope="col" style="text-align:center">Designation</th>
-        <th scope="col" style="text-align:center">Section/Dept.</th>
+        {{-- <th scope="col" style="text-align:center">Designation</th> --}}
+        <th scope="col" style="text-align:center">Section</th>
         <th scope="col" style="text-align:center">Req date</th>
         <th scope="col" style="text-align:center">Rcvd date</th>
-        <th scope="col" style="text-align:center">Pur type</th>
+        <th scope="col" style="text-align:center">GRN</th>
+        <th scope="col" style="text-align:center">Challan</th>
+        <th scope="col" style="text-align:center">Top</th>
         <th scope="col" style="text-align:center">Status</th>
 
         {{-- <th scope="col">Notes</th> --}}
@@ -56,12 +58,30 @@
         <td style="text-align:center">{{$requisition->requisition_no}}</td>
         <td>{{$requisition->item_names}}</td>
         <td>{{$requisition->required_for}}</td>
-        <td>{{$requisition->designation}}</td>
+        {{-- <td>{{$requisition->designation}}</td> --}}
         <td>{{$requisition->department}}</td>
         <td style="text-align:center">{{$requisition->requisition_date}}</td>
         {{-- <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td> --}}
         <td style="text-align:center">{{$requisition->received_date}}</td>
+        <td style="text-align:center">{{$requisition->Grn}}</td>
+
+
+
+        @if ($requisition->challan==!'Null')
+
+            <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"></a>
+        </td>
+        @else
+
+        <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"><i class="fa fa-eye fa-lg"></i><i class="fa fa-eye fa-lg"></i></a>
+        </td>
+        @endif
+
+
+
+
         <td style="text-align:center">{{$requisition->pur_type}}</td>
+
 
         @php
         if ( $requisition->status == 'Pending'):

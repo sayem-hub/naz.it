@@ -207,6 +207,7 @@ class HomeController extends Controller
             'Problems' => $request->input('problems'),
             'Gpno' => $request->input('gpno'),
             'To' => $request->input('destination'),
+            'Grn' => $request->input('GRN'),
             'Status' => $request->input('status'),
 
         ];

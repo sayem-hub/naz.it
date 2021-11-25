@@ -104,6 +104,11 @@
             </div>
 
             <div class="mb-3">
+                <label for="GRN" class="form-label">GRN</label>
+                <input type="text" class="form-control" name="GRN" id="GRN" value="{{ $outitems->Grn }}">
+            </div>
+
+            <div class="mb-3">
               <label for="status" class="form-label">Status</label>
               <select class="form-select" id="status" name="status" required>
                     <option value="{{ $outitems->Status }}">{{ $outitems->Status }}</option>

@@ -23,7 +23,7 @@
 
 
 
-<table class="table table-bordered table-hover" style="font-size: 11px">
+<table class="table table-bordered table-hover" style="font-size: 10px">
     <thead>
         <tr>
             <th scope="col" style="text-align:center">SL</th>
@@ -35,11 +35,12 @@
             <th scope="col" style="text-align:center">Section</th>
             <th scope="col" style="text-align:center">Wty</th>
             <th scope="col" style="text-align:center">Supplier</th>
-            <th scope="col" style="text-align:center">Pur date</th>
-            <th scope="col" style="text-align:center">Out date</th>
+            <th scope="col" style="text-align:center">Dop</th>
+            <th scope="col" style="text-align:center">Sent on</th>
             <th scope="col" style="text-align:center">GP</th>
             <th scope="col" style="text-align:center">Sent for</th>
-            <th scope="col" style="text-align:center">Sent to</th>
+            <th scope="col" style="text-align:center">To</th>
+            <th scope="col" style="text-align:center">GRN</th>
             <th scope="col" style="text-align:center">Problem</th>
             <th scope="col" style="text-align:center">Notes</th>
             <th scope="col" style="text-align:center">Status</th>
@@ -70,6 +71,7 @@
             <td style="text-align:center">{{$item->Gpno}}</td>
             <td style="text-align:center">{{$item->Sentfor}}</td>
             <td style="text-align:center">{{$item->To}}</td>
+            <td style="text-align:center">{{$item->Grn}}</td>
             <td> {{$item->Problems}}</td>
             <td>{{$item->Notes}}</td>
 

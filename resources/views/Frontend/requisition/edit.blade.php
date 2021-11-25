@@ -14,7 +14,7 @@
             </ul>
         </div>
         @endif
-        <form action="{{route('requisition.edit', $requisitions->id)}}" method="post">
+        <form action="{{route('requisition.edit', $requisitions->id)}}" method="post" enctype="multipart/form-data">
             @csrf
 
            <div class="mb-3">
@@ -66,11 +66,22 @@
             </div>
 
             <div class="mb-3">
+                <label for="GRN" class="form-label">GRN</label>
+                <input type="text" class="form-control" name="GRN" id="GRN" value="{{ $requisitions->Grn }}">
+            </div>
+
+            <div class="mb-3">
+                <label for="challan" class="form-label">Challan</label>
+                <input type="file" class="form-control" name="challan" id="challan" value="{{$requisitions->challan}}">
+            </div>
+
+            <div class="mb-3">
                 <label for="pur_type" class="form-label">Pur type</label>
                     <select class="form-control" name="pur_type">
                         <option value="{{ $requisitions->pur_type }}" selected>{{ $requisitions->pur_type }}</option>
-                        <option value="H/O">H/O</option>
-                        <option value="Factory">Factory</option>
+                        <option value="HO">Head Office</option>
+                        <option value="Fact">Factory</option>
+                        <option value="Hstk">HO Stock</option>
                     </select>
             </div>
 
