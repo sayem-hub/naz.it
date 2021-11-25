@@ -32,9 +32,9 @@
       <tr>
        <th scope="col" style="text-align:center">SL</th>
         <th scope="col" style="text-align:center">Tab ID</th>
-        <th scope="col" style="text-align:center">Brand</th>
+        {{-- <th scope="col" style="text-align:center">Brand</th> --}}
         <th scope="col" style="text-align:center">Model</th>
-        <th scope="col" style="text-align:center">Size</th>
+        {{-- <th scope="col" style="text-align:center">Size</th> --}}
         <th scope="col" style="text-align:center">Serial</th>
         <th scope="col" style="text-align:center">IMEI 1</th>
         <th scope="col" style="text-align:center">IMEI 2</th>
@@ -56,9 +56,9 @@
       <tr>
         <th scope="row" style="text-align:center">{{$key+1}}</th>
         <td style="text-align:center">{{$tablet->tab_id}}</td>
-        <td style="text-align:center">{{$tablet->brand}}</td>
+        {{-- <td style="text-align:center">{{$tablet->brand}}</td> --}}
         <td style="text-align:center">{{$tablet->model}}</td>
-        <td style="text-align:center">{{$tablet->size}}</td>
+        {{-- <td style="text-align:center">{{$tablet->size}}</td> --}}
         <td style="text-align:center">{{$tablet->serial}}</td>
         <td>{{$tablet->imei_1}}</td>
         <td>{{$tablet->imei_2}}</td>
