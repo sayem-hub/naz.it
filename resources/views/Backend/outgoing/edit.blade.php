@@ -80,6 +80,7 @@
                 <input type="text" class="form-control" name="problems" id="problems" value="{{ $outitems->Problems }}">
             </div>
 
+
             <div class="mb-3">
                 <label for="Notes" class="form-label">Notes</label>
                 <input type="text" class="form-control" name="Notes" id="Notes" value="{{ $outitems->Notes }}">
@@ -88,6 +89,18 @@
             <div class="mb-3">
               <label for="gate-pass" class="form-label">Gate Pass No.</label>
               <input type="number" class="form-control" name="gpno" id="gpno" value="{{$outitems->Gpno}}">
+            </div>
+
+
+            <div class="mb-3">
+                <label for="destination" class="form-label">To</label>
+                <select class="form-control" id="status" name="destination" requred>
+                    <option value="{{$outitems->To}}" selected>{{$outitems->To}}</option>
+                    <option value="HO">HO</option>
+                    <option value="CA">CA</option>
+                    <option value="Givensee">Givensee</option>
+                    <option value="Monipur">Monipur</option>
+                </select>
             </div>
 
             <div class="mb-3">
