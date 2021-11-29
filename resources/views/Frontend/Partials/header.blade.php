@@ -43,7 +43,7 @@
                     <li><a href="{{ route('requisition.index') }}">Requisition</a></li>
 					<li><a href="{{ route('rfid.index') }}">RFID</a></li>
 					<li><a href="{{ route('kpi.home') }}">KPI</a></li>
-					<li><a href="{{ route('new.mail.form.create') }}">Open Mail</a></li>
+					<li><a href="{{ route('new.mail.form.create') }}">MOF</a></li>
 
 
                     @if(auth()->user())

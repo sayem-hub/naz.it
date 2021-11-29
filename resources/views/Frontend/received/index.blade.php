@@ -25,7 +25,7 @@
     </div>
 </form>
 
-<table class="table table-bordered table-hover" style="font-size: 12px">
+<table class="table table-bordered table-hover" style="font-size: 11px">
     <thead>
       <tr>
         <th scope="col" style="text-align:center">SL</th>

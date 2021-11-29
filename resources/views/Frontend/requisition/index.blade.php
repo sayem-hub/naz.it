@@ -37,11 +37,11 @@
         {{-- <th scope="col" style="text-align:center">Designation</th> --}}
         <th scope="col" style="text-align:center">Section</th>
         <th scope="col" style="text-align:center">Req date</th>
-        <th scope="col" style="text-align:center">Rcvd date</th>
+        <th scope="col" style="text-align:center">Status</th>
+        <th scope="col" style="text-align:center">Rcv date</th>
         <th scope="col" style="text-align:center">GRN</th>
         <th scope="col" style="text-align:center">Challan</th>
         <th scope="col" style="text-align:center">Top</th>
-        <th scope="col" style="text-align:center">Status</th>
 
         {{-- <th scope="col">Notes</th> --}}
         {{-- <th scope="col">Entry at</th> --}}
@@ -61,27 +61,6 @@
         {{-- <td>{{$requisition->designation}}</td> --}}
         <td>{{$requisition->department}}</td>
         <td style="text-align:center">{{$requisition->requisition_date}}</td>
-        {{-- <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td> --}}
-        <td style="text-align:center">{{$requisition->received_date}}</td>
-        <td style="text-align:center">{{$requisition->Grn}}</td>
-
-
-
-        @if ($requisition->challan==!'Null')
-
-            <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"></a>
-        </td>
-        @else
-
-        <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"><i class="fa fa-eye fa-lg"></i><i class="fa fa-eye fa-lg"></i></a>
-        </td>
-        @endif
-
-
-
-
-        <td style="text-align:center">{{$requisition->pur_type}}</td>
-
 
         @php
         if ( $requisition->status == 'Pending'):
@@ -94,6 +73,31 @@
         @endphp
 
         <td style="color: {{$color}}; text-align:center">{{ $requisition->status }}</td>
+
+
+        {{-- <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td> --}}
+        <td style="text-align:center">{{$requisition->received_date}}</td>
+        <td style="text-align:center">{{$requisition->Grn}}</td>
+
+
+
+        @if ($requisition->challan==!'Null')
+
+        <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"></a>
+        </td>
+        @else
+
+        <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"><i
+                    class="fa fa-eye fa-lg"></i><i class="fa fa-eye fa-lg"></i></a>
+        </td>
+        @endif
+
+
+
+        <td style="text-align:center">{{$requisition->pur_type}}</td>
+
+
+
         {{-- <td>{{$requisition->status}}</td> --}}
         {{-- <td>{{$requisition->notes}}</td> --}}
         {{-- <td>{{date('d/m/Y', strtotime($requisition->created_at))}}</td> --}}

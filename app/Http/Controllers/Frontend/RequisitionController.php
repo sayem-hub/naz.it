@@ -79,7 +79,7 @@ class RequisitionController extends Controller
             $request->challan->move('upload/requisition/challans', $newName);
             }
             else{
-                $newName= 'NoChallan';
+                $newName= 'NULL';
             }
 
             $data = [

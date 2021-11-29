@@ -27,9 +27,49 @@
 
 
             <div class="mb-3">
-                <label for="section" class="form-label">Section</label>
-                <input type="text" class="form-control" name="section" id="section">
+                <label for="section" class="form-label">Section/Department</label>
+                <select class="form-control" name="section">
+                    <option value="" selected>--Select section--</option>
+                    <option value="Accounts">Accounts</option>
+                    <option value="Payroll">Payroll</option>
+                    <option value="Merchandising">Merchandising</option>
+                    <option value="Admin">Admin</option>
+                    <option value="IE & Planning">IE & Planning</option>
+                    <option value="Compliance">Compliance</option>
+                    <option value="KPI">KPI</option>
+                    <option value="Cutting-MIS">Cutting-MIS</option>
+                    <option value="Sample-RMG">Sample-RMG</option>
+                    <option value="Dyeing">Dyeing</option>
+                    <option value="Dyeing Production">Dyeing Production</option>
+                    <option value="Dyeing Plannng">Dyeing Plannng</option>
+                    <option value="Dyeing Finishing">Dyeing Finishing</option>
+                    <option value="Dyeing Batch">Dyeing Batch</option>
+                    <option value="Knitting">Knitting</option>
+                    <option value="Knitting Planning">Knitting Planning</option>
+                    <option value="Knitting Label">Knitting Label</option>
+                    <option value="Knitting Store">Knitting Store</option>
+                    <option value="General Store">General Store</option>
+                    <option value="Inventory">Inventory</option>
+                    <option value="Chemical Store">Chemical Store</option>
+                    <option value="Sewing Store">Sewing Store</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Shahriar Sir">Shahriar Sir</option>
+                    <option value="Finishing-RMG">Finishing-RMG</option>
+                    <option value="Quality-RMG">Quality-RMG</option>
+                    <option value="Quality-ZXY">Quality-ZXY</option>
+                    <option value="Quality-Aldi">Quality-Aldi</option>
+                    <option value="Quality-GP">Quality-GP</option>
+                    <option value="Quality-Otto">Quality-Otto</option>
+                    <option value="AOP">AOP</option>
+                    <option value="AOP Design">AOP Design</option>
+                    <option value="CAD">CAD</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="Printing">Printing</option>
+                    <option value="Embroidery">Embroidery</option>
+                    <option value="NZ Accessories">NZ Accessories</option>
+                </select>
             </div>
+
 
             <div class="mb-3">
                 <label for="printer_model" class="form-label">Printer model</label>
