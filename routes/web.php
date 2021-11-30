@@ -47,9 +47,9 @@ Route::middleware(['auth'])->group(function () {
 
 //Toner Status
 
-Route::get('/toner-status', [App\Http\Controllers\Frontend\TonerController::class, 'tonerIndex'])->name('toner.status');
-Route::get('/toner/add', [App\Http\Controllers\Frontend\TonerController::class, 'tonerReceive'])->name('toner.stock.create');
-Route::post('/toner/add', [App\Http\Controllers\Frontend\TonerController::class, 'tonerReceiveStore']);
+    Route::get('/toner-status', [App\Http\Controllers\Frontend\TonerController::class, 'tonerIndex'])->name('toner.status');
+    Route::get('/toner/add', [App\Http\Controllers\Frontend\TonerController::class, 'tonerReceive'])->name('toner.stock.create');
+    Route::post('/toner/add', [App\Http\Controllers\Frontend\TonerController::class, 'tonerReceiveStore']);
     Route::get('/toner/expense', [App\Http\Controllers\Frontend\TonerController::class, 'tonerExpense'])->name('toner.expense.create');
     Route::post('/toner/expense', [App\Http\Controllers\Frontend\TonerController::class, 'tonerExpenseStore']);
 

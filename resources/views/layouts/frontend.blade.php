@@ -8,7 +8,9 @@
 <meta name="Sayem" content="WebThemez">
 <!-- CSS Files -->
 
-<link href="{{asset('assets/frontend/css/bootstrap.min.css')}}" rel="stylesheet" media="screen">
+<link href="{{asset('assets/frontend/css/bootstrap.min.css')}}" rel="stylesheet" media="screen"> 
+
+{{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
 <link href="{{asset('assets/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
 <link href="{{asset('assets/frontend/css/pe-icon-7-stroke.css')}}" rel="stylesheet">
 <link href="{{asset('assets/frontend/css/animate.css')}}" rel="stylesheet" media="screen">

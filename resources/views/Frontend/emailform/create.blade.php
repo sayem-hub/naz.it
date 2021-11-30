@@ -2,9 +2,9 @@
 @section('main')
 
 
-<div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+<div class="row g-3 align-items-center">
+
+    
 
         <h3 class="text-center mt-3">Mail Opening Form</h3>
             <p class="text-center">To apply for an email account please fill out the form and click the submit button.<br> (<span style="color: red">*</span>) Marks field are
@@ -34,27 +34,27 @@
 
 
 
-            <div class="col-sm-4">
-                <label for="full_name" class="form-label">Full Name<span style="color: red">*</span></label>
+            <div class="col-auto">
+                <label for="full_name" class="col-form-label">Full Name<span style="color: red">*</span></label>
             </div>
 
-            <div class="col-sm-8">
-                <input type="text" class="form-control mail-form" name="full_name" id="full_name" required>
+            <div class="col-auto">
+                <input type="text" class="form-control" name="full_name" id="full_name" required>
             </div>
 
-           <div class="col-sm-4">
+           <div class="col-4">
                 <label for="nick_name" class="form-label">Nick Name</label>
                 </div>
 
-                <div class="col-sm-8">
+                <div class="col-4">
                 <input type="text" class="form-control mail-form" name="nick_name" id="nick_name">
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-4">
                 <label for="designation" class="form-label">Designation<span style="color: red">*</span></label>
                 </div>
 
-                <div class="col-sm-8">
+                <div class="col-4">
                 <input type="text" class="form-control mail-form" name="designation" id="designation" required>
             </div>
 
@@ -130,7 +130,7 @@
 
         </form>
 
-    </div>
+
 
 </div>
 @endsection

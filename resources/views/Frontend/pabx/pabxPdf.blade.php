@@ -10,7 +10,7 @@
     <style>
 
 @page {
-            margin: 25px 25px;
+            margin: 20px 20px;
             }
             header {
             position: fixed;
@@ -119,7 +119,7 @@
                 <th scope="col">Section</th>
                 <th scope="col">Department</th>
                 <th scope="col">Extension No</th>
-                <th scope="col">Model</th>
+                {{-- <th scope="col">Model</th> --}}
                 <th scope="col">Status</th>
             </tr>
         </thead>
@@ -134,7 +134,7 @@
                 <td>{{$pabx->section}}</td>
                 <td>{{$pabx->department}}</td>
                 <td>{{$pabx->pabx_no}}</td>
-                <td>{{$pabx->model}}</td>
+                {{-- <td>{{$pabx->model}}</td> --}}
                 <td>{{$pabx->status}}</td>
             </tr>
 
