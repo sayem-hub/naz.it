@@ -47,7 +47,7 @@
             {{-- <td>{{$pabx->remarks}}</td> --}}
             <td style="text-align:center">{{$pabx->updated_at->format('Y-m-d')}}</td>
             <td style="text-align:center">
-                <a class="btn-secondary btn-block" href="{{ route('frontend.pabx.edit', $pabx->id)}}">Edit</a>
+                <a class="" href="{{ route('frontend.pabx.edit', $pabx->id)}}"><i class="fa fa-edit fa-lg"></i></a>
             </td>
         </tr>
 

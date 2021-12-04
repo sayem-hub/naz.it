@@ -8,10 +8,10 @@
     <div class="col-md-4">
         <h4 class="text-center mt-3">Toner Stock</h4>
 
-        <a href="{{ route('toner.stock.create') }}" class="btn btn-success">Add new stock</a>
+        <a href="{{ route('toner.stock.create') }}" class="btn btn-success"><i class="fa fa-plus"></i>Add New </a>
 
         <table class="table table-bordered table-hover" style="font-size: 14px";>
-            <thead style= "background-color: #FFD67B" >
+            <thead>
                 <tr >
                     <th scope="col" style="text-align:center">SL</th>
                     <th scope="col" style="text-align:center">Model</th>
@@ -40,6 +40,7 @@
 
             </tbody>
         </table>
+
 
 {{-- New Toner Receiving Section --}}
     <br>
@@ -84,7 +85,7 @@
     <div class="col-md-5">
 <h4 class="text-center mt-3">Toner Consumption</h4>
 
-<a href="{{ route('toner.expense.create') }}" class="btn btn-success">Expense entry</a>
+<a href="{{ route('toner.expense.create') }}" class="btn btn-success"><i class="fa fa-plus"> </i>Expense entry</a>
 
 
 <table class="table table-bordered table-hover" style="font-size: 11px">
@@ -122,10 +123,44 @@
 {{$expenses->links('pagination::bootstrap-4')}}
 
 </div>
+
+<div class="col-md-1"></div>
+<div class="col-md-5">
+    <h4 class="text-center mt-3">Month wise consumption</h4>
+
+    <table class="table table-bordered table-hover" style="font-size: 14px" ;>
+        <thead style="background-color: #07977f">
+            <tr>
+                <th scope="col" style="text-align:center">SL</th>
+                <th scope="col" style="text-align:center">Month</th>
+                <th scope="col" style="text-align:center">Model</th>
+                <th scope="col" style="text-align:center">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach ($current_data85 as $Key=>$alldata )
+                <tr>
+                   {{-- <th scope="row" style="text-align:center">{{$key+1}}</th> --}}
+                   <td style="text-align:center; font-weight: bold;">{{$loop->iteration}}</td>
+                    <td style="text-align:center">{{ $alldata->month_name}}</td>
+                    <td style="text-align:center">85A+26A</td>
+                    <td style="text-align:center">{{ $alldata->count }}</td>
+                </tr>
+
+
+            @endforeach
+
+
+
+
+        </tbody>
+    </table>
 </div>
 
 
 
+</div>
 
 
 @endsection

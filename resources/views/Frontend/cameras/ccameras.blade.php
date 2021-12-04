@@ -30,7 +30,7 @@
             <td style="text-align:center">{{$ccamera->updated_at}}</td>
 
             <td style="text-align:center">
-                <a class="btn-secondary btn-block" href="{{ route('camera.edit', $ccamera->id)}}">Edit</a>
+                <a class="" href="{{ route('camera.edit', $ccamera->id)}}"><i class="fa fa-edit fa-lg"></i></a>
 
             </td>
         </tr>

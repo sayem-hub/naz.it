@@ -88,7 +88,7 @@
 <td style="color: {{$color}}; text-align:center">{{$tablet->status}}</td>
 
 
-        <td style="text-align:center"><a class="btn btn-secondary" href="{{ route('tablet.edit', $tablet->id) }}">Edit</a></td>
+        <td style="text-align:center"><a class="" href="{{ route('tablet.edit', $tablet->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
       </tr>
 
       @endforeach

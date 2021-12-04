@@ -6,9 +6,9 @@
 
 <form action="{{ route('sentitem.search') }}" method="GET">
 
-        <a href="{{ route('sent.items.create') }}" class="btn btn-success">Add New Item</a>
-        <a href="{{ route('sentitem.pending') }}" class="btn btn-danger btn-sm">Pending report</a>
-        <a href="{{ route('sentitem.wty.pending') }}" class="btn btn-warning btn-sm">Pending warranty</a>
+        <a href="{{ route('sent.items.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Add New </a>
+        <a href="{{ route('sentitem.pending') }}" class="btn btn-danger btn-sm pull-right">Pending report</a>
+        <a href="{{ route('sentitem.wty.pending') }}" class="btn btn-warning btn-sm pull-right">Pending warranty</a>
 
 <div class="form-group row">
     <div class="col-xs-3">

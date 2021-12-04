@@ -12,7 +12,7 @@ class RequisitionController extends Controller
     public function index()
     {
 
-        $requisitions = Requisition::orderBy('id', 'desc')->paginate(15);
+        $requisitions = Requisition::orderBy('id', 'desc')->paginate(20);
         return view('Frontend.requisition.index', compact('requisitions'));
     }
 

@@ -10,9 +10,12 @@
 
         <form action="{{ route('requisition.search') }}" method="GET">
             <div class="form-group">
-                <a href={{ route('requisition.add') }} class="btn btn-success">Add requisition</a>
-                <a href={{route('create.preq.pdf')}} class="btn btn-danger btn-sm">Pending report</a>
-                <a href={{route('create.rreq.pdf')}} class="btn btn-warning btn-sm">Receipt report</a>
+                <a href={{ route('requisition.add') }} class="btn btn-success"><i class="fa fa-plus"></i> Requisition</a>
+
+                <a href={{route('create.preq.pdf')}} class="btn btn-danger btn-sm pull-right">Pending report</a>
+                <a href={{route('create.rreq.pdf')}} class="btn btn-warning btn-sm pull-right">Receipt report</a>
+
+
                 <div class="form-group row">
                     <div class="col-xs-3">
 
@@ -101,7 +104,7 @@
         {{-- <td>{{$requisition->status}}</td> --}}
         {{-- <td>{{$requisition->notes}}</td> --}}
         {{-- <td>{{date('d/m/Y', strtotime($requisition->created_at))}}</td> --}}
-        <td style="text-align:center"><a class=" btn-secondary btn-block" href="{{ route('requisition.edit', $requisition->id) }}">Edit</a></td>
+        <td style="text-align:center"><a class="" href="{{ route('requisition.edit', $requisition->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
       </tr>
 
       @endforeach

@@ -180,7 +180,7 @@ class HomeController extends Controller
 
         public function sentItem()
         {
-        $items = Outitem::orderBy('id', 'desc')->paginate(15);
+        $items = Outitem::orderBy('id', 'desc')->paginate(20);
         return view('Frontend.sent.index', compact('items'));
         }
 
