@@ -43,6 +43,7 @@ class RequisitionController extends Controller
                 'designation' => $request->input('designation'),
                 'department' => $request->input('department'),
                 'requisition_date' => $request->input('requisition_date'),
+                'challan' => 'create.jpg',
                 'status' => $request->input('status'),
                 'notes' => $request->input('notes'),
             ];
@@ -73,14 +74,26 @@ class RequisitionController extends Controller
 
             $requisitions = Requisition::find($id);
 
-            if ($request->hasFile('challan')){
+            // if ($request->hasFile('challan')){
+            // $challan = $request->file('challan');
+            // $newName = 'challan' . date('d-m-Y-H-i-s', time()) . '.' . $challan->getClientOriginalExtension();
+            //     $request->$challan->move('upload/requisition/challans', $newName);
+            //     $challan->update(['requisitions' => $newName]);
+
             $challan = $request->file('challan');
-            $newName = 'challan' . date('d-m-Y-H-i-s', time()) . '.' . $challan->getClientOriginalExtension();
-            $request->challan->move('upload/requisition/challans', $newName);
+            if ($challan) {
+                if (file_exists('upload/requisition/challans/' . $requisitions->challan)) {
+                    unlink('upload/requisition/challans/' . $requisitions->challan);
+                }
+                $newName = 'challan' . date('d-m-Y-H-i-s', time()) . '.' . $challan->getClientOriginalExtension();
+                $request->challan->move('upload/requisition/challans', $newName);
+                $requisitions->update(['challan' => $newName]);
             }
-            else{
-                $newName= 'NULL';
-            }
+
+
+
+
+
 
             $data = [
                 'requisition_no' => $request->input('requisition_no'),
@@ -91,7 +104,7 @@ class RequisitionController extends Controller
                 'requisition_date' => $request->input('requisition_date'),
                 'received_date' => $request->input('received_date'),
                 'Grn' => $request->input('GRN'),
-                'challan' => $newName,
+
                 'pur_type' => $request->input('pur_type'),
                 'status' => $request->input('status'),
                 'notes' => $request->input('notes'),

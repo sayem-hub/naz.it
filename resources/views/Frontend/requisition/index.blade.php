@@ -85,9 +85,10 @@
 
 
         @if ($requisition->challan==!'Null')
+        <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"></a></td>
+        @elseif ($requisition->challan=='create.jpg')
 
-        <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"></a>
-        </td>
+        <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"></a></td>
         @else
 
         <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"><i

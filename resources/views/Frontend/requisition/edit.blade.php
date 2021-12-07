@@ -72,7 +72,7 @@
 
             <div class="mb-3">
                 <label for="challan" class="form-label">Challan</label>
-                <input type="file" class="form-control" name="challan" id="challan" value="{{$requisitions->challan}}">
+                <input type="file" class="form-control" name="challan" id="challan" value="{{ asset('/upload/requisition/challans'.$requisitions->challan) }}">
             </div>
 
             <div class="mb-3">

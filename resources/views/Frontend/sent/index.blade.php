@@ -37,6 +37,7 @@
             <th scope="col" style="text-align:center">Supplier</th>
             <th scope="col" style="text-align:center">Dop</th>
             <th scope="col" style="text-align:center">Sent on</th>
+            <th scope="col" style="text-align:center">Used</th>
             <th scope="col" style="text-align:center">GP</th>
             <th scope="col" style="text-align:center">Sent for</th>
             <th scope="col" style="text-align:center">To</th>
@@ -68,6 +69,20 @@
             <td style="text-align:center">{{$item->Supplier}}</td>
             <td style="text-align:center">{{$item->Purdate}}</td>
             <td style="text-align:center">{{$item->Outdate}}</td>
+            {{-- <td style="text-align:center">{{$item->Purdate->diffInDays->$item->Outdate}}</td> --}}
+                <td>
+                    <?php
+                            $fdate = $item->Purdate;
+                            $tdate = $item->Outdate;
+                            $date1 = new DateTime($fdate);
+                            $date2 = new DateTime($tdate);
+                                    $interval = $date2->diff($date1);
+                                    $days = $interval->format('%a');
+                            echo $days.' ' .'days';
+
+                        ?>
+                </td>
+
             <td style="text-align:center">{{$item->Gpno}}</td>
             <td style="text-align:center">{{$item->Sentfor}}</td>
             <td style="text-align:center">{{$item->To}}</td>

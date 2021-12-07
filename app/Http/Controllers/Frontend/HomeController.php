@@ -8,6 +8,7 @@ use App\Models\Computer;
 use App\Models\Ccamera;
 use App\Models\Incoming;
 use App\Models\Outitem;
+use Symfony\Component\Console\Output\Output;
 
 class HomeController extends Controller
 {
@@ -182,6 +183,10 @@ class HomeController extends Controller
         {
         $items = Outitem::orderBy('id', 'desc')->paginate(20);
         return view('Frontend.sent.index', compact('items'));
+
+      $warranty_remaining =Outitem::where('Purdate', 'diffInDays', 'Outdate');
+
+dd($warranty_remaining);
         }
 
         public function createSentItem()
