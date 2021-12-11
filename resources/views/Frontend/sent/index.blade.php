@@ -23,7 +23,7 @@
 
 
 
-<table class="table table-bordered table-hover" style="font-size: 10px">
+<table class="table table-bordered table-hover" style="font-size: 12px">
     <thead>
         <tr>
             <th scope="col" style="text-align:center">SL</th>
@@ -37,7 +37,7 @@
             <th scope="col" style="text-align:center">Supplier</th>
             <th scope="col" style="text-align:center">Dop</th>
             <th scope="col" style="text-align:center">Sent on</th>
-            <th scope="col" style="text-align:center">Used</th>
+            {{-- <th scope="col" style="text-align:center">Used</th> --}}
             <th scope="col" style="text-align:center">GP</th>
             <th scope="col" style="text-align:center">Sent for</th>
             <th scope="col" style="text-align:center">To</th>
@@ -70,7 +70,7 @@
             <td style="text-align:center">{{$item->Purdate}}</td>
             <td style="text-align:center">{{$item->Outdate}}</td>
             {{-- <td style="text-align:center">{{$item->Purdate->diffInDays->$item->Outdate}}</td> --}}
-                <td>
+                {{-- <td>
                     <?php
                             $fdate = $item->Purdate;
                             $tdate = $item->Outdate;
@@ -81,7 +81,7 @@
                             echo $days.' ' .'days';
 
                         ?>
-                </td>
+                </td> --}}
 
             <td style="text-align:center">{{$item->Gpno}}</td>
             <td style="text-align:center">{{$item->Sentfor}}</td>

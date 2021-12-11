@@ -24,6 +24,8 @@ Route::post('/registration', [App\Http\Controllers\Frontend\UserController::clas
 Route::get('/new-mail-form', [App\Http\Controllers\Frontend\EmailController::class, 'create'])->name('new.mail.form.create');
 Route::post('/new-mail-form', [App\Http\Controllers\Frontend\EmailController::class, 'store']);
 
+Route::get('/computer-request', [App\Http\Controllers\Frontend\ComprequestController::class, 'create'])->name('comp.request.create');
+
 
 
 Route::get('/login', [App\Http\Controllers\Frontend\UserController::class, 'login'])->name('login');

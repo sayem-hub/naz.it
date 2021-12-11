@@ -48,7 +48,19 @@
                     <li><a href="{{ route('requisition.index') }}">Requisition</a></li>
                     <li><a href="{{ route('rfid.index') }}">RFID</a></li>
                     <li><a href="{{ route('kpi.home') }}">KPI</a></li>
-                    <li><a href="{{ route('new.mail.form.create') }}">MOF</a></li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Request</i><span class="caret"></span></a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ route('new.mail.form.create') }}">Email ID </a></li>
+
+                                <li class="divider"></li>
+                               <li><a href="{{ route('comp.request.create') }}">Computer/Laptop</a></li>
+
+                            </ul>
+                        </li>
+
 
 
                     @if(auth()->user())
