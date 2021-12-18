@@ -1,10 +1,6 @@
 @extends('layouts.frontend')
 @section('main')
 
-<section class="contact-section pt-100">
-    <div class="container">
-        <div class="row">
-
 <h3 class="text-center mt-3">Search Results</h3>
 <a href="{{route('sent.items.create')}}" class="btn btn-success">Add New Item</a>
 <table class="table table-bordered table-hover" style="font-size: 11px">
@@ -78,9 +74,5 @@
         </div>
         </div>
         {{-- {{$computers->links('pagination::bootstrap-4')}} --}}
-
-    </div>
-</div>
-</section>
 
         @endsection

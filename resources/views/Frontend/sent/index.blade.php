@@ -1,42 +1,29 @@
 @extends('layouts.frontend')
 @section('main')
 
-<section class="contact-section pt-130">
-    <div class="container-fluid">
 
-
-<h4 class="text-center">Sent Item List</h4>
+<h4 class="text-center mt-3">Sent Item List</h4>
 
 <form action="{{ route('sentitem.search') }}" method="GET">
 
         <a href="{{ route('sent.items.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Add New </a>
+        <a href="{{ route('sentitem.pending') }}" class="btn btn-danger btn-sm pull-right">Pending report</a>
+        <a href="{{ route('sentitem.wty.pending') }}" class="btn btn-warning btn-sm pull-right">Pending warranty</a>
 
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a href="{{ route('sentitem.pending') }}" class="btn btn-danger btn-sm pull-right">Pending report</a>
-                    <a href="{{ route('sentitem.wty.pending') }}" class="btn btn-warning btn-sm pull-right">Pending warranty</a>
-        </div>
+<div class="form-group row">
+    <div class="col-xs-3">
 
-            <div class="col-xs-6 col-md-4">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for User, item, serial no." name="query" id="txtSearch"
-                        value="{{ request()->input('query') }}">
-
-                    <div class="input-group-btn">
-                        <button class="btn btn-primary" type="submit">
-                            <span class="search"><i class="fa fa-search fa-fw"></i>Search</span>
-                        </button>
-
-                    </div>
-                    <div class="text-danger">@error('query'){{ $message }}@enderror</div>
-                </div>
-            </div>
-
-
+        <input type="text" class="form-control" name="query" placeholder="Item name, Serial, User name"
+            value="{{ request()->input('query') }}">
+        <span class="text-danger">@error('query'){{ $message }}@enderror</span>
+    </div>
+<button type="submit" class="btn btn-info">Search</button>
+</div>
 </form>
 
 
 
-<table class="table table-bordered table-hover text-wrap " style="font-size: .8rem;" >
+<table class="table table-bordered table-hover" style="font-size: 12px">
     <thead>
         <tr>
             <th scope="col" style="text-align:center">SL</th>
@@ -130,6 +117,5 @@
 </table>
 {{$items->links('pagination::bootstrap-4')}}
 
-</div>
-</section>
+
 @endsection

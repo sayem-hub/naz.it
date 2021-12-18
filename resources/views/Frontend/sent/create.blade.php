@@ -1,14 +1,11 @@
 @extends('layouts.frontend')
 @section('main')
 
-<section class="contact-section pt-100">
-    <div class="container">
-
 <div class="row">
     <div class="col-md-4"></div>
-    <div class="col-md-5">
+    <div class="col-md-4">
 
-        <h4 class="text-center mt-3">Add New Outgoing Item</h4>
+        <h3 class="text-center mt-3">Add New Outgoing Item</h3>
         <form action="{{route('sent.items.create')}}" method="post">
             @csrf
             <div class="mb-3">
@@ -121,8 +118,5 @@
     </div>
 
 </div>
-
-    </div>
-</section>
 
 @endsection

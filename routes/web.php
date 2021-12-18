@@ -25,7 +25,6 @@ Route::get('/new-mail-form', [App\Http\Controllers\Frontend\EmailController::cla
 Route::post('/new-mail-form', [App\Http\Controllers\Frontend\EmailController::class, 'store']);
 
 Route::get('/computer-request', [App\Http\Controllers\Frontend\ComprequestController::class, 'create'])->name('comp.request.create');
-Route::post('/computer-request', [App\Http\Controllers\Frontend\ComprequestController::class, 'store']);
 
 
 

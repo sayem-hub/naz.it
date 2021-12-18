@@ -1,14 +1,13 @@
 @extends('layouts.frontend')
 
 @section('main')
-<section class="contact-section pt-100">
-    <div class="container">
+
 
 <div class="row">
     <div class="col-md-0"></div>
     <div class="col-md-13">
 
-        <h4 class="text-center mt-3">Attendance Machine List</h4>
+        <h3 class="text-center mt-3">Attendance Machine List</h3>
 
 
             <div class="form-group">
@@ -71,6 +70,4 @@
 </table>
 {{ $machines->links('pagination::bootstrap-4')}}
 
-    </div>
-</section>
 @endsection

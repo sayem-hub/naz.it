@@ -1,8 +1,7 @@
 @extends('layouts.frontend')
 
 @section('main')
-<section class="contact-section pt-130">
-    <div class="container">
+
 
 <div class="row">
     <div class="col-md-0"></div>
@@ -16,7 +15,7 @@
                 <a href="#" class="btn btn-warning btn-sm">PDF Report</a>
             </div>
 
-<table class="table table-bordered table-hover">
+<table class="table table-bordered table-hover" style="font-size: 12px">
     <thead>
         <tr>
             <th scope="col" style="text-align:center">SL</th>
@@ -57,8 +56,5 @@
     </tbody>
 </table>
 {{ $wastages->links('pagination::bootstrap-4')}}
-
-</div>
-</section>
 
 @endsection

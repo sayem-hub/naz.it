@@ -1,13 +1,9 @@
 @extends('layouts.frontend')
 @section('main')
 
-<section class="contact-section pt-130">
-    <div class="container">
-        <div class="row">
-
 <h3 class="text-center mt-3">Search results</h3>
-<a href={{ route('requisition.add') }} class="btn btn-success">Add requisition</a>
-<table class="table table-bordered table-hover">
+<a href={{ route('requisition.add') }} class="btn btn-success">Add new requisition</a>
+<table class="table table-bordered table-hover" style="font-size: 12px">
     <thead>
         <tr>
            <th scope="col">#</th>
@@ -58,9 +54,5 @@
             </div>
             </div>
             {{$requisitions->links('pagination::bootstrap-4')}}
-
-        </div>
-    </div>
-</section>
 
             @endsection

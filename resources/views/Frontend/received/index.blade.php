@@ -1,15 +1,12 @@
 @extends('layouts.frontend')
 @section('main')
 
-<section class="contact-section pt-130">
-    <div class="container-fluid">
-
 
 <div class="row">
 <div class="col-md-0"></div>
 <div class="col-md-13">
 
-<h4 class="text-center mt-3">Received Items List</h4>
+<h3 class="text-center mt-3">Received Items List</h3>
 
 <form action="{{ route('received.goods.search') }}" method="GET">
     <div class="form-group">
@@ -88,9 +85,6 @@
 </div>
 
 {{ $incoming->links('pagination::bootstrap-4')}}
-
-</div>
-</section>
 @endsection
 
 

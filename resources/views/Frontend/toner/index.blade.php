@@ -2,19 +2,15 @@
 @section('main')
 {{-- Toner Stock Section --}}
 
-<section class="contact-section pt-130">
-
-    <div class="container-fluid">
-
 <div class="row">
 
-<div class="col-md-1"></div>
+    <div class="col-md-1"></div>
     <div class="col-md-4">
-        <h5 class="text-center mt-3">Toner Stock</h5>
+        <h4 class="text-center mt-3">Toner Stock</h4>
 
-        <a href="{{ route('toner.stock.create') }}" class="btn btn-outline-primary btn-sm"><i class="fa fa-plus"></i>Add New </a>
+        <a href="{{ route('toner.stock.create') }}" class="btn btn-success"><i class="fa fa-plus"></i>Add New </a>
 
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover" style="font-size: 14px";>
             <thead>
                 <tr >
                     <th scope="col" style="text-align:center">SL</th>
@@ -46,18 +42,17 @@
         </table>
 
 
-
 {{-- New Toner Receiving Section --}}
+    <br>
+        <h4 class="text-center mt-3">Toner receiving record</h4>
 
-        <h5 class="text-center mt-3">Toner receiving record</h5>
-
-        <table class="table table-bordered table-hover  " style="font-size: .85rem; ">
+        <table class="table table-bordered table-hover  " style="font-size: 11.5px; ">
             <thead>
                 <tr>
                     <th scope="col" style="text-align:center">SL</th>
                     <th scope="col" style="text-align:center">Date</th>
                     <th scope="col" style="text-align:center">Model</th>
-                    <th scope="col" style="text-align:center">Qty</th>
+                    <th scope="col" style="text-align:center">Quantity</th>
                     <th scope="col" style="text-align:center">GP No.</th>
                     {{-- <th scope="col" style="text-align:center">Notes</th> --}}
                 </tr>
@@ -85,15 +80,15 @@
 
 
 {{-- Toner Expenses Section --}}
-
+<div class = "row">
     <div class="col-md-1"></div>
     <div class="col-md-5">
-<h5 class="text-center mt-3">Toner Consumption</h5>
+<h4 class="text-center mt-3">Toner Consumption</h4>
 
-<a href="{{ route('toner.expense.create') }}" class="btn btn-outline-primary btn-sm"><i class="fa fa-plus"> </i>Expense</a>
+<a href="{{ route('toner.expense.create') }}" class="btn btn-success"><i class="fa fa-plus"> </i>Expense entry</a>
 
 
-<table class="table table-bordered table-hover" style="font-size: .8rem">
+<table class="table table-bordered table-hover" style="font-size: 11px">
     <thead>
         <tr>
             <th scope="col" style="text-align:center">SL</th>
@@ -127,13 +122,13 @@
 </table>
 {{$expenses->links('pagination::bootstrap-4')}}
 
+</div>
 
+<div class="col-md-1"></div>
+<div class="col-md-5">
+    <h4 class="text-center mt-3">Month wise consumption</h4>
 
-
-<div class="col-md-12">
-    <h5 class="text-center mt-3">Month wise consumption</h5>
-
-    <table class="table table-bordered table-hover" >
+    <table class="table table-bordered table-hover" style="font-size: 14px" ;>
         <thead style="background-color: #07977f">
             <tr>
                 <th scope="col" style="text-align:center">SL</th>
@@ -156,6 +151,9 @@
 
             @endforeach
 
+
+
+
         </tbody>
     </table>
 </div>
@@ -163,10 +161,6 @@
 
 
 </div>
-</div>
-</div>
-
-</section>
 
 
 @endsection

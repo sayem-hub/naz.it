@@ -1,14 +1,11 @@
 @extends('layouts.frontend')
 @section('main')
 
-
-<section class="contact-section pt-100">
-    <div class="container">
 <div class="row">
     <div class="col-md-4"></div>
-    <div class="col-md-5">
+    <div class="col-md-4">
 
-        <h4 class="text-center mt-3">Toner expense entry</h4>
+        <h3 class="text-center mt-3">Toner expense entry</h3>
         <form action="{{route('toner.expense.create')}}" method="post">
             @csrf
 
@@ -44,7 +41,7 @@
                     <option value="Sample-RMG">Sample-RMG</option>
                     <option value="Dyeing">Dyeing</option>
                     <option value="Dyeing Production">Dyeing Production</option>
-                    <option value="Dyeing Plannng">Dyeing Planning</option>
+                    <option value="Dyeing Plannng">Dyeing Plannng</option>
                     <option value="Dyeing Finishing">Dyeing Finishing</option>
                     <option value="Dyeing Batch">Dyeing Batch</option>
                     <option value="Knitting">Knitting</option>
@@ -105,6 +102,5 @@
     </div>
 
 </div>
-</div>
-</section>
+
 @endsection

@@ -2,59 +2,57 @@
 
 @section('main')
 
-
-
-<!-- ========================= hero-section start ========================= -->
-<section id="home" class="hero-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-5 col-lg-6">
-                <div class="hero-content-wrapper">
-                    <h2  class="mb-25 wow fadeInDown" data-wow-delay=".2s">NIMS v2.0</h2>
-                    <h3 class="mb-25 wow fadeInDown" data-wow-delay=".2s">NAZ IT Management System</h3>
-                    <p class="mb-35 wow fadeInLeft" data-wow-delay=".4s">You are in the IT section data bank! To access all the information you need to login first!</p>
-
-
-                    <div class="">
-                                @if(auth()->user())
-                                <a href="{{ route('logout') }}" class="theme-btn">
-                                    <i class="fa fa-arrow-circle-left"></i> <span>Logout</span>
-                                </a>
-
-                                @else
-                                <a href="{{ route('login') }}" class="theme-btn">
-                                    <i class="fa fa-sign-in"></i> <span> Login</span>
-                                </a>
-                                <a href="{{ route('registration') }}" class="theme-btn">
-                                    <i class="fa fa-unlock-alt"></i> <span>Register</span>
-                                </a>
-                                @endif
-
-                            </div>
-                </div>
-                        </div>
+<div class="row">
 
 
 
+    <div class="col-md-7">
 
 
-            </div>
-            <div class="col-xl-7 col-lg-6">
-                <div class="hero-img">
-                    <div class="d-inline-block hero-img-right">
-                        <img src="{{ asset('assets/frontend/images/hero/hero-img.png') }}" alt="" class="image wow fadeInRight"
-                            data-wow-delay=".5s">
-                        <img src="{{ asset ('assets/frontend/images/hero/dots.shape.svg')}}" alt="" class="dot-shape">
-                        <div class="video-btn">
-                            <a href="{{ route('home') }}"
-                                class="glightbox"><i class="lni lni-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+        <h1 class="wow fadeInLeft" style="font-size: 3em">
+            Welcome to NAZ-IMS!
+        </h1>
+
+        <div class="landing-text wow fadeInLeft">
+            <p>You are in the <strong>NAZ IT</strong> data bank! To access all the information at one place you need to login first!</p>
         </div>
+
+        <!-- header button -->
+        <!-- header button -->
+        <div class="head-btn wow fadeInLeft">
+            @if(auth()->user())
+            <a href="{{ route('logout') }}" class="btn-primary play-market">
+                <i class="fa fa-arrow-circle-left"></i> <span>Logout</span>
+            </a>
+
+            @else
+            <a href="{{ route('login') }}" class="btn-primary">
+                <i class="fa fa-sign-in"></i> <span> Login</span>
+            </a>
+            <a href="{{ route('registration') }}" class="btn-primary play-market">
+                <i class="fa fa-unlock-alt"></i> <span>Register</span>
+            </a>
+            @endif
+
+        </div>
+
     </div>
-</section>
-<!-- ========================= hero-section end ========================= -->
+
+    <!-- phone image -->
+    <div class="col-md-6">
+        <img src="{{asset('assets/frontend/images/header-phone.png')}}" alt="image-missing"
+            class="header-phone img-responsive wow fadeInRight">
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+            </div>
+            </div>
+            </div>
+            </div>
 
             @endsection

@@ -2,10 +2,6 @@
 
 @section('main')
 
-<section class="contact-section pt-100">
-
-    <div class="container">
-
 <h3 class="text-center mt-3">CC Camera List</h3>
 <a href="{{route('camera.create')}}" class="btn btn-success">Add CC Camera</a>
 <a href="{{route('camera.export.excel')}}" class="btn btn-info">Export to Excel</a> <br>
@@ -45,6 +41,4 @@
 </table>
 {{$ccameras->links('pagination::bootstrap-4')}}
 
-    </div>
-</section>
 @endsection
