@@ -2,6 +2,9 @@
 
 @section('main')
 
+<section class="contact-section pt-130">
+    <div class="container-fluid">
+
 <div class="row" style="color: rgb(80, 75, 75)">
     <div class="col-md-4"></div>
     <div class="col-md-4">
@@ -256,6 +259,6 @@
     </div>
 
 </div>
-
-
+</div>
+</section>
 @endsection

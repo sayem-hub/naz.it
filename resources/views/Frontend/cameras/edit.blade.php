@@ -2,11 +2,15 @@
 
 @section('main')
 
+
+<section class="contact-section pt-100">
+    <div class="container">
+
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Edit Camera Info</h3>
+        <h4 class="text-center mt-3">Edit Camera Info</h4>
         <form action="{{route('camera.edit',$ccamera->id)}}" method="post">
             @csrf
             <div class="mb-3">
@@ -58,5 +62,7 @@
 
 </div>
 
+    </div>
+</section>
 
 @endsection

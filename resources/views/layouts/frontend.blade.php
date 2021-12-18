@@ -1,68 +1,88 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="">
+
 <head>
-
-<title>{{ config('app.name') }}-NAZ IT Management System</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="description" content="Bootstrap, Landing page, Responsive, Businnes, Portfolio, Corporate">
-<meta name="Sayem" content="WebThemez">
-<!-- CSS Files -->
-
-<link href="{{asset('assets/frontend/css/bootstrap.min.css')}}" rel="stylesheet" media="screen">
-
-{{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>NIMS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link href="{{asset('assets/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
-<link href="{{asset('assets/frontend/css/pe-icon-7-stroke.css')}}" rel="stylesheet">
-<link href="{{asset('assets/frontend/css/animate.css')}}" rel="stylesheet" media="screen">
-<link href="{{asset('assets/frontend/css/owl.theme.css')}}" rel="stylesheet">
-<link href="{{asset('assets/frontend/css/owl.carousel.css')}}" rel="stylesheet">
-<link href="{{asset('assets/frontend/css/styles.css')}}" rel="stylesheet" media="screen"> 
-
-<!-- Google Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,700' rel='stylesheet' type='text/css'>
 
 
-<!-- Font Awesome -->
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/frontend/images/favicon.png') }}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/bootstrap-5.0.0-beta1.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/LineIcons.2.0.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/tiny-slider.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/glightbox.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/main.css')}}">
+
+
 </head>
 
-<body data-spy="scroll" data-target="#navbar-scroll">
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
 
-<div id="top"></div>
+{{-- ========================= preloader start ========================= --> --}}
+<div class="preloader">
+    <div class="loader">
+        <div class="spinner">
+            <div class="spinner-container">
+                <div class="spinner-rotator">
+                    <div class="spinner-left">
+                        <div class="spinner-circle"></div>
+                    </div>
+                    <div class="spinner-right">
+                        <div class="spinner-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{-- preloader end --}}
 
 @include('Frontend.Partials.header')
 
-<div class="fullscreen landing parallax banner" data-img-width="2000" data-img-height="1325" data-diff="100">
-
-	<div class="overlay">
-		<div class="container">
 
 
-			    @yield('main')
+
+        @yield('main')
 
 
-		</div>
-	</div>
-</div>
+
+
+
 
 @include('Frontend.Partials.footer')
 
-	<!-- javascript files -->
-    <script src="{{asset('assets/frontend/js/jquery.js')}}"></script>
-    <script src="{{asset('assets/frontend/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('assets/frontend/js/custom.js')}}"></script>
-    <script src="{{asset('assets/frontend/js/jquery.sticky.js')}}"></script>
-	<script src="{{asset('assets/frontend/js/wow.min.js')}}"></script>
-	<script src="{{asset('assets/frontend/js/owl.carousel.min.js')}}"></script>
-	<script src="{{asset('assets/frontend/js/ekko-lightbox-min.js')}}"></script>
-	<script type="text/javascript">
-	$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) { event.preventDefault(); $(this).ekkoLightbox(); });
-	</script>
-	<script>
-		new WOW().init();
-	</script>
+
+
+<!-- ========================= JS here ========================= -->
+<script src="{{ asset('assets/frontend/js/bootstrap.bundle-5.0.0-beta1.min.js') }}"></script>
+<script src="{{ asset('assets/frontend/js/contact-form.js')}}"></script>
+<script src="{{ asset('assets/frontend/js/count-up.min.js')}}"></script>
+<script src="{{ asset('assets/frontend/js/tiny-slider.js')}}"></script>
+<script src="{{ asset('assets/frontend/js/isotope.min.js')}}"></script>
+<script src="{{ asset('assets/frontend/js/glightbox.min.js')}}"></script>
+<script src="{{ asset('assets/frontend/js/wow.min.js')}}"></script>
+<script src="{{ asset('assets/frontend/js/imagesloaded.min.js')}}"></script>
+<script src="{{ asset('assets/frontend/js/main.js')}}"></script>
+<script src="https://kit.fontawesome.com/75a92dfdcc.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) { event.preventDefault(); $(this).ekkoLightbox(); });
+</script>
+<script>
+    new WOW().init();
+</script>
+
   </body>
 </html>

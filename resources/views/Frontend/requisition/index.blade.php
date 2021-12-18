@@ -1,36 +1,42 @@
 @extends('layouts.frontend')
 @section('main')
+<section class="contact-section pt-130">
 
+    <div class="container-fluid">
 
 <div class="row">
-    <div class="col-md-0"></div>
-    <div class="col-md-13">
 
-        <h3 class="text-center mt-3">Requisition Status</h3>
+    <div class="col-md-12">
 
-        <form action="{{ route('requisition.search') }}" method="GET">
-            <div class="form-group">
+        <h4 class="text-center">Requisition Status</h4>
+
+        <form class="" action="{{ route('requisition.search') }}" method="GET">
+
                 <a href={{ route('requisition.add') }} class="btn btn-success"><i class="fa fa-plus"></i> Requisition</a>
 
-                <a href={{route('create.preq.pdf')}} class="btn btn-danger btn-sm pull-right">Pending report</a>
-                <a href={{route('create.rreq.pdf')}} class="btn btn-warning btn-sm pull-right">Receipt report</a>
-
-
-                <div class="form-group row">
-                    <div class="col-xs-3">
-
-                        <input type="text" class="form-control" name="query" placeholder="User, item, req no, or status"
-                            value="{{ request()->input('query') }}">
-                        <span class="text-danger">@error('query'){{ $message }}@enderror</span>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href={{route('create.preq.pdf')}} class="btn btn-danger btn-sm">Pending report</a>
+                        <a href={{route('create.rreq.pdf')}} class="btn btn-warning btn-sm">Receipt report</a>
                     </div>
-                    <button type="submit" class="btn btn-info">Search</button>
-                </div>
 
-            </div>
+
+                <div class="col-xs-6 col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="User, item, req no, or status" name="query" id="txtSearch" value="{{ request()->input('query') }}">
+
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">
+                                <span class="search"><i class="fa fa-search fa-fw"></i>Search</span>
+                            </button>
+
+                        </div>
+                        <div class="text-danger">@error('query'){{ $message }}@enderror</div>
+                    </div>
+                </div>
         </form>
 
 
-<table class="table table-bordered table-hover" style="font-size: 11px">
+<table class="table table-bordered table-hover">
     <thead>
       <tr>
         <th scope="col" style="text-align:center">SL</th>
@@ -59,7 +65,7 @@
       <tr>
         <th scope="row" style="text-align:center">{{$key+1}}</th>
         <td style="text-align:center">{{$requisition->requisition_no}}</td>
-        <td>{{$requisition->item_names}}</td>
+        <td >{{$requisition->item_names}}</td>
         <td>{{$requisition->required_for}}</td>
         {{-- <td>{{$requisition->designation}}</td> --}}
         <td>{{$requisition->department}}</td>
@@ -115,6 +121,9 @@
     </div>
 </div>
   {{$requisitions->links('pagination::bootstrap-4')}}
+
+
+</section>
 
 @endsection
 

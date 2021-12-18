@@ -1,6 +1,8 @@
 @extends('layouts.frontend')
 @section('main')
 
+<section class="contact-section pt-130">
+    <div class="container">
 
 <div class="row">
     <div class="col-md-0"></div>
@@ -70,6 +72,9 @@
     </div>
 </div>
   {{$rfids->links('pagination::bootstrap-4')}}
+
+  </div>
+</section>
 
 @endsection
 
