@@ -2,6 +2,7 @@
 
 @section('main')
 
+<section class="contact-section pt-100">
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,13 +36,14 @@
                 <li class="child-nav"><a href="{{ route('admin.question.index') }}">Question</a></li>
             </ul>
         </div>
-        <h2>
-            <marquee behavior="scroll" direction="left" scrollamount="7">Welcome to link library of Worker KPI
-                Management Project!</marquee>
-        </h2>
-        <div class="brief">
-            <p> Please click the link below to go your desired page.</p>
+
+        <div>
+            <h3><marquee behavior="scroll" direction="left" scrollamount="8">Welcome to link library of Worker KPI Management Project!</marquee></h3>
         </div>
+
+        <div class="brief my-5">
+            <p> Please click the link below to go your desired page.</p>
+
 
         <div class="all-link">
             <ol>
@@ -62,6 +64,7 @@
                 <li><a target="_blank" href="http://192.168.0.108/otsnz/ProdBarcodeDateLine.aspx">Day Wise Production
                         Report by Barcode</a></li>
             </ol>
+        </div>
         </div>
 
 

@@ -36,7 +36,7 @@
 
 
 
-<table class="table table-bordered table-hover text-wrap " style="font-size: .8rem;" >
+<table class="table table-bordered table-hover text-wrap " style="font-size: .7rem;" >
     <thead>
         <tr>
             <th scope="col" style="text-align:center">SL</th>
