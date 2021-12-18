@@ -2,6 +2,9 @@
 
 @section('main')
 
+        <section class="contact-section pt-100">
+        <div class="container-fluid">
+
 <div class="row">
     <div class="col-md-0"></div>
     <div class="col-md-13">
@@ -27,7 +30,7 @@
 
 
 
-<table class="table table-bordered table-hover" style="font-size: 12px">
+<table class="table table-bordered table-hover" style="font-size: .9rem">
     <thead class="thead-dark">
       <tr>
        <th scope="col" style="text-align:center">SL</th>
@@ -98,6 +101,9 @@
     </div>
 </div>
   {{-- {{$tablets->links('pagination::bootstrap-4')}} --}}
+
+        </div>
+        </section>
 
 @endsection
 

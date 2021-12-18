@@ -1,6 +1,9 @@
 @extends('layouts.frontend')
 @section('main')
 
+<section class="contact-section pt-100">
+
+    <div class="container">
 
 @if ($errors->any())
 <div class="alert alert-danger">
@@ -22,13 +25,13 @@
 
 
 <div class="row">
-    <h3 class="text-center">Email ID Opening Form</h3>
+    <h4 class="text-center">Email ID Opening Form</h4>
     <p class="text-center">To apply for an email account please fill out the form and click the Apply button.<br> (<span
             style="color: red">*</span>) Marks field are mandatory!</p>
-    <div class="col-md-3"></div>
 
-    <div class="col-md-6 offset-md-6">
-        <div class="card">
+                <div class="col-md-3"></div>
+                    <div class="col-md-6 ">
+                        <div class="card">
 
 
 
@@ -159,7 +162,7 @@
                     </div>
             </div>
 
+</div>
 
-
-
+        </section>
             @endsection

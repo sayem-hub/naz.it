@@ -2,7 +2,8 @@
 
 @section('main')
 
-
+<section class="contact-section pt-130">
+    <div class="container">
 
 <div class="row">
     <div class="col-md-0"></div>
@@ -11,7 +12,7 @@
         <h3 class="text-center mt-3">PABX Users List</h3>
 
         <div class="form-group">
-            <a href="{{ route('frontend.pabx.create') }}" class="btn btn-success">Add New Extension</a>
+            <a href="{{ route('frontend.pabx.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Add New</a>
             <a href="{{route('create.pabx.pdf')}}" class="btn btn-warning btn-sm">PDF Report</a>
         </div>
 
@@ -56,5 +57,8 @@
     </tbody>
 </table>
 {{ $pabxes->links('pagination::bootstrap-4')}}
+
+</div>
+</section>
 
 @endsection

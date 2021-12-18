@@ -25,11 +25,11 @@ class CreateComprequestsTable extends Migration
             $table->string('mobile',150)->unique();
             $table->string('current_comp',100);
             $table->string('is_checked',100);
-            $table->string('required_for',255);
+            $table->string('reason_for',255);
             $table->string('device_type',150);
             $table->string('primary_use',255);
-            $table->string('display_size',100);
-            $table->string('accessoires',255);
+            $table->string('display_size',100)->nullable();
+            $table->string('accessories',255)->nullable();
             $table->timestamps();
         });
     }

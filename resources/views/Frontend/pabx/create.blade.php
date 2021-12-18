@@ -2,11 +2,14 @@
 
 @section('main')
 
+<section class="contact-section pt-100">
+    <div class="container">
+
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Add New PABX</h3>
+        <h4 class="text-center mt-3">Add New PABX</h4>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -87,5 +90,8 @@
         </form>
     </div>
 </div>
+
+    </div>
+</section>
 
 @endsection

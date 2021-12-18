@@ -1,12 +1,12 @@
 @extends('layouts.frontend')
 @section('main')
-
+<section class="contact-section pt-130">
 
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Add requisition</h3>
+        <h3 class="text-center">Add requisition</h3>
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -69,6 +69,7 @@
         </form>
 
     </div>
-
 </div>
+
+</section>
 @endsection

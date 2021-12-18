@@ -2,14 +2,13 @@
 
 @section('main')
 
-<div class="row">
+<section id="service" class="service-section pt-130 ">
 
-    <div class="col-12">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
 
-
-        <h3 class="text-center mt-3">Computer Users List</h3>
-
-        <form action="{{ route('computer.search') }}" method="GET">
+        <h4 class="text-center">Computer Users List</h4>
 
             <form action="{{ route('computer.search') }}" method="GET">
                 <div class="form-group">
@@ -29,12 +28,9 @@
             </form>
 
 
-
-
-
-    <table class="table table-bordered table-hover" style="font-size: 12px">
+    <table class="table table-bordered table-hover">
     <thead class="thead-dark">
-      <tr>
+      <p><small><tr>
        <th scope="col" style="text-align:center">SL</th>
         <th scope="col" style="text-align:center">Com ID</th>
         <th scope="col" style="text-align:center">Emp ID</th>
@@ -49,7 +45,7 @@
         <th scope="col" style="text-align:center">KP Status</th>
         <th scope="col" style="text-align:center">Action</th>
 
-      </tr>
+      </tr> </small></p>
     </thead>
     <tbody>
 
@@ -92,9 +88,13 @@
 
     </tbody>
   </table>
-    </div>
-</div>
+
   {{-- {{$computers->links('pagination::bootstrap-4')}} --}}
+
+</div>
+  </div>
+</div>
+</section>
 
 @endsection
 

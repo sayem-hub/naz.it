@@ -2,11 +2,14 @@
 
 @section('main')
 
+<section class="contact-section pt-100">
+    <div class="container">
+
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Add New Camera</h3>
+        <h4 class="text-center">Add New Camera</h4>
         <form action="{{route('camera.create')}}" method="post">
             @csrf
             <div class="mb-3">
@@ -53,5 +56,8 @@
         </form>
     </div>
 </div>
+
+    </div>
+</section>
 
 @endsection
