@@ -9,7 +9,7 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Add New Computer</h3>
+        <h4 class="text-center mt-3">Add New Computer</h4>
         <form action="{{route('computer.user.create')}}" method="post">
           @csrf
            <div class="mb-3">

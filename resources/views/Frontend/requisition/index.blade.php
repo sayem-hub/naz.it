@@ -19,7 +19,6 @@
                         <a href={{route('create.rreq.pdf')}} class="btn btn-warning btn-sm">Receipt report</a>
                     </div>
 
-
                 <div class="col-xs-6 col-md-4">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="User, item, req no, or status" name="query" id="txtSearch" value="{{ request()->input('query') }}">

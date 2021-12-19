@@ -10,7 +10,35 @@
 
         <h4 class="text-center">Computer Users List</h4>
 
-            <form action="{{ route('computer.search') }}" method="GET">
+                <form class="" action="{{ route('computer.search') }}" method="GET">
+
+                    <a href={{ route('computer.user.create') }} class="btn btn-success"><i class="fa fa-plus"></i>New User</a>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{route('pdf.generate')}}" class="btn btn-warning btn-sm pull-right"> PDF Report</a>
+
+                    </div>
+
+                    <div class="col-xs-6 col-md-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Name, Computer ID, Department" name="query"
+                                id="txtSearch" value="{{ request()->input('query') }}">
+
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary" type="submit">
+                                    <span class="search"><i class="fa fa-search fa-fw"></i>Search</span>
+                                </button>
+
+                            </div>
+                            <div class="text-danger">@error('query'){{ $message }}@enderror</div>
+                        </div>
+                    </div>
+                </form>
+
+
+
+
+        {{-- <form action="{{ route('computer.search') }}" method="GET">
                 <div class="form-group">
                     <a href={{ route('computer.user.create') }} class="btn btn-success"><i class="fa fa-plus"></i>New User</a>
                     <a href="{{route('pdf.generate')}}" class="btn btn-warning btn-sm pull-right"> PDF Report</a>
@@ -25,7 +53,7 @@
 
                     </div>
                 </div>
-            </form>
+            </form> --}}
 
 
     <table class="table table-bordered table-hover">

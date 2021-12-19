@@ -60,6 +60,15 @@ class IncomingController extends Controller
     {
         $initems = Incoming::find($id);
 
+      $challan = $request->file('challan_img');
+          if ($challan) {
+                 if (file_exists('upload/requisition/challans/' . $initems->challan_img)) {
+                     unlink('upload/requisition/challans/' . $initems->challan_img);
+                }
+               $newName = 'challan' . date('d-m-Y-H-i-s', time()) . '.' . $challan->getClientOriginalExtension();
+                $request->challan_img->move('upload/challans',$newName);
+                $initems->update(['challan_img' => $newName]);
+             }
         $data =  [
             'item_name'=>$request->input('itemname'),
             'quantity'=>$request->input('quantity'),
@@ -70,7 +79,6 @@ class IncomingController extends Controller
             'pur_date'=>$request->input('pdate'),
             'warranty'=>$request->input('warranty'),
             'challan_no'=>$request->input('challan_no'),
-            'challan_img'=>$request->input('challan_img'),
             'req_no'=>$request->input('req_no'),
             'pur_type'=>$request->input('pur_type'),
             'user_name'=>$request->input('user'),

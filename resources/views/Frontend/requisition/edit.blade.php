@@ -1,10 +1,15 @@
 @extends('layouts.frontend')
 @section('main')
+
+<section class="contact-section pt-100">
+
+    <div class="container">
+
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Update Record</h3>
+        <h3 class="text-center my-3">Update Record</h3>
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -14,8 +19,17 @@
             </ul>
         </div>
         @endif
+
+
+        @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+        @endif
+
         <form action="{{route('requisition.edit', $requisitions->id)}}" method="post" enctype="multipart/form-data">
             @csrf
+
 
            <div class="mb-3">
                 <label for="requisition_no" class="form-label">Requisiton No</label>
@@ -55,6 +69,7 @@
                     <option value="Received">Received</option>
                     <option value="Invalid">Invalid</option>
                     <option value="No need">No need</option>
+                    <option value="Excluded">Excluded</option>
                     <option value="Cancelled by NAZ">Cancelled by NAZ</option>
                     <option value="Cancelled by HO">Cancelled by HO</option>
                 </select>
@@ -70,9 +85,13 @@
                 <input type="text" class="form-control" name="GRN" id="GRN" value="{{ $requisitions->Grn }}">
             </div>
 
+            <div class="user-image mb-3 text-center">
+                <div class="imgPreview"> </div>
+            </div>
+
             <div class="mb-3">
                 <label for="challan" class="form-label">Challan</label>
-                <input type="file" class="form-control" name="challan" id="challan" value="{{ asset('/upload/requisition/challans'.$requisitions->challan) }}">
+                <input type="file" class="form-control" name="challan" id="challan" multiple="multiple" value="{{ asset('/upload/requisition/challans'.$requisitions->challan) }}">
             </div>
 
             <div class="mb-3">
@@ -95,4 +114,6 @@
             </div>
 
             </div>
+        </div>
+        </section>
             @endsection

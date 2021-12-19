@@ -80,17 +80,32 @@ class RequisitionController extends Controller
             //     $request->$challan->move('upload/requisition/challans', $newName);
             //     $challan->update(['requisitions' => $newName]);
 
-            $challan = $request->file('challan');
-            if ($challan) {
-                if (file_exists('upload/requisition/challans/' . $requisitions->challan)) {
-                    unlink('upload/requisition/challans/' . $requisitions->challan);
+             $challan = $request->file('challan');
+          if ($challan) {
+                 if (file_exists('upload/requisition/challans/' . $requisitions->challan)) {
+                     unlink('upload/requisition/challans/' . $requisitions->challan);
                 }
-                $newName = 'challan' . date('d-m-Y-H-i-s', time()) . '.' . $challan->getClientOriginalExtension();
+               $newName = 'challan' . date('d-m-Y-H-i-s', time()) . '.' . $challan->getClientOriginalExtension();
                 $request->challan->move('upload/requisition/challans', $newName);
                 $requisitions->update(['challan' => $newName]);
-            }
+             }
 
+                                        //     if($request->hasfile('challan')) {
+                                        //     foreach($request->file('challan') as $file)
+                                        //     {
+                                        //         $name = $file->getClientOriginalName();
+                                        //         // $newName = 'challan' . date('d-m-Y-H-i-s', time()).'.'.$name;
+                                        //         $file->move(public_path().'/upload/requisition/challans', $name);
+                                        //         $imgData[] = $name;
+                                        //     }
 
+                                        //     $fileModal = new Requisition();
+                                        //     // $fileModal->name = json_encode($imgData);
+                                        //     $fileModal->challan = json_encode($imgData);
+
+                                        //     // $requisitions->update(['challan' => $fileModal]);
+                                        //     $fileModal->update();
+                                        // }
 
 
 
@@ -111,7 +126,7 @@ class RequisitionController extends Controller
             ];
 
             $requisitions->update($data);
-            return redirect()->route('requisition.index');
+            return redirect()->back()->with('status', 'Updated successfully!');
         } catch (\Exception $exception) {
             return redirect()->back()->withErrors($exception->getMessage());
         }

@@ -111,20 +111,20 @@
 
     <h3>NAZ Bangladesh Ltd.</h3>
     <h4>ICT Department</h4>
-    <h5>List of Items Received</h5>
+    <h5>Received Item List</h5>
 
 
     <table class="styled-table" >
         <thead class="thead-dark" >
             <tr>
-                <th scope="col">#</th>
+                <th scope="col"> SL</th>
                 <th scope="col">Requisition no</th>
                 <th scope="col">Item</th>
                 <th scope="col">User</th>
                 <th scope="col">Designation</th>
                 <th scope="col">Section</th>
                 <th scope="col">Req date</th>
-                <th scope="col">Rcvd date</th>
+                <th scope="col">Rcv date</th>
                 {{-- <th scope="col">Status</th> --}}
             </tr>
         </thead>
