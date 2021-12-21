@@ -2,11 +2,14 @@
 
 @section('main')
 
+<section class="contact-section pt-130">
+    <div class="container">
+
 <div class="row">
     <div class="col-md-0"></div>
     <div class="col-md-13">
 
-        <h3 class="text-center mt-3">Printer List</h3>
+        <h4 class="text-center mt-3">Printer List</h4>
 
        <form action="{{ route('printer.search') }}" method="GET">
         <div class="form-group">
@@ -27,7 +30,7 @@
 
 
 
-<table class="table table-bordered table-hover" style="font-size: 12px">
+<table class="table table-bordered table-hover" >
     <thead class="thead-dark">
       <tr>
        <th scope="col" style="text-align:center">SL</th>
@@ -90,6 +93,9 @@
     </div>
 </div>
   {{ $printers->links('pagination::bootstrap-4')}}
+
+    </div>
+</section>
 
 @endsection
 

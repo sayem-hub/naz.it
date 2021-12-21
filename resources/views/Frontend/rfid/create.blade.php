@@ -54,7 +54,7 @@
 
             <div class="mb-3">
                 <label for="rf_id" class="form-label">RF ID No</label>
-                <input type="number" class="form-control" name="rf_id" id="rf_id">
+                <input type="number" class="form-control" name="rf_id" id="rf_id" value="000">
             </div>
 
             <div class="mb-3">

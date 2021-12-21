@@ -2,11 +2,14 @@
 
 @section('main')
 
+<section class="contact-section pt-130">
+    <div class="container">
+
 <div class="row" style="color: rgb(80, 75, 75)">
     <div class="col-md-2"></div>
     <div class="col-md-7">
 
-        <h3 class="text-center mt-3">Edit Record</h3>
+        <h4 class="text-center mt-3">Edit Record</h4>
         <form action="{{route('router.edit',$routers->id)}}" method="post">
         @csrf
             <div class="mb-3">
@@ -78,5 +81,8 @@
                 </div>
 
                 </div>
+
+    </div>
+</section>
 
 @endsection

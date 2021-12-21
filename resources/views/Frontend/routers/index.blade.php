@@ -2,13 +2,16 @@
 
 @section('main')
 
+<section class="contact-section pt-130">
+    <div class="container">
+
 
 
 <div class="row">
     <div class="col-md-0"></div>
     <div class="col-md-13">
 
-        <h3 class="text-center mt-3">Router List</h3>
+        <h4 class="text-center mt-3">Router List</h4>
 
         <div class="form-group">
             <a href="{{ route('router.create') }}" class="btn btn-success">Add New Router</a>
@@ -62,6 +65,9 @@
     </div>
 </div>
   {{ $routers->links('pagination::bootstrap-4')}}
+
+    </div>
+</section>
 
 @endsection
 

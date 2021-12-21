@@ -2,11 +2,14 @@
 
 @section('main')
 
+<section class="contact-section pt-130">
+    <div class="container">
+
 <div class="row" style="color: rgb(71, 67, 67)">
     <div class="col-md-2"></div>
     <div class="col-md-7">
 
-        <h3 class="text-center mt-3">Add New Router</h3>
+        <h4 class="text-center mt-3">Add New Router</h4>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -89,6 +92,9 @@
     </div>
 
 </div>
+
+    </div>
+</section>
 
 
 @endsection
