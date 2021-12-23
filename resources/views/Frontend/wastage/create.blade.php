@@ -2,11 +2,13 @@
 
 @section('main')
 
+<section class="contact-section pt-100">
+    <div class="container">
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Add Wastage Item</h3>
+        <h4 class="text-center mt-3">Add Wastage Item</h4>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -74,7 +76,10 @@
             </div>
 
 
-
+            <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Enter quantity">
+                </div>
 
             <div class="mb-3">
                 <label for="status" class="form-label">Status</label>
@@ -96,5 +101,8 @@
         </form>
     </div>
 </div>
+
+    </div>
+</section>
 
 @endsection

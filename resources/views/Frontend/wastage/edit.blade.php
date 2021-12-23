@@ -2,11 +2,14 @@
 
 @section('main')
 
+<section class="contact-section pt-130">
+    <div class="container">
+
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Update record</h3>
+        <h4 class="text-center mt-3">Update record</h4>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -72,6 +75,12 @@
                     <input type="text" class="form-control" name="user_name" id="user_name" value="{{ $wastages->user }}">
                 </div>
 
+
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="text" class="form-control" name="quantity" id="quantity" value="{{ $wastages->quantity }}">
+                </div>
+
         <div class="mb-3">
             <label for="status" class="form-label">Status</label>
             <select class="form-control" name="status">
@@ -93,5 +102,6 @@
         </form>
         </div>
         </div>
-
+    </div>
+</section>
 @endsection

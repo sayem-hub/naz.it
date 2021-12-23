@@ -37,6 +37,7 @@ class WastageController extends Controller
                 'serial_no' => $request->input('serial_no'),
                 'problem' => $request->input('problem'),
                 'user' => $request->input('user_name'),
+                'quanity' => $request->input('quantity'),
                 'notes' => $request->input('note'),
                 'status' => $request->input('status'),
             ];
@@ -75,6 +76,7 @@ class WastageController extends Controller
                 'serial_no' => $request->input('serial_no'),
                 'problem' => $request->input('problem'),
                 'user' => $request->input('user_name'),
+                 'quanity' => $request->input('quantity'),
                 'notes' => $request->input('note'),
                 'status' => $request->input('status'),
             ];

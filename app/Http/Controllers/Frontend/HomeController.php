@@ -9,6 +9,8 @@ use App\Models\Ccamera;
 use App\Models\Incoming;
 use App\Models\Outitem;
 use Symfony\Component\Console\Output\Output;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -182,11 +184,22 @@ class HomeController extends Controller
         public function sentItem()
         {
         $items = Outitem::orderBy('id', 'desc')->paginate(20);
+
+            // $start_time = Carbon::parse($this->Purdate);
+            // $currentDate = Carbon::now();
+            // $diff = $currentDate->diff($start_time);
+            // dd($diff);
+
+            $used = Outitem::whereRaw ('datediff(now(), Purdate');
+            $days = Outitem::whereRaw('Warranty');
+            // $rem = $days-$used;
+
         return view('Frontend.sent.index', compact('items'));
 
-      $warranty_remaining =Outitem::where('Purdate', 'diffInDays', 'Outdate');
 
-dd($warranty_remaining);
+        // $warranty_remaining =Outitem::where('Purdate', 'diffInDays', 'Outdate');
+
+
         }
 
         public function createSentItem()

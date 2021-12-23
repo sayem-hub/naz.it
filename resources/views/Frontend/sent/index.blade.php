@@ -51,6 +51,7 @@
             <th scope="col" style="text-align:center">Dop</th>
             <th scope="col" style="text-align:center">Sent on</th>
             {{-- <th scope="col" style="text-align:center">Used</th> --}}
+            <th scope="col" style="text-align:center">Wrem</th>
             <th scope="col" style="text-align:center">GP</th>
             <th scope="col" style="text-align:center">Sent for</th>
             <th scope="col" style="text-align:center">To</th>
@@ -83,7 +84,17 @@
             <td style="text-align:center">{{$item->Purdate}}</td>
             <td style="text-align:center">{{$item->Outdate}}</td>
             {{-- <td style="text-align:center">{{$item->Purdate->diffInDays->$item->Outdate}}</td> --}}
-                {{-- <td>
+
+
+            <td style="text-align:center">
+
+                {{-- {{ $item->Purdate->diffforHumans() }} --}}
+
+            </td>
+
+
+
+            {{-- <td>
                     <?php
                             $fdate = $item->Purdate;
                             $tdate = $item->Outdate;
