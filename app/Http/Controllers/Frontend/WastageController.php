@@ -10,8 +10,23 @@ class WastageController extends Controller
 {
     public function index()
     {
-        $wastages = Wastage::orderBy('id' ,'desc')->paginate(25);
-        return view('Frontend.wastage.index', compact('wastages'));
+
+        $motherboard = Wastage::where('item_name', '=', 'Motherboard')->count();
+        $hdd = Wastage::where('item_name', '=', 'HDD')->count();
+        $monitor = Wastage::where('item_name', '=', 'Monitor')->count();
+        $casing = Wastage::where('item_name', '=', 'Casing')->sum('quantity');
+        $toner = Wastage::where('item_name', '=', 'Toner')->sum('quantity');
+
+        $total = $motherboard+$hdd+$monitor+$casing+$toner;
+
+        $wastages = Wastage::orderBy('id' ,'desc')->paginate(2500);
+        return view('Frontend.wastage.index', compact('wastages'))
+        ->with('motherboard', $motherboard)
+        ->with('hdd', $hdd)
+        ->with('monitor', $monitor)
+        ->with('casing', $casing)
+        ->with('toner', $toner)
+        ->with('total', $total);
     }
 
     public function create()
@@ -37,7 +52,7 @@ class WastageController extends Controller
                 'serial_no' => $request->input('serial_no'),
                 'problem' => $request->input('problem'),
                 'user' => $request->input('user_name'),
-                'quanity' => $request->input('quantity'),
+                'quantity' => $request->input('quantity'),
                 'notes' => $request->input('note'),
                 'status' => $request->input('status'),
             ];
@@ -76,7 +91,7 @@ class WastageController extends Controller
                 'serial_no' => $request->input('serial_no'),
                 'problem' => $request->input('problem'),
                 'user' => $request->input('user_name'),
-                 'quanity' => $request->input('quantity'),
+                 'quantity' => $request->input('quantity'),
                 'notes' => $request->input('note'),
                 'status' => $request->input('status'),
             ];
