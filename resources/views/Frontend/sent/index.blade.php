@@ -3,6 +3,9 @@
 
 <section class="contact-section pt-130">
     <div class="container-fluid">
+     <div class="row">
+
+        <div class="col-md-12">
 
 
 <h4 class="text-center">Sent Item List</h4>
@@ -30,8 +33,6 @@
                     <div class="text-danger">@error('query'){{ $message }}@enderror</div>
                 </div>
             </div>
-
-
 </form>
 
 
@@ -128,7 +129,7 @@
             endif;
             @endphp
 
-            <td style="background-color: {{$color}}; color: #3F000F; text-weight:  ; text-align:center">{{ $item->Status }}</td>
+            <td style="background-color: {{$color}}; color: #3F000F; text-align:center;">{{ $item->Status }}</td>
 
             {{-- <td>{{$item->Status}}</td> --}}
             {{--<td>{{$item->created_at}}</td>--}}
@@ -140,6 +141,9 @@
     </tbody>
 </table>
 {{$items->links('pagination::bootstrap-4')}}
+
+        </div>
+     </div>
 
 </div>
 </section>

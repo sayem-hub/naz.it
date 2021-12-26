@@ -11,41 +11,47 @@
 
 <h4 class="text-center mt-3">Received Items List</h4>
 
-<form action="{{ route('received.goods.search') }}" method="GET">
-    <div class="form-group">
-        <a  href={{ route('received.goods.new') }} class="btn btn-success">Add New Item</a>
-        <div class="form-group row" >
-            <div class="col-xs-3">
 
-            <input type="text" class="form-control" name="query" placeholder="Serial No. or User name" value="{{ request()->input('query') }}">
-            <span class="text-danger">@error('query'){{ $message }}@enderror</span>
+    <form action="{{ route('received.goods.search') }}" method="GET">
+
+        <a href="{{ route('received.goods.new') }}" class="btn btn-success"><i class="fa fa-plus"></i>Add New </a>
 
 
+
+        <div class="col-xs-6 col-md-4">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Serial No. or User name" name="query" id="txtSearch"
+                       value="{{ request()->input('query') }}">
+
+                <div class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">
+                        <span class="search"><i class="fa fa-search fa-fw"></i>Search</span>
+                    </button>
+
+                </div>
+                <div class="text-danger">@error('query'){{ $message }}@enderror</div>
             </div>
-            <button type="submit" class="btn btn-info">Search</button>
         </div>
-
-    </div>
-</form>
+    </form>
 
 <table class="table table-bordered table-hover" style="font-size: 11px">
     <thead>
       <tr>
         <th scope="col" style="text-align:center">SL</th>
-        <th scope="col"style="text-align:center">Item name</th>
+        <th scope="col" style="text-align:center">Item name</th>
         <!--<th scope="col"style="text-align:center">Quantity</th>-->
-        <th scope="col"style="text-align:center">Brand</th>
-        <th scope="col"style="text-align:center">Model</th>
-        <th scope="col"style="text-align:center">Serial no.</th>
-        <th scope="col"style="text-align:center">Supplier</th>
-        <th scope="col"style="text-align:center">Pur date</th>
-        <th scope="col"style="text-align:center">Wty</th>
-        <th scope="col"style="text-align:center">Challan no.</th>
-        <th scope="col"style="text-align:center">Challan</th>
-        <th scope="col"style="text-align:center">Req no.</th>
-        <th scope="col"style="text-align:center">P.type</th>
-        <th scope="col"style="text-align:center">User</th>
-        <th scope="col"style="text-align:center">Dept.</th>
+        <th scope="col" style="text-align:center">Brand</th>
+        <th scope="col" style="text-align:center">Model</th>
+        <th scope="col" style="text-align:center">Serial no.</th>
+        <th scope="col" style="text-align:center">Supplier</th>
+        <th scope="col" style="text-align:center">Pur date</th>
+        <th scope="col" style="text-align:center">Wty</th>
+        <th scope="col" style="text-align:center">Challan no.</th>
+        <th scope="col" style="text-align:center">Challan</th>
+        <th scope="col" style="text-align:center">Req no.</th>
+        <th scope="col" style="text-align:center">P.type</th>
+        <th scope="col" style="text-align:center">User</th>
+        <th scope="col" style="text-align:center">Dept.</th>
         {{-- <th scope="col"style="text-align:center">Notes</th> --}}
         {{-- <th scope="col"style="text-align:center">Action</th> --}}
 

@@ -6,26 +6,25 @@
 
 <div class="row">
     <div class="col-md-0"></div>
-    <div class="col-md-13">
-
-        <h3 class="text-center mt-3">Issued RF ID List</h3>
-
+    <div class="col-md-12">
+        <h4 class="text-center mt-3">Issued RFID List</h4>
         <form action="{{ route('rfid.search') }}" method="GET">
-            <div class="form-group">
+
                 <a href={{ route('rfid.create') }} class="btn btn-success">Issue New ID</a>
-                <div class="form-group row">
-                    <div class="col-xs-3">
 
-                        <input type="text" class="form-control" name="query" placeholder="NAZ ID or RF ID"
+                <div class="col-xs-6 col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search by Emp ID or Rfid" name="query" id="txtSearch"
                             value="{{ request()->input('query') }}">
-                        <span class="text-danger">@error('query'){{ $message }}@enderror</span>
 
-
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">
+                                <span class="search"><i class="fa fa-search fa-fw"></i>Search</span>
+                            </button>
+                        </div>
+                        <div class="text-danger">@error('query'){{ $message }}@enderror</div>
                     </div>
-                    <button type="submit" class="btn btn-info">Search</button>
                 </div>
-
-            </div>
         </form>
 
 
@@ -33,7 +32,7 @@
     <thead>
       <tr>
         <th scope="col" style="text-align:center">SL</th>
-        <th scope="col" style="text-align:center">NAZ ID</th>
+        <th scope="col" style="text-align:center">Emp ID</th>
 
         <th scope="col" style="text-align:center">Name</th>
         <th scope="col" style="text-align:center">Designation</th>

@@ -1,31 +1,33 @@
 @extends('layouts.frontend')
 @section('main')
 
-<section class="contact-section pt-100">
-    <div class="container">
-        <div class="row">
+<section class="contact-section pt-130">
+    <div class="container-fluid">
+       <div class="row">
 
-<h3 class="text-center mt-3">Search Results</h3>
-<a href="{{route('sent.items.create')}}" class="btn btn-success">Add New Item</a>
-<table class="table table-bordered table-hover" style="font-size: 11px">
+        <div class="col-md-12">
+
+<h4 class="text-center mt-3">Search Results</h4>
+<a href="{{route('sent.items.create')}}" class="btn btn-success"><i class="fa fa-plus"></i>Add New</a>
+<table class="table table-bordered table-hover" style="font-size: .8rem">
     <thead class="thead-dark">
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Item Name</th>
-            <th scope="col">Brand</th>
-            <th scope="col">Model</th>
-            <th scope="col">Serial No.</th>
-            <th scope="col">User</th>
-            <th scope="col">Section</th>
-            <th scope="col">Warranty</th>
-            <th scope="col">Supplier</th>
-            <th scope="col">Pur. Date</th>
-            <th scope="col">Out Date</th>
-            <th scope="col">GP No</th>
-            <th scope="col">Sent For</th>
-            <th scope="col">Problem</th>
-            <th scope="col">Notes</th>
-            <th scope="col">Status</th>
+            <th scope="col" class="text-center">SL</th>
+            <th scope="col" class="text-center">Item</th>
+            <th scope="col" class="text-center">Brand</th>
+            <th scope="col" class="text-center">Model</th>
+            <th scope="col" class="text-center">Serial no.</th>
+            <th scope="col" class="text-center">User</th>
+            <th scope="col" class="text-center">Section</th>
+            <th scope="col" class="text-center">Warranty</th>
+            <th scope="col" class="text-center">Supplier</th>
+            <th scope="col" class="text-center">Pur date</th>
+            <th scope="col" class="text-center">Sent on</th>
+            <th scope="col" class="text-center">GP no</th>
+            <th scope="col" class="text-center">Sent for</th>
+            <th scope="col" class="text-center">Problem</th>
+            <th scope="col" class="text-center">Notes</th>
+            <th scope="col" class="text-center">Status</th>
         </tr>
         </thead>
         <tbody>
@@ -33,21 +35,21 @@
             @foreach($sentitems as $key=>$item)
 
             <tr>
-                <th scope="row">{{$key+1}}</th>
-                <td>{{$item->Iname}}</td>
-                <td>{{$item->Brand}}</td>
-                <td>{{$item->Model}}</td>
-                <td>{{$item->Serial}}</td>
-                <td>{{$item->User}}</td>
-                <td>{{$item->Section}}</td>
-                <td>{{$item->Warranty}}</td>
-                <td>{{$item->Supplier}}</td>
-                <td>{{$item->Purdate}}</td>
-                <td>{{$item->Outdate}}</td>
-                <td>{{$item->Gpno}}</td>
-                <td>{{$item->Sentfor}}</td>
-                <td>{{$item->Problems}}</td>
-                <td>{{$item->Notes}}</td>
+                <th scope="row" class="text-center">{{$key+1}}</th>
+                <td class="text-center">{{$item->Iname}}</td>
+                <td class="text-center">{{$item->Brand}}</td>
+                <td class="text-center">{{$item->Model}}</td>
+                <td class="text-center">{{$item->Serial}}</td>
+                <td class="text-center">{{$item->User}}</td>
+                <td class="text-center">{{$item->Section}}</td>
+                <td class="text-center">{{$item->Warranty}}</td>
+                <td class="text-center">{{$item->Supplier}}</td>
+                <td class="text-center">{{$item->Purdate}}</td>
+                <td class="text-center">{{$item->Outdate}}</td>
+                <td class="text-center">{{$item->Gpno}}</td>
+                <td class="text-center">{{$item->Sentfor}}</td>
+                <td class="text-center">{{$item->Problems}}</td>
+                <td class="text-center">{{$item->Notes}}</td>
 
                 @php
                 if ( $item->Status == 'Pending'):
@@ -63,7 +65,7 @@
                 endif;
                 @endphp
 
-                <td style="background-color: {{$color}}">{{ $item->Status }}</td>
+                <td class="text-center" style="background-color: {{$color}}">{{ $item->Status }}</td>
 
                 {{-- <td>{{$item->Status}}</td> --}}
                 {{--<td>{{$item->created_at}}</td>--}}
@@ -80,7 +82,7 @@
         {{-- {{$computers->links('pagination::bootstrap-4')}} --}}
 
     </div>
-</div>
+
 </section>
 
         @endsection

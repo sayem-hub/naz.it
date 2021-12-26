@@ -5,19 +5,24 @@
     <div class="container">
         <div class="row">
 
+            <div class="col-md-12">
+
 <h3 class="text-center mt-3">Search results</h3>
-<a href={{ route('requisition.add') }} class="btn btn-success">Add requisition</a>
+<a href={{ route('requisition.add') }} class="btn btn-success"><i class="fa fa-plus"></i> Requisition</a>
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
-           <th scope="col">#</th>
-            <th scope="col">Requisition No</th>
+           <th scope="col">SL</th>
+            <th scope="col">Requisition</th>
             <th scope="col">Item(s)</th>
             <th scope="col">Required for</th>
             <th scope="col">Designation</th>
             <th scope="col">Section/Dept.</th>
-            <th scope="col">Requisition Date</th>
+            <th scope="col">Req Date</th>
             <th scope="col">Status</th>
+            <th scope="col">Rcv Date</th>
+            <th scope="col">GRN</th>
+            <th scope="col">Challan</th>
             {{-- <th scope="col">Notes</th> --}}
             {{-- <th scope="col">Entry at</th> --}}
             <th scope="col">Action</th>
@@ -45,6 +50,12 @@
                         endif;
                         @endphp
                     <td style="color: {{$color}}">{{ $requisition->status }}</td>
+
+                    <td>{{$requisition->received_date}}</td>
+                    <td>{{$requisition->Grn}}</td>
+                    <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"><i
+                                class="fa fa-eye fa-lg"></i><i class="fa fa-eye fa-lg"></i></a>
+                    </td>
 
                     {{-- <td>{{$requisition->notes}}</td> --}}
                     {{-- <td>{{date('d/m/Y', strtotime($requisition->created_at))}}</td> --}}

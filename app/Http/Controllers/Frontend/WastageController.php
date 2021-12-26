@@ -16,8 +16,9 @@ class WastageController extends Controller
         $monitor = Wastage::where('item_name', '=', 'Monitor')->count();
         $casing = Wastage::where('item_name', '=', 'Casing')->sum('quantity');
         $toner = Wastage::where('item_name', '=', 'Toner')->sum('quantity');
+        $ram = Wastage::where('item_name', '=', 'RAM')->sum('quantity');
 
-        $total = $motherboard+$hdd+$monitor+$casing+$toner;
+        $total = $motherboard+$hdd+$monitor+$casing+$toner+$ram;
 
         $wastages = Wastage::orderBy('id' ,'desc')->paginate(2500);
         return view('Frontend.wastage.index', compact('wastages'))
@@ -26,6 +27,7 @@ class WastageController extends Controller
         ->with('monitor', $monitor)
         ->with('casing', $casing)
         ->with('toner', $toner)
+        ->with('ram', $ram)
         ->with('total', $total);
     }
 

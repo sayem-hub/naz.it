@@ -9,7 +9,7 @@
     <div class="col-md-4"></div>
     <div class="col-md-5">
 
-        <h4 class="text-center mt-3">Issue New RF ID</h4>
+        <h4 class="text-center mt-3">Issue New RFID</h4>
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -23,7 +23,7 @@
             @csrf
 
             <div class="mb-3">
-                <label for="naz_id" class="form-label">NAZ ID</label>
+                <label for="naz_id" class="form-label">Employee ID</label>
                 <input type="text" class="form-control" name="naz_id" id="naz_id" value="NAZ-">
             </div>
 

@@ -16,6 +16,7 @@
             <th class="text-center">Monitor</th>
             <th class="text-center">Casing</th>
             <th class="text-center">Toner</th>
+             <th class="text-center">RAM</th>
             <th class="text-center">Total</th>
 
         </tr>
@@ -29,6 +30,7 @@
             <td class="text-center">{{$monitor}}</td>
             <td class="text-center">{{$casing}}</td>
             <td class="text-center">{{$toner}}</td>
+            <td class="text-center">{{$ram}}</td>
             <td class="text-center">{{$total}}</td>
         </tr>
     </tbody>

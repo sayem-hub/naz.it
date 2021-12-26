@@ -2,9 +2,9 @@
 @section('main')
 <section class="contact-section pt-90">
 
-
-
         <div class="container">
+
+            <div class="row">
 
                     <form class="row g-3" action="{{ route('comp.request.create') }}" method="post">
                         @csrf
@@ -147,7 +147,7 @@
                                     </span>
 
 
-                                    <span  class="border border-info">
+                        <span  class="border border-info pb-2">
 
                                         <h4>Specify your new requirement</h4>
 
@@ -185,7 +185,7 @@
                                         </div>
 
                                         <div>
-                                        <b>What you will primary use this computer for?</b>
+                                        <b>What you will primarily use this computer for?</b>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox"  class="form-check-input" name="primary_use[]" value="Email">
@@ -232,19 +232,20 @@
                                             <label class="form-check-label">Special works</label>
                                              </div>
 
-                                             <div class="row">
+
                                                 <div class="col-12">
                                                 <textarea class="form-control" name="display_size" rows="2" placeholder="Monitor/Screen Size, Storage Size, RAM Size, Processor model, Software etc."></textarea>
                                                 </div>
-                                            </div>
-                                    </span>
 
-                                    <div class="row">
+                        </span>
+
+
+
                                     <div class="col-12">
                                         <textarea class="form-control" name="accessories" rows="2"
                                             placeholder="Mention any other accessories if you need"></textarea>
                                     </div>
-                                    </div>
+
 
 
                             <div class="col-md-12">
@@ -257,11 +258,11 @@
                             <button type="submit" class="btn btn-success">Apply</button>
                             </div>
 
-                            </form>
+                    </form>
 
+            </div>
+        </div>
 
-                        </form>
-
-            </section>
+</section>
 
 @endsection
