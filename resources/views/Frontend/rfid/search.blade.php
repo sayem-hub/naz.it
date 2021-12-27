@@ -10,7 +10,7 @@
 
 <div class="col-md-12">
 
-<h4 class="text-center mt-3">Search results</h4>
+<h4 class="text-center mt-3">Search results by "{{$search_text}}"</h4>
 <a href={{ route('rfid.create') }} class="btn btn-success">Issue New ID</a>
 <table class="table table-bordered table-hover" style="font-size: 15px">
     <thead>

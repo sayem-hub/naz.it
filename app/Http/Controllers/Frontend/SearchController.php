@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Rfid;
 use Illuminate\Support\Facades\DB;
 
 class SearchController extends Controller
@@ -22,7 +21,8 @@ class SearchController extends Controller
                 //   ->orWhere('SurfaceArea','<', 10)
                 //   ->orWhere('LocalName','like','%'.$search_text.'%')
                 ->paginate(4);
-            return view('Frontend.rfid.search', ['rfids' => $rfids]);
+            return view('Frontend.rfid.search', ['rfids' => $rfids])
+                ->with('search_text', $search_text);
         }
 
         public function compSearch(Request $request)
@@ -38,7 +38,8 @@ class SearchController extends Controller
         //   ->orWhere('SurfaceArea','<', 10)
         //   ->orWhere('LocalName','like','%'.$search_text.'%')
         ->paginate(200);
-        return view('Frontend.computers.search', ['computers' => $computers]);
+        return view('Frontend.computers.search', ['computers' => $computers])
+            ->with('search_text', $search_text);
 
         }
 
@@ -55,7 +56,8 @@ class SearchController extends Controller
             //   ->orWhere('SurfaceArea','<', 10)
             //   ->orWhere('LocalName','like','%'.$search_text.'%')
             ->paginate(200);
-        return view('Frontend.received.search', ['received_items' => $received_items]);
+        return view('Frontend.received.search', ['received_items' => $received_items])
+            ->with('search_text', $search_text);
     }
     public function tabSearch(Request $request)
     {
@@ -70,7 +72,8 @@ class SearchController extends Controller
             //   ->orWhere('SurfaceArea','<', 10)
             //   ->orWhere('LocalName','like','%'.$search_text.'%')
             ->paginate(200);
-        return view('Frontend.kpiproject.tablet.search', ['tablets' => $tablets]);
+        return view('Frontend.kpiproject.tablet.search', ['tablets' => $tablets])
+            ->with('search_text', $search_text);
     }
 
     public function requisitionSearch(Request $request)
@@ -87,7 +90,8 @@ class SearchController extends Controller
             //   ->orWhere('SurfaceArea','<', 10)
             //   ->orWhere('LocalName','like','%'.$search_text.'%')
             ->paginate(1000);
-        return view('Frontend.requisition.search', ['requisitions' => $requisitions]);
+        return view('Frontend.requisition.search', ['requisitions' => $requisitions])
+            ->with('search_text', $search_text);
 }
 
     public function sentSearch(Request $request)
@@ -102,7 +106,8 @@ class SearchController extends Controller
         //   ->orWhere('SurfaceArea','<', 10)
         //   ->orWhere('LocalName','like','%'.$search_text.'%')
         ->paginate(1000);
-        return view('Frontend.sent.search', ['sentitems' => $sentitems]);
+        return view('Frontend.sent.search', ['sentitems' => $sentitems])
+            ->with('search_text', $search_text);
     }
 
         public function printerSearch(Request $request)
@@ -118,7 +123,8 @@ class SearchController extends Controller
             //   ->orWhere('SurfaceArea','<', 10)
             //   ->orWhere('LocalName','like','%'.$search_text.'%')
             ->paginate(1000);
-        return view('Frontend.printers.search', ['printers' => $printers]);
+        return view('Frontend.printers.search', ['printers' => $printers])
+            ->with('search_text', $search_text);
         }
 }
 

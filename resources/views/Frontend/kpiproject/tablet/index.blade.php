@@ -6,31 +6,38 @@
         <div class="container-fluid">
 
 <div class="row">
-    <div class="col-md-0"></div>
-    <div class="col-md-13">
+    <div class="col-lg-12">
 
-        <h3 class="text-center mt-3">Android TAB List</h3>
+        <h4 class="text-center mt-3">Android TAB List</h4>
 
-        <form action="{{ route('tablet.search') }}" method="GET">
-            <div class="form-group">
-                <a href={{ route('tablet.create') }} class="btn btn-success">Add New Tab</a>
-                <a href="{{ route('create.tablet.pdf') }}" class="btn btn-warning btn-sm">PDF Report</a>
-                <div class="form-group row"><br>
-                    <div class="col-xs-3">
 
-                        <input type="text" class="form-control" name="query" placeholder="User name or Tab serial no."
-                            value="{{ request()->input('query') }}">
-                        <span class="text-danger">@error('query'){{ $message }}@enderror</span>
+        <form class="" action="{{ route('tablet.search') }}" method="GET">
+
+            <a href="{{ route('tablet.create') }}" class="btn btn-success"><i class="fa fa-plus"></i>New Tab</a>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="{{ route('create.tablet.pdf') }}" class="btn btn-warning btn-sm pull-right"> PDF Report</a>
+
+            </div>
+
+            <div class="col-xs-6 col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="User name or Tab serial no." name="query"
+                           id="txtSearch" value="{{ request()->input('query') }}">
+
+                    <div class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">
+                            <span class="search"><i class="fa fa-search fa-fw"></i>Search</span>
+                        </button>
+
                     </div>
-                    <button type="submit" class="btn btn-info">Search</button>
+                    <div class="text-danger">@error('query'){{ $message }}@enderror</div>
                 </div>
-
             </div>
         </form>
 
 
-
-<table class="table table-bordered table-hover" style="font-size: .9rem">
+<table class="table table-bordered table-hover" style="font-size: .75rem">
     <thead class="thead-dark">
       <tr>
        <th scope="col" style="text-align:center">SL</th>

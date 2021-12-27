@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('main')
 
-<h3 class="text-center mt-3">Search Results</h3>
+<h4 class="text-center mt-3">Search results by "{{$search_text}}"</h4>
 <a href="{{route('printer.create')}}" class="btn btn-success">Add New Printer</a>
 <table class="table table-bordered table-hover" style="font-size: 12px">
     <thead class="thead-dark">

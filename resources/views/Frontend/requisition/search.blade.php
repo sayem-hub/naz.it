@@ -7,7 +7,7 @@
 
             <div class="col-md-12">
 
-<h3 class="text-center mt-3">Search results</h3>
+<h4 class="text-center mt-3">Search results by "{{$search_text}}"</h4>
 <a href={{ route('requisition.add') }} class="btn btn-success"><i class="fa fa-plus"></i> Requisition</a>
 <table class="table table-bordered table-hover">
     <thead>

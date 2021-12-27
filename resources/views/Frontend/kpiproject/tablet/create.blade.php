@@ -2,11 +2,16 @@
 
 @section('main')
 
-<div class="row" style="color: rgb(71, 67, 67)">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <section class="contact-section pt-130">
+        <div class="container-fluid">
 
-        <h3 class="text-center mt-3">Add New Tablet</h3>
+            <div class="row" style="color: rgb(71, 67, 67)">
+                <div class="col-md-4"></div>
+                <div class="col-md-3">
+
+
+
+        <h4 class="text-center mt-3">Add New Tablet</h4>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -188,6 +193,9 @@
     </div>
 
 </div>
+
+        </div>
+    </section>
 
 
 @endsection

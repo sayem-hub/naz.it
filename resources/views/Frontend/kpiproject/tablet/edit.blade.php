@@ -2,11 +2,15 @@
 
 @section('main')
 
-<div class="row" style="color: rgb(80, 75, 75)">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <section class="contact-section pt-130">
+        <div class="container-fluid">
 
-        <h3 class="text-center mt-3">Edit Record</h3>
+            <div class="row" style="color: rgb(71, 67, 67)">
+                <div class="col-md-4"></div>
+                <div class="col-md-3">
+
+
+        <h4 class="text-center mt-3">Edit Record</h3>
 
         @csrf
 
@@ -194,6 +198,8 @@
     </div>
 
 </div>
+        </div>
+    </section>
 
 
 @endsection

@@ -1,28 +1,31 @@
 @extends('layouts.frontend')
 @section('main')
 
-<h3 class="text-center mt-3">Search Results</h3>
+    <section class="contact-section pt-130">
+        <div class="container-fluid">
+
+<h4 class="text-center mt-3">Search results by "{{$search_text}}"</h4>
 <a href="{{route('tablet.create')}}" class="btn btn-success">Add New Tab</a>
-<table class="table table-bordered table-hover" style="font-size: 14px">
+<table class="table table-bordered table-hover" style="font-size: .8rem">
     <thead class="thead-dark">
         <tr>
 
-            <th scope="col">#</th>
-            <th scope="col">Tab ID</th>
-            <th scope="col">Brand</th>
-            <th scope="col">Model</th>
-            <th scope="col">Size</th>
-            <th scope="col">Serial</th>
-            <th scope="col">IMEI 1</th>
-            <th scope="col">IMEI 2</th>
-            <th scope="col">User</th>
-            <th scope="col">Emp ID</th>
-            <th scope="col">Designation</th>
-            <th scope="col">Section</th>
-            <th scope="col">Dept.</th>
-            <th scope="col">Line</th>
-            <th scope="col">Status</th>
-            <th scope="col">Action</th>
+            <th scope="col" class="text-center">SL</th>
+            <th scope="col" class="text-center">Tab ID</th>
+            <th scope="col" class="text-center">Brand</th>
+            <th scope="col" class="text-center">Model</th>
+            <th scope="col" class="text-center">Size</th>
+            <th scope="col" class="text-center">Serial</th>
+            <th scope="col" class="text-center">IMEI 1</th>
+            <th scope="col" class="text-center">IMEI 2</th>
+            <th scope="col" class="text-center">User</th>
+            <th scope="col" class="text-center">Emp ID</th>
+            <th scope="col" class="text-center">Title</th>
+            <th scope="col" class="text-center">Sec</th>
+            <th scope="col" class="text-center">Dept.</th>
+            <th scope="col" class="text-center">Line</th>
+            <th scope="col" class="text-center">Status</th>
+            <th scope="col" class="text-center">Action</th>
 
         </tr>
         </thead>
@@ -31,23 +34,23 @@
             @foreach($tablets as $key=>$tablet)
 
             <tr>
-                <th scope="row">{{$key+1}}</th>
-                <td>{{$tablet->tab_id}}</td>
-                <td>{{$tablet->brand}}</td>
-                <td>{{$tablet->model}}</td>
-                <td>{{$tablet->size}}</td>
-                <td>{{$tablet->serial}}</td>
-                <td>{{$tablet->imei_1}}</td>
-                <td>{{$tablet->imei_2}}</td>
-                <td>{{$tablet->user}}</td>
-                <td>{{$tablet->emp_id}}</td>
-                <td>{{$tablet->designation}}</td>
-                <td>{{$tablet->section}}</td>
-                <td>{{$tablet->department}}</td>
-                <td>{{$tablet->line_no}}</td>
-                <td>{{$tablet->status}}</td>
+                <th scope="row" class="text-center">{{$key+1}}</th>
+                <td class="text-center">{{$tablet->tab_id}}</td>
+                <td class="text-center">{{$tablet->brand}}</td>
+                <td class="text-center">{{$tablet->model}}</td>
+                <td class="text-center">{{$tablet->size}}</td>
+                <td class="text-center">{{$tablet->serial}}</td>
+                <td class="text-center">{{$tablet->imei_1}}</td>
+                <td class="text-center">{{$tablet->imei_2}}</td>
+                <td class="text-center">{{$tablet->user}}</td>
+                <td class="text-center">{{$tablet->emp_id}}</td>
+                <td class="text-center">{{$tablet->designation}}</td>
+                <td class="text-center">{{$tablet->section}}</td>
+                <td class="text-center">{{$tablet->department}}</td>
+                <td class="text-center">{{$tablet->line_no}}</td>
+                <td class="text-center">{{$tablet->status}}</td>
                 {{-- <td>{{$tablet->notes}}</td> --}}
-                <td>
+                <td class="text-center">
                     <a class="btn btn-secondary" href="{{ route('tablet.edit', $tablet->id) }}">Edit</a>
 
                 </td>
@@ -58,7 +61,7 @@
         </tbody>
         </table>
         </div>
-        </div>
-        {{-- {{$computers->links('pagination::bootstrap-4')}} --}}
+
+    </section>
 
         @endsection
