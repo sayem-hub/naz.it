@@ -46,15 +46,18 @@
                             data-wow-delay=".5s">
                         <img src="{{ asset ('assets/frontend/images/hero/dots.shape.svg')}}" alt="" class="dot-shape">
                         <div class="video-btn">
-                            <a href="{{ route('home') }}"
+                            <a href="{{ route('admin.login') }}"
                                 class="glightbox"><i class="lni lni-play"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
+
+
 </section>
 <!-- ========================= hero-section end ========================= -->
 
-            @endsection
+@endsection

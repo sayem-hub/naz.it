@@ -27,6 +27,7 @@ class CreateERequestsTable extends Migration
             $table->string('pro_id', 200)->nullable();
             $table->string('mail_group', 200)->nullable();
             $table->string('referred_by', 200);
+            $table->string('status', 200);
             $table->string('approved_by', 200)->nullable();
             $table->timestamps();
         });

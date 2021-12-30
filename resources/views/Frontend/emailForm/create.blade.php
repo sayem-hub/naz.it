@@ -1,36 +1,37 @@
 @extends('layouts.frontend')
 @section('main')
 
-<section class="contact-section pt-100">
+<section class="contact-section pt-130">
 
     <div class="container">
 
-@if ($errors->any())
-<div class="alert alert-danger">
-    <ul>
-        @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
 
-<div style="margin-top: 30px">
-    @if(session()->has('message'))
-    <div class="alert alert-success mt-3">
-        {{ session()->get('message') }}
-    </div>
-    @endif
-</div>
-
-
-<div class="row">
-    <h4 class="text-center">Email ID Opening Form</h4>
-    <p class="text-center">To apply for an email account please fill out the form and click the Apply button.<br> (<span
-            style="color: red">*</span>) Marks field are mandatory!</p>
+        <div class="row">
+                <h4 class="text-center">Email ID Opening Form</h4>
+                <p class="text-center">To apply for an email account please fill out the form and click the Apply button.<br> (<span
+                        style="color: red">*</span>) Marks field are mandatory!</p>
 
                 <div class="col-md-3"></div>
                     <div class="col-md-6 ">
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        <div style="margin-top: 30px">
+                            @if(session()->has('message'))
+                                <div class="alert alert-success mt-3">
+                                    {{ session()->get('message') }}
+                                </div>
+                            @endif
+                        </div>
+
                         <div class="card">
 
 
@@ -52,6 +53,7 @@
                     </div>
 
 
+
                     <div class="form-group has-success has-feedback">
                         <label class="col-xs-4 control-label" for="inputSuccess">Nick Name</label>
                         <div class="col-xs-8">
@@ -59,7 +61,6 @@
                                 placeholder="Write your nick name">
                         </div>
                     </div>
-
 
                     <div class="form-group has-success has-feedback">
                         <label class="col-xs-4 control-label" for="inputSuccess">Designation<span
@@ -70,7 +71,6 @@
                         </div>
                     </div>
 
-
                     <div class="form-group has-success has-feedback">
                         <label class="col-xs-4 control-label" for="inputSuccess">Employee ID<span
                                 style="color: red">*</span></label>
@@ -79,7 +79,6 @@
                         </div>
                     </div>
 
-
                     <div class="form-group has-success has-feedback">
                         <label class="col-xs-4 control-label" for="inputSuccess">Section</label>
                         <div class="col-xs-8">
@@ -87,7 +86,6 @@
                                 placeholder="Write your section name">
                         </div>
                     </div>
-
 
                     <div class="form-group has-success has-feedback">
                         <label class="col-xs-4 control-label" for="inputSuccess">Department<span
@@ -98,7 +96,6 @@
                         </div>
                     </div>
 
-
                     <div class="form-group has-success has-feedback">
                         <label class="col-xs-4 control-label" for="inputSuccess">Date of Join<span
                                 style="color: red">*</span></label>
@@ -106,7 +103,6 @@
                             <input type="date" name="doj" id="inputSuccess" class="form-control">
                         </div>
                     </div>
-
 
                     <div class="form-group has-success has-feedback">
                         <label class="col-xs-4 control-label" for="inputSuccess">Mobile No.<span
@@ -117,7 +113,6 @@
                         </div>
                     </div>
 
-
                     <div class="form-group has-success has-feedback">
                         <label class="col-xs-4 control-label" for="inputSuccess">Proposed Email ID</label>
                         <div class="col-xs-8">
@@ -127,7 +122,6 @@
                                 name@nz-bd.com</span>
                         </div>
                     </div>
-
 
                     <div class="form-group has-success has-feedback">
                         <label class="col-xs-4 control-label" for="inputSuccess">Proposed Email Group</label>
@@ -156,13 +150,19 @@
                         </div>
                     </div>
 
-                    <div class="bg-light text-right">
+                    <div class="bg-light py-2">
                         <button type="submit" class="btn btn-success">Apply</button>
 
                     </div>
+
+            </form>
+
             </div>
+        </div>
 
-</div>
+        </div>
 
-        </section>
-            @endsection
+        </div>
+    </div>
+</section>
+@endsection

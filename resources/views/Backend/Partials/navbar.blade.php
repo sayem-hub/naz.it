@@ -78,6 +78,13 @@
           </a>
         </li>
 
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('user.request') }}">
+                  <span data-feather="bar-chart-2"></span>
+                  User Request
+              </a>
+          </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{{ route('import.export') }}">
             <span data-feather="bar-chart-2"></span>

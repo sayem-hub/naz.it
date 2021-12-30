@@ -11,13 +11,13 @@ class EmailController extends Controller
     public function index() {
 
         $emailrequestforms = eRequest::orderBy('id', 'desc')->paginate(15);
-        return view('Frontend.emailform.index', compact('emailrequestforms'));
+        return view('Frontend.emailForm.index', compact('emailrequestforms'));
 
     }
 
     public function create(){
 
-        return view('Frontend.emailform.create');
+        return view('Frontend.emailForm.create');
     }
     public function store(Request $request)
     {
@@ -44,11 +44,11 @@ class EmailController extends Controller
                 'pro_id' => $request->input('pro_id'),
                 'mail_group' => $request->input('mail_group'),
                 'referred_by' => $request->input('referred_by'),
-                'approved_by' => $request->input('approved_by'),
+                'status' => 'Pending',
             ];
 
             eRequest::create($data);
-            return redirect()->route('new.mail.form.create')->with('message', 'Application successful! You have to wait some time for revewing your application by HR and IT Dept.');
+            return redirect()->route('new.mail.form.create')->with('message', 'Application submitted successfully! You will have to wait a while for your application to be reviewed by the HR and IT department.');
 
         } catch (\Exception $exception) {
             return redirect()->back()->withErrors($exception->getMessage());
