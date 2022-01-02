@@ -29,7 +29,6 @@ class EmailController extends Controller
                 'department' => 'required',
                 'doj'=>'required',
                 'mobile'=>'required',
-                'referred_by'=>'required',
             ]);
 
             $data = [

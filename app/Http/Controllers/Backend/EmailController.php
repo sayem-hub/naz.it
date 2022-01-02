@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Mail\AutoMail;
 use App\Models\eRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller
 {
@@ -37,7 +39,9 @@ class EmailController extends Controller
             'status' => $request->input('status'),
         ];
 
+
         $eRequest->update($data);
+        Mail::to('sayem74@gmail.com')->cc(['sayem.it@nz-bd.com', 'anait@nz-bd.com'])->send(new AutoMail($eRequest));
         return redirect()->route('user.request');
     }
 

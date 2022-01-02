@@ -143,8 +143,7 @@
 
 
                     <div class="form-group has-success has-feedback">
-                        <label class="col-xs-4 control-label" for="inputSuccess">Referrence<span
-                                style="color: red">*</span></label>
+                        <label class="col-xs-4 control-label" for="inputSuccess">Reference</label>
                         <div class="col-xs-8">
                             <input type="text" name="referred_by" id="inputSuccess" class="form-control">
                         </div>
