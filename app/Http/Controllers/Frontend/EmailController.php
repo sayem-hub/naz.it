@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\eRequest;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Null_;
 
 class EmailController extends Controller
 {
@@ -52,6 +53,13 @@ class EmailController extends Controller
         } catch (\Exception $exception) {
             return redirect()->back()->withErrors($exception->getMessage());
         }
+    }
+
+    public function emailAddressList() {
+
+        $allEmailIDs = eRequest::where('created_address','=',!'Null')->paginate(500);
+        return view('Frontend.emailForm.all_mail_Ids', compact('allEmailIDs'));
+
     }
 }
 

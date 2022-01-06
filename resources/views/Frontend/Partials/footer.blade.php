@@ -7,17 +7,17 @@
             <div class="footer-social-links ">
                 <ul class="d-flex align-items-center justify-content-center">
 
-                    <li><a class="text-center wow fadeInUp" data-wow-delay=".1s" href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
-                    <li><a class="text-center wow fadeInUp" data-wow-delay=".3s" href="javascript:void(0)"><i class="lni lni-twitter-filled"></i></a></li>
-                    <li><a class="text-center wow fadeInUp" data-wow-delay=".5s" href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                    <li><a class="text-center wow fadeInUp" data-wow-delay=".7s" href="javascript:void(0)"><i class="lni lni-instagram-filled"></i></a></li>
+                    <li><a class="text-center wow fadeInUp" data-wow-delay=".1s" href="https://www.facebook.com/Vsayem"><i class="lni lni-facebook-filled"></i></a></li>
+                    <li><a class="text-center wow fadeInUp" data-wow-delay=".3s" href="https://twitter.com/sayem74"><i class="lni lni-twitter-filled"></i></a></li>
+                    <li><a class="text-center wow fadeInUp" data-wow-delay=".5s" href="https://www.linkedin.com/in/sayem74/"><i class="lni lni-linkedin-original"></i></a></li>
+                    <li><a class="text-center wow fadeInUp" data-wow-delay=".7s" href="https://www.facebook.com/Vsayem"><i class="lni lni-instagram-filled"></i></a></li>
 
                 </ul>
             </div>
 
             <div class=" mt-3">
-                    <p class="text-center wow fadeInUp fs-6 fw-lighter" data-wow-delay=".9s" >Copyright © 2021-<?php echo date("Y");?>,  <a target="_blank" href="mailto:sayem74@gmail.com">ICT DEPARTMENT,
-                     NAZ</a> Developed by Sayem </p>
+                    <p class="text-center wow fadeInUp fs-6 fw-lighter" data-wow-delay=".9s" > <small>Copyright © 2021-<?php echo date("Y");?>,  <a target="_blank" href="mailto:sayem74@gmail.com">ICT DEPARTMENT,
+                     NAZ</a> Developed by Sayem </small> </p>
              </div>
 
         </div>

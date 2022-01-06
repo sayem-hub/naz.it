@@ -588,7 +588,7 @@ progress {
     width: 100%;
     max-width: 100%;
     padding-right: calc(var(--bs-gutter-x) / 2);
-    padding-left: calc(var(--bs-gutter-x) / 2);
+   /*  padding-left: calc(var(--bs-gutter-x) / 2);  by Sayem*/
     margin-top: var(--bs-gutter-y);
 }
 .col {
@@ -7108,7 +7108,7 @@ fieldset:disabled .btn {
         margin-left: 3rem !important;
     }
     .ms-sm-auto {
-        margin-left: auto !important;
+        margin-left: 20px;
     }
     .p-sm-0 {
         padding: 0 !important;

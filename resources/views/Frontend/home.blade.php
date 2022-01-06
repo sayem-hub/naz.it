@@ -8,9 +8,9 @@
 <section id="home" class="hero-section">
 
     <div class="container">
-        <marquee width="60%" direction="left" height="100px">
+        {{--<marquee width="60%" direction="left" height="100px">
             <h2  class="text-success">Happy new year 2022 to all of my dear Colleagues!</h2>
-        </marquee>
+        </marquee>--}}
         <div class="row align-items-center">
 
             <div class="col-xl-5 col-lg-6">
@@ -35,19 +35,16 @@
                                 </a>
                                 @endif
 
-                            </div>
+                    </div>
                 </div>
-                        </div>
-
-
-
-
+            </div>
 
             </div>
+
             <div class="col-xl-7 col-lg-6">
                 <div class="hero-img">
                     <div class="d-inline-block hero-img-right">
-                        <img src="{{ asset('assets/frontend/images/hero/hero-img.png') }}" alt="" width="300px" height="300px" class="image wow fadeInRight"
+                        <img src="{{ asset('assets/frontend/images/hero/hero-img.png') }}" alt="" width="500px" height="450px" class="image wow fadeInRight"
                             data-wow-delay=".5s">
                         <img src="{{ asset ('assets/frontend/images/hero/dots.shape.svg')}}" alt="" class="dot-shape">
                         <div class="video-btn">

@@ -4,11 +4,11 @@
 
 <section id="service" class="service-section pt-130 ">
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-lg-12">
 
-        <h4 class="text-center">Computer Users List</h4>
+        <h4 class="text-center ">Computer Users List</h4>
 
                 <form class="" action="{{ route('computer.search') }}" method="GET">
 
@@ -56,9 +56,9 @@
             </form> --}}
 
 
-    <table class="table table-bordered table-hover">
+    <table class="table table-bordered w-auto small text-nowrap table-hover">
     <thead class="thead-dark">
-      <p><small><tr>
+    <tr>
        <th scope="col" style="text-align:center">SL</th>
         <th scope="col" style="text-align:center">Com ID</th>
         <th scope="col" style="text-align:center">Emp ID</th>
@@ -73,7 +73,7 @@
         <th scope="col" style="text-align:center">KP Status</th>
         <th scope="col" style="text-align:center">Action</th>
 
-      </tr> </small></p>
+      </tr>
     </thead>
     <tbody>
 
@@ -83,8 +83,8 @@
         <th scope="row" style="text-align:center">{{$key+1}}</th>
         <td style="text-align:center">{{$user->Comid}}</td>
         <td style="text-align:center">{{$user->Emp_id}}</td>
-        <td>{{$user->User}}</td>
-        <td>{{$user->Designation}}</td>
+        <td class="text-wrap">{{$user->User}}</td>
+        <td class="text-wrap">{{$user->Designation}}</td>
         <td style="text-align:center">{{$user->Comtype}}</td>
         <td style="text-align:center">{{$user->Ipadd}}</td>
         <td>{{$user->Email}}</td>

@@ -96,7 +96,8 @@ class HomeController extends Controller
             'Remarks' => $request->input('Remarks'),
         ];
         $computer->update($data);
-        return redirect()->route('computer.user');
+        return redirect()->back();
+//        return redirect()->route('computer.user');
     }
 
     public function ccamera(){

@@ -37,7 +37,7 @@
 
 
 
-<table class="table table-bordered table-hover text-wrap " style="font-size: .7rem;" >
+<table class="table table-bordered w-auto small text-nowrap table-hover" style="font-size: .69rem;" >
     <thead>
         <tr>
             <th scope="col" style="text-align:center">SL</th>
@@ -76,12 +76,12 @@
             <th scope="row" style="text-align:center">{{$key+1}}</th>
             <td>{{$item->Iname}}</td>
             <td style="text-align:center">{{$item->Brand}}</td>
-            <td style="text-align:center">{{$item->Model}}</td>
+            <td class="text-wrap" style="text-align:center">{{$item->Model}}</td>
             <td>{{$item->Serial}}</td>
-            <td>{{$item->User}}</td>
+            <td class="text-wrap">{{$item->User}}</td>
             <td>{{$item->Section}}</td>
             <td style="text-align:center">{{$item->Warranty}}</td>
-            <td style="text-align:center">{{$item->Supplier}}</td>
+            <td class="text-wrap" style="text-align:center">{{$item->Supplier}}</td>
             <td style="text-align:center">{{$item->Purdate}}</td>
             <td style="text-align:center">{{$item->Outdate}}</td>
             {{-- <td style="text-align:center">{{$item->Purdate->diffInDays->$item->Outdate}}</td> --}}
@@ -112,8 +112,8 @@
             <td style="text-align:center">{{$item->Sentfor}}</td>
             <td style="text-align:center">{{$item->To}}</td>
             <td style="text-align:center">{{$item->Grn}}</td>
-            <td> {{$item->Problems}}</td>
-            <td>{{$item->Notes}}</td>
+            <td class="text-wrap"> {{$item->Problems}}</td>
+            <td class="text-wrap">{{$item->Notes}}</td>
 
             @php
             if ( $item->Status == 'Pending'):

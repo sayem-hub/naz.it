@@ -42,7 +42,7 @@
                                         <li class="nav-item"><a href="{{ route('scanner.index') }}">Scanner</a></li>
                                         <li class="nav-item"><a href="{{ route('cc-camera') }}">CC Camera</a></li>
                                         <li class="nav-item"><a href="{{ route('toner.status') }}">Toner Status</a></li>
-
+                                        <li class="nav-item"><a class="page-scroll" href="{{ route('rfid.index') }}">Rfid</a></li>
                                         <li class="nav-item"><a href="#0">IT Policy</a></li>
                                     </ul>
                                 </li>
@@ -67,12 +67,22 @@
                                     <a class="page-scroll" href="{{ route('requisition.index') }}">Requisition</a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="{{ route('rfid.index') }}">Rfid</a>
-                                </li>
+
 
                                 <li class="nav-item">
                                     <a class="page-scroll" href="{{ route('kpi.home') }}">KPI</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)"
+                                       data-bs-toggle="collapse" data-bs-target="#submenu-1-3"
+                                       aria-controls="navbarSupportedContent" aria-expanded="false"
+                                       aria-label="Toggle navigation">Public </a>
+
+                                    <ul class="sub-menu collapse" id="submenu-1-3">
+                                        <li class="nav-item"><a class="page-scroll" href="{{ route('naz.email.list') }}">Email IDs</a></li>
+
+                                    </ul>
                                 </li>
 
 

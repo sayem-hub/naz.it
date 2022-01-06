@@ -2,14 +2,12 @@
 
 namespace App\Mail;
 
-use App\Models\eRequest;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use App\Http\Controllers\Backend\EmailController;
 
-class AutoMail extends Mailable
+class HREmailIdNotification extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,9 +16,9 @@ class AutoMail extends Mailable
      *
      * @return void
      */
-    public function __construct($eRequest)
+    public function __construct($createdIds)
     {
-        $this->eRequest = $eRequest;
+        $this->createdIds = $createdIds;
     }
 
     /**
@@ -29,8 +27,10 @@ class AutoMail extends Mailable
      * @return $this
      */
     public function build()
-    {
-        $data = $this->eRequest;
-        return $this->subject('Open a Mail account')->view('Backend.mail.mailToHo',compact('data'));
+            {
+
+                $data = $this->createdIds;
+                return $this->subject('A new email account has been created! ')->view('Backend.mail.mailToNazNewMailId',compact('data'));
+
     }
 }

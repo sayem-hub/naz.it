@@ -9,11 +9,12 @@
 
 
                 <div class="col-md-3"></div>
-                <div class="col-md-6 ">
+                <div class="col-md-6">
 
                     <div class="card">
                         <div class="card-header">
-                        <h4 class="text-center">Email ID Opening Request</h4></div>
+                        <h4 class="text-center">Email ID Opening Request</h4>
+                        </div>
 
 
                         <div class="card-body">
@@ -21,7 +22,7 @@
                             <p style="color: black">Dear Sir, <br> Please open a mail account as per below info. <br><br></p>
 
                             <table class="table table-bordered table-sm">
-                                <tr><td>{{'  '.'Employee ID'}} </td> <td>{{$all_request->office_id}}</td></tr>
+                                <tr><td> Employee ID </td> <td>{{$all_request->office_id}}</td></tr>
                                 <tr><td>Employee Name</td> <td>{{$all_request->full_name}}</td></tr>
                                 <tr><td>Nick Name</td> <td>{{$all_request->nick_name}}</td></tr>
                                 <tr><td>Designation</td> <td>{{$all_request->designation}}</td></tr>

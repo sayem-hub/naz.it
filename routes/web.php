@@ -23,6 +23,7 @@ Route::post('/registration', [App\Http\Controllers\Frontend\UserController::clas
 // Route::get('/new-mail-form', [App\Http\Controllers\Frontend\EmailController::class, 'index'])->name('new.mail.form');
 Route::get('/mail-opening-form', [App\Http\Controllers\Frontend\EmailController::class, 'create'])->name('new.mail.form.create');
 Route::post('/mail-opening-form', [App\Http\Controllers\Frontend\EmailController::class, 'store']);
+Route::get('/naz-email-address', [App\Http\Controllers\Frontend\EmailController::class, 'emailAddressList'])->name('naz.email.list');
 
 Route::get('/computer-request', [App\Http\Controllers\Frontend\ComprequestController::class, 'create'])->name('comp.request.create');
 Route::post('/computer-request', [App\Http\Controllers\Frontend\ComprequestController::class, 'store']);
@@ -184,6 +185,14 @@ Route::middleware(['auth'])->group(function () {
         Route::get('user-request/edit/{id}', [App\Http\Controllers\Backend\EmailController::class, 'editEmailRequest'])->name('edit.email.request');
         Route::post('user-request/edit/{id}', [App\Http\Controllers\Backend\EmailController::class, 'updateEmailRequest']);
         Route::get('user-request/view/{id}', [App\Http\Controllers\Backend\EmailController::class, 'viewEmailRequest'])->name('view.email.request');
+        Route::get('user-request/entry/email-address/{id}', [App\Http\Controllers\Backend\EmailController::class, 'editForCreatedID'])->name('editForEntry.email.request');
+        Route::post('user-request/entry/email-address/{id}', [App\Http\Controllers\Backend\EmailController::class, 'updateForCreatedID']);
+
+
+
+
+
+
 
         //Import/Export Route
         Route::get('importExport', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'importExport'])->name('import.export');

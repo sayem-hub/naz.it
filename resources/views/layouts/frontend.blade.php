@@ -27,27 +27,25 @@
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+
 
 {{-- ========================= preloader start ========================= --> --}}
-{{--    <div class="preloader">--}}
-{{--        <div class="loader">--}}
-{{--            <div class="spinner">--}}
-{{--                <div class="spinner-container">--}}
-{{--                    <div class="spinner-rotator">--}}
-{{--                        <div class="spinner-left">--}}
-{{--                            <div class="spinner-circle"></div>--}}
-{{--                        </div>--}}
-{{--                        <div class="spinner-right">--}}
-{{--                            <div class="spinner-circle"></div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+    {{--div class="preloader">
+        <div class="loader">
+            <div class="spinner">
+                <div class="spinner-container">
+                    <div class="spinner-rotator">
+                        <div class="spinner-left">
+                            <div class="spinner-circle"></div>
+                        </div>
+                        <div class="spinner-right">
+                            <div class="spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>--}}
 {{-- preloader end --}}
 
 @include('Frontend.Partials.header')

@@ -10,10 +10,10 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
-    
+
 
     <!-- Bootstrap core CSS -->
-<link href="{{asset('assets/backend/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" > 
+<link href="{{asset('assets/backend/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" >
 
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -41,25 +41,24 @@
       }
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <link href="{{asset('assets/backend/css/dashboard.css')}}" rel="stylesheet">
   </head>
   <body>
-    
+
 @include('backend.partials.header')
 
 <div class="container-fluid">
-  <div class="row">
-    
-@include('backend.partials.navbar')
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    @include('backend.partials.navbar')
 
-      @yield('main')
-      
-    </main>
-  </div>
+
+
+
+        @yield('main')
+
+
 </div>
 
 
