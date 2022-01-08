@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Mail\HREmailIdNotification;
 use App\Models\Requisition;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use PhpParser\Node\Expr\FuncCall;
+use App\Mail\RequisitionMail;
 
 class RequisitionController extends Controller
 {
@@ -49,7 +52,10 @@ class RequisitionController extends Controller
             ];
 
             Requisition::create($data);
-            return redirect()->route('requisition.index');
+
+            Mail::to(['sayem74@gmail.com', 'sayem.it@nz-bd.com'])->cc(['anait@nz-bd.com', 'sayem.imp@gmail.com'])->send(new RequisitionMail($data));
+            return redirect()->route('requisition.index')->with('message', "Updated and Email has sent Successfully!");
+
         } catch (\Exception $exception) {
             return redirect()->back()->withErrors($exception->getMessage());
         }

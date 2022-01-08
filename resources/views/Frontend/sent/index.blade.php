@@ -74,12 +74,12 @@
 
         <tr >
             <th scope="row" style="text-align:center">{{$key+1}}</th>
-            <td>{{$item->Iname}}</td>
+            <td class="text-wrap">{{$item->Iname}}</td>
             <td style="text-align:center">{{$item->Brand}}</td>
             <td class="text-wrap" style="text-align:center">{{$item->Model}}</td>
             <td>{{$item->Serial}}</td>
             <td class="text-wrap">{{$item->User}}</td>
-            <td>{{$item->Section}}</td>
+            <td class="text-wrap">{{$item->Section}}</td>
             <td style="text-align:center">{{$item->Warranty}}</td>
             <td class="text-wrap" style="text-align:center">{{$item->Supplier}}</td>
             <td style="text-align:center">{{$item->Purdate}}</td>
@@ -109,7 +109,7 @@
                 </td> --}}
 
             <td style="text-align:center">{{$item->Gpno}}</td>
-            <td style="text-align:center">{{$item->Sentfor}}</td>
+            <td class="text-wrap" style="text-align:center">{{$item->Sentfor}}</td>
             <td style="text-align:center">{{$item->To}}</td>
             <td style="text-align:center">{{$item->Grn}}</td>
             <td class="text-wrap"> {{$item->Problems}}</td>
@@ -124,12 +124,14 @@
             $color = '#737CA1';
             elseif ( $item->Status == 'Replaced'):
             $color = 'bisque';
+            elseif ( $item->Status == 'Returnable'):
+            $color = '#6bab90';
             else:
             $color = 'gray';
             endif;
             @endphp
 
-            <td style="background-color: {{$color}}; color: #3F000F; text-align:center;">{{ $item->Status }}</td>
+            <td style="background-color: {{$color}}; color: #3F000F; text-align:center; min-width: 95px;" class="btn btn-sm">{{ $item->Status }}</td>
 
             {{-- <td>{{$item->Status}}</td> --}}
             {{--<td>{{$item->created_at}}</td>--}}

@@ -109,7 +109,7 @@
                 <select class="form-control" id="status" name="status" requred>
                     <option selected>--Select--</option>
                     <option value="Pending">Pending</option>
-                    <option value="Nreturnable">Non-returnable</option>
+                    <option value="N-Return">Non-returnable</option>
                     <option value="Returnable">Returnable</option>
                     <option value="Using">Using</option>
                 </select>

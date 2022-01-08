@@ -110,7 +110,7 @@
                     <option value="Returned">Returned</option>
                     <option value="Not Solved">Not Solved</option>
                     <option value="Returnable">Returnable</option>
-                    <option value="Nreturnable">Non-returnable</option>
+                    <option value="N-Return">Non-returnable</option>
                     <option value="Using">Using</option>
                 </select>
             </div>
