@@ -7,9 +7,9 @@
 <div class="row">
     <div class="col-md-12">
 
-        <h4 class="text-center mt-3">New Email IDs</h4>
+        <h4 class="text-center mt-3">Search Results by "{{$search_text}}"</h4>
 
-        <form class="" action="{{route('email.address.search')}}" method="GET">
+        <form class="" action="#" method="GET">
 
 
 
@@ -51,30 +51,30 @@
     </thead>
     <tbody>
 
-    @foreach($allEmailIDs as $key=>$allEmailID)
+    @foreach($emailIds as $key=>$emailId)
 
       <tr>
         <th scope="row" style="text-align:center">{{$key+1}}</th>
-        <td style="text-align:center">{{$allEmailID->office_id}}</td>
-        <td>{{$allEmailID->full_name}}</td>
-        <td>{{$allEmailID->designation}}</td>
-        <td>{{$allEmailID->created_address}}</td>
-        <td>{{$allEmailID->department}}</td>
-        <td style="text-align:center">{{$allEmailID->updated_at}}</td>
-        {{-- <td>{{date('d/m/Y', strtotime($allEmailID>requisition_date))}}</td> --}}
+        <td style="text-align:center">{{$emailId->office_id}}</td>
+        <td>{{$emailId->full_name}}</td>
+        <td>{{$emailId->designation}}</td>
+        <td>{{$emailId->created_address}}</td>
+        <td>{{$emailId->department}}</td>
+        <td style="text-align:center">{{$emailId->updated_at}}</td>
+        {{-- <td>{{date('d/m/Y', strtotime($emailId>requisition_date))}}</td> --}}
 
 
        {{-- @php
-        if ( $allEmailID->status == 'Pending'):
+        if ( $emailId->status == 'Pending'):
         $color = 'red';
-        elseif ( $allEmailID->status == 'Received'):
+        elseif ( $emailId->status == 'Received'):
         $color = 'green';
         else:
         $color = 'gray';
         endif;
         @endphp
 
-        <td style="color: {{$color}}; text-align:center">{{ $allEmailID->status }}</td>--}}
+        <td style="color: {{$color}}; text-align:center">{{ $emailId->status }}</td>--}}
 
       </tr>
 
@@ -84,7 +84,7 @@
   </table>
     </div>
 </div>
-  {{$allEmailIDs->links('pagination::bootstrap-4')}}
+  {{$emailIds->links('pagination::bootstrap-4')}}
 </div>
     </section>
 @endsection

@@ -57,7 +57,7 @@ class EmailController extends Controller
 
     public function emailAddressList() {
 
-        $allEmailIDs = eRequest::where('created_address','=',!'Null')->paginate(500);
+        $allEmailIDs = eRequest::where('created_address','=',!'Null')->orderBy('id', 'desc')->paginate(500);
         return view('Frontend.emailForm.all_mail_Ids', compact('allEmailIDs'));
 
     }

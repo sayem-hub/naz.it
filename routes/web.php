@@ -24,6 +24,7 @@ Route::post('/registration', [App\Http\Controllers\Frontend\UserController::clas
 Route::get('/mail-opening-form', [App\Http\Controllers\Frontend\EmailController::class, 'create'])->name('new.mail.form.create');
 Route::post('/mail-opening-form', [App\Http\Controllers\Frontend\EmailController::class, 'store']);
 Route::get('/naz-email-address', [App\Http\Controllers\Frontend\EmailController::class, 'emailAddressList'])->name('naz.email.list');
+Route::get('/naz-email-address/search',[App\Http\Controllers\Frontend\SearchController::class, 'emailIdSearch'])->name('email.address.search');
 
 Route::get('/computer-request', [App\Http\Controllers\Frontend\ComprequestController::class, 'create'])->name('comp.request.create');
 Route::post('/computer-request', [App\Http\Controllers\Frontend\ComprequestController::class, 'store']);

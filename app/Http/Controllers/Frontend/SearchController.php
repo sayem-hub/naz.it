@@ -126,5 +126,23 @@ class SearchController extends Controller
         return view('Frontend.printers.search', ['printers' => $printers])
             ->with('search_text', $search_text);
         }
+
+
+    public function emailIdSearch(Request $request)
+
+    {
+        $request->validate(([
+            'query' => 'required|min:3'
+        ]));
+
+        $search_text = $request->input('query');
+        $emailIds = DB::table('e_requests')
+            ->where('full_name', 'LIKE', '%' . $search_text . '%')->orWhere('nick_name', 'LIKE', '%' . $search_text . '%')
+            //   ->orWhere('SurfaceArea','<', 10)
+            //   ->orWhere('LocalName','like','%'.$search_text.'%')
+            ->paginate(1000);
+        return view('Frontend.emailForm.search_all_mail_Ids', ['emailIds' => $emailIds])
+            ->with('search_text', $search_text);
+    }
 }
 
