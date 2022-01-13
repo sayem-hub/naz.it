@@ -35,7 +35,7 @@
 
 
 
-        <table class="table table-bordered text-nowrap table-hover">
+        <table class="table table-bordered text-nowrap table-hover" style="font-size: .8rem">
     <thead>
       <tr>
         <th scope="col" style="text-align:center">SL</th>
@@ -43,6 +43,7 @@
         <th scope="col" style="text-align:center">Employee Name</th>
         <th scope="col" style="text-align:center">Designation</th>
         <th scope="col" style="text-align:center">Email ID</th>
+        <th scope="col" style="text-align:center">Mobile No</th>
         <th scope="col" style="text-align:center">Department</th>
         <th scope="col" style="text-align:center">Created at</th>
 {{--        <th scope="col" style="text-align:center">Status</th>--}}
@@ -59,6 +60,7 @@
         <td>{{$allEmailID->full_name}}</td>
         <td>{{$allEmailID->designation}}</td>
         <td>{{$allEmailID->created_address}}</td>
+        <td>{{$allEmailID->mobile}}</td>
         <td>{{$allEmailID->department}}</td>
         <td style="text-align:center">{{$allEmailID->updated_at}}</td>
         {{-- <td>{{date('d/m/Y', strtotime($allEmailID>requisition_date))}}</td> --}}

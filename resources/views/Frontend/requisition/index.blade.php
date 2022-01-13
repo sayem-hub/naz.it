@@ -16,8 +16,23 @@
                         <a href="{{ route('requisition.add') }}" class="btn btn-success"><i class="fa fa-plus"></i>Requisition</a>
 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <a href="{{route('create.preq.pdf')}}" class="btn btn-danger btn-sm">Pending report</a>
-                                <a href="{{route('create.rreq.pdf')}}" class="btn btn-warning btn-sm">Receipt report</a>
+                                <a href="{{route('create.preq.pdf')}}">
+                                    <button type="button" class="btn btn-warning position-relative">Pending
+                                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                            {{$pendingCount}}<span class="visually-hidden">
+                                                unread messages</span></span></button></a>
+
+{{--                                $requisitions->where('status', '=', 'Pending')->count()--}}
+
+                                <a href="{{route('create.rreq.pdf')}}">
+                                    <button type="button" class="btn btn-success position-relative">Received
+                                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+                                            {{$receivedCount}}<span class="visually-hidden">
+                                                unread messages</span></span></button></a>
+
+
+
+{{--                                <a href="{{route('create.rreq.pdf')}}" class="btn btn-warning btn-sm">Receipt report</a>--}}
                             </div>
 
                         <div class="col-xs-6 col-md-4">

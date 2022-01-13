@@ -57,7 +57,12 @@
 
             <div class="mb-3">
                 <label for="model" class="form-label">Model (If applicable)</label>
-                <input type="text" class="form-control" name="model" id="model">
+                <input type="text" class="form-control" name="Model" id="Model">
+            </div>
+
+            <div class="mb-3">
+                <label for="model" class="form-label">Serial/Service Tag</label>
+                <input type="text" class="form-control" name="Serial_no" id="Serial_no">
             </div>
 
             <div class="mb-3">
@@ -166,12 +171,14 @@
                     <option value="IT">IT</option>
                     <option value="MIS">MIS</option>
                     <option value="Internal Audit">Internal Audit</option>
+                    <option value="Process Audit">Process Audit</option>
                     <option value="Compliance">Compliance</option>
                     <option value="Payroll">Payroll</option>
                     <option value="PD">PD</option>
                     <option value="Accounts">Accounts</option>
                     <option value="IE">IE</option>
                     <option value="CAD">CAD</option>
+                    <option value="Marketing">Marketing</option>
                     <option value="Delivery">Delivery</option>
                     <option value="Quality">Quality</option>
                     <option value="Finishing">Finishing</option>
@@ -198,6 +205,7 @@
                     <option value="Printing">Printing</option>
                     <option value="Production">Production</option>
                     <option value="Store">Store</option>
+                    <option value="Utility">Utility</option>
                     <option value="Maintenance">Maintenance</option>
                     <option value="Offset">Offset</option>
                     <option value="Elastic">Elastic</option>
@@ -221,6 +229,7 @@
                     <option value="Dyeing">Dyeing</option>
                     <option value="All Over Print">All Over Print</option>
                     <option value="Store">Store</option>
+                    <option value="Maintenance">Maintenance</option>
                     <option value="CAD">CAD</option>
                     <option value="NZ Accessories">NZ Accessories</option>
                     <option value="Embroidery">Embroidery</option>

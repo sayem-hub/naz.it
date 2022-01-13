@@ -130,6 +130,7 @@
                                 <option value="{{$eRequest->mail_group}}" selected>{{$eRequest->mail_group}}</option>
                                 <option value="all_emp">Default [all_emp@nz-bd.com]</option>
                                 <option value="merchandisers">Merchandising</option>
+                                <option value="maintenance">Maintenance</option>
                                 <option value="knitter">Knitting</option>
                                 <option value="dyeing">Dyeing</option>
                                 <option value="all_store">Store</option>

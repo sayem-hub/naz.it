@@ -12,7 +12,7 @@
 
                 <form class="" action="{{ route('computer.search') }}" method="GET">
 
-                    <a href={{ route('computer.user.create') }} class="btn btn-success"><i class="fa fa-plus"></i>New User</a>
+                    <a href="{{ route('computer.user.create') }}" class="btn btn-success"><i class="fa fa-plus"></i>New User</a>
 
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <a href="{{route('pdf.generate')}}" class="btn btn-warning btn-sm pull-right"> PDF Report</a>
@@ -56,7 +56,7 @@
             </form> --}}
 
 
-    <table class="table table-bordered w-auto small text-nowrap table-hover">
+    <table class="table table-bordered text-nowrap w-auto small table-hover">
     <thead class="thead-dark">
     <tr>
        <th scope="col" style="text-align:center">SL</th>
@@ -88,7 +88,7 @@
         <td style="text-align:center">{{$user->Comtype}}</td>
         <td style="text-align:center">{{$user->Ipadd}}</td>
         <td>{{$user->Email}}</td>
-        <td>{{$user->Section}}</td>
+        <td class="text-wrap">{{$user->Section}}</td>
         {{-- <td>{{$user->Department}}</td> --}}
 
             @php
@@ -104,7 +104,7 @@
             @endphp
 
             <td style="color: {{$color}}; text-align:center">{{ $user->Status }}</td>
-            <td style="text-align:center">{{$user->Kp_status}}</td>
+            <td class="text-wrap" style="text-align:center">{{$user->Kp_status}}</td>
 
         <td style="text-align:center">
           <a class="" href="{{route('computer.user.edit',$user->id)}}"><i class="fa fa-edit fa-lg"></i></a>

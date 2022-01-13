@@ -55,7 +55,7 @@ class EmailController extends Controller
 
 
             $eRequest->update($data);
-            Mail::to('ahsanul@nz-bd.com')->cc(['wajed@nz-bd.com', 'sayed.it@nz-bd.com', 'anait@nz-bd.com', 'sayem.it@nz-bd.com'])->send(new AutoMail($eRequest));
+            Mail::to('ahsanul@nz-bd.com')->cc(['wajed@nz-bd.com', 'sayed.it@nz-bd.com', 'anait@nz-bd.com', 'kalam@nz-bd.com', 'sayem.it@nz-bd.com'])->send(new AutoMail($eRequest));
             return redirect()->route('user.request')->with('message', "Email has sent Successfully!");
 
         } catch (\Exception $exception) {
@@ -110,7 +110,7 @@ class EmailController extends Controller
 
 
             $createdIds->update($data);
-            Mail::to(['sumon-hr@nz-bd.com', 'masum.hr@nz-bd.com', 'aminul.payroll@nz-bd.com', 'khalid@nz-bd.com', 'mahadi.hasan@nz-bd.com', 'anis.hr@nz-bd.com'])->cc(['ahsanul@nz-bd.com', 'anait@nz-bd.com', 'asadujjaman@nz-bd.com', 'tanvirsohel@nz-bd.com', 'sayem.it@nz-bd.com'])->send(new HREmailIdNotification($createdIds));
+            Mail::to(['sumon-hr@nz-bd.com', 'masum.hr@nz-bd.com', 'aminul.payroll@nz-bd.com', 'khalid@nz-bd.com', 'mahadi.hasan@nz-bd.com', 'anis.hr@nz-bd.com'])->cc(['ahsanul@nz-bd.com', 'anait@nz-bd.com', 'asadujjaman@nz-bd.com', 'tanvirsohel@nz-bd.com', 'kalam@nz-bd.com', 'sayem.it@nz-bd.com'])->send(new HREmailIdNotification($createdIds));
             return redirect()->route('user.request')->with('message', "Updated and Email has sent Successfully!");
 
             //->cc(['wajed@nz-bd.com', 'sayed.it@nz-bd.com', 'anait@nz-bd.com','sayem.it@nz-bd.com'])

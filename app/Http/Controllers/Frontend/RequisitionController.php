@@ -16,7 +16,14 @@ class RequisitionController extends Controller
     {
 
         $requisitions = Requisition::orderBy('id', 'desc')->paginate(20);
-        return view('Frontend.requisition.index', compact('requisitions'));
+        $pendingCount = Requisition::where('status', '=', 'Pending')->count();
+        $receivedCount = Requisition::where('status', '=', 'Received')->count();
+        return view('Frontend.requisition.index', compact('requisitions'))
+            ->with('pendingCount', $pendingCount)
+            ->with('receivedCount', $receivedCount);
+
+
+
     }
 
     public function create()
@@ -53,7 +60,7 @@ class RequisitionController extends Controller
 
             Requisition::create($data);
 
-            Mail::to(['sayem74@gmail.com', 'sayem.it@nz-bd.com'])->cc(['anait@nz-bd.com', 'sayem.imp@gmail.com'])->send(new RequisitionMail($data));
+            Mail::to(['wajed@nz-bd.com', 'hasan.scm@nz-bd.com'])->cc(['jahangir.scm@nz-bd.com', 'sayed.it@nz-bd.com', 'anait@nz-bd.com', 'kalam@nz-bd.com', 'sayem.it@nz-bd.com'])->send(new RequisitionMail($data));
             return redirect()->route('requisition.index')->with('message', "Updated and Email has sent Successfully!");
 
         } catch (\Exception $exception) {

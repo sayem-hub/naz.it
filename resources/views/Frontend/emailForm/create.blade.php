@@ -7,43 +7,41 @@
 
 
         <div class="row">
-                <h4 class="text-center">Email ID Opening Form</h4>
-                <p class="text-center">To apply for an email account please fill out the form and click the Apply button.<br> (<span
-                        style="color: red">*</span>) Marks field are mandatory!</p>
+
 
                 <div class="col-md-3"></div>
-                    <div class="col-md-6 ">
+                    <div class="col-md-7 ">
 
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
 
-                        <div style="margin-top: 30px">
-                            @if(session()->has('message'))
-                                <div class="alert alert-success mt-3">
-                                    {{ session()->get('message') }}
+                        <div class="card bg-info mb-2">
+                            <h4 class="text-center mt-3">Email ID Opening Form</h4>
+                            <p class="text-center">To apply for an email account please fill out the form and click the Apply button.<br> (<span
+                                    style="color: red">*</span>) Marks field are mandatory!</p>
+
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
                                 </div>
                             @endif
-                        </div>
 
-                        <div class="card">
-
+                            <div >
+                                @if(session()->has('message'))
+                                    <div class="alert alert-success mt-3">
+                                        {{ session()->get('message') }}
+                                    </div>
+                                @endif
+                            </div>
 
 
             <div class="card-body">
 
-
-                <form class="form-horizontal" action="{{ route('new.mail.form.create') }}" method="post">
+                <form class="form" action="{{ route('new.mail.form.create') }}" method="post">
                     @csrf
-
-
-                    <div class="form-group has-success has-feedback">
+                    <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Full Name<span
                                 style="color: red">*</span></label>
                         <div class="col-xs-8">
@@ -52,9 +50,7 @@
                         </div>
                     </div>
 
-
-
-                    <div class="form-group has-success has-feedback">
+                    <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Nick Name</label>
                         <div class="col-xs-8">
                             <input type="text" name="nick_name" id="inputSuccess" class="form-control"
@@ -62,7 +58,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group has-success has-feedback">
+                    <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Designation<span
                                 style="color: red">*</span></label>
                         <div class="col-xs-8">
@@ -71,7 +67,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group has-success has-feedback">
+                    <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Employee ID<span
                                 style="color: red">*</span></label>
                         <div class="col-xs-8">
@@ -79,7 +75,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group has-success has-feedback">
+                    <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Section</label>
                         <div class="col-xs-8">
                             <input type="text" name="section" id="inputSuccess" class="form-control"
@@ -87,7 +83,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group has-success has-feedback">
+                    <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Department<span
                                 style="color: red">*</span></label>
                         <div class="col-xs-8">
@@ -96,7 +92,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group has-success has-feedback">
+                    <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Date of Join<span
                                 style="color: red">*</span></label>
                         <div class="col-xs-8">
@@ -104,7 +100,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group has-success has-feedback">
+                    <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Mobile No.<span
                                 style="color: red">*</span></label>
                         <div class="col-xs-8">
@@ -113,7 +109,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group has-success has-feedback">
+                    <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Proposed Email ID</label>
                         <div class="col-xs-8">
                             <input type="email" name="pro_id" id="inputError" class="form-control"
@@ -123,12 +119,13 @@
                         </div>
                     </div>
 
-                    <div class="form-group has-success has-feedback">
+                    <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Proposed Email Group</label>
                         <div class="col-xs-8">
                             <select class="form-control" name="mail_group">
                                 <option value="all_emp" selected>Default [all_emp@nz-bd.com]</option>
                                 <option value="merchandisers">Merchandising</option>
+                                <option value="maintenance">Maintenance</option>
                                 <option value="knitter">Knitting</option>
                                 <option value="dyeing">Dyeing</option>
                                 <option value="all_store">Store</option>
@@ -142,14 +139,14 @@
                     </div>
 
 
-                    <div class="form-group has-success has-feedback">
+                    <div class="form-group mb-3">
                         <label class="col-xs-4 control-label" for="inputSuccess">Reference</label>
                         <div class="col-xs-8">
                             <input type="text" name="referred_by" id="inputSuccess" class="form-control">
                         </div>
                     </div>
 
-                    <div class="bg-light py-2">
+                    <div class="d-grid gap-2">
                         <button type="submit" class="btn btn-success">Apply</button>
 
                     </div>

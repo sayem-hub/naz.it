@@ -9,7 +9,7 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Edit Record</h3>
+        <h3 class="text-center mt-3">Edit Record test</h3>
         <form action="{{route('computer.user.edit',$computer->id)}}" method="post">
         @csrf
             <div class="mb-3">
@@ -56,10 +56,16 @@
                     </select>
                 </div>
 
+
                 <div class="mb-3">
                     <label for="Model" class="form-label">Model (If applicable)</label>
                     <input type="text" class="form-control" name="Model" id="Model" value="{{ $computer->Model }}">
                 </div>
+
+            <div class="mb-3">
+                <label for="model" class="form-label">Serial/Service Tag</label>
+                <input type="text" class="form-control" name="Serial_no" id="Serial_no" value="{{$computer->Serial_no}}">
+            </div>
 
                 <div class="mb-3">
                     <label for="Spec" class="form-label">Specification</label>
@@ -165,12 +171,14 @@
                     <option value="IT">IT</option>
                     <option value="MIS">MIS</option>
                     <option value="Internal Audit">Internal Audit</option>
+                    <option value="Process Audit">Process Audit</option>
                     <option value="Compliance">Compliance</option>
                     <option value="Payroll">Payroll</option>
                     <option value="PD">PD</option>
                     <option value="Accounts">Accounts</option>
                     <option value="IE">IE</option>
                     <option value="CAD">CAD</option>
+                    <option value="Marketing">Marketing</option>
                     <option value="Delivery">Delivery</option>
                     <option value="Quality">Quality</option>
                     <option value="Finishing">Finishing</option>
@@ -186,7 +194,7 @@
                     <option value="Inventory">Inventory</option>
                     <option value="Chemical Store">Chemical Store</option>
                     <option value="Yarn Store">Yarn Store</option>
-                  <option value="NZ Acc Store">NZ Acc Store</option>
+                    <option value="NZ Acc Store">NZ Acc Store</option>
                     <option value="Design">Design</option>
                     <option value="Testing LAB">Testing LAB</option>
                     <option value="Washing">Washing</option>
@@ -200,6 +208,7 @@
                     <option value="Offset">Offset</option>
                     <option value="Elastic">Elastic</option>
                     <option value="Maintenance">Maintenance</option>
+                    <option value="Utility">Utility</option>
                 </select>
             </div>
 
@@ -224,6 +233,7 @@
                 <option value="NZ Accessories">NZ Accessories</option>
                 <option value="Embroidery">Embroidery</option>
                 <option value="Printing">Printing</option>
+                    <option value="Maintenance">Maintenance</option>
 
                 </select>
             </div>

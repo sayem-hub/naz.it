@@ -39,7 +39,8 @@
                     <td>{{$requisition->required_for}}</td>
                     <td>{{$requisition->designation}}</td>
                     <td>{{$requisition->department}}</td>
-                    <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td>
+                    <td>{{$requisition->requisition_date}}</td>
+{{--                    <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td>--}}
                         @php
                         if ( $requisition->status == 'Pending'):
                         $color = 'red';

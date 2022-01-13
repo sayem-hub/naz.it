@@ -45,6 +45,7 @@ class HomeController extends Controller
             'Comtype' => $request->input('ComType'),
             'Brand' => $request->input('Brand'),
             'Model' => $request->input('Model'),
+            'Serial_no' => $request->input('Serial_no'),
             'Spec' => $request->input('Spec'),
             'Monitor' => $request->input('Monitor'),
             'Keyboard' => $request->input('Keyboard'),
@@ -82,6 +83,7 @@ class HomeController extends Controller
             'ComType' => $request->input('ComType'),
             'Brand' => $request->input('Brand'),
             'Model' => $request->input('Model'),
+            'Serial_no' => $request->input('Serial_no'),
             'Spec' => $request->input('Spec'),
             'Monitor' => $request->input('Monitor'),
             'Keyboard' => $request->input('Keyboard'),
@@ -96,8 +98,8 @@ class HomeController extends Controller
             'Remarks' => $request->input('Remarks'),
         ];
         $computer->update($data);
-        return redirect()->back();
-//        return redirect()->route('computer.user');
+//        return redirect()->back();
+         return redirect()->route('computer.user');
     }
 
     public function ccamera(){
@@ -184,18 +186,21 @@ class HomeController extends Controller
 
         public function sentItem()
         {
-        $items = Outitem::orderBy('id', 'desc')->paginate(20);
+            $items = Outitem::orderBy('id', 'desc')->paginate(20);
 
-            // $start_time = Carbon::parse($this->Purdate);
-            // $currentDate = Carbon::now();
-            // $diff = $currentDate->diff($start_time);
-            // dd($diff);
 
-            $used = Outitem::whereRaw ('datediff(now(), Purdate');
-            $days = Outitem::whereRaw('Warranty');
-            // $rem = $days-$used;
+          /*  $date = Outitem::select('Purdate')->get();
 
-        return view('Frontend.sent.index', compact('items'));
+            $difference = Carbon::parse($date)->diffInDays();*/
+
+
+
+
+//            $remaining_days = DB::table('outitems')->whereRaw(DATEDIFF('current_date', 'Purdate'))->get();
+
+
+        return view('Frontend.sent.index', compact('items'))
+            ->with('$difference', 'difference');
 
 
         // $warranty_remaining =Outitem::where('Purdate', 'diffInDays', 'Outdate');

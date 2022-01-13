@@ -37,7 +37,7 @@
 
 
 
-<table class="table table-bordered w-auto small text-nowrap table-hover" style="font-size: .69rem;" >
+<table class="table table-bordered text-nowrap table-hover" style="font-size: .69rem;" >
     <thead>
         <tr>
             <th scope="col" style="text-align:center">SL</th>
@@ -80,8 +80,10 @@
             <td>{{$item->Serial}}</td>
             <td class="text-wrap">{{$item->User}}</td>
             <td class="text-wrap">{{$item->Section}}</td>
-            <td style="text-align:center">{{$item->Warranty}}</td>
+            <td class="text-wrap">{{$item->Warranty}}</td>
             <td class="text-wrap" style="text-align:center">{{$item->Supplier}}</td>
+
+
             <td style="text-align:center">{{$item->Purdate}}</td>
             <td style="text-align:center">{{$item->Outdate}}</td>
             {{-- <td style="text-align:center">{{$item->Purdate->diffInDays->$item->Outdate}}</td> --}}
@@ -131,7 +133,7 @@
             endif;
             @endphp
 
-            <td style="background-color: {{$color}}; color: #3F000F; text-align:center; min-width: 95px;" class="btn btn-sm">{{ $item->Status }}</td>
+            <td style="background-color: {{$color}}; color: #3F000F; text-align:center; min-width: 100px; font-size: .7rem;" class="btn btn-sm">{{ $item->Status }}</td>
 
             {{-- <td>{{$item->Status}}</td> --}}
             {{--<td>{{$item->created_at}}</td>--}}
