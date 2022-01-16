@@ -17,22 +17,16 @@
 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                 <a href="{{route('create.preq.pdf')}}">
-                                    <button type="button" class="btn btn-warning position-relative">Pending
+                                    <button type="button" class="btn btn-warning btn-sm position-relative">Pending
                                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                             {{$pendingCount}}<span class="visually-hidden">
                                                 unread messages</span></span></button></a>
 
-{{--                                $requisitions->where('status', '=', 'Pending')->count()--}}
-
                                 <a href="{{route('create.rreq.pdf')}}">
-                                    <button type="button" class="btn btn-success position-relative">Received
+                                    <button type="button" class="btn btn-success btn-sm position-relative">Received
                                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
                                             {{$receivedCount}}<span class="visually-hidden">
                                                 unread messages</span></span></button></a>
-
-
-
-{{--                                <a href="{{route('create.rreq.pdf')}}" class="btn btn-warning btn-sm">Receipt report</a>--}}
                             </div>
 
                         <div class="col-xs-6 col-md-4">
@@ -112,8 +106,8 @@
                             <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"></a></td>
                             @else
 
-                            <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"><i
-                                        class="fa fa-eye fa-lg"></i><i class="fa fa-eye fa-lg"></i></a>
+                            <td style="text-align:center;"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"><i
+                                        class="fa fa-eye fa-lg"></i></a>
                             </td>
                             @endif
 
@@ -126,7 +120,7 @@
                             {{-- <td>{{$requisition->status}}</td> --}}
                             {{-- <td>{{$requisition->notes}}</td> --}}
                             {{-- <td>{{date('d/m/Y', strtotime($requisition->created_at))}}</td> --}}
-                            <td style="text-align:center"><a class="" href="{{ route('requisition.edit', $requisition->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
+                            <td style="text-align:center"><a class="#" href="{{ route('requisition.edit', $requisition->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
                           </tr>
 
                           @endforeach

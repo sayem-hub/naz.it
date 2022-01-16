@@ -14,9 +14,37 @@
 
                     <a href="{{ route('computer.user.create') }}" class="btn btn-success"><i class="fa fa-plus"></i>New User</a>
 
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a href="{{route('pdf.generate')}}" class="btn btn-warning btn-sm pull-right"> PDF Report</a>
+                    <a href="{{route('pdf.generate')}}" class="btn btn-primary btn-sm pull-right"> PDF Report</a>
 
+                    {{--<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{route('pdf.generate')}}" class="btn btn-primary btn-sm pull-right"> PDF Report</a>
+
+                    </div>--}}
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="#">
+                            <button type="button" class="btn btn-warning btn-sm position-relative">Desktop
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                            {{$desktopCount}}<span class="visually-hidden">
+                                                unread messages</span></span></button></a>
+
+                        <a href="#">
+                            <button type="button" class="btn btn-success btn-sm position-relative">Laptop
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+                                            {{$laptopCount}}<span class="visually-hidden">
+                                                unread messages</span></span></button></a>
+
+                        <a href="#">
+                            <button type="button" class="btn btn-info btn-sm position-relative">Server
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                                            {{$serverCount}}<span class="visually-hidden">
+                                                unread messages</span></span></button></a>
+
+                        <a href="#">
+                            <button type="button" class="btn btn-secondary btn-sm position-relative">iMac
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                                            {{$imacCount}}<span class="visually-hidden">
+                                                unread messages</span></span></button></a>
                     </div>
 
                     <div class="col-xs-6 col-md-4">

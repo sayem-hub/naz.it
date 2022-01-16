@@ -55,7 +55,7 @@
                     <td>{{$requisition->received_date}}</td>
                     <td>{{$requisition->Grn}}</td>
                     <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"><i
-                                class="fa fa-eye fa-lg"></i><i class="fa fa-eye fa-lg"></i></a>
+                                class="fa fa-eye fa-lg"></i></a>
                     </td>
 
                     {{-- <td>{{$requisition->notes}}</td> --}}

@@ -116,6 +116,7 @@
                     <option value="Solved">Solved</option>
                     <option value="Returned">Returned</option>
                     <option value="Replaced">Replaced</option>
+                    <option value="Received">Received</option>
                     <option value="Not Solved">Not Solved</option>
                     </select>
             </div>

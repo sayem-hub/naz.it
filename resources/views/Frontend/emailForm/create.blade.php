@@ -5,17 +5,15 @@
 
     <div class="container">
 
-
         <div class="row">
-
-
                 <div class="col-md-3"></div>
                     <div class="col-md-7 ">
 
-
                         <div class="card bg-info mb-2">
-                            <h4 class="text-center mt-3">Email ID Opening Form</h4>
-                            <p class="text-center">To apply for an email account please fill out the form and click the Apply button.<br> (<span
+                            <div class="card-body">
+
+                            <h4 class="card-title text-center">Email ID Opening Form</h4>
+                            <p class="card-text text-center">To apply for an email account please fill out the form and click the Apply button.<br> (<span
                                     style="color: red">*</span>) Marks field are mandatory!</p>
 
                             @if ($errors->any())
@@ -157,6 +155,7 @@
         </div>
 
         </div>
+                    </div>
 
         </div>
     </div>

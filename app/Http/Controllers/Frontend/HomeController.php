@@ -26,7 +26,15 @@ class HomeController extends Controller
     public function computerUser()
     {
         $computers = Computer::orderBy('id', 'desc')->paginate(300);
-        return view('Frontend.computers.computerUser',compact('computers'));
+        $desktopCount = Computer::where('Comtype', '=', 'Desktop')->count();
+        $laptopCount = Computer::where('Comtype', '=', 'Laptop')->count();
+        $serverCount = Computer::where('Comtype', '=', 'Server')->count();
+        $imacCount = Computer::where('Comtype', '=', 'iMAC')->count();
+        return view('Frontend.computers.computerUser',compact('computers'))
+            ->with('desktopCount', $desktopCount)
+            ->with('laptopCount', $laptopCount)
+            ->with('serverCount', $serverCount)
+            ->with('imacCount', $imacCount);
     }
 
     public function create()
