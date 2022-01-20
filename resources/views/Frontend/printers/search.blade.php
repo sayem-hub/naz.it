@@ -1,9 +1,12 @@
 @extends('layouts.frontend')
 @section('main')
 
+    <section class="contact-section pt-130">
+        <div class="container">
+
 <h4 class="text-center mt-3">Search results by "{{$search_text}}"</h4>
-<a href="{{route('printer.create')}}" class="btn btn-success">Add New Printer</a>
-<table class="table table-bordered table-hover" style="font-size: 12px">
+<a href="{{route('printer.create')}}" class="btn btn-success"><i class="fa fa-plus"></i>New Printer</a>
+<table class="table table-bordered table-hover" style="font-size: .8rem">
     <thead class="thead-dark">
         <tr>
             <th scope="col" style="text-align:center">SL</th>
@@ -64,4 +67,6 @@
     </tbody>
 </table>
 {{$printers->links('pagination::bootstrap-4')}}
+        </div>
+    </section>
 @endsection

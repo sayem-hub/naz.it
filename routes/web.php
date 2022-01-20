@@ -181,6 +181,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\Backend\DashboardController::class, 'dashboard'])->name('dashboard');
         Route::get('logout', [App\Http\Controllers\Backend\LoginController::class, 'logout'])->name('admin.logout');
 
+        Route::get('nims-user', [App\Http\Controllers\Backend\UserController::class, 'index'])->name('nims.user.index');
+
+
         //Email ID and Computer Request
         Route::get('user-request', [App\Http\Controllers\Backend\EmailController::class, 'userRequest'])->name('user.request');
         Route::get('user-request/edit/{id}', [App\Http\Controllers\Backend\EmailController::class, 'editEmailRequest'])->name('edit.email.request');

@@ -49,9 +49,12 @@
 
 @include('backend.partials.header')
 
+
 <div class="container-fluid">
 
     @include('backend.partials.navbar')
+
+
 
 
 

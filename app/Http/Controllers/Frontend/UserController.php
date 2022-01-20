@@ -12,7 +12,12 @@ class UserController extends Controller
 {
     public function registration()
     {
+
+        /*$user = Auth::user();
+        dd($user);*/
         return view('Frontend.registration');
+
+
     }
 
     public function profile(){
@@ -68,7 +73,7 @@ class UserController extends Controller
                 'office_id' => $request->input('office_id'),
                 'phone' => $request->input('phone'),
                 'email' => $request->input('email'),
-                'password' => Hash::make('User#005'),
+                'password' => Hash::make('User#006'),
                 'department' => $request->input('department'),
                 'section' => $request->input('section'),
                 'company' => $request->input('company'),
@@ -89,6 +94,8 @@ class UserController extends Controller
         {
             return view('Frontend.login');
         }
+
+
 
         public function doLogin(Request $request)
         {
@@ -111,7 +118,9 @@ class UserController extends Controller
         public function logout(){
             auth()->logout();
             return redirect()->route('home');
+
         }
+
         }
 
 

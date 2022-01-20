@@ -48,11 +48,10 @@
             <th scope="col" style="text-align:center">User</th>
             <th scope="col" style="text-align:center">Section</th>
             <th scope="col" style="text-align:center">Wty</th>
+            <th scope="col" style="text-align:center">Pur date</th>
+            <th scope="col" style="text-align:center">Wty rem</th>
             <th scope="col" style="text-align:center">Supplier</th>
-            <th scope="col" style="text-align:center">Dop</th>
             <th scope="col" style="text-align:center">Sent on</th>
-            {{-- <th scope="col" style="text-align:center">Used</th> --}}
-            <th scope="col" style="text-align:center">Wrem</th>
             <th scope="col" style="text-align:center">GP</th>
             <th scope="col" style="text-align:center">Sent for</th>
             <th scope="col" style="text-align:center">To</th>
@@ -81,36 +80,30 @@
             <td class="text-wrap">{{$item->User}}</td>
             <td class="text-wrap">{{$item->Section}}</td>
             <td class="text-wrap">{{$item->Warranty}}</td>
+            <td class="" style="text-align:center">{{$item->Purdate}}</td>
+
+
+            @php
+                $purdate = strtotime($item->Purdate);
+
+                $warranty = ($item->Warranty);
+                $difference =time()- $purdate;
+                $differenceInDays = round(($warranty)-($difference/86400));
+            @endphp
+
+            @if($item->Purdate==!'Null')
+                <td class="" style="text-align:center">{{'-'}} </td>
+                @elseif($differenceInDays<=0)
+                <td class="text-danger" style="text-align:center">{{'Expired'}} </td>
+
+            @else
+            <td class="" style="text-align:center">{{$differenceInDays}} days</td>
+            @endif
+
+
             <td class="text-wrap" style="text-align:center">{{$item->Supplier}}</td>
-
-
-            <td style="text-align:center">{{$item->Purdate}}</td>
             <td style="text-align:center">{{$item->Outdate}}</td>
-            {{-- <td style="text-align:center">{{$item->Purdate->diffInDays->$item->Outdate}}</td> --}}
-
-
-            <td style="text-align:center">
-
-                {{-- {{ $item->Purdate->diffforHumans() }} --}}
-
-            </td>
-
-
-
-            {{-- <td>
-                    <?php
-                            $fdate = $item->Purdate;
-                            $tdate = $item->Outdate;
-                            $date1 = new DateTime($fdate);
-                            $date2 = new DateTime($tdate);
-                                    $interval = $date2->diff($date1);
-                                    $days = $interval->format('%a');
-                            echo $days.' ' .'days';
-
-                        ?>
-                </td> --}}
-
-            <td style="text-align:center">{{$item->Gpno}}</td>
+            <td class="text-wrap" style="text-align:center">{{$item->Gpno}}</td>
             <td class="text-wrap" style="text-align:center">{{$item->Sentfor}}</td>
             <td style="text-align:center">{{$item->To}}</td>
             <td style="text-align:center">{{$item->Grn}}</td>

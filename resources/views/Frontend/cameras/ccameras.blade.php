@@ -17,6 +17,7 @@
             <th scope="col" style="text-align:center">Location</th>
             <th scope="col" style="text-align:center">DVR No</th>
             <th scope="col" style="text-align:center">Status</th>
+            <th scope="col" style="text-align:center">Reason</th>
             <th scope="col" style="text-align:center">Updated at</th>
             <th scope="col" style="text-align:center">Action</th>
         </tr>
@@ -31,6 +32,7 @@
             <td>{{$ccamera->camlocation}}</td>
             <td style="text-align:center">{{$ccamera->dvr_no}}</td>
             <td style="text-align:center">{{$ccamera->status}}</td>
+            <td style="text-align:center">{{$ccamera->reason}}</td>
             <td style="text-align:center">{{$ccamera->updated_at}}</td>
 
             <td style="text-align:center">

@@ -11,22 +11,25 @@
 
         <h4 class="text-center mt-3">Printer List</h4>
 
-       <form action="{{ route('printer.search') }}" method="GET">
-        <div class="form-group">
-            <a href={{ route('printer.create') }} class="btn btn-success">Add New Printer</a>
-            <a href={{route('create.printer.pdf')}} class="btn btn-warning btn-sm">PDF Report</a>
-            <div class="form-group row">
-                <div class="col-xs-3">
-
-                    <input type="text" class="form-control" name="query" placeholder="User name or section or status"
-                        value="{{ request()->input('query') }}">
-                    <span class="text-danger">@error('query'){{ $message }}@enderror</span>
-                </div>
-                <button type="submit" class="btn btn-info">Search</button>
+        <form class="" action="{{ route('printer.search') }}" method="GET">
+            <a href="{{ route('printer.create') }}" class="btn btn-success"><i class="fa fa-plus"></i>New Printer</a>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="{{route('create.printer.pdf')}}" class="btn btn-warning btn-sm pull-right"> PDF Report</a>
             </div>
+            <div class="col-xs-6 col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="User name or section or status"
+                           id="txtSearch" name="query" value="{{ request()->input('query') }}">
 
-        </div>
-    </form>
+                    <div class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">
+                            <span class="search"><i class="fa fa-search fa-fw"></i>Search</span>
+                        </button>
+                    </div>
+                    <div class="text-danger">@error('query'){{ $message }}@enderror</div>
+                </div>
+            </div>
+        </form>
 
 
 

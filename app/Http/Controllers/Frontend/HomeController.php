@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\ComputerUser;
 use Illuminate\Http\Request;
 use App\Models\Computer;
 use App\Models\Ccamera;
@@ -11,6 +12,7 @@ use App\Models\Outitem;
 use Symfony\Component\Console\Output\Output;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use DateTime;
 
 class HomeController extends Controller
 {
@@ -25,11 +27,11 @@ class HomeController extends Controller
 
     public function computerUser()
     {
-        $computers = Computer::orderBy('id', 'desc')->paginate(300);
-        $desktopCount = Computer::where('Comtype', '=', 'Desktop')->count();
-        $laptopCount = Computer::where('Comtype', '=', 'Laptop')->count();
-        $serverCount = Computer::where('Comtype', '=', 'Server')->count();
-        $imacCount = Computer::where('Comtype', '=', 'iMAC')->count();
+        $computers = ComputerUser::orderBy('id', 'desc')->paginate(300);
+        $desktopCount = ComputerUser::where('Comtype', '=', 'Desktop')->count();
+        $laptopCount = ComputerUser::where('Comtype', '=', 'Laptop')->count();
+        $serverCount = ComputerUser::where('Comtype', '=', 'Server')->count();
+        $imacCount = ComputerUser::where('Comtype', '=', 'iMAC')->count();
         return view('Frontend.computers.computerUser',compact('computers'))
             ->with('desktopCount', $desktopCount)
             ->with('laptopCount', $laptopCount)
@@ -61,6 +63,7 @@ class HomeController extends Controller
             'ups' => $request->input('UPS'),
             'Ipadd' => $request->input('IPAdd'),
             'Email' => $request->input('EmailAddress'),
+            'Mobile' => $request->input('Mobile'),
             'Section' => $request->input('Section'),
             'Department' => $request->input('Department'),
             'Status' => $request->input('Status'),
@@ -69,19 +72,19 @@ class HomeController extends Controller
 
 
         ];
-        Computer::create($data);
+        ComputerUser::create($data);
 
         return redirect()->route('computer.user');
 }
     public function edit($id)
     {
-        $computer = Computer::find($id);
+        $computer = ComputerUser::find($id);
         return view('Frontend.computers.editCom',compact('computer'));
     }
     public function update(Request $request,$id)
 
     {
-        $computer = Computer::find($id);
+        $computer = ComputerUser::find($id);
 
         $data = [
             'Comid' => $request->input('ComputerID'),
@@ -99,6 +102,7 @@ class HomeController extends Controller
             'UPS' => $request->input('UPS'),
             'IPAdd' => $request->input('IPAdd'),
             'Email' => $request->input('EmailAddress'),
+            'Mobile' => $request->input('Mobile'),
             'Section' => $request->input('Section'),
             'Department' => $request->input('Department'),
             'Status' => $request->input('Status'),
@@ -128,6 +132,7 @@ class HomeController extends Controller
             'camlocation' => $request->input('camlocation'),
             'dvr_no' => $request->input('dvr_no'),
             'status' => $request->input('status'),
+            'reason' => $request->input('reason'),
         ];
 
         Ccamera::create($data);
@@ -148,6 +153,7 @@ class HomeController extends Controller
             'camlocation' => $request->input('camlocation'),
             'dvr_no' => $request->input('dvr_no'),
             'status' => $request->input('status'),
+            'reason' => $request->input('reason'),
         ];
         $ccamera->update($data);
         return redirect()->route('cc-camera');
@@ -197,18 +203,8 @@ class HomeController extends Controller
             $items = Outitem::orderBy('id', 'desc')->paginate(20);
 
 
-          /*  $date = Outitem::select('Purdate')->get();
+        return view('Frontend.sent.index', compact('items'));
 
-            $difference = Carbon::parse($date)->diffInDays();*/
-
-
-
-
-//            $remaining_days = DB::table('outitems')->whereRaw(DATEDIFF('current_date', 'Purdate'))->get();
-
-
-        return view('Frontend.sent.index', compact('items'))
-            ->with('$difference', 'difference');
 
 
         // $warranty_remaining =Outitem::where('Purdate', 'diffInDays', 'Outdate');

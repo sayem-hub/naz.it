@@ -162,6 +162,11 @@
             </div>
 
             <div class="mb-3">
+                <label for="Mobile" class="form-label">Mobile No.</label>
+                <input type="text" class="form-control" name="Mobile" id="Mobile">
+            </div>
+
+            <div class="mb-3">
                 <label for="Section" class="form-label">Section</label>
                 <select class="form-control" name="Section">
                     <option value="" selected>---Select from list---</option>

@@ -43,6 +43,18 @@
                     </div>
 
             <div class="mb-3">
+                <label for="reason" class="form-label">Reason</label>
+                <select class="form-control" name="reason">
+                    <option value="" selected>--Select--</option>
+                    <option value="Camera Damage">Camera Damage</option>
+                    <option value="Adapter Damage">Adapter Damage</option>
+                    <option value="Converter Damage">Converter Damage</option>
+                    <option value="No Power Cable">No Power Cable</option>
+                    <option value="No Coaxial Cable">No Coaxial Cabled</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
                 <label for="camstatus" class="form-label">Status</label>
                 <select class="form-control" name="status">
                     <option value="Active">Active</option>

@@ -33,7 +33,7 @@ class SearchController extends Controller
         ]);
 
         $search_text = $request->input('query');
-        $computers = DB::table('computers')
+        $computers = DB::table('computer_users')
         ->where('User', 'LIKE', '%' . $search_text . '%')->orWhere('Department', 'LIKE', '%' . $search_text . '%')->orWhere('Comid', 'LIKE', '%' . $search_text . '%')
         //   ->orWhere('SurfaceArea','<', 10)
         //   ->orWhere('LocalName','like','%'.$search_text.'%')

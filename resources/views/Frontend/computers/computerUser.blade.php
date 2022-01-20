@@ -95,10 +95,11 @@
         <th scope="col" style="text-align:center">Type</th>
         <th scope="col" style="text-align:center">IP address</th>
         <th scope="col" style="text-align:center">Email address</th>
+        <th scope="col" style="text-align:center">Mobile No.</th>
         <th scope="col" style="text-align:center">Section</th>
         {{-- <th scope="col" style="text-align:center">Department</th> --}}
         <th scope="col" style="text-align:center">Status</th>
-        <th scope="col" style="text-align:center">KP Status</th>
+{{--        <th scope="col" style="text-align:center">KP Status</th>--}}
         <th scope="col" style="text-align:center">Action</th>
 
       </tr>
@@ -111,11 +112,13 @@
         <th scope="row" style="text-align:center">{{$key+1}}</th>
         <td style="text-align:center">{{$user->Comid}}</td>
         <td style="text-align:center">{{$user->Emp_id}}</td>
+
         <td class="text-wrap">{{$user->User}}</td>
         <td class="text-wrap">{{$user->Designation}}</td>
         <td style="text-align:center">{{$user->Comtype}}</td>
         <td style="text-align:center">{{$user->Ipadd}}</td>
         <td>{{$user->Email}}</td>
+          <td style="text-align:center">{{$user->Mobile}}</td>
         <td class="text-wrap">{{$user->Section}}</td>
         {{-- <td>{{$user->Department}}</td> --}}
 
@@ -132,7 +135,7 @@
             @endphp
 
             <td style="color: {{$color}}; text-align:center">{{ $user->Status }}</td>
-            <td class="text-wrap" style="text-align:center">{{$user->Kp_status}}</td>
+{{--            <td class="text-wrap" style="text-align:center">{{$user->Kp_status}}</td>--}}
 
         <td style="text-align:center">
           <a class="" href="{{route('computer.user.edit',$user->id)}}"><i class="fa fa-edit fa-lg"></i></a>
