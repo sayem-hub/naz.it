@@ -42,6 +42,12 @@
                     <td style="text-align:center">{{$stocks93}}</td>
                 </tr>
 
+             <tr>
+                 <td style="text-align:center">4</td>
+                 <td style="text-align:center">55A</td>
+                 <td style="text-align:center">{{$stocks55}}</td>
+             </tr>
+
             </tbody>
         </table>
 
@@ -136,23 +142,22 @@
     <table class="table table-bordered table-hover" >
         <thead style="background-color: #07977f">
             <tr>
-                <th scope="col" style="text-align:center">SL</th>
-                <th scope="col" style="text-align:center">Month</th>
-                <th scope="col" style="text-align:center">Model</th>
-                <th scope="col" style="text-align:center">Total</th>
+                <th scope="col" class="text-center">SL</th>
+                <th scope="col" class="text-center">Month</th>
+                <th scope="col" class="text-center">Model</th>
+                <th scope="col" class="text-center">Total</th>
             </tr>
         </thead>
         <tbody>
 
-            @foreach ($current_data85 as $Key=>$alldata )
+            @foreach ($allTonerCount as $Key=>$count )
                 <tr>
                    {{-- <th scope="row" style="text-align:center">{{$key+1}}</th> --}}
                    <td style="text-align:center; font-weight: bold;">{{$loop->iteration}}</td>
-                    <td style="text-align:center">{{ $alldata->month_name}}</td>
-                    <td style="text-align:center">85A+26A</td>
-                    <td style="text-align:center">{{ $alldata->count }}</td>
+                    <td style="text-align:center">{{ $count->month_name}}</td>
+                    <td style="text-align:center">All </td>
+                    <td style="text-align:center">{{ $count->count }}</td>
                 </tr>
-
 
             @endforeach
 

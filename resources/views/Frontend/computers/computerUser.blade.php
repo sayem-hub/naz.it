@@ -84,23 +84,23 @@
             </form> --}}
 
 
-    <table class="table table-bordered text-nowrap w-auto small table-hover">
+    <table class="table table-bordered text-nowrap small table-hover">
     <thead class="thead-dark">
     <tr>
-       <th scope="col" style="text-align:center">SL</th>
-        <th scope="col" style="text-align:center">Com ID</th>
-        <th scope="col" style="text-align:center">Emp ID</th>
-        <th scope="col" style="text-align:center">Name</th>
-        <th scope="col" style="text-align:center">Designation</th>
-        <th scope="col" style="text-align:center">Type</th>
-        <th scope="col" style="text-align:center">IP address</th>
-        <th scope="col" style="text-align:center">Email address</th>
-        <th scope="col" style="text-align:center">Mobile No.</th>
-        <th scope="col" style="text-align:center">Section</th>
-        {{-- <th scope="col" style="text-align:center">Department</th> --}}
-        <th scope="col" style="text-align:center">Status</th>
-{{--        <th scope="col" style="text-align:center">KP Status</th>--}}
-        <th scope="col" style="text-align:center">Action</th>
+       <th scope="col" class="text-center">SL</th>
+        <th scope="col" class="text-center">Com ID</th>
+        <th scope="col" class="text-center">Emp ID</th>
+        <th scope="col" class="text-center">Name</th>
+        <th scope="col" class="text-center">Designation</th>
+        <th scope="col" class="text-center">Type</th>
+        <th scope="col" class="text-center">IP address</th>
+        <th scope="col" class="text-center">Email address</th>
+        <th scope="col" class="text-center">Mobile No.</th>
+{{--        <th scope="col" class=text-cente"r>Section</th>--}}
+        <th scope="col" class="text-center">Department</th>
+        <th scope="col" class="text-center">Status</th>
+{{--        <th scope="col" class=text-center>KP Status</th>--}}
+        <th scope="col" class="text-center">Action</th>
 
       </tr>
     </thead>
@@ -109,18 +109,18 @@
       @foreach($computers as $key=>$user)
 
       <tr>
-        <th scope="row" style="text-align:center">{{$key+1}}</th>
-        <td style="text-align:center">{{$user->Comid}}</td>
-        <td style="text-align:center">{{$user->Emp_id}}</td>
+        <th scope="row" class="text-center">{{$key+1}}</th>
+        <td class="text-center">{{$user->Comid}}</td>
+        <td class="text-center">{{$user->Emp_id}}</td>
 
         <td class="text-wrap">{{$user->User}}</td>
         <td class="text-wrap">{{$user->Designation}}</td>
-        <td style="text-align:center">{{$user->Comtype}}</td>
-        <td style="text-align:center">{{$user->Ipadd}}</td>
+        <td class="text-center">{{$user->Comtype}}</td>
+        <td class="text-center">{{$user->Ipadd}}</td>
         <td>{{$user->Email}}</td>
-          <td style="text-align:center">{{$user->Mobile}}</td>
-        <td class="text-wrap">{{$user->Section}}</td>
-        {{-- <td>{{$user->Department}}</td> --}}
+          <td class="text-center">{{$user->Mobile}}</td>
+{{--        <td class="text-wrap">{{$user->Section}}</td>--}}
+       <td class="text-wrap">{{$user->Department}}</td>
 
             @php
             if ( $user->Status == 'In repair'):
@@ -135,10 +135,10 @@
             @endphp
 
             <td style="color: {{$color}}; text-align:center">{{ $user->Status }}</td>
-{{--            <td class="text-wrap" style="text-align:center">{{$user->Kp_status}}</td>--}}
+{{--            <td class="text-wrap" class=text-center>{{$user->Kp_status}}</td>--}}
 
-        <td style="text-align:center">
-          <a class="" href="{{route('computer.user.edit',$user->id)}}"><i class="fa fa-edit fa-lg"></i></a>
+        <td class="text-center">
+          <a href="{{route('computer.user.edit',$user->id)}}"><i class="fa fa-edit fa-lg"></i></a>
 
         </td>
       </tr>
@@ -148,11 +148,12 @@
     </tbody>
   </table>
 
-  {{-- {{$computers->links('pagination::bootstrap-4')}} --}}
+   {{$computers->links('pagination::bootstrap-4')}}
 
 </div>
   </div>
 </div>
+
 </section>
 
 @endsection

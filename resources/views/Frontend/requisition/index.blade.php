@@ -48,22 +48,22 @@
                 <table class="table table-bordered table-hover">
                         <thead>
                           <tr>
-                            <th scope="col" style="text-align:center">SL</th>
-                            <th scope="col" style="text-align:center">Requisition</th>
-                            <th scope="col" style="text-align:center">Item(s)</th>
-                            <th scope="col" style="text-align:center">Required for</th>
-                            {{-- <th scope="col" style="text-align:center">Designation</th> --}}
-                            <th scope="col" style="text-align:center">Section</th>
-                            <th scope="col" style="text-align:center">Req date</th>
-                            <th scope="col" style="text-align:center">Status</th>
-                            <th scope="col" style="text-align:center">Rcv date</th>
-                            <th scope="col" style="text-align:center">GRN</th>
-                            <th scope="col" style="text-align:center">Challan</th>
-                            <th scope="col" style="text-align:center">Top</th>
+                            <th scope="col" class="text-center">SL</th>
+                            <th scope="col" class="text-center">Requisition</th>
+                            <th scope="col" class="text-center">Item(s)</th>
+                            <th scope="col" class="text-center">Required for</th>
+                            {{-- <th scope="col" class="text-center">Designation</th> --}}
+                            <th scope="col" class="text-center">Section</th>
+                            <th scope="col" class="text-center">Req date</th>
+                            <th scope="col" class="text-center">Status</th>
+                            <th scope="col" class="text-center">Rcv date</th>
+                            <th scope="col" class="text-center">GRN</th>
+                            <th scope="col" class="text-center">Challan</th>
+                            <th scope="col" class="text-center">Top</th>
 
                             {{-- <th scope="col">Notes</th> --}}
                             {{-- <th scope="col">Entry at</th> --}}
-                            <th scope="col" style="text-align:center">Action</th>
+                            <th scope="col" class="text-center">Action</th>
 
                           </tr>
                         </thead>
@@ -72,13 +72,13 @@
                         @foreach($requisitions as $key=>$requisition)
 
                           <tr>
-                            <th scope="row" style="text-align:center">{{$key+1}}</th>
-                            <td style="text-align:center">{{$requisition->requisition_no}}</td>
+                            <th scope="row" class="text-center">{{$key+1}}</th>
+                            <td class="text-center">{{$requisition->requisition_no}}</td>
                             <td >{{$requisition->item_names}}</td>
                             <td>{{$requisition->required_for}}</td>
                             {{-- <td>{{$requisition->designation}}</td> --}}
                             <td>{{$requisition->department}}</td>
-                            <td style="text-align:center">{{$requisition->requisition_date}}</td>
+                            <td class="text-center">{{$requisition->requisition_date}}</td>
 
                             @php
                             if ( $requisition->status == 'Pending'):
@@ -94,16 +94,16 @@
 
 
                             {{-- <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td> --}}
-                            <td style="text-align:center">{{$requisition->received_date}}</td>
-                            <td style="text-align:center">{{$requisition->Grn}}</td>
+                            <td class="text-center">{{$requisition->received_date}}</td>
+                            <td class="text-center">{{$requisition->Grn}}</td>
 
 
 
                             @if ($requisition->challan==!'Null')
-                            <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"></a></td>
+                            <td class="text-center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"></a></td>
                             @elseif ($requisition->challan=='create.jpg')
 
-                            <td style="text-align:center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"></a></td>
+                            <td class="text-center"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"></a></td>
                             @else
 
                             <td style="text-align:center;"><a href="{{ asset('upload/requisition/challans/'.$requisition->challan) }}"><i
@@ -113,23 +113,24 @@
 
 
 
-                            <td style="text-align:center">{{$requisition->pur_type}}</td>
+                            <td class="text-center">{{$requisition->pur_type}}</td>
 
 
 
                             {{-- <td>{{$requisition->status}}</td> --}}
                             {{-- <td>{{$requisition->notes}}</td> --}}
                             {{-- <td>{{date('d/m/Y', strtotime($requisition->created_at))}}</td> --}}
-                            <td style="text-align:center"><a class="#" href="{{ route('requisition.edit', $requisition->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
+                            <td class="text-center"><a class="#" href="{{ route('requisition.edit', $requisition->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
                           </tr>
 
                           @endforeach
 
                         </tbody>
                 </table>
+                {{$requisitions->links('pagination::bootstrap-4')}}
     </div>
 </div>
-  {{$requisitions->links('pagination::bootstrap-4')}}
+
 
 
 </section>

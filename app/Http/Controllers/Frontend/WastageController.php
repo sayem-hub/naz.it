@@ -20,7 +20,7 @@ class WastageController extends Controller
 
         $total = $motherboard+$hdd+$monitor+$casing+$toner+$ram;
 
-        $wastages = Wastage::orderBy('id' ,'desc')->paginate(2500);
+        $wastages = Wastage::orderBy('id' ,'desc')->paginate(50);
         return view('Frontend.wastage.index', compact('wastages'))
         ->with('motherboard', $motherboard)
         ->with('hdd', $hdd)

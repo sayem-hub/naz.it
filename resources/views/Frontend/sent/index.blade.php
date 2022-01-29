@@ -72,15 +72,15 @@
 
 
         <tr >
-            <th scope="row" style="text-align:center">{{$key+1}}</th>
+            <th scope="row" class="text-center ">{{$key+1}}</th>
             <td class="text-wrap">{{$item->Iname}}</td>
-            <td style="text-align:center">{{$item->Brand}}</td>
-            <td class="text-wrap" style="text-align:center">{{$item->Model}}</td>
+            <td class="text-center ">{{$item->Brand}}</td>
+            <td class="text-center text-wrap">{{$item->Model}}</td>
             <td>{{$item->Serial}}</td>
             <td class="text-wrap">{{$item->User}}</td>
             <td class="text-wrap">{{$item->Section}}</td>
             <td class="text-wrap">{{$item->Warranty}}</td>
-            <td class="" style="text-align:center">{{$item->Purdate}}</td>
+            <td class="text-center">{{$item->Purdate}}</td>
 
 
             @php

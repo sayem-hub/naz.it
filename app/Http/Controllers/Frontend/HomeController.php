@@ -27,7 +27,7 @@ class HomeController extends Controller
 
     public function computerUser()
     {
-        $computers = ComputerUser::orderBy('id', 'desc')->paginate(300);
+        $computers = ComputerUser::orderBy('id', 'desc')->paginate(50);
         $desktopCount = ComputerUser::where('Comtype', '=', 'Desktop')->count();
         $laptopCount = ComputerUser::where('Comtype', '=', 'Laptop')->count();
         $serverCount = ComputerUser::where('Comtype', '=', 'Server')->count();
@@ -198,17 +198,11 @@ class HomeController extends Controller
         return redirect()->route('received.goods');
         }
 
+
         public function sentItem()
         {
             $items = Outitem::orderBy('id', 'desc')->paginate(20);
-
-
         return view('Frontend.sent.index', compact('items'));
-
-
-
-        // $warranty_remaining =Outitem::where('Purdate', 'diffInDays', 'Outdate');
-
 
         }
 

@@ -34,26 +34,26 @@
         </div>
     </form>
 
-<table class="table table-bordered table-hover" style="font-size: 11px">
+<table class="table table-bordered table-hover" style="font-size: .8rem;">
     <thead>
       <tr>
-        <th scope="col" style="text-align:center">SL</th>
-        <th scope="col" style="text-align:center">Item name</th>
-        <!--<th scope="col"style="text-align:center">Quantity</th>-->
-        <th scope="col" style="text-align:center">Brand</th>
-        <th scope="col" style="text-align:center">Model</th>
-        <th scope="col" style="text-align:center">Serial no.</th>
-        <th scope="col" style="text-align:center">Supplier</th>
-        <th scope="col" style="text-align:center">Pur date</th>
-        <th scope="col" style="text-align:center">Wty</th>
-        <th scope="col" style="text-align:center">Challan no.</th>
-        <th scope="col" style="text-align:center">Challan</th>
-        <th scope="col" style="text-align:center">Req no.</th>
-        <th scope="col" style="text-align:center">P.type</th>
-        <th scope="col" style="text-align:center">User</th>
-        <th scope="col" style="text-align:center">Dept.</th>
-        {{-- <th scope="col"style="text-align:center">Notes</th> --}}
-        {{-- <th scope="col"style="text-align:center">Action</th> --}}
+        <th scope="col" class="text-center">SL</th>
+        <th scope="col" class="text-center">Item name</th>
+        <!--<th scope="col"class="text-center">Quantity</th>-->
+        <th scope="col" class="text-center">Brand</th>
+        <th scope="col" class="text-center">Model</th>
+        <th scope="col" class="text-center">Serial no.</th>
+        <th scope="col" class="text-center">Supplier</th>
+        <th scope="col" class="text-center">Pur date</th>
+        <th scope="col" class="text-center">Wty</th>
+        <th scope="col" class="text-center">Challan no.</th>
+        <th scope="col" class="text-center">Challan</th>
+        <th scope="col" class="text-center">Req no.</th>
+        <th scope="col" class="text-center">P.type</th>
+        <th scope="col" class="text-center">User</th>
+        <th scope="col" class="text-center">Dept.</th>
+        {{-- <th scope="col"class="text-center">Notes</th> --}}
+        {{-- <th scope="col"class="text-center">Action</th> --}}
 
       </tr>
     </thead>
@@ -62,21 +62,21 @@
     @foreach($incoming as $key=>$received)
 
       <tr>
-        <th scope="row" style="text-align:center">{{$key+1}}</th>
+        <th scope="row" class="text-center">{{$key+1}}</th>
         <td>{{$received->item_name}}</td>
        {{-- <td>{{$received->quantity}}</td> --}}
-        <td style="text-align:center">{{$received->brand_name}}</td>
-        <td style="text-align:center">{{$received->model}}</td>
-        <td>{{$received->serial_no}}</td>
-        <td style="text-align:center">{{$received->supplier}}</td>
-        <td style="text-align:center">{{$received->pur_date}}</td>
-        <td style="text-align:center">{{$received->warranty}}</td>
-        <td style="text-align:center">{{$received->challan_no}}</td>
-        <td style="text-align:center"> <img src="{{asset('upload/challans/'.$received->challan_img)}}" alt="Not image file" width="95px" height="60px"> </td>
-        <td style="text-align:center">{{$received->req_no}}</td>
-        <td style="text-align:center">{{$received->pur_type}}</td>
-        <td>{{$received->user_name}}</td>
-        <td style="text-align:center">{{$received->department}}</td>
+        <td class="text-center">{{$received->brand_name}}</td>
+        <td class="text-center">{{$received->model}}</td>
+        <td class="text-wrap">{{$received->serial_no}}</td>
+        <td class="text-center ">{{$received->supplier}}</td>
+        <td class="text-center text-nowrap">{{$received->pur_date}}</td>
+        <td class="text-center">{{$received->warranty}}</td>
+        <td class="text-center">{{$received->challan_no}}</td>
+        <td class="text-center"> <img src="{{asset('upload/challans/'.$received->challan_img)}}" alt="Not image file" width="95px" height="60px"> </td>
+        <td class="text-center">{{$received->req_no}}</td>
+        <td class="text-center">{{$received->pur_type}}</td>
+        <td class="text-wrap">{{$received->user_name}}</td>
+        <td class="text-center">{{$received->department}}</td>
         {{-- <td>{{$received->notes}}</td> --}}
        {{-- <td>{{$received->created_at}}</td> --}}
         {{-- <td>{{$received->updated_at}}</td>--> --}}

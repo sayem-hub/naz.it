@@ -43,6 +43,7 @@
         <th scope="col" style="text-align:center">Employee Name</th>
         <th scope="col" style="text-align:center">Designation</th>
         <th scope="col" style="text-align:center">Email ID</th>
+        <th scope="col" style="text-align:center">Mobile No</th>
         <th scope="col" style="text-align:center">Department</th>
         <th scope="col" style="text-align:center">Created at</th>
 {{--        <th scope="col" style="text-align:center">Status</th>--}}
@@ -55,10 +56,11 @@
 
       <tr>
         <th scope="row" style="text-align:center">{{$key+1}}</th>
-        <td style="text-align:center">{{$emailId->office_id}}</td>
+        <td class="fw-bold">{{$emailId->office_id}}</td>
         <td>{{$emailId->full_name}}</td>
         <td>{{$emailId->designation}}</td>
-        <td>{{$emailId->created_address}}</td>
+          <td class="text-info">{{$emailId->created_address}}</td>
+        <td>{{$emailId->mobile}}</td>
         <td>{{$emailId->department}}</td>
         <td style="text-align:center">{{$emailId->updated_at}}</td>
         {{-- <td>{{date('d/m/Y', strtotime($emailId>requisition_date))}}</td> --}}

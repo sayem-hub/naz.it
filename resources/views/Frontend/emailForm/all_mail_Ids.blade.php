@@ -11,8 +11,6 @@
 
         <form class="" action="{{route('email.address.search')}}" method="GET">
 
-
-
             {{--<div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <a href="{{route('create.preq.pdf')}}" class="btn btn-danger btn-sm">Pending report</a>
                 <a href="{{route('create.rreq.pdf')}}" class="btn btn-warning btn-sm">Receipt report</a>
@@ -35,7 +33,8 @@
 
 
 
-        <table class="table table-bordered text-nowrap table-hover" style="font-size: .8rem">
+        <table class="table table-secondary table-bordered text-nowrap table-hover" style="font-size: .8rem">
+
     <thead>
       <tr>
         <th scope="col" style="text-align:center">SL</th>
@@ -54,15 +53,15 @@
 
     @foreach($allEmailIDs as $key=>$allEmailID)
 
-      <tr>
+      <tr class="table-success">
         <th scope="row" style="text-align:center">{{$key+1}}</th>
-        <td style="text-align:center">{{$allEmailID->office_id}}</td>
+        <td class="text-center">{{$allEmailID->office_id}}</td>
         <td>{{$allEmailID->full_name}}</td>
         <td>{{$allEmailID->designation}}</td>
-        <td>{{$allEmailID->created_address}}</td>
+          <td class="fw-bold">{{$allEmailID->created_address}}</td>
         <td>{{$allEmailID->mobile}}</td>
         <td>{{$allEmailID->department}}</td>
-        <td style="text-align:center">{{$allEmailID->updated_at}}</td>
+        <td class="text-center">{{$allEmailID->updated_at}}</td>
         {{-- <td>{{date('d/m/Y', strtotime($allEmailID>requisition_date))}}</td> --}}
 
 

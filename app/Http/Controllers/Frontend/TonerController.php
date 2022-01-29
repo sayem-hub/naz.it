@@ -27,9 +27,13 @@ class TonerController extends Controller
         $model93 = Tonerexpense::where('toner_model', '=', '93A')->count();
         $stocks93 = $toner93 - $model93;
 
+        $toner55 = Tonerstock::where('toner_model', '=', '55A')->sum('qty');
+        $model55 = Tonerexpense::where('toner_model', '=', '55A')->count();
+        $stocks55 = $toner55 - $model55;
+
         $currentMonth = date('F');
 
-        $current_data85 = Tonerexpense::select(
+        $allTonerCount = Tonerexpense::select(
             DB::raw("(COUNT(*)) as count"),
             DB::raw("MONTHNAME(created_at) as month_name")
         )
@@ -49,7 +53,8 @@ class TonerController extends Controller
         ->with('stocks85', $stocks85)
         -> with('stocks26', $stocks26)
         -> with('stocks93', $stocks93)
-        ->with('current_data85', $current_data85);
+        ->with('allTonerCount', $allTonerCount)
+        ->with('stocks55', $stocks55);
 
     }
 

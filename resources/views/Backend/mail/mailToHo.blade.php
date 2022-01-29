@@ -54,6 +54,11 @@
         <td style="width: 19.7629%;">Common Group</td>
         <td style="width: 44.709%;">all_emp@nz-bd.com</td>
     </tr>
+
+    <tr>
+        <td style="width: 19.7629%;">Reference</td>
+        <td style="width: 44.709%;">{{$data->referred_by}}</td>
+    </tr>
     </tbody>
 </table>
 <p>&nbsp;</p>

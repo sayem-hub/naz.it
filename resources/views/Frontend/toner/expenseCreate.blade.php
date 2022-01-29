@@ -25,6 +25,7 @@
                     <option value="85A">85A</option>
                     <option value="26A">26A</option>
                     <option value="93A">93A</option>
+                    <option value="93A">55A</option>
                 </select>
             </div>
 
@@ -84,6 +85,7 @@
                 <option value="HP M402dn">HP M402dn</option>
                 <option value="HP M706n">HP M706n</option>
                 <option value="Canon 6230 DN">Canon LBP6230DN</option>
+                <option value="HP P3015">HP P3015</option>
             </select>
             </div>
 

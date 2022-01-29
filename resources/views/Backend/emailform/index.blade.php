@@ -65,7 +65,7 @@
                         <td>
                             <a class="btn btn-primary" href="{{route('edit.email.request', $email_request->id)}}">Edit</a>
                             <a class="btn btn-secondary" href="{{route('view.email.request', $email_request->id)}}">View</a>
-                            <a class="btn btn-warning" href="{{route('editForEntry.email.request', $email_request->id)}}">Enter ID</a>
+                            <a class="btn btn-warning" href="{{route('editForEntry.email.request', $email_request->id)}}">Finish</a>
                         </td>
                     </tr>
 
