@@ -44,7 +44,13 @@ Route::post('admin/login', [App\Http\Controllers\Backend\LoginController::class,
 
 
 
+
+
 Route::middleware(['auth'])->group(function () {
+
+
+
+
 
     //Frontend Route
     Route::get('/profile', [App\Http\Controllers\Frontend\UserController::class, 'profile'])->name('profile');
@@ -85,6 +91,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/router/edit/{id}', [App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerEdit'])->name('router.edit');
     Route::post('/router/edit/{id}', [App\Http\Controllers\Frontend\RouterSwitchController::class, 'routerUpdate']);
     Route::get('router-list/generatePDF', [App\Http\Controllers\Frontend\PdfController::class, 'generateRouterPdf'])->name('create.router.pdf');
+
+    Route::get('/switches-list',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'switchIndex'])->name('switch.index');
+    Route::get('/switches/create',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'switchCreate'])->name('switch.create');
+    Route::post('/switches/create',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'switchStore'])->name('switch.store');
+    Route::get('/switches/edit/{id}',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'switchEdit'])->name('switch.edit');
+    Route::post('/switches/edit/{id}',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'switchUpdate']);
 
     //Printer & Scanner Route
     Route::get('/printers-list',[App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerIndex'])->name('printer.index');
@@ -193,11 +205,6 @@ Route::middleware(['auth'])->group(function () {
         Route::post('user-request/entry/email-address/{id}', [App\Http\Controllers\Backend\EmailController::class, 'updateForCreatedID']);
 
 
-
-
-
-
-
         //Import/Export Route
         Route::get('importExport', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'importExport'])->name('import.export');
         Route::get('computer/export', [App\Http\Controllers\Backend\MaatwebsiteController::class, 'export'])->name('computer.export');
@@ -262,7 +269,18 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/question/create', [App\Http\Controllers\Backend\QuestionsController::class, 'create'])->name('admin.question.create');
         Route::post('/question/create', [App\Http\Controllers\Backend\QuestionsController::class, 'store']);
 
+
+
+            });
+
+    Route::middleware(['sewing_employee'])->group(function () {
+        Route::get('/sewing-machine/home', [App\Http\Controllers\Frontend\SewingController::class, 'home'])->name('sewing.home');
     });
 
-});
+    });
+
+
+
+
+
 

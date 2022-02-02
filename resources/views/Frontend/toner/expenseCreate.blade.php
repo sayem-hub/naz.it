@@ -71,6 +71,7 @@
                     <option value="Printing">Printing</option>
                     <option value="Embroidery">Embroidery</option>
                     <option value="NZ Accessories">NZ Accessories</option>
+                    <option value="Wastage">Wastage</option>
                 </select>
             </div>
 

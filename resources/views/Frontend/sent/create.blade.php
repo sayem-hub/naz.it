@@ -68,7 +68,7 @@
                 <select class="form-control" id="sentfor" name="sentfor" required>
                     <option selected>--Select--</option>
                     <option value="Warranty">Warranty</option>
-                    <option value="Reparing">Reparing</option>
+                    <option value="Repair">Repair</option>
                     <option value="Replace">Replace</option>
                     <option value="Resigned">Resigned</option>
                     <option value="Damaged">Damaged</option>

@@ -38,6 +38,7 @@
                                         <li class="nav-item"><a href="{{ route('frontend.pabx.index') }}">PABX User</a></li>
                                         <li class="nav-item"><a href="{{ route('faceid.index') }}">FaceId Machine</a></li>
                                         <li class="nav-item"><a href="{{ route('router.index') }}">Router</a></li>
+                                        <li class="nav-item"><a href="{{ route('switch.index') }}">Switch</a></li>
                                         <li class="nav-item"><a href="{{ route('printer.index') }}">Printer</a></li>
                                         <li class="nav-item"><a href="{{ route('scanner.index') }}">Scanner</a></li>
                                         <li class="nav-item"><a href="{{ route('cc-camera') }}">CC Camera</a></li>
@@ -65,6 +66,10 @@
 
                                 <li class="nav-item">
                                     <a class="page-scroll" href="{{ route('requisition.index') }}">Requisition</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="{{route('sewing.home')}}">S.Machine</a>
                                 </li>
 
 
@@ -109,8 +114,9 @@
                                            aria-label="Toggle navigation"><i class="fa fa-user fa-lg"></i> </a>
 
 
+
                                         <ul class="sub-menu collapse" id="submenu-1-3">
-                                            <li><a class="dropdown-item" href="{{ route('profile') }}"> Profile</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('profile') }}"> Hi {{auth()->user()->name}}!</a></li>
 
                                             <li class="divider"></li>
                                             <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>

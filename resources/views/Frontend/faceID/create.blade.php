@@ -2,11 +2,15 @@
 
 @section('main')
 
+    <section id="service" class="service-section pt-130 ">
+
+        <div class="container">
+
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Add New Machine</h3>
+        <h4 class="text-center mt-3">Add New Machine</h4>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -75,5 +79,7 @@
         </form>
     </div>
 </div>
+        </div>
+    </section>
 
 @endsection

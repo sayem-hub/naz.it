@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Netswitches;
 use App\Models\Router;
 use Illuminate\Http\Request;
 
@@ -64,19 +65,19 @@ class RouterSwitchController extends Controller
     {
 
         try {
-             $request->validate([
+            $request->validate([
 
-                 'router_id' => 'required',
-                 'name' => 'required',
+                'router_id' => 'required',
+                'name' => 'required',
                 'brand' => 'required',
                 'model' => 'required',
-               'ssid' => 'required',
-               'ip_address' => 'required',
-               'location' => 'required',
+                'ssid' => 'required',
+                'ip_address' => 'required',
+                'location' => 'required',
                 'status' => 'required',
-           ]);
+            ]);
 
-            $routers   = Router::find($id);
+            $routers = Router::find($id);
 
             $data = [
                 'router_id' => $request->input('router_id'),
@@ -92,6 +93,79 @@ class RouterSwitchController extends Controller
             ];
             $routers->update($data);
             return redirect()->route('router.index');
+        } catch (\Exception $exception) {
+            return redirect()->back()->withErrors($exception->getMessage());
+        }
+    }
+
+    public function switchIndex()
+    {
+        $switches = Netswitches::orderBy('id')->paginate(50);
+        return view('Frontend.switch.index', compact('switches'));
+    }
+
+    public function switchCreate()
+    {
+
+        return view('Frontend.switch.create');
+    }
+
+    public function switchStore(Request $request)
+    {
+        try {
+            $request->validate([
+                'brand' => 'required',
+                'model' => 'required',
+                'location' => 'required',
+                'status' => 'required',
+            ]);
+
+            $data = [
+                'brand' => $request->input('brand'),
+                'model' => $request->input('model'),
+                'port_no' => $request->input('port_no'),
+                'location' => $request->input('location'),
+                'type' => $request->input('type'),
+                'status' => $request->input('status'),
+
+            ];
+
+            Netswitches::create($data);
+            return redirect()->route('switch.index');
+        } catch (\Exception $exception) {
+            return redirect()->back()->withErrors($exception->getMessage());
+        }
+    }
+
+    public function switchEdit($id)
+    {
+        $switches = Netswitches::find($id);
+        return view('Frontend.switch.edit', compact('switches'));
+    }
+
+    public function switchUpdate(Request $request, $id)
+    {
+
+        try {
+            $request->validate([
+                'brand' => 'required',
+                'model' => 'required',
+                'location' => 'required',
+                'status' => 'required',
+            ]);
+
+            $switches = Netswitches::find($id);
+
+            $data = [
+                'brand' => $request->input('brand'),
+                'model' => $request->input('model'),
+                'port_no' => $request->input('port_no'),
+                'location' => $request->input('location'),
+                'type' => $request->input('type'),
+                'status' => $request->input('status'),
+            ];
+            $switches->update($data);
+            return redirect()->route('switch.index');
         } catch (\Exception $exception) {
             return redirect()->back()->withErrors($exception->getMessage());
         }

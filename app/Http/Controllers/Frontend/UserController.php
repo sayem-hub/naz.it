@@ -16,8 +16,6 @@ class UserController extends Controller
         /*$user = Auth::user();
         dd($user);*/
         return view('Frontend.registration');
-
-
     }
 
     public function profile(){
@@ -94,8 +92,6 @@ class UserController extends Controller
         {
             return view('Frontend.login');
         }
-
-
 
         public function doLogin(Request $request)
         {

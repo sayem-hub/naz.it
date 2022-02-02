@@ -60,7 +60,7 @@ class RequisitionController extends Controller
 
             Requisition::create($data);
 
-            Mail::to(['wajed@nz-bd.com', 'hasan.scm@nz-bd.com'])->cc(['jahangir.scm@nz-bd.com', 'sayed.it@nz-bd.com', 'anait@nz-bd.com', 'kalam@nz-bd.com', 'sayem.it@nz-bd.com'])->send(new RequisitionMail($data));
+            Mail::to(['wajed@nz-bd.com', 'hasan.scm@nz-bd.com'])->cc(['jahangir.scm@nz-bd.com', 'ahsanul@nz-bd.com' ,'sayed.it@nz-bd.com', 'anait@nz-bd.com', 'kalam@nz-bd.com', 'sayem.it@nz-bd.com'])->send(new RequisitionMail($data));
             return redirect()->route('requisition.index')->with('message', "Updated and Email has sent Successfully!");
 
         } catch (\Exception $exception) {

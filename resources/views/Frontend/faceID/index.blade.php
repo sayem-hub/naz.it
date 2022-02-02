@@ -1,35 +1,38 @@
 @extends('layouts.frontend')
 
 @section('main')
-<section class="contact-section pt-100">
+<section class="contact-section pt-120">
     <div class="container">
 
 <div class="row">
     <div class="col-md-0"></div>
-    <div class="col-md-13">
+    <div class="col-md-12">
 
-        <h4 class="text-center mt-3">Attendance Machine List</h4>
+        <h4 class="text-center mt-3">FaceId Machine List</h4>
 
 
-            <div class="form-group">
-                <a href="{{ route('faceid.create') }}" class="btn btn-success">Add New Machine</a>
-                <a href="{{route('create.faceid.pdf')}}" class="btn btn-warning btn-sm">PDF Report</a>
+
+        <a href="{{ route('faceid.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Machine</a>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+                    <a href="{{route('create.faceid.pdf')}}" class="btn btn-warning btn-sm pull-right">PDF Report</a>
             </div>
 
-<table class="table table-bordered table-hover" style="font-size: 13px">
+
+<table class="table table-bordered table-hover" style="font-size: .8rem">
     <thead>
         <tr>
-            <th style="text-align:center" scope="col">SL</th>
-            <th scope="col" style="text-align:center">Machine Name</th>
-            <th scope="col" style="text-align:center">ID</th>
-            <th scope="col" style="text-align:center">IP address</th>
-            <th scope="col" style="text-align:center">Serial no</th>
-            <th scope="col" style="text-align:center">Type</th>
-            <th scope="col" style="text-align:center">Model</th>
-            <th scope="col" style="text-align:center">Location</th>
-            <th scope="col" style="text-align:center">Status</th>
+            <th class="text-center" scope="col">SL</th>
+            <th scope="col" class="text-center">Machine Name</th>
+            <th scope="col" class="text-center">ID</th>
+            <th scope="col" class="text-center">IP address</th>
+            <th scope="col" class="text-center">Serial no</th>
+            <th scope="col" class="text-center">Type</th>
+            <th scope="col" class="text-center">Model</th>
+            <th scope="col" class="text-center">Location</th>
+            <th scope="col" class="text-center">Status</th>
             {{-- <th scope="col">Updated at</th> --}}
-            <th scope="col" style="text-align:center">Action</th>
+            <th scope="col" class="text-center">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -37,13 +40,13 @@
         @foreach($machines as $key=>$machine)
 
         <tr>
-            <th scope="row" style="text-align:center">{{$key+1}}</th>
+            <th scope="row" class="text-center">{{$key+1}}</th>
             <td >{{$machine->machine_name}}
-            <td style="text-align:center">{{$machine->machine_id}}</td>
-            <td style="text-align:center">{{$machine->ip_address}}</td>
-            <td style="text-align:center">{{$machine->serial_no}}</td>
-            <td style="text-align:center">{{$machine->type}}</td>
-            <td style="text-align:center">{{$machine->model}}</td>
+            <td class="text-center">{{$machine->machine_id}}</td>
+            <td class="text-center">{{$machine->ip_address}}</td>
+            <td class="text-center">{{$machine->serial_no}}</td>
+            <td class="text-center">{{$machine->type}}</td>
+            <td class="text-center">{{$machine->model}}</td>
             <td>{{$machine->location}}</td>
 
             @php
@@ -62,7 +65,7 @@
 
             <td style="color: {{$color}}; text-align:center">{{ $machine->status }}</td>
             {{-- <td>{{$machine->updated_at->format('Y-m-d')}}</td> --}}
-            <td style="text-align:center"><a class="" href="{{ route('faceid.edit', $machine->id)}}" ><i class="fa fa-edit fa-lg"></i></a></td>
+            <td class="text-center"><a class="" href="{{ route('faceid.edit', $machine->id)}}" ><i class="fa fa-edit fa-lg"></i></a></td>
         </tr>
 
         @endforeach
@@ -72,5 +75,8 @@
 {{ $machines->links('pagination::bootstrap-4')}}
 
     </div>
+</div>
+    </div>
+
 </section>
 @endsection

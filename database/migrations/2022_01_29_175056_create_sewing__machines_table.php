@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNetswitchesTable extends Migration
+class CreateSewingMachinesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,8 @@ class CreateNetswitchesTable extends Migration
      */
     public function up()
     {
-        Schema::create('netswitches', function (Blueprint $table) {
+        Schema::create('sewing__machines', function (Blueprint $table) {
             $table->id();
-            $table->string('brand');
-            $table->string('model')->nullable();
-            $table->string('port_no');
-            $table->string('location');
-            $table->string('type');
-            $table->string('status');
             $table->timestamps();
         });
     }
@@ -32,6 +26,6 @@ class CreateNetswitchesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('netswitches');
+        Schema::dropIfExists('sewing__machines');
     }
 }
