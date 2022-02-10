@@ -31,5 +31,6 @@ class RequisitionMail extends Mailable
     {
         $requisition = $this->data;
         return $this->subject("Requisition for $requisition[item_names] for $requisition[required_for]")->view('Backend.mail.requisitionMail',compact('requisition'));
+//        return $this->subject("Requisition for $requisition[item_names] for $requisition[required_for] for Local purchase")->view('Backend.mail.requisitionMail',compact('requisition'));
     }
 }

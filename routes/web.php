@@ -97,6 +97,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/switches/create',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'switchStore'])->name('switch.store');
     Route::get('/switches/edit/{id}',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'switchEdit'])->name('switch.edit');
     Route::post('/switches/edit/{id}',[App\Http\Controllers\Frontend\RouterSwitchController::class, 'switchUpdate']);
+    Route::get('/switch-list/generatePDF',[App\Http\Controllers\Frontend\PdfController::class, 'generateSwitchPdf'])->name('create.switch.pdf');
+    Route::get('/switch-list/generateSummary',[App\Http\Controllers\Frontend\PdfController::class, 'generateSwitchSummary'])->name('create.switch.summary');
 
     //Printer & Scanner Route
     Route::get('/printers-list',[App\Http\Controllers\Frontend\PrinterScannerController::class, 'printerIndex'])->name('printer.index');
@@ -166,7 +168,7 @@ Route::middleware(['auth'])->group(function () {
             Route::post('/sent-items/create',[App\Http\Controllers\Frontend\HomeController::class, 'storeSentItem']);
             Route::get('/sent-items/search',[App\Http\Controllers\Frontend\SearchController::class, 'sentSearch'])->name('sentitem.search');
             Route::get('/generate-pendingReport',[App\Http\Controllers\Frontend\PdfController::class, 'generateSentPending'])->name('sentitem.pending');
-            Route::get('/generate-pending-Wtyreport/search',[App\Http\Controllers\Frontend\PdfController::class, 'generateWarrantyPending'])->name('sentitem.wty.pending');
+            Route::get('/generate-pendingWtyreport',[App\Http\Controllers\Frontend\PdfController::class, 'generateWarrantyPending'])->name('sentitem.wty.pending');
 
 
 

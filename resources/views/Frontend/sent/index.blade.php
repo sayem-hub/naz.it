@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('main')
 
-<section class="contact-section pt-130">
+<section class="contact-section pt-110">
     <div class="container-fluid">
      <div class="row">
 
@@ -12,21 +12,22 @@
 
 <form action="{{ route('sentitem.search') }}" method="GET">
 
-        <a href="{{ route('sent.items.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Add New </a>
 
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <a href="{{ route('sent.items.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Add New </a>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2">
                     <a href="{{ route('sentitem.pending') }}" class="btn btn-danger btn-sm pull-right">Pending report</a>
                     <a href="{{ route('sentitem.wty.pending') }}" class="btn btn-warning btn-sm pull-right">Pending warranty</a>
         </div>
 
-            <div class="col-xs-6 col-md-4">
+            <div class="col">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search for User, item, serial no." name="query" id="txtSearch"
                         value="{{ request()->input('query') }}">
 
                     <div class="input-group-btn">
+
                         <button class="btn btn-primary" type="submit">
-                            <span class="search"><i class="fa fa-search fa-fw"></i>Search</span>
+                            <span class="search-form-box"><i class="fa fa-search fa-fw"></i>Search</span>
                         </button>
 
                     </div>

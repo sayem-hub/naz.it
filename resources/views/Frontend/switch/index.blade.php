@@ -18,8 +18,12 @@
         </div>
 
         <div class="form-group">
-            <a href="{{ route('switch.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Switch</a>
-{{--            <a href="{{route('create.router.pdf')}}" class="btn btn-warning btn-sm">PDF Report</a>--}}
+        <a href="{{ route('switch.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Switch</a>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a href="{{ route('create.switch.pdf') }}" class="btn btn-warning btn-sm" >PDF report</a>
+            <a href="{{ route('create.switch.summary') }}" class="btn btn-info btn-sm" >Summary</a>
         </div>
 
 

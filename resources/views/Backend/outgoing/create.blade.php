@@ -3,8 +3,8 @@
 @section('main')
 
 <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-7">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
 
         <h3 class="text-center mt-3">Add New Outgoing Item</h3>
         <form action="{{route('admin.outgoing.create')}}" method="post">

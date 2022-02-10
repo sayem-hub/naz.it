@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Computer;
 use App\Models\ComputerUser;
 use App\Models\Faceid;
+use App\Models\Netswitches;
 use App\Models\Pabx;
 use App\Models\Printer;
 use App\Models\Requisition;
@@ -143,5 +144,48 @@ class PdfController extends Controller
         $sentitemswarranty = DB::table('outitems')->where([['Sentfor', '=', 'Warranty'], ['Status', '=', 'Pending']])->get();
         $pdf = PDF::loadView('Frontend.sent.sentWarrantyPDF', compact(('sentitemswarranty')))->setPaper('a4', 'landscape');
         return $pdf->download('Warranty_Pending_list.pdf');
+    }
+
+    public function switchPdf(Request $request)
+    {
+        $switches = Netswitches::all();
+        return view('Frontend.switch.pdfSwitch', compact('switches'));
+    }
+
+    public function generateSwitchPdf(Request $request)
+    {
+        $switches = Netswitches::all();
+        $pdf = PDF::loadView('Frontend.switch.pdfSwitch', compact(('switches')));
+        return $pdf->download('Switch_List.pdf');
+    }
+
+    public function generateSwitchSummary(Request $request)
+    {
+        $switches = Netswitches::all();
+
+        $cisco26 = Netswitches::where('brand', '=', 'Cisco')-> where('port_no', '=' , '26 Port')->count();
+        $cisco8 = Netswitches::where('brand', '=', 'Cisco')-> where('port_no', '=' , '8 Port')->count();
+
+        $netgear24 = Netswitches::where('brand', '=', 'Netgear')->where('port_no', '=', '24 Port')->count();
+        $netgear16 = Netswitches::where('brand', '=', 'Netgear')->where('port_no', '=', '16 Port')->count();
+        $netgear8 = Netswitches::where('brand', '=', 'Netgear')->where('port_no', '=' ,'8 Port')->count();
+
+        $tplink24 = Netswitches::where('brand', '=', 'TP-Link')->where('port_no', '=', '24 Port')->count();
+        $tplink16 = Netswitches::where('brand', '=', 'TP-Link')->where('port_no', '=', '16 Port')->count();
+        $tplink8 = Netswitches::where('brand', '=', 'TP-Link')->where('port_no', '=' ,'8 Port')->count();
+
+        $belkin24 = Netswitches::where('brand', '=', 'Belkin')->where('port_no', '=', '24 Port')->count();
+
+        $dlink8 = Netswitches::where('brand', '=', 'D-Link')->where('port_no', '=', '8 Port')->count();
+        $dlink16 = Netswitches::where('brand', '=', 'D-Link')->where('port_no', '=', '16 Port')->count();
+
+        $tenda16 = Netswitches::where('brand', '=', 'Tenda')->where('port_no', '=', '16 Port')->count();
+        $tenda8 = Netswitches::where('brand', '=', 'Tenda')->where('port_no', '=', '8 Port')->count();
+
+
+        $pdf = PDF::loadView('Frontend.switch.PdfSummarySwitch', compact('switches', 'cisco26', 'cisco8', 'netgear24', 'netgear16', 'netgear8', 'tplink24', 'tplink16', 'tplink8', 'belkin24', 'dlink8', 'dlink16', 'tenda16', 'tenda8'));
+
+
+        return $pdf->download('Switch_Summary.pdf');
     }
 }

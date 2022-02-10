@@ -50,7 +50,7 @@
         .styled-table {
         border-collapse: collapse;
         margin: 15px 0;
-        font-size: 0.6em;
+        font-size: 0.7em;
         font-family: sans-serif;
         min-width: 400px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -65,7 +65,7 @@
 
         .styled-table th,
         .styled-table td {
-        padding: 10px 13px;
+        padding: 12px 15px;
         }
 
         .styled-table tbody tr {
@@ -85,7 +85,7 @@
         color: #009879;
         }
 
-    h2, h3, h4{
+    h2, h3, h4, h5{
             text-align: center;
             line-height: 40%;
         }
@@ -105,44 +105,40 @@
        Copyright © 2021-<?php echo date("Y");?> NAZ-IMS by Abu Sayem; Software generated report. Print date & time: <?php echo date("Y-m-d, h:i:sa");?>
     </footer>
 
-    <h2>NAZ Bangladesh Ltd.</h2>
-    <h3>ICT Department</h3>
-    <h4>Router List</h4>
+    <h3>NAZ Bangladesh Ltd.</h3>
+    <h4>ICT Department</h4>
+    <h5>Network Switch List</h5>
 
 
-    <table class="styled-table" >
-        <thead class="thead-dark" >
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Computer ID</th>
-                <th scope="col">Employee ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Designation</th>
-                {{-- <th scope="col">IP Address</th> --}}
-                <th scope="col">Email Address</th>
-                <th scope="col">Section</th>
-                <th scope="col">Department</th>
-                <th scope="col">Status</th>
-            </tr>
+
+
+    <table class="styled-table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">SL</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Model</th>
+            <th scope="col">Port</th>
+            <th scope="col">Location</th>
+            <th scope="col">Type</th>
+            <th scope="col">Status</th>
+        </tr>
         </thead>
         <tbody>
 
-            @foreach($computers as $key=>$user)
+        @foreach($switches as $key=>$switch)
 
             <tr>
                 <th scope="row">{{$key+1}}</th>
-                <td>{{$user->Comid}}</td>
-                <td>{{$user->Emp_id}}</td>
-                <td>{{$user->User}}</td>
-                <td>{{$user->Designation}}</td>
-                {{-- <td>{{$user->Ipadd}}</td> --}}
-                <td>{{$user->Email}}</td>
-                <td>{{$user->Section}}</td>
-                <td>{{$user->Department}}</td>
-                <td>{{$user->Status}}</td>
+                <td>{{$switch->brand}}</td>
+                <td>{{$switch->model}}</td>
+                <td>{{$switch->port_no}}</td>
+                <td style="text-align:center;">{{$switch->location}}</td>
+                <td style="text-align:center;">{{$switch->type}}</td>
+                <td>{{$switch->status}}</td>
             </tr>
 
-            @endforeach
+        @endforeach
 
         </tbody>
     </table>

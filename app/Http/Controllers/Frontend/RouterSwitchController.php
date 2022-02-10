@@ -100,7 +100,7 @@ class RouterSwitchController extends Controller
 
     public function switchIndex()
     {
-        $switches = Netswitches::orderBy('id')->paginate(50);
+        $switches = Netswitches::orderBy('id')->paginate(300);
         return view('Frontend.switch.index', compact('switches'));
     }
 
