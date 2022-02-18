@@ -9,7 +9,7 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
 
-        <h3 class="text-center mt-3">Edit Record test</h3>
+        <h3 class="text-center mt-3">Edit Record</h3>
         <form action="{{route('computer.user.edit',$computer->id)}}" method="post">
         @csrf
             <div class="mb-3">

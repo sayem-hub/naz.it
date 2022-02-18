@@ -26,6 +26,13 @@ Route::post('/mail-opening-form', [App\Http\Controllers\Frontend\EmailController
 Route::get('/naz-email-address', [App\Http\Controllers\Frontend\EmailController::class, 'emailAddressList'])->name('naz.email.list');
 Route::get('/naz-email-address/search',[App\Http\Controllers\Frontend\SearchController::class, 'emailIdSearch'])->name('email.address.search');
 
+// Naz Dept Head Route Start
+Route::get('/dept-heads-subheads', [App\Http\Controllers\Frontend\EmailController::class, 'deptHeadIndex'])->name('nazdeptheads.index');
+Route::get('/dept-heads-subheads/create', [App\Http\Controllers\Frontend\EmailController::class, 'deptHeadCreate'])->name('nazdeptheads.create');
+Route::post('/dept-heads-subheads/create', [App\Http\Controllers\Frontend\EmailController::class, 'deptHeadStore']);
+Route::get('/dept-heads-subheads/edit/{id}', [App\Http\Controllers\Frontend\EmailController::class, 'deptHeadEdit'])->name('nazdeptheads.edit');
+Route::post('/dept-heads-subheads/edit/{id}', [App\Http\Controllers\Frontend\EmailController::class, 'deptHeadUpdate']);
+
 Route::get('/computer-request', [App\Http\Controllers\Frontend\ComprequestController::class, 'create'])->name('comp.request.create');
 Route::post('/computer-request', [App\Http\Controllers\Frontend\ComprequestController::class, 'store']);
 

@@ -86,6 +86,7 @@
 
                                     <ul class="sub-menu collapse" id="submenu-1-3">
                                         <li class="nav-item"><a class="page-scroll" href="{{ route('naz.email.list') }}">Email IDs</a></li>
+                                        <li class="nav-item"><a class="page-scroll" href="{{ route('nazdeptheads.index') }}">Dept Heads Group </a></li>
 
                                     </ul>
                                 </li>

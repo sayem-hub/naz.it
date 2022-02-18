@@ -99,7 +99,7 @@
 {{--        <th scope="col" class=text-cente"r>Section</th>--}}
         <th scope="col" class="text-center">Department</th>
         <th scope="col" class="text-center">Status</th>
-{{--        <th scope="col" class=text-center>KP Status</th>--}}
+        <th scope="col" class=text-center>KP Status</th>
         <th scope="col" class="text-center">Action</th>
 
       </tr>
@@ -135,7 +135,7 @@
             @endphp
 
             <td style="color: {{$color}}; text-align:center">{{ $user->Status }}</td>
-{{--            <td class="text-wrap" class=text-center>{{$user->Kp_status}}</td>--}}
+            <td class="text-wrap" class=text-center>{{$user->Kp_status}}</td>
 
         <td class="text-center">
           <a href="{{route('computer.user.edit',$user->id)}}"><i class="fa fa-edit fa-lg"></i></a>

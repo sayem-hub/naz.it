@@ -27,7 +27,7 @@ class HomeController extends Controller
 
     public function computerUser()
     {
-        $computers = ComputerUser::orderBy('id', 'desc')->paginate(50);
+        $computers = ComputerUser::orderBy('id', 'desc')->paginate(550);
         $desktopCount = ComputerUser::where('Comtype', '=', 'Desktop')->count();
         $laptopCount = ComputerUser::where('Comtype', '=', 'Laptop')->count();
         $serverCount = ComputerUser::where('Comtype', '=', 'Server')->count();

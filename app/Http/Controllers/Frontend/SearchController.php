@@ -141,7 +141,7 @@ class SearchController extends Controller
             //   ->orWhere('SurfaceArea','<', 10)
             //   ->orWhere('LocalName','like','%'.$search_text.'%')
             ->paginate(1000);
-        return view('Frontend.emailForm.search_all_mail_Ids', ['emailIds' => $emailIds])
+        return view('Frontend.publicFolder.emailForm.search_all_mail_Ids', ['emailIds' => $emailIds])
             ->with('search_text', $search_text);
     }
 }
