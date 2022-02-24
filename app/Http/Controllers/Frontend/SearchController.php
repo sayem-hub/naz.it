@@ -144,5 +144,21 @@ class SearchController extends Controller
         return view('Frontend.publicFolder.emailForm.search_all_mail_Ids', ['emailIds' => $emailIds])
             ->with('search_text', $search_text);
     }
+
+
+    public function equipmentSearch(Request $request)
+
+    {
+        $request->validate(([
+            'query' => 'required|min:5'
+        ]));
+
+        $search_text = $request->input('query');
+        $all_equipment = DB::table('preusers')
+            ->where('emp_id', 'LIKE', '%' . $search_text . '%')
+            ->paginate(1000);
+        return view('Frontend.requestFolder.preRequisition.search', ['all_equipment' => $all_equipment])
+            ->with('search_text', $search_text);
+    }
 }
 

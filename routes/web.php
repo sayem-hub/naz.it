@@ -36,7 +36,15 @@ Route::post('/dept-heads-subheads/edit/{id}', [App\Http\Controllers\Frontend\Ema
 Route::get('/computer-request', [App\Http\Controllers\Frontend\ComprequestController::class, 'create'])->name('comp.request.create');
 Route::post('/computer-request', [App\Http\Controllers\Frontend\ComprequestController::class, 'store']);
 
+//Request Route
+Route::get('/request/home', [\App\Http\Controllers\Frontend\RequestController::class, 'index'])->name('request.home');
 
+//Pre-requisition route start here
+Route::get('/pre-requisition/create', [\App\Http\Controllers\Frontend\PreRequisitionController::class, 'createPreReq'])->name('create.pre.req');
+Route::post('/pre-requisition/create', [\App\Http\Controllers\Frontend\PreRequisitionController::class, 'preReqStore']);
+Route::get('/pre-requisition/print', [\App\Http\Controllers\Frontend\PreRequisitionController::class, 'print'])->name('pre.req.print');
+Route::get('/pre-requisition/search',[App\Http\Controllers\Frontend\SearchController::class, 'equipmentSearch'])->name('equipment.search');
+//Pre-requisition route end here
 
 Route::get('/login', [App\Http\Controllers\Frontend\UserController::class, 'login'])->name('login');
 Route::post('/login', [App\Http\Controllers\Frontend\UserController::class, 'doLogin']);

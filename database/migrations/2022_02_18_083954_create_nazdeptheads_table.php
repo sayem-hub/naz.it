@@ -15,7 +15,6 @@ class CreateNazdeptheadsTable extends Migration
     {
         Schema::create('nazdeptheads', function (Blueprint $table) {
             $table->id();
-
             $table->string('emp_id', 100)->unique();
             $table->string('employee_name', 200);
             $table->string('designation', 100);

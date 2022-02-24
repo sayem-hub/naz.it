@@ -44,7 +44,7 @@
                                         <li class="nav-item"><a href="{{ route('cc-camera') }}">CC Camera</a></li>
                                         <li class="nav-item"><a href="{{ route('toner.status') }}">Toner Status</a></li>
                                         <li class="nav-item"><a class="page-scroll" href="{{ route('rfid.index') }}">Rfid</a></li>
-                                        <li class="nav-item"><a href="#0">IT Policy</a></li>
+
                                     </ul>
                                 </li>
 
@@ -87,6 +87,7 @@
                                     <ul class="sub-menu collapse" id="submenu-1-3">
                                         <li class="nav-item"><a class="page-scroll" href="{{ route('naz.email.list') }}">Email IDs</a></li>
                                         <li class="nav-item"><a class="page-scroll" href="{{ route('nazdeptheads.index') }}">Dept Heads Group </a></li>
+                                        <li class="nav-item"><a href="{{asset('assets/frontend/files/it-policy/IT Policy_NAZ.pdf')}}">IT Policy</a></li>
 
                                     </ul>
                                 </li>
@@ -101,6 +102,7 @@
                                     <ul class="sub-menu collapse" id="submenu-1-3">
                                         <li class="nav-item"><a href="{{ route('new.mail.form.create') }}">Email ID</a></li>
                                         <li class="nav-item"><a href="{{ route('comp.request.create') }}">Computer/Laptop</a></li>
+                                        <li class="nav-item"><a href="{{ route('request.home') }}">IT Accessoires</a></li>
 
                                     </ul>
                                 </li>

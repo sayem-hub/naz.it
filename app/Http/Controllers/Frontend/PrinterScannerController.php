@@ -11,7 +11,7 @@ class PrinterScannerController extends Controller
 {
     public function printerIndex()
 {
-        $printers = Printer::orderBy('id', 'desc')->paginate(20);
+        $printers = Printer::orderBy('id', 'desc')->paginate(200);
         return view('Frontend.printers.index', compact('printers'));
 }
 

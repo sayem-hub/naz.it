@@ -7,7 +7,7 @@
 
             <div class="col-lg-12">
 
-<h4 class="text-center mt-3">Search results by "{{$search_text}}"</h3>
+<h4 class="text-center mt-3">Search results by "{{$search_text}}"</h4>
 <a href="{{route('computer.user.create')}}" class="btn btn-success"><i class="fa fa-plus"></i> Computer</a>
 <table class="table table-bordered table-hover" style="font-size: .8rem">
     <thead class="thead-dark">
