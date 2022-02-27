@@ -14,6 +14,8 @@ use App\Models\Router;
 use App\Models\Scanner;
 use App\Models\Tablet;
 use Illuminate\Http\Request;
+use App\Models\Prerequi;
+use App\Models\Preuser;
 use Illuminate\Support\Facades\DB;
 use PDF;
 
@@ -26,7 +28,6 @@ class PdfController extends Controller
         public function compPdf(Request $request)
     {
         $computers = ComputerUser::all();
-
         return view('Frontend.computers.compInventory', compact('computers'));
     }
 
@@ -182,10 +183,24 @@ class PdfController extends Controller
         $tenda16 = Netswitches::where('brand', '=', 'Tenda')->where('port_no', '=', '16 Port')->count();
         $tenda8 = Netswitches::where('brand', '=', 'Tenda')->where('port_no', '=', '8 Port')->count();
 
-
         $pdf = PDF::loadView('Frontend.switch.PdfSummarySwitch', compact('switches', 'cisco26', 'cisco8', 'netgear24', 'netgear16', 'netgear8', 'tplink24', 'tplink16', 'tplink8', 'belkin24', 'dlink8', 'dlink16', 'tenda16', 'tenda8'));
-
-
         return $pdf->download('Switch_Summary.pdf');
+    }
+
+    public function equipmentPdf(Request $request)
+    {
+        $all_equipment = DB::table('preusers')
+            ->join('prerequis', 'preusers.id', '=','prerequis.preuser_id' )->get();
+
+        return view('Frontend.requestFolder.preRequisition.preview', compact('all_equipment'));
+    }
+
+    public function generateEquipPdf($id)
+    {
+        $all_equipment = Prerequi::find($id);
+
+//            join('preusers', 'prerequis.preuser_id', '=','preusers.id' )->first();
+        $pdf = PDF::loadView('Frontend.requestFolder.preRequisition.preview',compact('all_equipment'));
+        return $pdf->download('Pre-requisition.pdf');
     }
 }

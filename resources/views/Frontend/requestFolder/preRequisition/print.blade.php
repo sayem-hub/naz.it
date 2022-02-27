@@ -4,9 +4,29 @@
 
         <div class="container">
 
-<form class="" action="{{ route('equipment.search') }}" method="GET">
 
-{{--    <a href="{{route('pdf.generate')}}" class="btn btn-primary btn-sm pull-right"> PDF Report</a>--}}
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <div >
+                @if(session()->has('message'))
+                    <div class="alert alert-success mt-3">
+                        {{ session()->get('message') }}
+                    </div>
+                @endif
+            </div>
+
+
+            <form class="" action="{{ route('equipment.search') }}" method="GET">
+
+
 
     <div class="col-xs-6 col-md-4">
         <div class="input-group">

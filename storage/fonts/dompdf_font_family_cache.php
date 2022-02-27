@@ -80,4 +80,7 @@
   'glyphicons halflings' => array(
     'normal' => $fontDir . '/glyphicons_halflings_normal_7021e60bec5e3265beecc08280cec230',
   ),
+  'lineicons' => array(
+    'normal' => $fontDir . '/lineicons_normal_e26a72eff4432ff3339d30fcf9aa407b',
+  ),
 ) ?>

@@ -155,6 +155,7 @@ class SearchController extends Controller
 
         $search_text = $request->input('query');
         $all_equipment = DB::table('preusers')
+            ->join('prerequis', 'preusers.id', '=','prerequis.preuser_id' )
             ->where('emp_id', 'LIKE', '%' . $search_text . '%')
             ->paginate(1000);
         return view('Frontend.requestFolder.preRequisition.search', ['all_equipment' => $all_equipment])

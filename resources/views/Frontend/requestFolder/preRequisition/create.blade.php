@@ -6,14 +6,17 @@
     <div class="container-fluid">
 
         <div class="row">
+
             <div class="col-md-1"></div>
-            <div class="col-md-4">
+            <div class="col-md-5">
+
 
                 <div class="card bg-info mb-2">
                     <div class="card-body">
 
                         <h4 class="card-title text-center">User information</h4>
                         <p class="text-center text-danger">Please fill up all the required fields.</p>
+
 
 
                         @if ($errors->any())
@@ -113,13 +116,16 @@
 
 
 
-                                <div class="col-md-1"></div>
-                                <div class="col-md-4">
-                                    <div class="card bg-primary bg-gradient mb-2">
-                                        <div class="card-body">
 
+                                <div class="col-md-5">
+
+                                    <div class="card bg-secondary bg-gradient mb-2">
+
+                                        <div class="card-body">
+                                            <a href="{{route('pre.req.print')}}"><mark class="text-dark">Click for Print</mark> </a>
                                         <h4 class="card-title text-center">Item information</h4>
                                             <p class="text-center text-danger">Please fill up all the required fields.</p>
+
 
                                         <div class="form-group mb-2">
                                             <label class="col-xs-4 control-label" for="inputSuccess">Item Name<span
@@ -136,14 +142,18 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group mb-2">
-                                            <label class="col-xs-4 control-label" for="inputSuccess">Unit<span
-                                                    style="color: red">*</span></label>
-                                            <div class="col-xs-8">
-                                                <input type="text" name="unit" id="inputSuccess" class="form-control"
-                                                       placeholder="Input measurement unit like Pcs, Pair, Set etc." required>
+                                            <div class="form-group mb-2">
+                                                <label class="col-xs-4 control-label" for="inputSuccess">Proposed Email Group</label>
+                                                <div class="col-xs-8">
+                                                    <select class="form-control" name="unit">
+                                                        <option selected>--Select--</option>
+                                                        <option value="Pcs">Pcs</option>
+                                                        <option value="Set">Set</option>
+                                                        <option value="Pair">Pair</option>
+                                                        <option value="Meter">Meter</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                        </div>
 
 
 
@@ -178,9 +188,11 @@
                                         {{--                    Pre Requisition Section End Here--}}
 
                                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                        <button type="submit" class="btn btn-warning m-3">Submit</button>
+
+                                        <button type="submit" class="btn btn-warning mb-2">Submit</button>
                                             </div>
                                             </form>
+
                                     </div>
                                 </div>
                             </div>

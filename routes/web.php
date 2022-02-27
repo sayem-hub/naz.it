@@ -44,6 +44,10 @@ Route::get('/pre-requisition/create', [\App\Http\Controllers\Frontend\PreRequisi
 Route::post('/pre-requisition/create', [\App\Http\Controllers\Frontend\PreRequisitionController::class, 'preReqStore']);
 Route::get('/pre-requisition/print', [\App\Http\Controllers\Frontend\PreRequisitionController::class, 'print'])->name('pre.req.print');
 Route::get('/pre-requisition/search',[App\Http\Controllers\Frontend\SearchController::class, 'equipmentSearch'])->name('equipment.search');
+Route::get('/pre-requisition/preview/{id}', [App\Http\Controllers\Frontend\PreRequisitionController::class, 'viewEquipForm'])->name('equipment.form.preview');
+
+Route::get('/pre-requisition/generatePDF/{id}', [App\Http\Controllers\Frontend\PdfController::class, 'generateEquipPdf'])->name('equipment.pdf.generate');
+
 //Pre-requisition route end here
 
 Route::get('/login', [App\Http\Controllers\Frontend\UserController::class, 'login'])->name('login');
@@ -231,15 +235,11 @@ Route::middleware(['auth'])->group(function () {
 
         //Computer Route
         Route::get('/computers', [App\Http\Controllers\Backend\ComputerController::class, 'computer'])->name('admin.computer');
-
         Route::get('/computers/create', [App\Http\Controllers\Backend\ComputerController::class, 'create'])->name('admin.computer.create');
         Route::post('/computers/create', [App\Http\Controllers\Backend\ComputerController::class, 'store']);
-
         Route::get('computers/edit/{id}', [App\Http\Controllers\Backend\ComputerController::class, 'edit'])->name('admin.computer.edit');
         Route::post('computers/edit/{id}', [App\Http\Controllers\Backend\ComputerController::class, 'update']);
-
         Route::get('computers/delete/{id}', [App\Http\Controllers\Backend\ComputerController::class, 'delete'])->name('admin.computer.delete');
-
 
         //Outgoing Route
 
@@ -259,7 +259,6 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('incoming/edit/{id}', [App\Http\Controllers\Backend\IncomingController::class, 'edit'])->name('admin.incoming.edit');
         Route::post('incoming/edit/{id}', [App\Http\Controllers\Backend\IncomingController::class, 'update']);
-
         Route::get('incoming/delete/{id}', [App\Http\Controllers\Backend\IncomingController::class, 'delete'])->name('admin.incoming.delete');
 
         //Ccamera Route

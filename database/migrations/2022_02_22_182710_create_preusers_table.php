@@ -21,7 +21,7 @@ class CreatePreusersTable extends Migration
             $table->string('section', 100);
             $table->string('department', 100);
             $table->string('mobile', 100);
-            $table->string('reference', 100);
+            $table->string('reference', 100)->nullable();
             $table->timestamps();
         });
     }
