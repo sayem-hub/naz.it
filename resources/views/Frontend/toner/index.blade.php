@@ -48,6 +48,12 @@
                  <td style="text-align:center">{{$stocks55}}</td>
              </tr>
 
+             <tr>
+                 <td style="text-align:center">5</td>
+                 <td style="text-align:center">80A/05A</td>
+                 <td style="text-align:center">{{$stocks55}}</td>
+             </tr>
+
             </tbody>
         </table>
 

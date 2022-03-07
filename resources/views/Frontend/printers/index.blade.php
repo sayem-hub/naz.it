@@ -18,7 +18,7 @@
             </div>
             <div class="col-xs-6 col-md-4">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="User name or section or status"
+                    <input type="text" class="form-control" placeholder="Search by Serial/Section/Status"
                            id="txtSearch" name="query" value="{{ request()->input('query') }}">
 
                     <div class="input-group-btn">

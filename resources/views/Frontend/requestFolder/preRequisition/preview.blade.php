@@ -112,7 +112,7 @@
 
 <h3>NAZ Bangladesh Ltd.</h3>
 <h4>ICT Department</h4>
-<h4> <a href="{{route('equipment.pdf.generate', $all_equipment->id)}}"> Pre-requisition Form</a></h4>
+<h4> <a href="{{route('equipment.pdf.generate', $all_equipment->id)}}"> Manual/Pre-requisition</a></h4>
 <br>
 
     <p><strong>Request No.</strong>&emsp;{{$all_equipment->manual_num}}

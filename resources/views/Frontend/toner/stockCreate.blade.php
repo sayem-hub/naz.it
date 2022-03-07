@@ -24,6 +24,7 @@
                     <option value="26A">26A</option>
                     <option value="93A">93A</option>
                     <option value="55A">55A</option>
+                    <option value="93A">80A/05A</option>
                 </select>
             </div>
 

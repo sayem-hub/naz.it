@@ -46,9 +46,9 @@ class PreRequisitionController extends Controller
 
             if (isset($lastId)) {
                 // Sum 1 + last id
-                $incrementId2 = 'NIT-PRE-REQ-00' . ($lastId->id + 1);
+                $incrementId2 = 'NIT-MAN-REQ-00' . ($lastId->id + 1);
             } else {
-                $incrementId2 = 'NIT-PRE-REQ-001';
+                $incrementId2 = 'NIT-MAN-REQ-001';
             }
 
             Prerequi::create([

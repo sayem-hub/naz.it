@@ -31,6 +31,10 @@ class TonerController extends Controller
         $model55 = Tonerexpense::where('toner_model', '=', '55A')->count();
         $stocks55 = $toner55 - $model55;
 
+        $toner0580 = Tonerstock::where('toner_model', '=', '80A/05A')->sum('qty');
+        $model0580 = Tonerexpense::where('toner_model', '=', '80A/05A')->count();
+        $stocks0580 = $toner0580 - $model0580;
+
         $currentMonth = date('F');
 
         $allTonerCount = Tonerexpense::select(
@@ -51,10 +55,11 @@ class TonerController extends Controller
         // $stocks = Tonerstock::orderBy('id')->paginate(100);
         return view('Frontend.toner.index', compact('expenses', 'newtoners', 'currentMonth'))
         ->with('stocks85', $stocks85)
-        -> with('stocks26', $stocks26)
-        -> with('stocks93', $stocks93)
+        ->with('stocks26', $stocks26)
+        ->with('stocks93', $stocks93)
         ->with('allTonerCount', $allTonerCount)
-        ->with('stocks55', $stocks55);
+        ->with('stocks55', $stocks55)
+        ->with('stocks0580', $stocks0580);
 
     }
 

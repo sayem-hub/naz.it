@@ -5,13 +5,13 @@
 
     <div class="container-fluid">
 
-        <div class="row">
+        <div class="row bg-secondary">
 
             <div class="col-md-1"></div>
             <div class="col-md-5">
 
 
-                <div class="card bg-info mb-2">
+                <div class="card bg-secondary mb-2">
                     <div class="card-body">
 
                         <h4 class="card-title text-center">User information</h4>
