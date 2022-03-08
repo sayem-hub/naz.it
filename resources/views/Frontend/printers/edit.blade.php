@@ -2,9 +2,12 @@
 
 @section('main')
 
+    <section class="contact-section pt-130">
+        <div class="container">
+
 <div class="row" style="color: rgb(80, 75, 75)">
     <div class="col-md-4"></div>
-    <div class="col-md-4">
+    <div class="col-md-5">
 
         <h3 class="text-center mt-3">Edit Record</h3>
         <form action="{{route('printer.edit',$printers->id)}}" method="post">
@@ -68,9 +71,9 @@
                 <label for="servic_type" class="form-label">Service Type</label>
                 <select class="form-control" name="service_type">
                     <option value= "{{ $printers->service_type}}" selected>{{ $printers->service_type}}</option>
-                    <option value="Single User">Single User</option>
-                    <option value="Shared Printer">Shared</option>
-                    <option value="Network Printer">Network Printer</option>
+                    <option value="Single">Single</option>
+                    <option value="Share">Share</option>
+                    <option value="Network">Network</option>
                 </select>
             </div>
 
@@ -89,8 +92,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="remarks" class="form-label">Remarks</label>
-                <input type="text" class="form-control" name="remarks" id="remarks" value="{{ $printers->remarks }}">
+                <label for="remarks" class="form-label">Date of Purchase</label>
+                <input type="date" class="form-control" name="pur_date" id="pur_date" value="{{$printers->pur_date}}">
             </div>
 
 
@@ -100,6 +103,7 @@
             </div>
 
             </div>
-
+        </div>
+    </section>
 
 @endsection

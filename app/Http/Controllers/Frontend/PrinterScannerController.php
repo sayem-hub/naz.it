@@ -28,11 +28,7 @@ class PrinterScannerController extends Controller
                 'printer_id' => 'required',
                 'printer_brand' => 'required',
                 'printer_model' => 'required',
-
                 'function' => 'required',
-                'section' => 'required',
-                'department' => 'required',
-                'user' => 'required',
                 'service_type' => 'required',
                 'status' => 'required',
             ]);
@@ -48,7 +44,7 @@ class PrinterScannerController extends Controller
                 'user' => $request->input('user'),
                 'service_type' => $request->input('service_type'),
                 'status' => $request->input('status'),
-                'remarks' => $request->input('remarks'),
+                'pur_date' => $request->input('pur_date'),
             ];
 
             Printer::create($data);
@@ -72,11 +68,7 @@ class PrinterScannerController extends Controller
                 'printer_id' => 'required',
                 'printer_brand' => 'required',
                 'printer_model' => 'required',
-
                 'function' => 'required',
-                'section' => 'required',
-                'department' => 'required',
-                'user' => 'required',
                 'service_type' => 'required',
                 'status' => 'required',
             ]);
@@ -94,7 +86,7 @@ class PrinterScannerController extends Controller
                 'user' => $request->input('user'),
                 'service_type' => $request->input('service_type'),
                 'status' => $request->input('status'),
-                'remarks' => $request->input('remarks'),
+                'pur_date' => $request->input('pur_date'),
             ];
             $printers->update($data);
             return redirect()->route('printer.index');

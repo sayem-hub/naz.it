@@ -33,7 +33,7 @@
 
 
 
-<table class="table table-bordered table-hover" >
+<table class="table table-bordered table-hover" style="font-size: .8rem">
     <thead class="thead-dark">
       <tr>
        <th scope="col" style="text-align:center">SL</th>
@@ -43,11 +43,11 @@
         <th scope="col" style="text-align:center">Serial No</th>
         <th scope="col" style="text-align:center">Function</th>
         <th scope="col" style="text-align:center">Section</th>
-        <th scope="col" style="text-align:center">Department</th>
+{{--        <th scope="col" style="text-align:center">Department</th>--}}
         <th scope="col" style="text-align:center">User</th>
-        <th scope="col" style="text-align:center">Service Type</th>
+        <th scope="col" style="text-align:center">Type</th>
+          <th scope="col" style="text-align:center">Pur Date</th>
         <th scope="col" style="text-align:center">Status</th>
-        {{-- <th scope="col">Remarks</th> --}}
         <th scope="col" style="text-align:center">Action</th>
       </tr>
     </thead>
@@ -63,9 +63,15 @@
         <td style="text-align:center">{{$print->serial_no}}</td>
         <td style="text-align:center">{{$print->function}}</td>
         <td style="text-align:center">{{$print->section}}</td>
-        <td style="text-align:center">{{$print->department}}</td>
+{{--        <td style="text-align:center">{{$print->department}}</td>--}}
         <td style="text-align:center">{{$print->user}}</td>
         <td style="text-align:center">{{$print->service_type}}</td>
+
+          @if($print->pur_date==!'Null')
+        <td class="text-center">{{'-'}}</td>
+          @else
+              <td class="text-center">{{\Carbon\Carbon::parse($print->pur_date)->format('d-M-y')}}</td>
+          @endif
 
             @php
             if ( $print->status == 'In repair'):

@@ -1,5 +1,4 @@
 @extends('layouts.frontend')
-
 @section('main')
 
 <section class="contact-section pt-130">
@@ -7,7 +6,7 @@
 
 <div class="row" style="color: rgb(71, 67, 67)">
     <div class="col-md-4"></div>
-    <div class="col-md-4">
+    <div class="col-md-5">
 
         <h4 class="text-center mt-3">Add New Printer</h4>
 
@@ -81,9 +80,9 @@
                 <label for="servic_type" class="form-label">Service Type</label>
                 <select class="form-control" name="service_type">
                     <option value="" selected>---Select Type---</option>
-                    <option value="Single User">Single User</option>
-                    <option value="Shared Printer">Shared</option>
-                    <option value="Network Printer">Network Printer</option>
+                    <option value="Single User">Single</option>
+                    <option value="Shared Printer">Share</option>
+                    <option value="Network Printer">Network</option>
                 </select>
             </div>
 
@@ -101,8 +100,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="remarks" class="form-label">Remarks</label>
-                <input type="text" class="form-control" name="remarks" id="remarks">
+                <label for="remarks" class="form-label">Date of Purchase</label>
+                <input type="date" class="form-control" name="pur_date" id="pur_date">
             </div>
 
 
