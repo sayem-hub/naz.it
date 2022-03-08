@@ -36,23 +36,25 @@
                     <td style="text-align:center">{{$stocks26}}</td>
                 </tr>
 
+             <tr>
+                 <td style="text-align:center">3</td>
+                 <td style="text-align:center">80A/05A</td>
+                 <td style="text-align:center">{{$stocks0580}}</td>
+             </tr>
+
                 <tr>
-                    <td style="text-align:center">3</td>
+                    <td style="text-align:center">4</td>
                     <td style="text-align:center">93A</td>
                     <td style="text-align:center">{{$stocks93}}</td>
                 </tr>
 
              <tr>
-                 <td style="text-align:center">4</td>
+                 <td style="text-align:center">5</td>
                  <td style="text-align:center">55A</td>
                  <td style="text-align:center">{{$stocks55}}</td>
              </tr>
 
-             <tr>
-                 <td style="text-align:center">5</td>
-                 <td style="text-align:center">80A/05A</td>
-                 <td style="text-align:center">{{$stocks55}}</td>
-             </tr>
+
 
             </tbody>
         </table>
@@ -143,9 +145,9 @@
 
 
 <div class="col-md-12">
-    <h5 class="text-center mt-3">Month wise consumption</h5>
+    <h5 class="text-center mt-3">Month wise consumption/{{\Carbon\Carbon::now()->format('Y')}}</h5>
 
-    <table class="table table-bordered table-hover" >
+    <table class="table table-bordered table-hover">
         <thead style="background-color: #07977f">
             <tr>
                 <th scope="col" class="text-center">SL</th>
