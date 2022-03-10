@@ -45,7 +45,7 @@
                 </form>
 
 
-                <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-hover" style="font-size: .785rem">
                         <thead>
                           <tr>
                             <th scope="col" class="text-center">SL</th>
@@ -62,7 +62,6 @@
                             <th scope="col" class="text-center">Top</th>
 
                             {{-- <th scope="col">Notes</th> --}}
-                            {{-- <th scope="col">Entry at</th> --}}
                             <th scope="col" class="text-center">Action</th>
 
                           </tr>
@@ -78,7 +77,7 @@
                             <td>{{$requisition->required_for}}</td>
                             {{-- <td>{{$requisition->designation}}</td> --}}
                             <td>{{$requisition->department}}</td>
-                            <td class="text-center">{{$requisition->requisition_date}}</td>
+                            <td class="text-center">{{\Carbon\Carbon::parse($requisition->requisition_date)->format('d-M-y')}}</td>
 
                             @php
                             if ( $requisition->status == 'Pending'):
@@ -92,11 +91,13 @@
 
                             <td style="color: {{$color}}; text-align:center">{{ $requisition->status }}</td>
 
+                              @if($requisition->received_date==!'Null')
+                                  <td class="text-center">{{'-'}}</td>
+                              @else
+                            <td class="text-center">{{\Carbon\Carbon::parse($requisition->received_date)->format('d-M-y')}}</td>
+                                @endif
 
-                            {{-- <td>{{date('d/m/Y', strtotime($requisition->requisition_date))}}</td> --}}
-                            <td class="text-center">{{$requisition->received_date}}</td>
-                            <td class="text-center">{{$requisition->Grn}}</td>
-
+                              <td class="text-center">{{$requisition->Grn}}</td>
 
 
                             @if ($requisition->challan==!'Null')

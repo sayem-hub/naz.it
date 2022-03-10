@@ -59,7 +59,7 @@
         }
 
         .styled-table thead tr {
-            background-color: #000000;
+            background-color: #009879;
             color: #ffffff;
             text-align: center;
             height: 15px;
@@ -115,8 +115,9 @@
 <h4> <a href="{{route('equipment.pdf.generate', $all_equipment->id)}}"> Manual/Pre-requisition</a></h4>
 <br>
 
-    <p><strong>Request No.</strong>&emsp;{{$all_equipment->manual_num}}
-        &#160;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Date: {{\Carbon\Carbon::now()->format('d/m/Y')}}
+    <p style="font-size: 12px;"><strong>Request No.</strong>&emsp;{{$all_equipment->manual_num}}
+        &#160;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        Date: {{\Carbon\Carbon::now()->format('d-M-Y')}}
        </p>
 
 

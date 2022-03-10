@@ -82,7 +82,7 @@
 
                 <tr>
                     <th scope="row" style="text-align:center">{{$key+1}}</th>
-                    <td style="text-align:center">{{$newtoner->date}}</td>
+                    <td style="text-align:center">{{date('d-m-y, h:i A', strtotime($newtoner->date))}}</td>
                     <td style="text-align:center">{{$newtoner->toner_model}}</td>
                     <td style="text-align:center">{{$newtoner->qty}}</td>
                     <td style="text-align:center">{{$newtoner->gp_no}}</td>
@@ -125,10 +125,10 @@
 
         <tr >
          <th scope="row" style="text-align:center">{{$key+1}}</th>
-         <td style="text-align:center">{{ date('Y-m-d, h:i A', strtotime($expense->date)) }}</td>
+         <td>{{ date('d-m-y, h:i A', strtotime($expense->date)) }}</td>
             {{-- <td style="text-align:center">{{$expense->date}}</td> --}}
             <td style="text-align:center">{{$expense->toner_model}}</td>
-            <td style="text-align:center">{{$expense->section}}</td>
+            <td>{{$expense->section}}</td>
             <td style="text-align:center">{{$expense->printer_model}}</td>
             <td style="text-align:center">{{$expense->recipient}}</td>
             {{-- <td>{{$expense->notes}}</td> --}}
