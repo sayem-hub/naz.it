@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +7,10 @@
     <title>Preview</title>
 
     <style>
-
         .custom-container{
             width: 80%;
             margin: 5px auto;
         }
-
         @page {
             margin: 30px 25px;
         }
@@ -25,7 +22,6 @@
             height: 10px;
             font-size: 8px;
             /** Extra personal styles **/
-
             color: black;
             text-align: left;
             line-height: 5px;
@@ -38,7 +34,6 @@
             height: 20px;
             font-size: 8px;
             /** Extra personal styles **/
-
             color: black;
             text-align: center;
             line-height: 10px;
@@ -46,46 +41,37 @@
         table, td, th {
             border: .1px solid #000000;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
         }
         .styled-table {
-
             font-size: 0.8em;
             font-family: sans-serif;
             margin: auto;
         }
-
         .styled-table thead tr {
             background-color: #009879;
             color: #ffffff;
             text-align: center;
             height: 15px;
         }
-
         .styled-table th,
         .styled-table td {
             padding: 2px 15px  ;
         }
-
-
         .styled-table tbody tr:nth-of-type(even) {
             background-color: #f3f3f3;
         }
-
         .styled-table tbody tr.active-row {
             font-weight: bold;
             color: #009879;
         }
-
         h2, h3, h4, h5{
             font-family: sans-serif;
             text-align: center;
             line-height: 40%;
         }
-
         hr {
             display: block;
             margin-left: auto;
@@ -93,7 +79,6 @@
             border-style: inset;
             border-width: 0.5px;
         }
-
     </style>
 
 </head>
@@ -110,32 +95,32 @@
 
 <div class="custom-container">
 
-<h3>NAZ Bangladesh Ltd.</h3>
-<h4>ICT Department</h4>
-<h4> <a href="{{route('equipment.pdf.generate', $all_equipment->id)}}"> Manual/Pre-requisition</a></h4>
-<br>
+    <h3>NAZ Bangladesh Ltd.</h3>
+    <h4>ICT Department</h4>
+    <h4> <a href="{{route('equipment.pdf.generate', $all_equipment->id)}}"> Manual/Pre-requisition</a></h4>
+    <br>
 
     <p style="font-size: 12px;"><strong>Request No.</strong>&emsp;{{$all_equipment->manual_num}}
         &#160;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         Date: {{\Carbon\Carbon::now()->format('d-M-Y')}}
-       </p>
+    </p>
 
 
 
 
-<table class="styled-table" >
-    <thead class="thead-dark" >
-    <tr>
-        <th scope="col">SL</th>
-        <th scope="col">Item Name</th>
-        <th scope="col">Qty</th>
-        <th scope="col">Size</th>
-        <th scope="col">Unit</th>
-        <th scope="col">Purpose</th>
-        <th scope="col">Remarks</th>
-    </tr>
-    </thead>
-    <tbody>
+    <table class="styled-table" >
+        <thead class="thead-dark" >
+        <tr>
+            <th scope="col">SL</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Size</th>
+            <th scope="col">Unit</th>
+            <th scope="col">Purpose</th>
+            <th scope="col">Remarks</th>
+        </tr>
+        </thead>
+        <tbody>
 
         <tr>
             <th> {{1}} </th>
@@ -146,10 +131,10 @@
             <td>{{$all_equipment->purpose}}</td>
             <td>{{$all_equipment->remarks}}</td>
         </tr>
-    </tbody>
-</table>
+        </tbody>
+    </table>
 
-{{--User info and Signature Part--}}
+    {{--User info and Signature Part--}}
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -167,9 +152,3 @@
 
 </body>
 </html>
-
-
-
-
-
-

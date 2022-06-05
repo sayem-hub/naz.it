@@ -230,6 +230,7 @@
                     <option value="Compliance">Compliance</option>
                     <option value="IE & Planning">IE & Planning</option>
                     <option value="RMG">RMG</option>
+                    <option value="Sample-RMG">Sample-RMG</option>
                     <option value="Knitting">Knitting</option>
                     <option value="Dyeing">Dyeing</option>
                     <option value="All Over Print">All Over Print</option>
@@ -248,6 +249,7 @@
                     <option value="Running" selected>Running</option>
                     <option value="Idle">Idle</option>
                     <option value="In repair">In repair</option>
+                    <option value="Resigned">Resigned</option>
                 </select>
             </div>
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Prerequi;
 use App\Models\Preuser;
 use Illuminate\Http\Request;
+use DB;
 
 class PreRequisitionController extends Controller
 {
@@ -19,15 +20,16 @@ class PreRequisitionController extends Controller
     public function preReqStore(Request $request)
     {
 
-        try {
-            $request->validate([
-                'emp_id' => 'required',
-                'employee_name' => 'required',
-                'designation' => 'required',
-                'section' => 'required',
-                'department' => 'required',
-                'mobile' => 'required',
-            ]);
+//        try {
+//            $request->validate([
+//                'emp_id' => 'required',
+//                'employee_name' => 'required',
+//                'designation' => 'required',
+//                'section' => 'required',
+//                'department' => 'required',
+//                'mobile' => 'required',
+//            ]);
+
 
             $data = ([
                 'emp_id' => $request->input('emp_id'),
@@ -44,6 +46,7 @@ class PreRequisitionController extends Controller
 
 //        $incrementId = new Prerequi();
 
+
             if (isset($lastId)) {
                 // Sum 1 + last id
                 $incrementId2 = 'NIT-MAN-REQ-00' . ($lastId->id + 1);
@@ -51,26 +54,39 @@ class PreRequisitionController extends Controller
                 $incrementId2 = 'NIT-MAN-REQ-001';
             }
 
-            Prerequi::create([
-                'preuser_id' => $preusers->id,
-                'manual_num' => $incrementId2,
-                'item_des' => $request->input('item_des'),
-                'size' => $request->input('size'),
-                'unit' => $request->input('unit'),
-                'qty' => $request->input('qty'),
-                'purpose' => $request->input('purpose'),
-                'remarks' => $request->input('remarks'),
-            ]);
-            return redirect()->route('pre.req.print')->with('message', "Your data has submit successfully!");;
-        } catch (\Exception $exception) {
-            return redirect()->back()->withErrors($exception->getMessage());
-        }
+            $item_des = $request->item_des;
+            $size = $request->size;
+            $unit = $request->unit;
+            $qty = $request->qty;
+            $purpose = $request->purpose;
+            $remarks = $request->remarks;
+
+
+//            for($i=0; $i < count($item_des); $i++) {
+//                $saveRecord=[
+//                    'preuser_id' => $preusers->id,
+//                    'manual_num' => $incrementId2,
+//                    'item_des' =>$item_des[$i],
+//                    'size' =>$size[$i],
+//                    'unit' =>$unit[$i],
+//                    'qty' =>$qty[$i],
+//                    'purpose' =>$purpose[$i],
+//                    'remarks' =>$remarks[$i],
+//                ];
+//
+//                DB::table('prerequis')->insert($saveRecord);
+//            }
+//
+//            return redirect()->route('pre.req.print')->with('message', "Your data has submit successfully!");;
+//        } catch (\Exception $exception) {
+//            return redirect()->back()->withErrors($exception->getMessage());
+//        }
     }
 
-        public function print()
-        {
-            return view ('Frontend.requestFolder.preRequisition.print');
-        }
+    public function print()
+    {
+        return view ('Frontend.requestFolder.preRequisition.print');
+    }
 
 
     public function viewEquipForm($id)

@@ -48,13 +48,13 @@
                         </div>
                     </div>
 
-                    <div class="form-group mb-2">
+                    {{-- <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Nick Name</label>
                         <div class="col-xs-8">
                             <input type="text" name="nick_name" id="inputSuccess" class="form-control"
                                 placeholder="Write your nick name">
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="form-group mb-2">
                         <label class="col-xs-4 control-label" for="inputSuccess">Designation<span

@@ -113,9 +113,11 @@
             <th scope="col" style="text-align:center">SL</th>
             <th scope="col" style="text-align:center">Date & Time</th>
             <th scope="col" style="text-align:center">Model</th>
+            <th scope="col" style="text-align:center">Brand</th>
             <th scope="col" style="text-align:center">Section</th>
             <th scope="col" style="text-align:center">Printer Model</th>
-            <th scope="col" style="text-align:center">Recipient</th>
+            <th scope="col" style="text-align:center">Damage</th>
+            <th scope="col" style="text-align:center">Concern</th>
             {{-- <th scope="col" style="text-align:center">Notes</th> --}}
         </tr>
     </thead>

@@ -38,6 +38,7 @@
                     <option value="Accounts">Accounts</option>
                     <option value="Payroll">Payroll</option>
                     <option value="Merchandising">Merchandising</option>
+                    <option value="PD">PD</option>
                     <option value="Admin">Admin</option>
                     <option value="IE & Planning">IE & Planning</option>
                     <option value="Compliance">Compliance</option>
@@ -49,6 +50,7 @@
                     <option value="Dyeing Planning">Dyeing Planning</option>
                     <option value="Dyeing Finishing">Dyeing Finishing</option>
                     <option value="Dyeing Batch">Dyeing Batch</option>
+                    <option value="Dyeing-ETP">Dyeing-ETP</option>
                     <option value="Knitting">Knitting</option>
                     <option value="Knitting Planning">Knitting Planning</option>
                     <option value="Knitting Label">Knitting Label</option>

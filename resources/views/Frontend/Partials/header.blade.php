@@ -84,6 +84,7 @@
                                         <li class="nav-item"><a class="page-scroll" href="{{ route('naz.email.list') }}">Email IDs</a></li>
                                         <li class="nav-item"><a class="page-scroll" href="{{ route('nazdeptheads.index') }}">Dept Heads Group </a></li>
                                         <li class="nav-item"><a href="{{asset('assets/frontend/files/it-policy/IT Policy_NAZ.pdf')}}">IT Policy</a></li>
+                                        <li class="nav-item"><a href="{{asset('assets/frontend/files/it-policy/IT Policy_NAZ.pdf')}}">Easy Copy</a></li>
 
                                     </ul>
                                 </li>

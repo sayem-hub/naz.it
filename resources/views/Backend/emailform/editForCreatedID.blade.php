@@ -54,14 +54,14 @@
                         </div>
                     </div>
 
-
+{{--
                     <div class="form-group has-success has-feedback">
                         <label class="col-xs-4 control-label" for="inputSuccess">Nick Name</label>
                         <div class="col-xs-8">
                             <input type="text" name="nick_name" id="inputSuccess" class="form-control"
                                    value="{{$createdIds->nick_name}}" readonly>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="form-group has-success has-feedback">
                         <label class="col-xs-4 control-label" for="inputSuccess">Designation<span

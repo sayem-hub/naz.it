@@ -20,6 +20,11 @@ Route::get('/registration', [App\Http\Controllers\Frontend\UserController::class
 Route::post('/registration', [App\Http\Controllers\Frontend\UserController::class, 'doRegistration']);
 
 
+
+//Clipboard route
+Route::get('/public/clipboard',[App\Http\Controllers\Frontend\ClipboardController::class, 'index'])->name('cliboard.index');
+
+
 // Route::get('/new-mail-form', [App\Http\Controllers\Frontend\EmailController::class, 'index'])->name('new.mail.form');
 Route::get('/mail-opening-form', [App\Http\Controllers\Frontend\EmailController::class, 'create'])->name('new.mail.form.create');
 Route::post('/mail-opening-form', [App\Http\Controllers\Frontend\EmailController::class, 'store']);
@@ -44,7 +49,7 @@ Route::get('/pre-requisition/create', [\App\Http\Controllers\Frontend\PreRequisi
 Route::post('/pre-requisition/create', [\App\Http\Controllers\Frontend\PreRequisitionController::class, 'preReqStore']);
 Route::get('/pre-requisition/print', [\App\Http\Controllers\Frontend\PreRequisitionController::class, 'print'])->name('pre.req.print');
 Route::get('/pre-requisition/search',[App\Http\Controllers\Frontend\SearchController::class, 'equipmentSearch'])->name('equipment.search');
-Route::get('/pre-requisition/preview/{id}', [App\Http\Controllers\Frontend\PreRequisitionController::class, 'viewEquipForm'])->name('equipment.form.preview');
+Route::get('/pre-requisition/preview/{preuser_id}', [App\Http\Controllers\Frontend\PreRequisitionController::class, 'viewEquipForm'])->name('equipment.form.preview');
 
 Route::get('/pre-requisition/generatePDF/{id}', [App\Http\Controllers\Frontend\PdfController::class, 'generateEquipPdf'])->name('equipment.pdf.generate');
 

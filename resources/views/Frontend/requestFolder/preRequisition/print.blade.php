@@ -23,14 +23,14 @@
                 @endif
             </div>
 
-
+                <h6 class="mb-3">Form-এ পূরণকৃত অনুরোধটি প্রিন্ট বা সেভ করতে আপনার আইডি নাম্বার টাইপ করে Find বাটনে ক্লিক করুন।</h6>
             <form class="" action="{{ route('equipment.search') }}" method="GET">
 
 
 
     <div class="col-xs-6 col-md-4">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Type employee ID" name="query"
+            <input type="text" class="form-control" placeholder="Type your employee ID here" name="query"
                    id="txtSearch" value="{{ request()->input('query') }}">
 
             <div class="input-group-btn">

@@ -35,7 +35,7 @@ class EmailController extends Controller
 
             $data = [
                 'full_name' => $request->input('full_name'),
-                'nick_name' => $request->input('nick_name'),
+                // 'nick_name' => $request->input('nick_name'),
                 'designation' => $request->input('designation'),
                 'office_id' => $request->input('office_id'),
                 'section' => $request->input('section'),

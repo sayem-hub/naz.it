@@ -20,7 +20,7 @@
         </div>
         @endif
 
-        <form action="{{route('printer.create')}}" method="post">
+        <form action="" method="post">
           @csrf
            <div class="mb-3">
                 <label for="printer_id" class="form-label">Printer ID</label>
@@ -80,9 +80,9 @@
                 <label for="servic_type" class="form-label">Service Type</label>
                 <select class="form-control" name="service_type">
                     <option value="" selected>---Select Type---</option>
-                    <option value="Single">Single</option>
-                    <option value="Share">Share</option>
-                    <option value="Network">Network</option>
+                    <option value="Single User">Single</option>
+                    <option value="Shared Printer">Share</option>
+                    <option value="Network Printer">Network</option>
                 </select>
             </div>
 

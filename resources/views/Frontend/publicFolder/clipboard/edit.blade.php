@@ -1,57 +1,48 @@
 @extends('layouts.frontend')
+
 @section('main')
 
-<section class="contact-section pt-130">
-    <div class="container">
+    <section class="contact-section pt-130">
+        <div class="container">
 
-<div class="row" style="color: rgb(71, 67, 67)">
+<div class="row" style="color: rgb(80, 75, 75)">
     <div class="col-md-4"></div>
     <div class="col-md-5">
 
-        <h4 class="text-center mt-3">Add New Printer</h4>
-
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
-
-        <form action="{{route('printer.create')}}" method="post">
-          @csrf
-           <div class="mb-3">
+        <h3 class="text-center mt-3">Edit Record</h3>
+        <form action="{{route('printer.edit',$printers->id)}}" method="post">
+        @csrf
+            <div class="mb-3">
                 <label for="printer_id" class="form-label">Printer ID</label>
-                <input type="text" class="form-control" name="printer_id" id="printer_id" value="NAZPRN-">
+                <input type="text" class="form-control" name="printer_id" id="printer_id" value="{{ $printers->printer_id}}">
             </div>
 
             <div class="mb-3">
                 <label for="printer_brand" class="form-label">Printer Brand</label>
-               <select class="form-control" name="printer_brand">
-                <option value="" selected>---Select Printer Brand---</option>
-                <option value="HP">HP</option>
-                <option value="Canon">Canon</option>
-                <option value="Brother">Brother</option>
-                <option value="Epson">Epson</option>
-            </select>
+                <select class="form-control" name="printer_brand">
+                    <option value="{{ $printers->printer_brand}}"> {{ $printers->printer_brand}}</option>
+                    <option value="HP">HP</option>
+                    <option value="Canon">Canon</option>
+                    <option value="Brother">Brother</option>
+                    <option value="Epson">Epson</option>
+                </select>
             </div>
 
             <div class="mb-3">
                 <label for="printer_model" class="form-label">Model </label>
-                <input type="text" class="form-control" name="printer_model" id="printer_model">
+                <input type="text" class="form-control" name="printer_model" id="printer_model" value="{{ $printers->printer_model}}">
             </div>
 
             <div class="mb-3">
                 <label for="serial_no" class="form-label">Serial No </label>
-                <input type="text" class="form-control" name="serial_no" id="serial_no">
+                <input type="text" class="form-control" name="serial_no" id="serial_no" value="{{ $printers->serial_no }}">
             </div>
 
             <div class="mb-3">
                 <label for="function" class="form-label">Function</label>
                 <select class="form-control" name="function">
-                    <option value="" selected>---Select Printer Function---</option>
+
+                    <option value="{{ $printers->function}}" selected>{{ $printers->function}}</option>
                     <option value="Laser">Laser</option>
                     <option value="Inkjet">Inkjet</option>
                     <option value="Color Laser">Color Laser</option>
@@ -63,23 +54,23 @@
 
             <div class="mb-3">
                 <label for="section" class="form-label">Section</label>
-                <input type="text" class="form-control" name="section" id="section">
+                <input type="text" class="form-control" name="section" id="section" value= "{{ $printers->section}}">
             </div>
 
-                    <div class="mb-3">
+            <div class="mb-3">
                 <label for="department" class="form-label">Department</label>
-                <input type="text" class="form-control" name="department" id="department" placeholder="Enter department name">
+                <input type="text" class="form-control" name="department" id="department" value= "{{$printers->department}}">
             </div>
 
             <div class="mb-3">
                 <label for="user" class="form-label">User</label>
-                <input type="text" class="form-control" name="user" id="user" placeholder="Enter user name">
+                <input type="text" class="form-control" name="user" id="user" value= "{{ $printers->user}}">
             </div>
 
             <div class="mb-3">
                 <label for="servic_type" class="form-label">Service Type</label>
                 <select class="form-control" name="service_type">
-                    <option value="" selected>---Select Type---</option>
+                    <option value= "{{ $printers->service_type}}" selected>{{ $printers->service_type}}</option>
                     <option value="Single">Single</option>
                     <option value="Share">Share</option>
                     <option value="Network">Network</option>
@@ -89,8 +80,9 @@
             <div class="mb-3">
                 <label for="Status" class="form-label">Status</label>
                 <select class="form-control" name="status">
-                    <option value="Active" selected>Active</option>
-                    <option value="Inactive" >Inactive</option>
+                    <option value="{{ $printers->status }}" selected>{{ $printers->status}}</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
                     <option value="Idle">Idle</option>
                     <option value="In repair">In repair</option>
                     <option value="No cartridge">No cartridge</option>
@@ -101,19 +93,17 @@
 
             <div class="mb-3">
                 <label for="remarks" class="form-label">Date of Purchase</label>
-                <input type="date" class="form-control" name="pur_date" id="pur_date">
+                <input type="date" class="form-control" name="pur_date" id="pur_date" value="{{$printers->pur_date}}">
             </div>
 
 
-            <button type="submit" class="btn btn-primary">Create</button>
-          </form>
+            <button type="submit" class="btn btn-primary">Update</button>
+            </form>
 
-    </div>
+            </div>
 
-</div>
-
-    </div>
-</section>
-
+            </div>
+        </div>
+    </section>
 
 @endsection

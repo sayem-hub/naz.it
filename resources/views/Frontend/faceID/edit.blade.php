@@ -2,6 +2,10 @@
 
 @section('main')
 
+<section id="service" class="service-section pt-130 ">
+
+    <div class="container">
+
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
@@ -76,5 +80,7 @@
         </form>
     </div>
 </div>
+</div>
+</section>
 
 @endsection

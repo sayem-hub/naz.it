@@ -19,10 +19,6 @@
         <td style="width: 44.709%; height: 18px;">{{$data->full_name}}</td>
     </tr>
     <tr style="height: 18px;">
-        <td style="width: 19.7629%; height: 18px;">Nick Name</td>
-        <td style="width: 44.709%; height: 18px;">{{$data->nick_name}}</td>
-    </tr>
-    <tr style="height: 18px;">
         <td style="width: 19.7629%; height: 18px;">Designation</td>
         <td style="width: 44.709%; height: 18px;">{{$data->designation}}</td>
     </tr>

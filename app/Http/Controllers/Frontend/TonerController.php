@@ -39,7 +39,7 @@ class TonerController extends Controller
 
         $allTonerCount = Tonerexpense::select(
             DB::raw("(COUNT(*)) as count"),
-            DB::raw("MONTHNAME(created_at) as month_name")
+            DB::raw("MONTHNAME(date) as month_name")
         )
             ->whereYear('created_at', date('Y'))
             ->groupBy('month_name')

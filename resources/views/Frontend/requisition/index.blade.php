@@ -11,6 +11,24 @@
 
              <h4 class="text-center">Requisition Status</h4>
 
+             @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+
+            <div style="margin-top: 10px">
+                @if(session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session()->get('message') }}
+                </div>
+            </div>
+            @endif
+
                 <form class="" action="{{ route('requisition.search') }}" method="GET">
 
                         <a href="{{ route('requisition.add') }}" class="btn btn-success"><i class="fa fa-plus"></i>Requisition</a>
