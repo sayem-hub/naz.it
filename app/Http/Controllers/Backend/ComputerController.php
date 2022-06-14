@@ -38,21 +38,21 @@ public function store(Request $request)
         'Remarks'=>$request->input('Remarks'),
 
     ];
-    Computer::create($data);
+    ComputerUser::create($data);
     return redirect()->route('admin.computer');
 }
 
 public function edit($id)
 
 {
-    $computer = Computer::find($id);
+    $computer = ComputerUser::find($id);
     return view('backend.computers.edit',compact('computer'));
 }
 
 public function update(Request $request,$id)
 
 {
-    $computer = Computer::find($id);
+    $computer = ComputerUser::find($id);
 
     $data = [
         'Comid'=>$request->input('ComputerID'),
@@ -77,7 +77,7 @@ public function update(Request $request,$id)
     public function delete($id)
 
     {
-        $computer = Computer::find($id);
+        $computer = ComputerUser::find($id);
         $computer->delete();
 
         return redirect()->back();

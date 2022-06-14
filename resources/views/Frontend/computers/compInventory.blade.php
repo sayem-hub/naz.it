@@ -127,14 +127,14 @@
     <table class="styled-table" >
         <thead class="thead-dark" >
             <tr>
-                <th scope="col">#</th>
+                <th scope="col">Sl</th>
                 <th scope="col">Comp ID</th>
                 <th scope="col">Emp ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Designation</th>
-                {{-- <th scope="col">IP Address</th> --}}
+                <th scope="col">IP address</th>
                 <th scope="col">Email address</th>
-                <th scope="col">Section</th>
+                {{-- <th scope="col">Section</th> --}}
                 <th scope="col">Dept.</th>
                 <th scope="col">Status</th>
             </tr>
@@ -149,9 +149,9 @@
                 <td>{{$user->Emp_id}}</td>
                 <td>{{$user->User}}</td>
                 <td>{{$user->Designation}}</td>
-                {{-- <td>{{$user->Ipadd}}</td> --}}
+                <td>{{$user->Ipadd}}</td>
                 <td>{{$user->Email}}</td>
-                <td>{{$user->Section}}</td>
+                {{-- <td>{{$user->Section}}</td> --}}
                 <td>{{$user->Department}}</td>
                 <td>{{$user->Status}}</td>
             </tr>
