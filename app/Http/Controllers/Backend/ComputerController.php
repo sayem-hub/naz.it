@@ -4,13 +4,13 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Computer;
+use App\Models\ComputerUser;
 
 class ComputerController extends Controller
 {
     public function computer()
     {
-       $computers = Computer::orderBy('id','desc')->paginate(300);
+       $computers = ComputerUser::orderBy('id','desc')->paginate(300);
         return view('Backend.computers.computers',compact('computers'));
     }
 
